@@ -65,7 +65,7 @@
             <div class="box">
   <div class="container-1">
       <input type="search" id="search" placeholder="Busca tu Tramite" />
-         <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar algo...</button>
+         <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
   </div>
 </div>
          
