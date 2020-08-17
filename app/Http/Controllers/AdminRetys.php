@@ -10,30 +10,31 @@ use App\mtregistro; //modelo de registros
 class AdminRetys extends Controller
 {
     
-    public function index(){ 
-    return view('VistasRetys.index');
- }
+   public function index(){ 
+      return view('VistasRetys.index');
+   }
 
- public function btarjetas(Request $request){
+   public function btarjetas(Request $request){
  	
- 	$buscar=$request->get('buscar');
- 	$terg=mtramiteomodelo::all();
- 	//echo $terg;
- 	
-
- 	return view('VistasRetys.vtarjetas')
- 	->with(['terg'=>$terg]);
+ 	   $buscar=$request->get('buscar');
+ 	   $terg=mtramiteomodelo::all();
+ 	   //echo $terg;
  	
 
+ 	   return view('VistasRetys.vtarjetas')
+ 	            ->with(['terg'=>$terg]);
+ 	
+   }
+
+   public function bareasgob(){ 
+      
+      return view('VistasRetys.vagobierno');
    
- }
-
-     public function bareasgob(){ 
-    return view('VistasRetys.vagobierno');
- }
+   }
 
    public function bpersonasgob(){ 
-    return view('VistasRetys.vpersonas');
- }
+   
+      return view('VistasRetys.vpersonas');
+   }
 
 }

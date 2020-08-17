@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap4.5/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('bootstrap4.5/css/bootstrap.min.css')}}">
      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
      <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
      <link rel="stylesheet" href="css/style.css">
@@ -16,7 +16,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
    
-     <link href="animate.css/animate.min.css" rel="stylesheet">
+     <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
     <title>Trámites y Servicios </title>
   </head>
   <body>
@@ -207,7 +207,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./js/jquery-3.5.1.slim.js"></script>
-    <script src="./owl.carousel/owl.carousel.min.js"></script>
+    <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js')}}"></script>
 
   <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="./vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -215,14 +215,14 @@
   <script src="./vendor/venobox/venobox.min.js"></script>
   <script src="./vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="./vendor/counterup/counterup.min.js"></script>
-  <script src="./vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="{{ asset ('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
   <script src="./vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <script src="./vendor/aos/aos.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
       
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="./bootstrap4.5/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="{{ asset('bootstrap4.5/js/bootstrap.min.js')}}" ></script>
      <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
