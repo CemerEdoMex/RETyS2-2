@@ -65,8 +65,10 @@
             <div class="box">
   <div class="container-1">
     <center>
+       <form   class="form-inline" action="{{ route('tarjetas') }}" >
       <input type="search" id="search" placeholder="Busca tu Tramite" />
          <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
+       </form>
        </center>
   </div>
 </div>
