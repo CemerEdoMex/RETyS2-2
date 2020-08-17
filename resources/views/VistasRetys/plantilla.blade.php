@@ -16,7 +16,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
    
-     <link href="animate.css/animate.min.css" rel="stylesheet">
+     <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
     <title>Trámites y Servicios </title>
   </head>
   <body>
@@ -65,8 +65,10 @@
             <div class="box">
   <div class="container-1">
     <center>
+       <form   class="form-inline" action="{{ route('tarjetas') }}" >
       <input type="search" id="search" placeholder="Busca tu Tramite" />
          <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
+       </form>
        </center>
   </div>
 </div>
