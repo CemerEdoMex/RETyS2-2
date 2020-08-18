@@ -90,7 +90,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/indigena.png"
+								src="img/icon/indigena agua.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Indígenas</p>
@@ -107,7 +107,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/jovenes.png"
+								src="img/icon/jovenes agua .png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Jóvenes</p>
@@ -124,7 +124,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/viajero.png"
+								src="img/icon/migrantes agua.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Migrantes</p>
@@ -141,7 +141,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/mujer.png"
+								src="img/icon/mujer agua.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Mujeres</p>
@@ -158,7 +158,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/niños.png"
+								src="img/icon/niños azul.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Niños</p>
@@ -175,7 +175,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/tinta.png"
+								src="img/icon/notario azul.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Notarios Públicos</p>
@@ -192,7 +192,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/discapacitado.png"
+								src="img/icon/discapacidad.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Personas con Discapacidad</p>
@@ -209,7 +209,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/segador.png"
+								src="img/icon/productores azul.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Productores</p>

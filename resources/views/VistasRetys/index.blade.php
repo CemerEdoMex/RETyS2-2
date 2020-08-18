@@ -199,7 +199,7 @@
 									src="img/icon/ICONOS_SALUD 2.png"
 									class="img-fluid" width="70">
 								<p
-									class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Salud y Deporte</p>
+								>Salud y Deporte</p>
 							</div>
 						</div>
 					</a>
@@ -266,8 +266,7 @@
 								<img
 									src="img/icon/casa2.png"
 									class="img-fluid" width="70">
-								<p
-									class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Vivienda</p>
+								<p class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Vivienda</p>
 							</div>
 						</div>
 					</a>
@@ -281,7 +280,7 @@
 
 				<div class="col-lg-6 video-box">
            
-					<iframe width="460" height="215" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="450" height="295" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					 <div class="icon-box">
 					 
 					  
