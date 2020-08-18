@@ -15,7 +15,7 @@
 			
 		
 		
-			<div class="col-6">		
+			<div class="col-9">		
 				
 				<strong>Categorias Columna 2</strong>
 				<br>
@@ -238,6 +238,18 @@
 					 <div class="icon-box">
 					 
 					  
+					</div>
+
+					<div class="tab">
+						<ul class="nav nav-tabs">
+							<li class="nav-item">
+							  <a class="nav-link active" href="#">Carpeta Ciudadana</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" href="#">Seguimineto de Tramite</a>
+							</li>
+						
+						  </ul>
 					</div>
 			</div>
 
