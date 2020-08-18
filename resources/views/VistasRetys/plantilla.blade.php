@@ -139,55 +139,47 @@
         </nav>-->
 
         <!-- Page Content  -->
-        <div id="content">
-  
-
-           <!-- <nav class="navbar  navbar-light " id="navsecond" >
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Ocultar</span>
-                    </button>
-                    
-        
-             
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                       
-                    </div>
-                </div>
-            </nav>-->
-            <main id="main">
-    <section class="services">
-   
-     @yield ('tarjetas')
-           <!-- ======= Why Us Section ======= -->
-   
-      <div class="container" id="video">
-
-        <div class="row">
+        <div class="container-fluid">
+		
+          <div class="row mb-2">	
           
-
-       
-        
+          
+            <div class="col-9">		
+              
+              @yield ('tarjetas')
+      
+            </div>	
+            
+      
+      
+            <div class="col-3">
+              <strong>Columna Video y Tabs</strong>
+                 
+                <iframe width="450" height="295" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 
+      
+                <div class="tab">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Carpeta Ciudadana</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Seguimineto de Tramite</a>
+                    </li>
+                  
+                    </ul>
+                </div>
+            </div>
+      
+          </div>
         </div>
 
-      </div>
+          
+          
+     
+          
    
-    </section><!-- End Services Section -->
-    </main>
-
-
    
-
-
-
-
-
-                
-    </div>
-
 
 
 
