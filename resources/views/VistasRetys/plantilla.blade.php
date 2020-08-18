@@ -149,9 +149,13 @@
                  
               <iframe width="450" height="295" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                
+              <br>
 
+            <hr>
+            
+            <br>
               <div class="card border-warning" >
-                <div class="card-body">
+                <div class="card-body text-warning">
                   <h5 class="card-title">Punto de Contacto</h5>
                   
                   <ul class="nav nav-tabs">
@@ -180,20 +184,43 @@
       
             <div class="col-3">
              
-                <div class="tab">
+              <div class="card border-success" >
+                <div class="card-body text-success">
+                  <h5 class="card-title">Carpeta ciudadana</h5>
                   <ul class="nav nav-tabs">
                     <li class="nav-item">
-                      <a class="nav-link active" href="#">Carpeta Ciudadana</a>
+                      <a class="nav-link active" href="#">Ingresa Cuts</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Seguimineto de Tramite</a>
+                      <a class="nav-link" href="#">CUTS</a>
                     </li>
                   
                     </ul>
                 </div>
             </div>
+            <br>
+
+            <hr>
+            
+            <br>
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
+              <div class="card-body ">
+                <h5 class="card-title text-warning">Consulte su solicitud</h5>
+                <p class="card-text">Si realizo un tramite o servicio, consulte el estado
+                  de su solicitud mediante su  folio.</p>
+
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control text-warning" placeholder="Ingrese su folio" aria-label="Ingrese su folio" aria-describedby="basic-addon2"
+                    name="folioID" id="folioID">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-waning" type="button">Buscar...🔎 </button>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
       
-          </div>
+          </div> <!-- Col 3 -->
         </div>
 
           
