@@ -94,7 +94,7 @@
     <li class="nav-item active">
       <a class="nav-link" href="inicio">Tema</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item secondary">
       <a class="nav-link" href="areasgob">Areas de Gobierno</a>
     </li>
     <li class="nav-item">
