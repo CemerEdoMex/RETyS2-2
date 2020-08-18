@@ -188,17 +188,6 @@
 						<div class="card border-0 bg-transparent responsive-categorias card-body">
 							<div class="responsive-categorias">
 								<img
-									src="img/icon/casa2.png"
-
-									class="img-fluid" width="70">
-								<p class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Vivienda</p>
-
-									class="img" >
-								<p
-									class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Vivienda</p>
-
-							</div>
-						</div>
-					</button>
+									src="img/icon/casa2.png">
 
 @stop
