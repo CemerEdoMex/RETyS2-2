@@ -167,15 +167,7 @@
       <div class="container" id="video">
 
         <div class="row">
-          <div class="col-lg-6 video-box">
-           
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-             <div class="icon-box">
-             
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
+          
 
        
         
