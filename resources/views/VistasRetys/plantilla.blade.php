@@ -142,10 +142,35 @@
 
         <div class="container-fluid">
 		
-          <div class="row mb-2">	
+          <div class="row mb-3">	
           
-          
-            <div class="col-9">		
+            <div class="col-3">
+              <strong>Columna Video</strong>
+                 
+              <iframe width="450" height="295" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               
+
+              <div class="card border-warning" >
+                <div class="card-body">
+                  <h5 class="card-title">Punto de Contacto</h5>
+                  
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Federal</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Estatal</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Municipal</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+    
+            </div>
+
+            <div class="col-6">		
               
               @yield ('tarjetas')
       
@@ -154,11 +179,7 @@
       
       
             <div class="col-3">
-              <strong>Columna Video y Tabs</strong>
-                 
-                <iframe width="450" height="295" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                 
-      
+             
                 <div class="tab">
                   <ul class="nav nav-tabs">
                     <li class="nav-item">

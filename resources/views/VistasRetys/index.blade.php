@@ -1,7 +1,7 @@
 @extends('VistasRetys.plantilla')
 @section('tarjetas')
 
-<section class="pt-4 pb-4">
+<section class=" pt-4 pb-4">
 	<div class="container">
 		<div class="row ">
 			<div class="col-12 text-center text-elegant-color-dark h3">
