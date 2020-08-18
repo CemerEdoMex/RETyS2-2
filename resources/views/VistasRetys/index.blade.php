@@ -2,24 +2,6 @@
 @section('tarjetas')
 
 
-
-<!-- Categorias -->
-
-
-
-<section class="pt-4 pb-4">
-	
-	<div class="container-fluid">
-		
-		<div class="row mb-3">
-			
-		
-		
-			<div class="col-9">		
-				
-				<strong>Categorias Columna 2</strong>
-				<br>
-
 				<div class="btn-group mr-2" role="group" aria-label="First group">
 					
 					<button type="button" class="btn">
@@ -207,56 +189,16 @@
 							<div class="responsive-categorias">
 								<img
 									src="img/icon/casa2.png"
-<<<<<<< HEAD
+
 									class="img-fluid" width="70">
 								<p class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Vivienda</p>
-=======
+
 									class="img" >
 								<p
 									class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Vivienda</p>
->>>>>>> 3a6c07d738ea9cacaafab1a12484465430d3338d
+
 							</div>
 						</div>
 					</button>
-					
-					
-				
-				</div>
 
-			</div>	
-			
-
-
-			<div class="col-3">
-				<strong>Columna 3</strong>
-           
-<<<<<<< HEAD
-					<iframe width="450" height="295" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-=======
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
->>>>>>> 3a6c07d738ea9cacaafab1a12484465430d3338d
-					 <div class="icon-box">
-					 
-					  
-					</div>
-
-					<div class="tab">
-						<ul class="nav nav-tabs">
-							<li class="nav-item">
-							  <a class="nav-link active" href="#">Carpeta Ciudadana</a>
-							</li>
-							<li class="nav-item">
-							  <a class="nav-link" href="#">Seguimineto de Tramite</a>
-							</li>
-						
-						  </ul>
-					</div>
-			</div>
-
-		</div>
-	</div>
-
-</section>
-
-<!-- Destacados -->
 @stop
