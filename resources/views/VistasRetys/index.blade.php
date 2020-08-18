@@ -15,7 +15,7 @@
 			
 		
 		
-			<div class="col-6">		
+			<div class="col-8">		
 				
 				<strong>Categorias Columna 2</strong>
 				<br>
@@ -222,13 +222,27 @@
 			
 
 
-			<div class="col-3">
+			<div class="col-4">
 				<strong>Columna 3</strong>
            
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/CrRL854defQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					 <div class="icon-box">
 					 
 					  
+					</div>
+
+					<div class="tab">
+						<ul class="nav nav-tabs">
+							<li class="nav-item">
+							  <a class="nav-link active" href="#">Carpeta Ciudadana</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" href="#">Seguimineto de Tramite</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" href="#">Preguntas frecuentes</a>
+							</li>
+						  </ul>
 					</div>
 			</div>
 
