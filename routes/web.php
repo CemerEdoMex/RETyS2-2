@@ -21,4 +21,4 @@ Route::GET('inicio','AdminRetys@index')->name('inicio');
 
 Route::name('tarjetas')->get('tarjetas','AdminRetys@btarjetas') ;/*ruta de targetas */
 Route::name('areasgob')->get('areasgob','AdminRetys@bareasgob') ;/*Areas de Gobierno */
-Route::name('personasgob')->get('personasgob','AdminRetys@bpersonasgob') ;/*Areas de Gobierno */
+Route::get('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*Areas de Gobierno */
