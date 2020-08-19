@@ -28,7 +28,7 @@
     
     <link rel="stylesheet" href="{{ asset('vendor/carousel.css') }}">
 
-    <title>Trámites y Servicios </title>
+  @yield('title')<title>Trámites y Servicios </title>
 
 </head>
 
@@ -67,7 +67,6 @@
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
         
@@ -76,18 +75,7 @@
           <div class="container">
             <div class="carousel-caption">
               <div class="container-1" >  
-                <form   class="form-inline" action="{{ route('tarjetas') }}" style="justify-content: center;">
-                  <input type="search" id="search" placeholder="Busca tu Tramite" />
-                  <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-      
-      
-        
+
       
       </div>
       <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -102,13 +90,13 @@
         <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
             <ul class="navbar-nav" style="margin:auto;">
                 <li class="nav-item active">
-                    <a class="nav-link" href="inicio">Tema</a>
+                    <a class="nav-link" href="{{ route('inicio')}} ">Tema</a>
                 </li>
                 <li class="nav-item secondary">
-                    <a class="nav-link" href="areasgob">Areas de Gobierno</a>
+                    <a class="nav-link" href="{{ route('areasgob')}} ">Areas de Gobierno</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="personasgob">Personas</a>
+                    <a class="nav-link" href="{{ route('personasgob')}} ">Personas</a>
                 </li>
 
 
