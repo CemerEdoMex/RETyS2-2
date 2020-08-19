@@ -2,7 +2,7 @@
 @section('tarjetas')
 
 <section class=" pt-4 pb-4">
-	<div class="container">
+	<div class="content">
 		<div class="row ">
 			<div class="col-12 text-center text-elegant-color-dark h3">
 				<strong>Categorías</strong>
@@ -254,7 +254,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/casa.png"
+								src="img/icon/casa2.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Vivienda</p>

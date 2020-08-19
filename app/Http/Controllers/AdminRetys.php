@@ -38,4 +38,11 @@ class AdminRetys extends Controller
       return view('VistasRetys.vpersonas');
    }
 
+   public function prueba()
+   {
+
+      return view('VistasRetys.prueba');
+   }
+
+
 }
