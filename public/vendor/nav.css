@@ -1,4 +1,11 @@
 
+.fa {
+  size: 7px;
+  border: 2px;
+}
+
+
+
 .navTwo nav {
     background: rgba(245, 245, 245, 0.9);
     width: 100%;

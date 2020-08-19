@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('bootstrap4.5/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('vendor/nav.css')}}">
      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
      <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
      <link rel="stylesheet" href="css/style.css">
@@ -156,14 +157,23 @@
             <br>
               <div class="card border-warning" >
                 <div class="card-body text-warning">
-                  <h5 class="card-title">Punto de Contacto</h5>
+                  <h5 class="card-title"><i class="fas fa-comments fa-lg"></i>Punto de Contacto</h5>
                   
                   <ul class="nav nav-tabs">
                     <li class="nav-item">
-                      <a class="nav-link active" href="#">Federal</a>
+                      <a class="nav-link " href="#">Federal</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Estatal</a>
+                      <a class="nav-link active" href="#">Estatal</a>
+                      <br> <br>
+                      <p class="text-secondary">En linea <span class="warning"> CHAT</span></p>
+                      <br>
+                      <p class="text-secondary">Centro de Atencion telefonica</p>
+                      <hr>
+                      <ul>
+                        <li class="text-secondary">Llama sin costo <h5 class="text-warning"> 01 800 696 95 96</h5> </li>
+                        <li class="text-secondary"> En el centro de toluca <h5 class="text-warnig"> 0700 </h5> </li>
+                      </ul>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Municipal</a>
@@ -184,15 +194,34 @@
       
             <div class="col-3">
              
-              <div class="card border-success" >
+              <div class="card border-success border-8"  >
                 <div class="card-body text-success">
-                  <h5 class="card-title">Carpeta ciudadana</h5>
+                  <h5 class="card-title"><i class="fas fa-folder-open fa-lg"></i> Carpeta ciudadana</h5>
                   <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#">Ingresa Cuts</a>
-                    </li>
+                    <p class="text-secondary">Ingresa Cuts</p> 
+                    <br>
                     <li class="nav-item">
                       <a class="nav-link" href="#">CUTS</a>
+                      <p class="text-secondary"> Ingresa aqui para realizar tu tramite y/o srvivio o consultar el estado de tus solicitudes </p>
+                      <div class="form-grupo">
+                        <form action="">
+                            <div class="form-group">
+                              <input type="email" class="form-control" id="cuts" name="cuts" aria-describedby="cutsHelp" placeholder="CUTS">
+                              <small id="cutslHelp" class="form-text text-muted">Ingresa tu cuts previamente creado.</small>
+                            </div>
+                            <div class="form-group">
+                              <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                            </div>
+                            <button type="button" class="btn btn-success btn-fluid">Iniciar Sesion</button>
+                          </form>
+                          <hr>
+                        <ul>
+                          <li> <a href="#">¿Olvidaste tu contraseña?</a> </li>
+                          <li> <a href="#"> Verifica si tienes CUTS</a> </li>
+                          <li> <a href="#"> ¿No tienes CUTS? Obtenlo AQUI</a> </li>
+                          <li> <a href="#"> ¿Deseas modificar tu correo electronico?</a> </li>
+                        </ul>
+                      </div>
                     </li>
                   
                     </ul>
@@ -205,7 +234,7 @@
             <br>
             <div class="card border-warning mb-3" style="max-width: 18rem;">
               <div class="card-body ">
-                <h5 class="card-title text-warning">Consulte su solicitud</h5>
+                <h5 class="card-title text-warning"><i class="fas fa-search fa-lg" ></i>Consulte su solicitud</h5>
                 <p class="card-text">Si realizo un tramite o servicio, consulte el estado
                   de su solicitud mediante su  folio.</p>
 
@@ -263,5 +292,8 @@
             });
         });
     </script>
+
+    @yield('scripts')
+
   </body>
 </html>
