@@ -76,7 +76,7 @@
           <div class="container">
             <div class="carousel-caption">
               <div class="container-1" >  
-                <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;">
+                <form   class="form-inline" action="{{ route('tarjetas') }}" style="justify-content: center;">
                   <input type="search" id="search" placeholder="Busca tu Tramite" />
                   <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                 </form>
@@ -87,19 +87,7 @@
       
       
       
-        <div class="carousel-item">
-          <img class="third-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="Third slide"  style="  justify-content: center;">
-          <div class="container">
-            <div class="carousel-caption">
-               <div class="container-1">
-                  <form   class="form-inline" action="{{ route('tarjetas') }}" >
-                    <input type="search" id="search" placeholder="Busca tu Tramite" />
-                    <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
-                  </form>
-                </div>
-            </div>
-          </div>
-        </div>
+        
       
       </div>
       <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
