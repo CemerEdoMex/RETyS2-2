@@ -1,4 +1,6 @@
 @extends('VistasRetys.plantilla')
+
+
 @section('tarjetas')
 
 <section class=" pt-4 pb-4">

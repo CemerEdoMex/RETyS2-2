@@ -15,13 +15,13 @@
     return view('welcome');
 });*/
 
-Route::get('/','AdminRetys@index');
+Route::GET('/','AdminRetys@index');
 
 Route::GET('inicio','AdminRetys@index')->name('inicio');
 
-Route::get('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de targetas */
-Route::get('areasgob','AdminRetys@bareasgob')->name('areasgob') ;/*Areas de Gobierno */
-Route::get('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*Areas de Gobierno */
+Route::GET('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGETas */
+Route::GET('areasgob','AdminRetys@bareasgob')->name('areasgob') ;/*Areas de Gobierno */
+Route::GET('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*Areas de Gobierno */
 
 
 Route::GET('prueba','AdminRetys@prueba')->name('prueba');

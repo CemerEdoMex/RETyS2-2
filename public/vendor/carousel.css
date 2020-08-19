@@ -12,6 +12,7 @@ body {
 
 /* Carousel base class */
 .carousel {
+  background-color:#777 ;
   margin-bottom: 1rem;
 }
 /* Since positioning the image, we need to help out the caption */

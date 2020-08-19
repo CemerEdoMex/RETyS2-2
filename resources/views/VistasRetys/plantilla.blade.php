@@ -28,7 +28,7 @@
     
     <link rel="stylesheet" href="{{ asset('vendor/carousel.css') }}">
 
-    <title>Trámites y Servicios </title>
+  @yield('title')<title>Trámites y Servicios </title>
 
 </head>
 
@@ -125,13 +125,13 @@
         <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
             <ul class="navbar-nav" style="margin:auto;">
                 <li class="nav-item active">
-                    <a class="nav-link" href="inicio">Tema</a>
+                    <a class="nav-link" href="{{ route('inicio')}} ">Tema</a>
                 </li>
                 <li class="nav-item secondary">
-                    <a class="nav-link" href="areasgob">Areas de Gobierno</a>
+                    <a class="nav-link" href="{{ route('areasgob')}} ">Areas de Gobierno</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="personasgob">Personas</a>
+                    <a class="nav-link" href="{{ route('personasgob')}} ">Personas</a>
                 </li>
 
 
