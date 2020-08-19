@@ -72,11 +72,11 @@
       <div class="carousel-inner">
         
         <div class="carousel-item active">
-        <img class="first-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="First slide">
+        <img class="first-slide" src="{{ asset('img/palacioN.jpg')}}" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <div class="container-1">  
-                <form   class="form-inline" action="{{ route('tarjetas') }}" >
+              <div class="container-1" >  
+                <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;">
                   <input type="search" id="search" placeholder="Busca tu Tramite" />
                   <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                 </form>
@@ -85,21 +85,10 @@
           </div>
         </div>
       
-        <div class="carousel-item">
-          <img class="second-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">               <div class="container-1">
-                <form   class="form-inline" action="{{ route('tarjetas') }}" >
-                  <input type="search" id="search" placeholder="Busca tu Tramite" />
-                  <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
-                </form>
-            </div>
-          </div>
-        </div>
-        </div>
+      
       
         <div class="carousel-item">
-          <img class="third-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="Third slide">
+          <img class="third-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="Third slide"  style="  justify-content: center;">
           <div class="container">
             <div class="carousel-caption">
                <div class="container-1">
