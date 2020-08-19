@@ -67,7 +67,6 @@
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
         
@@ -76,7 +75,7 @@
           <div class="container">
             <div class="carousel-caption">
               <div class="container-1" >  
-                <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;">
+                <form   class="form-inline" action="{{ route('tarjetas') }}" style=" justify-content: center;">
                   <input type="search" id="search" placeholder="Busca tu Tramite" />
                   <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                 </form>
@@ -88,11 +87,11 @@
       
       
         <div class="carousel-item">
-          <img class="third-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="Third slide"  style="  justify-content: center;">
+          <img class="second-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="Third slide" >
           <div class="container">
             <div class="carousel-caption">
                <div class="container-1">
-                  <form   class="form-inline" action="{{ route('tarjetas') }}" >
+                  <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
                     <input type="search" id="search" placeholder="Busca tu Tramite" />
                     <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                   </form>
