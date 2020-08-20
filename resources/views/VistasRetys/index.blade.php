@@ -18,7 +18,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/cana.png"
+								src="img/icon/adultosm.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Adultos Mayores</p>
@@ -35,7 +35,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/estudiante.png"
+								src="img/icon/educacionverde.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Educación</p>
@@ -52,10 +52,10 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/mayas.png"
+								src="img/icon/culturaverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Cultura o Historia</p>
+								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Cultura</p>
 						</div>
 					</div>
 				</a>
@@ -69,7 +69,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/dinero.png"
+								src="img/icon/finanzasverde.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Finanzas</p>
@@ -120,7 +120,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/ley.png"
+								src="img/icon/justiciaverde.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">justicia</p>
@@ -137,7 +137,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/verde.png"
+								src="img/icon/ambienteverde.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Media Ambiente</p>
@@ -154,10 +154,10 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/cuenta.png"
+								src="img/icon/impuestosverdes.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Pago de Inpuestos</p>
+								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Pago de Impuestos</p>
 						</div>
 					</div>
 				</a>
@@ -171,7 +171,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/telefono.png"
+								src="img/icon/quejasverde.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Quejas o Denuncias</p>
@@ -188,7 +188,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/corazon.png"
+								src="img/icon/saludverde.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Salud y Deporte</p>
@@ -205,7 +205,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/policia.png"
+								src="img/icon/seguridadverde.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Seguridad</p>
@@ -239,7 +239,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/mapa.png"
+								src="img/icon/turismoverde.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Turismo</p>
