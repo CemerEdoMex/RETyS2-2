@@ -76,6 +76,34 @@
             <div class="carousel-caption">
               <div class="container-1" >  
 
+                <form   class="form-inline" action="{{ route('tarjetas') }}" style="justify-content: center;">
+
+              
+                  <input type="search" id="search" placeholder="Busca tu Tramite" />
+                  <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      
+      
+
+        <div class="carousel-item">
+          <img class="second-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="Third slide" >
+          <div class="container">
+            <div class="carousel-caption">
+               <div class="container-1">
+                  <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
+                    <input type="search" id="search" placeholder="Busca tu Tramite" />
+                    <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+
       
       </div>
       <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -261,14 +289,7 @@
                 integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
                 crossorigin="anonymous"></script>
             <script src="{{ asset('bootstrap4.5/js/bootstrap.min.js') }}"></script>
-            <script type="text/javascript">
-                $(document).ready(function() {
-                    $('#sidebarCollapse').on('click', function() {
-                        $('#sidebar').toggleClass('active');
-                    });
-                });
-
-            </script>
+            <
 
             @yield('scripts')
 
