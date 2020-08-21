@@ -123,7 +123,7 @@
 								src="img/icon/justiciaverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">justicia</p>
+								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Justicia</p>
 						</div>
 					</div>
 				</a>
@@ -140,7 +140,7 @@
 								src="img/icon/ambienteverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Media Ambiente</p>
+								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Medio Ambiente</p>
 						</div>
 					</div>
 				</a>

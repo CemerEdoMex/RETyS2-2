@@ -91,7 +91,7 @@
 
 
             <div class="carousel-item">
-              <img class="second-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="Third slide" >
+              <img class="second-slide" src="{{ asset('img/Cosmovitral.jpg')}}" alt="Third slide" >
               <div class="container">
                 <div class="carousel-caption">
                    <div class="container-1">
