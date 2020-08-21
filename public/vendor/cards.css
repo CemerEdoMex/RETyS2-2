@@ -29,7 +29,7 @@
 .tarjeta{
 	width: 300px;
 	height: 350px;
-	background: #F29720;
+	background: #3abd35;
 	position: relative;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -75,7 +75,7 @@
 	text-align: center;
 	color: #fff;
 	font-family: "open sans";
-  background: #F29720;
+  background: #3abd35;
 }
 
 .tarjeta-wrap:hover .tarjeta{
