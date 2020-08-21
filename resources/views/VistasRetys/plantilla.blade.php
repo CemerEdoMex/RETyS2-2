@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-      
+
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ asset('bootstrap4.5/css/bootstrap.min.css') }}">
@@ -25,7 +25,7 @@
         <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        
+
         <link rel="stylesheet" href="{{ asset('vendor/carousel.css') }}">
 
       @yield('title')<title>Trámites y Servicios </title>
@@ -57,7 +57,7 @@
                 <a class="nav-link disabled" href="#">DATOS ABIERTOS</a>
               </li>
             </ul>
-            
+
           </div>
         </nav>
       </header>
@@ -69,16 +69,16 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
           </ol>
           <div class="carousel-inner">
-            
+
             <div class="carousel-item active">
             <img class="first-slide" src="{{ asset('img/palacioN.jpg')}}" alt="First slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <div class="container-1" >  
+                  <div class="container-1" >
 
                     <form   class="form-inline" action="{{ route('tarjetas') }}" style="justify-content: center;">
 
-                  
+
                       <input type="search" id="search" placeholder="Busca tu Tramite" />
                       <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                     </form>
@@ -86,9 +86,9 @@
                 </div>
               </div>
             </div>
-          
-          
-          
+
+
+
 
             <div class="carousel-item">
               <img class="second-slide" src="{{ asset('img/TolucaNevado.jpg')}}" alt="Third slide" >
@@ -104,7 +104,7 @@
               </div>
             </div>
 
-          
+
           </div>
           <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -132,14 +132,14 @@
                 </ul>
             </nav>
             <div class="container-fluid">
-           
+
 
                 <div class="row mb-3">
 
                     <div class="col-lg-3">
-                       
+
                         <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CrRL854defQ" 
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CrRL854defQ"
                         allowfullscreen></iframe>
                         </div>
                         <br>
@@ -253,28 +253,34 @@
                     </div> <!-- Col 3 -->
                 </div> <!-- sISTEMA DE COLUMNAS -->
 
-                 
+                <div class="row">
+                    <div class="col-12 col-md">
+                        @include('VistasRetys.cards')
+                    </div>
+                </div>
 
-                    
-           
-          
+
+
+
             <!-- FOOTER -->
                 <footer>
           <div class="container">
             <div class="row">
-              
+
               <div class="col-lg-4 col-md-6">
-                <h3>Site Map</h3>
+                <h3>Mapa del  sitio</h3>
                 <ul class="list-unstyled three-column">
-                  <li>Home</li>
-                  <li>Services</li>
-                  <li>About</li>
-                  <li>Code</li>
-                  <li>Design</li>
-                  <li>Host</li>
-                  <li>Contact</li>
-                  <li>Company</li>
+                  <li>Mi Portal</li>
+                  <li>Trmiates y Servicios</li>
+                  <li>Transparencia</li>
                 </ul>
+
+                <ul class="list-unstyled three-column">
+                    <li>Temas</li>
+                    <li>Areas de Gobierno</li>
+                    <li>Personas</li>
+                  </ul>
+
                 <ul class="list-unstyled socila-list">
                   <li><img src="http://placehold.it/48x48" alt="" /></li>
                   <li><img src="http://placehold.it/48x48" alt="" /></li>
@@ -284,9 +290,9 @@
                   <li><img src="http://placehold.it/48x48" alt="" /></li>
                 </ul>
               </div>
-              
+
               <div class="col-lg-4 col-md-6">
-                <h3>latest Articles</h3>
+                <h3>Ultimas publicaciones</h3>
                 <div class="media">
                   <a href="#" class="pull-left">
                     <img src="http://placehold.it/64x64" alt="" class="media-object" />
@@ -296,7 +302,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                   </div>
                 </div>
-                
+
                 <div class="media">
                   <a href="#" class="pull-left">
                     <img src="http://placehold.it/64x64" alt="" class="media-object" />
@@ -306,7 +312,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                   </div>
                 </div>
-                
+
                 <div class="media">
                   <a href="#" class="pull-left">
                     <img src="http://placehold.it/64x64" alt="" class="media-object" />
@@ -316,9 +322,9 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                   </div>
                 </div>
-                
+
               </div>
-              
+
               <div class="col-lg-4">
                 <h3>Our Work</h3>
                 <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
@@ -326,14 +332,14 @@
                 <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
                 <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
               </div>
-              
+
             </div>
           </div>
           <div class="copyright text-center">
-            Copyright &copy; 2017 <span>Your Template Name</span>
+            Gobierno del Estado de México.
           </div>
         </footer>
-          
+
 
      </main>
 
@@ -343,7 +349,7 @@
                 <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
 
                 <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-              
+
                 <script src="./vendor/venobox/venobox.min.js"></script>
                 <script src="./vendor/waypoints/jquery.waypoints.min.js"></script>
                 <script src="./vendor/counterup/counterup.min.js"></script>
