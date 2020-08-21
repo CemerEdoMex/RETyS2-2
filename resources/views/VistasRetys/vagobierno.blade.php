@@ -21,7 +21,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/ICONOS_ESTATAL 2.png"
+								src="img/icon/mexico.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Federal</p>
