@@ -51,7 +51,7 @@
                 <a class="nav-link" href="{{ route('trasnparencia')}}">TRANSPARENCIA</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link disabled" href="#">DATOS ABIERTOS</a>
+                <a class="nav-link disabled" href="http://edomex.gob.mx/estadisticas">DATOS ABIERTOS</a>
               </li>
             </ul>
 
@@ -328,17 +328,17 @@
             <div class="row">
 
               <div class="col-lg-4 col-md-6">
-                <h3>Mapa del  sitio</h3>
+                <h3 class=" text-white ">Mapa del  sitio</h3>
                 <ul class="list-unstyled three-column">
-                  <li>Mi Portal</li>
-                  <li>Trmiates y Servicios</li>
-                  <li>Transparencia</li>
+                  <li class=" text-white ">Mi Portal</li>
+                  <li class=" text-white ">Trmiates y Servicios</li>
+                  <li class=" text-white ">Transparencia</li>
                 </ul>
 
                 <ul class="list-unstyled three-column">
-                    <li>Temas</li>
-                    <li>Areas de Gobierno</li>
-                    <li>Personas</li>
+                    <li class=" text-white ">Temas</li>
+                    <li class=" text-white ">Areas de Gobierno</li>
+                    <li class=" text-white ">Personas</li>
                   </ul>
 
                 <ul class="list-unstyled socila-list">
@@ -352,7 +352,7 @@
               </div>
 
               <div class="col-lg-4 col-md-6">
-                <h3>Ultimas publicaciones</h3>
+                <h3 class=" text-white ">Ultimas publicaciones</h3>
                 <div class="media">
                   <a href="#" class="pull-left">
                     <img src="http://placehold.it/64x64" alt="" class="media-object" />
@@ -386,11 +386,11 @@
               </div>
 
               <div class="col-lg-4">
-                <h3>Our Work</h3>
-                <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-                <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-                <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
-                <img class="img-thumbnail" src="http://placehold.it/150x100" alt="" />
+                <h3 class=" text-white ">Nuestro trabajo</h3>
+                <img class="img-thumbnail" src="{{ asset ('img/icon/educacionverde.png') }}" alt="" />
+                <img class="img-thumbnail" src="{{ asset ('img/icon/culturaverde.png') }}" alt="" />
+                <img class="img-thumbnail" src="{{ asset ('img/icon/39AB61JUSTICIAVERDE.png') }}" alt="" />
+                <img class="img-thumbnail" src="{{ asset ('img/icon/adultosm.png') }}" alt="" />
               </div>
 
             </div>
@@ -399,6 +399,9 @@
             Gobierno del Estado de México.
           </div>
         </footer>
+
+
+
 
 
      </main>
