@@ -5,9 +5,6 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
-
-
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ asset('bootstrap4.5/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/nav.css') }}">
@@ -43,15 +40,15 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto" >
+            <ul class="navbar-nav mr-auto text-bold" >
               <li class="nav-item active">
-                <a class="nav-link" href="#">MI PORTAL</a>
+                <a class="nav-link" href="http://edomex.gob.mx/">MI PORTAL</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#">TRAMITES Y SERVICIOS</a>
+                <a class="nav-link" href="#tramitesServivios">TRAMITES Y SERVICIOS</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#">TRANSPARENCIA</a>
+                <a class="nav-link" href="{{ route('trasnparencia')}}">TRANSPARENCIA</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link disabled" href="#">DATOS ABIERTOS</a>
@@ -67,42 +64,74 @@
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner">
 
             <div class="carousel-item active">
-            <img class="first-slide" src="{{ asset('img/palacioN.jpg')}}" alt="First slide">
-              <div class="container">
-                <div class="carousel-caption">
-                  <div class="container-1" >
+            <img class="first-slide" src="{{ asset('img/Pal_1.jpg')}}" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="card-title">RETyS</h1>
+                    <p class="font-weight-bold" >Registro Estatal De Tramites y Servicios</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
 
-                    <form   class="form-inline" action="{{ route('tarjetas') }}" style="justify-content: center;">
-
-
-                      <input type="search" id="search" placeholder="Busca tu Tramite" />
-                      <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
-                    </form>
-                  </div>
                 </div>
-              </div>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
+                            <input type="search" id="search" placeholder="Busca tu Tramite" />
+                            <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
+                        </form>
+                    </div>
+                </div>
             </div>
 
-
-
-
             <div class="carousel-item">
-              <img class="second-slide" src="{{ asset('img/Cosmovitral.jpg')}}" alt="Third slide" >
+              <img class="second-slide" src="{{ asset('img/Pal_2.jpg')}}" alt="Third slide" >
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="card-title font-weight-bold">RETyS</h1>
+                    <p class="font-weight-bold" >Registro Estatal De Tramites y Servicios</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+              </div>
               <div class="container">
                 <div class="carousel-caption">
                    <div class="container-1">
-                      <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
+                    <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
                         <input type="search" id="search" placeholder="Busca tu Tramite" />
                         <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                       </form>
-                    </div>
                 </div>
               </div>
             </div>
+
+            <div class="carousel-item">
+                <img class="second-slide" src="{{ asset('img/Pal_3.jpg')}}" alt="Third slide" >
+                  <div class="carousel-caption d-none d-md-block">
+                      <h1 class="card-title font-weight-bold">RETyS</h1>
+                      <p class="font-weight-bold" >Registro Estatal De Tramites y Servicios</p>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="carousel-caption">
+                     <div class="container-1">
+                      <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
+                          <input type="search" id="search" placeholder="Busca tu Tramite" />
+                          <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
+                        </form>
+                  </div>
+                </div>
+              </div>
 
 
           </div>
@@ -118,20 +147,31 @@
             <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
                 <ul class="navbar-nav" style="margin:auto;">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ route('inicio')}} ">Tema</a>
+                        <a class="nav-link text-bold" href="{{ route('inicio')}} ">Trámites y Servicios</a>
                     </li>
-                    <li class="nav-item secondary">
-                        <a class="nav-link" href="{{ route('areasgob')}} ">Areas de Gobierno</a>
-                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Areas de Gobierno</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Federal</a>
+                          <a class="dropdown-item" href="#">Estatal</a>
+                          <a class="dropdown-item" href="#">Municipal</a>
+                      </li>
+
+                    <!--<li class="nav-item secondary">
+                        <a class="nav-link text-bold" href="{{ route('areasgob')}} ">Areas de Gobierno</a>
+                    </li> -->
+
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('personasgob')}} ">Personas</a>
+                        <a class="nav-link text-bold" href="{{ route('personasgob')}} ">Personas</a>
                     </li>
 
 
 
                 </ul>
             </nav>
-            <div class="container-fluid">
+            <div class="container-fluid" style="padding-top: 15px"  id="tramitesServivios">
 
 
                 <div class="row mb-3">
@@ -147,40 +187,52 @@
                         <hr>
 
                         <br>
-                        <div class="card border-warning">
+                        <div class="card gradient-card bg-gradient-warning ">
+                            <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
+                                <div class="text-white d-flex h-100 mask blue-gradient-rgba">
+                                <div class="first-content align-self-center p-3">
+                                    <h3 class="card-title text-warning text-bold"><i class="fas fa-comments fa-2x"></i> Punto de Contacto</h3>
+                                </div>
+                                </div>
+                            </div>
                             <div class="card-body text-warning">
-                                <h5 class="card-title"><i class="fas fa-comments fa-lg"></i>Punto de Contacto</h5>
-
-                                <ul class="nav nav-tabs">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link " href="#">Federal</a>
+                                      <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Federal</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#">Estatal</a>
-                                        <br> <br>
-                                        <p class="text-secondary">En linea <span class="warning"> CHAT</span></p>
-                                        <br>
-                                        <p class="text-secondary">Centro de Atencion telefonica</p>
-                                        <hr>
-                                        <ul>
-                                            <li class="text-secondary">Llama sin costo <h5 class="text-warning"> 01 800 696
-                                                    95 96</h5>
-                                            </li>
-                                            <li class="text-secondary"> En el centro de toluca <h5 class="text-warnig"> 0700
-                                                </h5>
-                                            </li>
-                                        </ul>
+                                      <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Estatal</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Municipal</a>
+                                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Municipal</a>
                                     </li>
                                 </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+                                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <br> <br>
+                                       <p class="text-secondary text-bold">Centro de Atención Telefónica</p>
+                                        <ul>
+                                            <li class="text-secondary">
+
+                                                <p>Llama sin costo <span class="text-warning"> 01 800 696
+                                                    95 96</span></p>
+                                            </li>
+                                            <li class="text-secondary">
+                                                <p>En el centro de toluca <span class="text-warning"> 0700
+                                                </span></p>
+                                            </li>
+                                        </ul>
+                                        <p class="text-secondary text-bold">Centro de Servicios Administrativos</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                                </div>
+
                             </div>
                         </div>
 
                     </div> <!-- Col 3 -->
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" >
 
                         @yield ('tarjetas')
 
@@ -188,14 +240,16 @@
 
                     <div class="col-lg-3">
 
-                        <div class="card border-success border-8">
+                        <div class="card bg-gradient-success ">
+                            <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
+                                <div class="text-success d-flex h-100 mask blue-gradient-rgba">
+                                <div class="first-content align-self-center p-3">
+                                    <h3 class="text-sucess text-bold"><i class="fas fa-folder-open fa-2x"></i> Carpeta Ciudadana</h3>
+                                </div>
+                                </div>
+                            </div>
                             <div class="card-body text-success">
-                                <h5 class="card-title"><i class="fas fa-folder-open fa-lg"></i> Carpeta ciudadana</h5>
-                                <ul class="nav nav-tabs">
-                                    <p class="text-secondary">Ingresa Cuts</p>
-                                    <br>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">CUTS</a>
+                                        CUTS
                                         <p class="text-secondary"> Ingresa aqui para realizar tu tramite y/o srvivio o
                                             consultar el estado de tus solicitudes </p>
                                         <div class="form-grupo">
@@ -231,10 +285,16 @@
                         <hr>
 
                         <br>
-                        <div class="card border-warning mb-3" style="max-width: 18rem;">
+                        <div class="card bg-gradient-info">
+                            <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
+                                <div class="text-info d-flex h-100 mask blue-gradient-rgba">
+                                <div class="first-content align-self-center p-3">
+                                    <h3 class="text-info text-bold"><i class="fas fa-search"></i>Consulte su solicitud</h3>
+                                </div>
+                                </div>
+                            </div>
                             <div class="card-body ">
-                                <h5 class="card-title text-warning"><i class="fas fa-search fa-lg"></i>Consulte su solicitud
-                                </h5>
+
                                 <p class="card-text">Si realizo un tramite o servicio, consulte el estado
                                     de su solicitud mediante su folio.</p>
 
@@ -243,7 +303,7 @@
                                         aria-label="Ingrese su folio" aria-describedby="basic-addon2" name="folioID"
                                         id="folioID">
                                     <div class="input-group-append">
-                                        <button class="btn btn-warning" type="button">Buscar...🔎 </button>
+                                        <button class="btn btn-info" type="button">Buscar...🔎 </button>
                                     </div>
                                 </div>
 
@@ -365,7 +425,7 @@
                     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
                     crossorigin="anonymous"></script>
                 <script src="{{ asset('bootstrap4.5/js/bootstrap.min.js') }}"></script>
-                <
+
 
                 @yield('scripts')
 

@@ -7,11 +7,12 @@
 	<div class="content">
 		<div class="row ">
 			<div class="col-12 text-center text-elegant-color-dark h3">
-				<strong>Categorías</strong>
+				<strong>Catalogo de Trámites y Servicios</strong>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+
+                <a class="text-success"
 					href=""
 					title="Trámites">
 					<div
@@ -21,14 +22,14 @@
 								src="img/icon/adultosm.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Adultos Mayores</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Adultos Mayores</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/173"
 					title="Servicios">
 					<div
@@ -38,14 +39,14 @@
 								src="img/icon/educacionverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Educación</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Educación</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/157"
 					title="Educación">
 					<div
@@ -55,14 +56,14 @@
 								src="img/icon/culturaverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Cultura</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Cultura</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/160"
 					title="Finanzas">
 					<div
@@ -72,14 +73,14 @@
 								src="img/icon/finanzasverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Finanzas</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Finanzas</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/162"
 					title="Medio Ambiente">
 					<div
@@ -89,14 +90,14 @@
 								src="img/icon/reclutamiento2.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Empleo</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Empleo</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/163"
 					title="Licencias">
 					<div
@@ -106,14 +107,14 @@
 								src="img/icon/familia.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Familia</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Familia</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/164"
 					title="Seguridad Pública">
 					<div
@@ -123,14 +124,14 @@
 								src="img/icon/justiciaverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Justicia</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Justicia</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/165"
 					title="Negocios y Empresas">
 					<div
@@ -140,14 +141,14 @@
 								src="img/icon/ambienteverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Medio Ambiente</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Medio Ambiente</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/166"
 					title="Trabajo">
 					<div
@@ -157,14 +158,14 @@
 								src="img/icon/impuestosverdes.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Pago de Impuestos</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Pago de Impuestos</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/167"
 					title="Registro Público">
 					<div
@@ -174,14 +175,14 @@
 								src="img/icon/quejasverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Quejas o Denuncias</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Quejas o Denuncias</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/169"
 					title="Vehículos">
 					<div
@@ -191,14 +192,14 @@
 								src="img/icon/saludverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Salud y Deporte</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Salud y Deporte</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/154"
 					title="Salud">
 					<div
@@ -208,14 +209,14 @@
 								src="img/icon/seguridadverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Seguridad</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Seguridad</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/161"
 					title="Registro Civil">
 					<div
@@ -225,14 +226,14 @@
 								src="img/icon/autobus.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Transporte y Urbanismo</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Transporte y Urbanismo</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/155"
 					title="Transporte">
 					<div
@@ -242,14 +243,14 @@
 								src="img/icon/turismoverde.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Turismo</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Turismo</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a class="text-success"
 					href="/ventanilla/categoria/156"
 					title="Ciudadania">
 					<div
@@ -259,12 +260,12 @@
 								src="img/icon/casa2.png"
 								class="img-fluid" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Vivienda</p>
+								class="font-weight-bold  align-self-center responsive-text-categorias">Vivienda</p>
 						</div>
 					</div>
 				</a>
 			</div>
-			
+
 
 		</div>
 	</div>
