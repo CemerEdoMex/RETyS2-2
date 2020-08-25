@@ -40,7 +40,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto text-bold" >
+            <ul class="navbar-nav mr-auto text-bold text-dark" >
               <li class="nav-item active">
                 <a class="nav-link" href="http://edomex.gob.mx/">MI PORTAL</a>
               </li>
@@ -147,11 +147,11 @@
             <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
                 <ul class="navbar-nav" style="margin:auto;">
                     <li class="nav-item active">
-                        <a class="nav-link text-bold" href="{{ route('inicio')}} ">TRÁMITES EN LÍNEA</a>
+                        <a class="nav-link text-bold text-dark" href="{{ route('inicio')}} ">TRÁMITES EN LÍNEA</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ÁREAS DE GOBIERNO</a>
+                        <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ÁREAS DE GOBIERNO</a>
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="#">Federal</a>
                           <a class="dropdown-item" href="#">Estatal</a>
@@ -164,7 +164,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link text-bold" href="{{ route('personasgob')}} ">POR PERSONA</a>
+                        <a class="nav-link text-bold text-dark" href="{{ route('personasgob')}} ">POR PERSONA</a>
                     </li>
 
 
@@ -176,7 +176,7 @@
 
                 <div class="row mb-3">
 
-                    <div class="col-lg-3 text-center">
+                    <div class="col-lg-3 text-center text-dark">
 
                         <h3> Video Tutorial</h3>
                         <div class="embed-responsive embed-responsive-16by9">

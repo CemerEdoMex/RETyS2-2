@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ asset('vendor/cards.css') }}">
 <div class="card mb-3">
-    <h3 class="card-title text-center font-weight-bold"  style=" font-size: 42px;">Trámites más buscados
+    <h3 class="card-title text-center font-weight-bold text-dark"  style=" font-size: 42px;">Trámites más buscados
 
     </h3>
     <div class="contenedor">
