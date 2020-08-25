@@ -6,8 +6,8 @@
 <section class=" pt-4 pb-4">
 	<div class="content">
 		<div class="row ">
-			<div class="col-12 text-center text-elegant-color-dark h3">
-				<strong>Catalogo de Trámites y Servicios</strong>
+			<div class="col-12 text-center text-elegant-color-dark" >
+				<p style=" font-size: 42px;">Catalogo de Trámites y Servicios</p>
 			</div>
 
 			<div class="col-6 col-xl-3 col-md-4">

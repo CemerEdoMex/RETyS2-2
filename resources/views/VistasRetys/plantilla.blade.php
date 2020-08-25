@@ -51,7 +51,7 @@
                 <a class="nav-link" href="{{ route('trasnparencia')}}">TRANSPARENCIA</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link disabled" href="http://edomex.gob.mx/estadisticas">DATOS ABIERTOS</a>
+                <a class="nav-link " href="http://edomex.gob.mx/estadisticas">DATOS ABIERTOS</a>
               </li>
             </ul>
 
@@ -71,8 +71,8 @@
             <div class="carousel-item active">
             <img class="first-slide" src="{{ asset('img/Pal_1.jpg')}}" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 class="card-title">RETyS</h1>
-                    <p class="font-weight-bold" >Registro Estatal De Tramites y Servicios</p>
+                    <h1 class="card-title font-weight-bold" style=" font-size: 82px;">RETyS</h1>
+                    <h2 class="font-weight-bold" >Registro Estatal de Trámites  y Servicios</h2>
                     <br>
                     <br>
                     <br>
@@ -82,7 +82,7 @@
                 <div class="container">
                     <div class="carousel-caption">
                         <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                            <input type="search" id="search" placeholder="Busca tu Tramite" />
+                            <input type="search" id="search" placeholder="Busca tu Trámite" />
                             <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                         </form>
                     </div>
@@ -92,8 +92,8 @@
             <div class="carousel-item">
               <img class="second-slide" src="{{ asset('img/Pal_2.jpg')}}" alt="Third slide" >
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 class="card-title font-weight-bold">RETyS</h1>
-                    <p class="font-weight-bold" >Registro Estatal De Tramites y Servicios</p>
+                    <h1 class="card-title font-weight-bold" style=" font-size: 82px;">RETyS</h1>
+                    <h2 class="font-weight-bold" >Registro Estatal de Trámites y Servicios</h2>
                     <br>
                     <br>
                     <br>
@@ -104,7 +104,7 @@
                 <div class="carousel-caption">
                    <div class="container-1">
                     <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                        <input type="search" id="search" placeholder="Busca tu Tramite" />
+                        <input type="search" id="search" placeholder="Busca tu Trámite" />
                         <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                       </form>
                 </div>
@@ -114,8 +114,8 @@
             <div class="carousel-item">
                 <img class="second-slide" src="{{ asset('img/Pal_3.jpg')}}" alt="Third slide" >
                   <div class="carousel-caption d-none d-md-block">
-                      <h1 class="card-title font-weight-bold">RETyS</h1>
-                      <p class="font-weight-bold" >Registro Estatal De Tramites y Servicios</p>
+                      <h1 class="card-title font-weight-bold" style=" font-size: 72px;">RETyS</h1>
+                      <h3 class="font-weight-bold" >Registro Estatal de Trámites y Servicios</h3>
                       <br>
                       <br>
                       <br>
@@ -126,7 +126,7 @@
                   <div class="carousel-caption">
                      <div class="container-1">
                       <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                          <input type="search" id="search" placeholder="Busca tu Tramite" />
+                          <input type="search" id="search" placeholder="Busca tu Trámite" />
                           <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                         </form>
                   </div>
@@ -147,11 +147,11 @@
             <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
                 <ul class="navbar-nav" style="margin:auto;">
                     <li class="nav-item active">
-                        <a class="nav-link text-bold" href="{{ route('inicio')}} ">Trámites y Servicios</a>
+                        <a class="nav-link text-bold" href="{{ route('inicio')}} ">TRÁMITES EN LÍNEA</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Areas de Gobierno</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ÁREAS DE GOBIERNO</a>
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="#">Federal</a>
                           <a class="dropdown-item" href="#">Estatal</a>
@@ -164,7 +164,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link text-bold" href="{{ route('personasgob')}} ">Personas</a>
+                        <a class="nav-link text-bold" href="{{ route('personasgob')}} ">POR PERSONA</a>
                     </li>
 
 
@@ -176,8 +176,9 @@
 
                 <div class="row mb-3">
 
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 text-center">
 
+                        <h3> Video Tutorial</h3>
                         <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CrRL854defQ"
                         allowfullscreen></iframe>
@@ -214,11 +215,11 @@
                                         <ul>
                                             <li class="text-secondary">
 
-                                                <p>Llama sin costo <span class="text-warning"> 01 800 696
-                                                    95 96</span></p>
+                                                <p>Lada sin costo <span class="text-warning"> 01 800 696 96 96
+                                                  </span></p>
                                             </li>
                                             <li class="text-secondary">
-                                                <p>En el centro de toluca <span class="text-warning"> 0700
+                                                <p>En el valle de Toluca <span class="text-warning"> 070
                                                 </span></p>
                                             </li>
                                         </ul>
@@ -257,22 +258,22 @@
                                                 <div class="form-group">
                                                     <input type="email" class="form-control" id="cuts" name="cuts"
                                                         aria-describedby="cutsHelp" placeholder="CUTS">
-                                                    <small id="cutslHelp" class="form-text text-muted">Ingresa tu cuts
-                                                        previamente creado.</small>
+                                                    <small id="cutslHelp" class="form-text text-muted">Ingresa tu CUTS previamente creada</small>
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="password" class="form-control" id="password"
                                                         name="password" placeholder="Password">
                                                 </div>
-                                                <button type="button" class="btn btn-success btn-fluid">Iniciar
-                                                    Sesion</button>
+                                                <button type="button" class="btn btn-success btn-fluid">Iniciar sesión
+
+                                                </button>
                                             </form>
                                             <hr>
                                             <ul>
                                                 <li> <a href="#">¿Olvidaste tu contraseña?</a> </li>
                                                 <li> <a href="#"> Verifica si tienes CUTS</a> </li>
-                                                <li> <a href="#"> ¿No tienes CUTS? Obtenlo AQUI</a> </li>
-                                                <li> <a href="#"> ¿Deseas modificar tu correo electronico?</a> </li>
+                                                <li> <a href="#"> ¿No tienes CUTS?  Obtenla AQUÍ</a> </li>
+                                                <li> <a href="#"> ¿Deseas modificar tu correo electrónico?</a> </li>
                                             </ul>
                                         </div>
                                     </li>
@@ -289,17 +290,16 @@
                             <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
                                 <div class="text-info d-flex h-100 mask blue-gradient-rgba">
                                 <div class="first-content align-self-center p-3">
-                                    <h3 class="text-info text-bold"><i class="fas fa-search"></i>Consulte su solicitud</h3>
+                                    <h3 class="text-info text-bold"><i class="fas fa-search"></i>Consulta tu solicitud</h3>
                                 </div>
                                 </div>
                             </div>
                             <div class="card-body ">
 
-                                <p class="card-text">Si realizo un tramite o servicio, consulte el estado
-                                    de su solicitud mediante su folio.</p>
+                                <p class="card-text">•	Si realizaste un trámite o servicio, consulta el estado de tu solicitud mediante el folio</p>
 
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control text-warning" placeholder="Ingrese su folio"
+                                    <input type="text" class="form-control text-warning" placeholder="•	Ingresa el folio"
                                         aria-label="Ingrese su folio" aria-describedby="basic-addon2" name="folioID"
                                         id="folioID">
                                     <div class="input-group-append">

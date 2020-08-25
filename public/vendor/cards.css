@@ -68,7 +68,7 @@ figure .trasera {
 
 figure .frontal {
 	display: block;
-	background: #000;
+	/*background: #000;
 
 	/* Podemos ocultar la imagen al da la vuelta si lo queremos */
 	/*backface-visibility: hidden;*/

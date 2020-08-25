@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('vendor/cards.css') }}">
 <div class="card mb-3">
-    <h3 class="card-title text-center font-weight-bold text-success">Tramites Mas Buscados
-        <span> <i class="fas fa-file-alt fa-2x"></i></span>
+    <h3 class="card-title text-center font-weight-bold"  style=" font-size: 42px;">Trámites más buscados
+
     </h3>
     <div class="contenedor">
 		<div class="contenedor_tarjeta">
