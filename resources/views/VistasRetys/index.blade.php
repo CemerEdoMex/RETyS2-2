@@ -20,7 +20,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/educacionm2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Educación</p>
 						</div>
@@ -37,7 +37,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/culturam2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Cultura</p>
 						</div>
@@ -54,7 +54,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/finanzasm2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Finanzas</p>
 						</div>
@@ -71,7 +71,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/reclutamientom.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Empleo</p>
 						</div>
@@ -88,7 +88,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/familiam2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Familia</p>
 						</div>
@@ -105,7 +105,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/justiciam2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Justicia</p>
 						</div>
@@ -139,7 +139,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/impuestosm2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Pago de Impuestos</p>
 						</div>
@@ -156,7 +156,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/denunciasm2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Quejas o Denuncias</p>
 						</div>
@@ -190,7 +190,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/seguridadm2.png"
-								class="img-fluid mx-auto" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Seguridad</p>
 						</div>
@@ -207,7 +207,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/transportem2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Transporte y Urbanismo</p>
 						</div>
@@ -224,7 +224,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/turismom2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Turismo</p>
 						</div>
@@ -241,7 +241,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/viviendam2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Vivienda</p>
 						</div>
