@@ -5,18 +5,20 @@
       
 
           <div class="row">
-          	@foreach($terg as $tr)
-          
           	
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
-              <div class="icon-box icon-box-pink">
-                <div class="icon"></div>
-                <h4 class="title"><a href="">{{ $tr->nombre }}</a></h4>
-                <p class="description" id="tarjet">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              </div>
-            </div>
-              @endforeach
-          
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                 <div class="card-header"><h5 class="card-title">Expedición de informe o certificado de antecedentes no penales</h5>  </div>
+                  <div class="card-body text-primary" >
+                    <img src="img/icon/certificado.png" style="width:30%;" class="img-size-50 mr-3 img-circle mx-auto d-block" alt="User Image">
+                   <h5 class="card-title" style="text-align: center">Costo:$139</h5>
+                   <button type="button" class="btn btn-outline-primary" style="width: 100px">Portal de pago</button>
+                   <button type="button" class="btn btn-outline-primary"style="width: 100px">Portal de citas</button>
+                   <button type="button" class="btn btn-outline-primary" style="width: 100px"> Trámite en linea</button>
+                   <button type="button" class="btn btn-outline-primary" style="width: 100px">Descargar formato</button>
+                 </div>
+                 <a class="btn btn-primary" href="#" role="button">Más información</a>
+                </div>
+           
 
            <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
               <div class="icon-box icon-box-cyan">

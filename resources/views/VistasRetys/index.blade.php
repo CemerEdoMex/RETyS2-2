@@ -10,24 +10,7 @@
 				<p style=" font-size: 42px;">Catalogo de Trámites y Servicios</p>
 			</div>
 
-			<div class="col-6 col-xl-3 col-md-4">
-
-                <a class="text-success"
-					href=""
-					title="Trámites">
-					<div
-						class="card border-0 bg-transparent responsive-categorias card-body">
-						<div class="responsive-categorias">
-							<img
-								src="img/icon/adultosm.png"
-								class="img-fluid" width="70">
-							<p
-								class="font-weight-bold  align-self-center responsive-text-categorias">Adultos Mayores</p>
-						</div>
-					</div>
-				</a>
-			</div>
-
+		
 			<div class="col-6 col-xl-3 col-md-4">
 				<a class="text-success"
 					href="/ventanilla/categoria/173"
@@ -36,7 +19,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/educacionverde.png"
+								src="img/icon/educacionm.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold  align-self-center responsive-text-categorias">Educación</p>
@@ -53,7 +36,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/culturaverde.png"
+								src="img/icon/culturam.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold  align-self-center responsive-text-categorias">Cultura</p>
@@ -70,7 +53,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/finanzasverde.png"
+								src="img/icon/finanzasm.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold  align-self-center responsive-text-categorias">Finanzas</p>
@@ -87,7 +70,7 @@
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
 							<img
-								src="img/icon/reclutamiento2.png"
+								src="img/icon/reclutamientom.png"
 								class="img-fluid" width="70">
 							<p
 								class="font-weight-bold  align-self-center responsive-text-categorias">Empleo</p>
