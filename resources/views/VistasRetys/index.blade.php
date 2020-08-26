@@ -122,7 +122,7 @@
 						<div class="responsive-categorias mx-auto-lg">
 							<img
 								src="img/icon/ambientem2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Medio Ambiente</p>
 						</div>
@@ -173,7 +173,7 @@
 						<div class="responsive-categorias mx-auto">
 							<img
 								src="img/icon/saludm2.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Salud y Deporte</p>
 						</div>

@@ -6,15 +6,14 @@
 
           <div class="row">
           	
-                <div class="card border-primary mb-3" style="max-width: 18rem;">
-                 <div class="card-header"><h5 class="card-title">Expedición de informe o certificado de antecedentes no penales</h5>  </div>
+                <div class="card border-primary mb-3 justify-content-center" style="max-width: 18rem;">
+                 <div class="card-header "><h5 class="card-title font-weight-bold" style="text-align: center">Expedición de informe o certificado de antecedentes no penales</h5>  </div>
                   <div class="card-body text-primary" >
                     <img src="img/icon/certificado.png" style="width:30%;" class="img-size-50 mr-3 img-circle mx-auto d-block" alt="User Image">
-                   <h5 class="card-title" style="text-align: center">Costo:$139</h5>
-                   <button type="button" class="btn btn-outline-primary" style="width: 100px">Portal de pago</button>
-                   <button type="button" class="btn btn-outline-primary"style="width: 100px">Portal de citas</button>
-                   <button type="button" class="btn btn-outline-primary" style="width: 100px"> Trámite en linea</button>
-                   <button type="button" class="btn btn-outline-primary" style="width: 100px">Descargar formato</button>
+                   <h5 class="card-title font-weight-bold" style="text-align: center">Costo:$139</h5>
+                  <button type="button" class="btn btn-outline-primary" style="width: 120px">Portal de pago</button>
+                  <button type="button" class="btn btn-outline-primary"style="width: 120px">Portal de citas</buttom> <button type="button" class="btn btn-outline-primary" style="width: 120px"> Trámite en línea</button>
+                   <button type="button" class="btn btn-outline-primary" style="width: 120px">Descargar formato</button>
                  </div>
                  <a class="btn btn-primary" href="#" role="button">Más información</a>
                 </div>
