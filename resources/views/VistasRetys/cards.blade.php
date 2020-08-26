@@ -9,9 +9,9 @@
 				<figure id="tarjeta">
 					<img src="{{ asset('img/unnamed.jpg') }}" class="frontal" alt="">
 					<figcaption class="trasera">
-						<h2 class="titulo">Expedición del informe o certificado de no antecedentes penales</h2>
+						<h2 class="titulo text-center">Expedición del informe o certificado de no antecedentes penales</h2>
 						<hr>
-						<p>Enlace de direccinamineto al tramite</p>
+						<p class="text-center">Enlace de direccionaminto al trámite.</p>
 					</figcaption>
 				</figure>
 			</a>
@@ -22,9 +22,9 @@
 				<figure id="tarjeta">
 					<img src="{{ asset ('img/altave.png') }}" class="frontal" alt="">
 					<figcaption class="trasera">
-						<h2 class="titulo">Alta de vehículos nuevos.</h2>
+						<h2 class="titulo text-center">Alta de vehículos nuevos.</h2>
 						<hr>
-						<p>Enlace de direccinamineto al tramite.</p>
+						<p class="text-center">Enlace de direccionaminto al trámite.</p>
 					</figcaption>
 				</figure>
 			</a>
@@ -35,9 +35,9 @@
 				<figure id="tarjeta">
 					<img src="img/verifica.png" class="frontal" alt="">
 					<figcaption class="trasera">
-						<h2 class="titulo">Pago de multa por verificación vehicular extemporánea.</h2>
+						<h2 class="titulo text-center">Pago de multa por verificación vehicular extemporánea.</h2>
 						<hr>
-						<p>Enlace de direccinamineto al tramite.</p>
+						<p class="text-center">Enlace de direccionaminto al trámite.</p>
 					</figcaption>
 				</figure>
 			</a>

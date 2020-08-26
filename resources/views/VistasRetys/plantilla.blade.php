@@ -45,7 +45,7 @@
                 <a class="nav-link" href="http://edomex.gob.mx/">MI PORTAL</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#tramitesServivios">TRAMITES Y SERVICIOS</a>
+                <a class="nav-link" href="{{ route('inicio')}}">TRÁMITES Y SERVICIOS</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="{{ route('trasnparencia')}}">TRANSPARENCIA</a>
@@ -251,8 +251,7 @@
                             </div>
                             <div class="card-body text-success">
                                         CUTS
-                                        <p class="text-secondary"> Ingresa aqui para realizar tu tramite y/o srvivio o
-                                            consultar el estado de tus solicitudes </p>
+                                        <p class="text-secondary"> Ingresa aquí para realizar tu tramite y/o servicio o consultar el estado de tus solicitudes. </p>
                                         <div class="form-grupo">
                                             <form action="">
                                                 <div class="form-group">
@@ -296,7 +295,7 @@
                             </div>
                             <div class="card-body ">
 
-                                <p class="card-text">•	Si realizaste un trámite o servicio, consulta el estado de tu solicitud mediante el folio</p>
+                                <p class="card-text">Sí realizaste un trámite o servicio, consulta el estado de tu solicitud mediante el folio.</p>
 
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control text-warning" placeholder="•	Ingresa el folio"

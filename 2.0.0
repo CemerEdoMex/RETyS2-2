@@ -1,0 +1,2 @@
+
+Warning: PHP Startup: Unable to load dynamic library 'oci8' (tried: C:\xampp\php\ext\oci8 (The specified module could not be found.), C:\xampp\php\ext\php_oci8.dll (The specified module could not be found.)) in Unknown on line 0

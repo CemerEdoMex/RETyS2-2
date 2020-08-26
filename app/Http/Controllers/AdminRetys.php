@@ -46,7 +46,7 @@ class AdminRetys extends Controller
 
    public function trasnparencia()
    {
-       return view('VistasRetys.trasnparencia');
+       return view('Trasnparencia.transparencia');
    }
 
 

@@ -3,6 +3,7 @@
 
 @section('tarjetas')
 
+<!-- <link rel="stylesheet" href=""> -->
 <!-- Aqui va todo tu html --->
 
 <div class="card" id="transparencia">
