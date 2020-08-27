@@ -1,11 +1,11 @@
-  @extends('VistasRetys.plantilla')
+  @extends('VistasRetys.layoutCards')
   @section('tarjetas')
 
     <div class="container">
-      
+
 
           <div class="row">
-          	
+
                 <div class="card border-primary mb-3 justify-content-center" style="max-width: 18rem;">
                  <div class="card-header "><h5 class="card-title font-weight-bold" style="text-align: center">Expedición de informe o certificado de antecedentes no penales</h5>  </div>
                   <div class="card-body text-primary" >
@@ -15,9 +15,9 @@
                   <button type="button" class="btn btn-outline-primary"style="width: 120px">Portal de citas</buttom> <button type="button" class="btn btn-outline-primary" style="width: 120px"> Trámite en línea</button>
                    <button type="button" class="btn btn-outline-primary" style="width: 120px">Descargar formato</button>
                  </div>
-                 <a class="btn btn-primary" href="#" role="button">Más información</a>
+                 <a class="btn btn-primary" href="{{ route('trasnparencia') }}" role="button">Más información</a>
                 </div>
-           
+
 
            <!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
               <div class="icon-box icon-box-cyan">
@@ -45,7 +45,7 @@
 
 
         </div>
-     </div>   
+     </div>
 
 
   @stop

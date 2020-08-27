@@ -11,7 +11,7 @@
 					<figcaption class="trasera">
 						<h2 class="titulo text-center">Expedición del informe o certificado de no antecedentes penales</h2>
 						<hr>
-						<p class="text-center">Enlace de direccionaminto al trámite.</p>
+						<p class="text-center">Enlace de direccionamiento al trámite.</p>
 					</figcaption>
 				</figure>
 			</a>
@@ -20,11 +20,11 @@
 		<div class="contenedor_tarjeta">
 			<a href="https://sistemas2.edomex.gob.mx/TramitesyServicios/Tramite?tram=215&cont=0">
 				<figure id="tarjeta">
-					<img src="{{ asset ('img/altave.png') }}" class="frontal" alt="">
+					<img src="{{ asset ('img/coche.png') }}" class="frontal" alt="">
 					<figcaption class="trasera">
 						<h2 class="titulo text-center">Alta de vehículos nuevos.</h2>
 						<hr>
-						<p class="text-center">Enlace de direccionaminto al trámite.</p>
+						<p class="text-center">Enlace de direccionamiento al trámite.</p>
 					</figcaption>
 				</figure>
 			</a>
@@ -37,7 +37,7 @@
 					<figcaption class="trasera">
 						<h2 class="titulo text-center">Pago de multa por verificación vehicular extemporánea.</h2>
 						<hr>
-						<p class="text-center">Enlace de direccionaminto al trámite.</p>
+						<p class="text-center">Enlace de direccionamiento al trámite.</p>
 					</figcaption>
 				</figure>
 			</a>

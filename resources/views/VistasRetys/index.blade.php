@@ -13,7 +13,7 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/173"
+					href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite=352&tipoTramite=2"
 					title="Servicios">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -30,7 +30,7 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/157"
+					href="http://tramitesyservicios.edomex.gob.mx/legcita/"
 					title="Educación">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -47,7 +47,7 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/160"
+					href="http://tramitesyservicios.edomex.gob.mx/legcita/"
 					title="Finanzas">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
