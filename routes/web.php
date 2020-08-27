@@ -32,3 +32,7 @@ Route::GET('prueba','AdminRetys@prueba')->name('prueba');
 |*/
 
 Route::GET('trasnparencia','AdminRetys@trasnparencia')->name('trasnparencia');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

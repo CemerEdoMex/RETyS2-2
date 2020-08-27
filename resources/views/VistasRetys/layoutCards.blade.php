@@ -154,83 +154,79 @@
 
 
 
-        <!-- FOOTER -->
+
+            <!-- FOOTER -->
             <footer>
-      <div class="container">
-        <div class="row">
+                <div class="container">
+                  <div class="row">
 
-          <div class="col-lg-4 col-md-6">
-            <h3 class=" text-white ">Mapa del  sitio</h3>
-            <ul class="list-unstyled three-column">
-              <li class=" text-white ">Mi Portal</li>
-              <li class=" text-white ">Trmiates y Servicios</li>
-              <li class=" text-white ">Transparencia</li>
-            </ul>
+                    <div class="col-lg-2 col-md-4">
+                      <h5 class=" text-white ">Conoce el Estado</h5>
+                      <ul class="list-unstyled ">
+                        <li class=" text-white ">-Nuestros municipios</li>
+                        <li class=" text-white ">-Corredores turísticos</li>
+                        <li class=" text-white ">-Parques</li>
+                         <li class=" text-white ">-Pueblos Mágicos</li>
+                          <li class=" text-white ">-Visita el Estado</li>
+                      </ul>
 
-            <ul class="list-unstyled three-column">
-                <li class=" text-white ">Temas</li>
-                <li class=" text-white ">Areas de Gobierno</li>
-                <li class=" text-white ">Personas</li>
-              </ul>
+                    </div>
 
-            <ul class="list-unstyled socila-list">
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-              <li><img src="http://placehold.it/48x48" alt="" /></li>
-            </ul>
-          </div>
+                     <div class="col-lg-3 col-md-4">
+                      <h5 class=" text-white ">Trámites y servicios</h5>
+                      <ul class="list-unstyled ">
+                        <li class=" text-white ">-Ventanilla electrónica</li>
+                        <li class=" text-white ">-Carpeta ciudadana</li>
+                        <li class=" text-white ">-Centros de Servicios Administrativos</li>
+                         <li class=" text-white ">-Portal de servicios</li>
+                      </ul>
 
-          <div class="col-lg-4 col-md-6">
-            <h3 class=" text-white ">Ultimas publicaciones</h3>
-            <div class="media">
-              <a href="#" class="pull-left">
-                <img src="http://placehold.it/64x64" alt="" class="media-object" />
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Programming</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-            </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                      <h5 class=" text-white ">Transparencia</h5>
+                      <ul class="list-unstyled ">
+                        <li class=" text-white ">-¿Qué es?</li>
+                        <li class=" text-white ">-Transparencia fiscal</li>
+                        <li class=" text-white ">-INFOEM</li>
+                         <li class=" text-white ">-Información pública</li>
+                         <li class=" text-white ">-SAIMEX</li>
 
-            <div class="media">
-              <a href="#" class="pull-left">
-                <img src="http://placehold.it/64x64" alt="" class="media-object" />
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Coding</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-            </div>
+                      </ul>
 
-            <div class="media">
-              <a href="#" class="pull-left">
-                <img src="http://placehold.it/64x64" alt="" class="media-object" />
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Web Sesign</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-            </div>
+                    </div>
 
-          </div>
+                     <div class="col-lg-2 col-md-4">
+                      <h5 class=" text-white ">Datos abiertos</h5>
+                      <ul class="list-unstyled ">
+                        <li class=" text-white ">-Datos abiertos en el Estado</li>
+                        <li class=" text-white ">-Estadísticas</li>
+                        <li class=" text-white ">-Datos abiertos en México</li>
+                         <li class=" text-white ">-Fundación de Datos Abiertos</li>
 
-          <div class="col-lg-4">
-            <h3 class=" text-white ">Nuestro trabajo</h3>
-            <img class="img-thumbnail" src="{{ asset ('img/icon/educacionverde.png') }}" alt="" />
-            <img class="img-thumbnail" src="{{ asset ('img/icon/culturaverde.png') }}" alt="" />
-            <img class="img-thumbnail" src="{{ asset ('img/icon/39AB61JUSTICIAVERDE.png') }}" alt="" />
-            <img class="img-thumbnail" src="{{ asset ('img/icon/adultosm.png') }}" alt="" />
-          </div>
 
-        </div>
-      </div>
-      <div class="copyright text-center">
-        Gobierno del Estado de México.
-      </div>
-    </footer>
+                      </ul>
+
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-3">
+
+                      <img class="img" src="{{ asset ('img/h1.png') }}" alt="" />
+
+                    </div>
+
+                  </div>
+                </div>
+                <div class="copyright text-center">
+                  Gobierno del Estado de México.
+                </div>
+              </footer>
+
+
 
 
 
