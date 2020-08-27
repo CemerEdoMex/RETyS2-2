@@ -358,7 +358,7 @@ ul.navbar-nav .nav-item:after {
 
 
 footer {
-  background: #939393;
+  background:#353536;
   color: #aaa;
   padding-top: 10px;
 }
@@ -371,7 +371,7 @@ footer a:hover {
   color: #fff;
 }
 
-footer h3 {
+footer h5 {
  color: #0894d1;
   letter-spacing: 1px;
   margin: 30px 0 20px;
