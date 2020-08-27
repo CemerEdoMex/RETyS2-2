@@ -91,6 +91,21 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'oracle' => [
+            'driver'         => 'oracle',
+            'host'           => 'localhost',
+            'port'           => '1521',
+            'database'       => 'angeldata',
+            'username'       => 'system',
+            'password'       => 'Angel170820',
+            'charset'        => 'AL32UTF8',
+            'prefix'         =>  '',
+            'prefix_schema'  =>  '',
+            'edition'        => 'ora$base',
+            'server_version' =>  '11g',
+        ],
+
+
     ],
 
     /*
