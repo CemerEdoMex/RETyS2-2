@@ -14,15 +14,14 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite=352&tipoTramite=2"
-					title="Servicios">
+					title="Educación">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
 							<img alt="cambiar imagen" 
 								 onmouseout=" src='img/icon/educacion3.png'"onmouseover="src='img/icon/educacionm2.png'" src="img/icon/educacion3.png"
 								class="img-fluid mx-auto d-block" width="70">
-							<p
-								class="font-weight-bold  text-center responsive-text-categorias">Educación</p>
+							<p class="font-weight-bold  text-center responsive-text-categorias">Educación</p>
 						</div>
 					</div>
 				</a>
@@ -31,7 +30,7 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="http://tramitesyservicios.edomex.gob.mx/legcita/"
-					title="Educación">
+					title="Cultura">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -52,7 +51,7 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/finanzasm2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -65,11 +64,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/162"
-					title="Medio Ambiente">
+					title="Empleo">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/reclutamientom.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -82,11 +81,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/163"
-					title="Licencias">
+					title="Familia">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/familiam2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -99,11 +98,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/164"
-					title="Seguridad Pública">
+					title="Justicia">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/justiciam2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -116,11 +115,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/165"
-					title="Negocios y Empresas">
+					title="Media Ambiente">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body ">
 						<div class="responsive-categorias mx-auto-lg">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/ambientem2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -133,11 +132,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/166"
-					title="Trabajo">
+					title="Pago de inpuestos ">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/impuestosm2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -150,11 +149,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/167"
-					title="Registro Público">
+					title="Quejas o Denuncias">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/denunciasm2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -167,11 +166,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/169"
-					title="Vehículos">
+					title="Salud y Deporte">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/saludm2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -184,11 +183,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a class="mx-auto" style="color:#341050;"
 					href="/ventanilla/categoria/154"
-					title="Salud">
+					title="Seguridad">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/seguridadm2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -201,11 +200,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/161"
-					title="Registro Civil">
+					title="Transporte y Urbanismo">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/transportem2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -218,11 +217,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/155"
-					title="Transporte">
+					title="Turismo">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/turismom2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
@@ -235,11 +234,11 @@
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
 					href="/ventanilla/categoria/156"
-					title="Ciudadania">
+					title="Vivienda">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img
+							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/viviendam2.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p

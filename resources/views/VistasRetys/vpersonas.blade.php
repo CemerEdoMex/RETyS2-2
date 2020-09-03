@@ -15,220 +15,220 @@
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a  style="color:#341050;"
 					href=""
 					title="Trámites">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
+							<img onmouseout=" src='img/icon/cana.png'"onmouseover="src='img/icon/cana2.png'"
 								src="img/icon/cana.png"
-								class="img-fluid" width="70">
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Adultos Mayores</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Adultos Mayores</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a  style="color:#341050;"
 					href="/ventanilla/categoria/173"
 					title="Servicios">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/ICONOS_NEGOCIO EMPRESA 2.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/empresarios1.png'"onmouseover="src='img/icon/empresarios2.png'"
+								src="img/icon/empresarios1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Empresarios y Emprendedores</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Empresarios y Emprendedores</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/157"
 					title="Educación">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/Estudiantes2.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/estudiantes1.png'"onmouseover="src='img/icon/estudiantes2.png'"
+								src="img/icon/Estudiantes1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Estudiantes</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Estudiantes</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/160"
 					title="Finanzas">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/hombre.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/hombre1.png'"onmouseover="src='img/icon/hombre2.png'"
+								src="img/icon/hombre1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Hombres</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Hombres</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/162"
 					title="Medio Ambiente">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/indigena agua.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/indigena1.png'"onmouseover="src='img/icon/indigena2.png'"
+								src="img/icon/indigena1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Indígenas</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Indígenas</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/163"
 					title="Licencias">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/jovenes agua .png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/jovenes1.png'"onmouseover="src='img/icon/jovenes2.png'"
+								src="img/icon/jovenes1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Jóvenes</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Jóvenes</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/164"
 					title="Seguridad Pública">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/migrantes agua.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/migrantes1.png'"onmouseover="src='img/icon/migrantes2.png'"
+								src="img/icon/migrantes1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Migrantes</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Migrantes</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/165"
 					title="Negocios y Empresas">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/mujer agua.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/mujer1.png'"onmouseover="src='img/icon/mujer2.png'"
+								src="img/icon/mujer1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Mujeres</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Mujeres</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/166"
 					title="Trabajo">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/niños azul.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/niños1.png'"onmouseover="src='img/icon/niños2.png'"
+								src="img/icon/niños1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Niños</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Niños</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/167"
 					title="Registro Público">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/notario azul.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/notario1.png'"onmouseover="src='img/icon/notario2.png'"
+								src="img/icon/notario1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Notarios Públicos</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Notarios Públicos</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/169"
 					title="Vehículos">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/discapacidad.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/discapacidad1.png'"onmouseover="src='img/icon/discapacidad2.png'"
+								src="img/icon/discapacidad1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Personas con Discapacidad</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Personas con Discapacidad</p>
 						</div>
 					</div>
 				</a>
 			</div>
 			
 			<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/154"
 					title="Salud">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/productores azul.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/productores1.png'"onmouseover="src='img/icon/productores2.png'"
+								src="img/icon/productores1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Productores</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Productores</p>
 						</div>
 					</div>
 				</a>
 			</div>
 				<div class="col-6 col-xl-3 col-md-4">
-				<a
+				<a style="color:#341050;"
 					href="/ventanilla/categoria/154"
 					title="Salud">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
-							<img
-								src="img/icon/recepcion.png"
-								class="img-fluid" width="70">
+							<img onmouseout=" src='img/icon/servidor publico1.png'"onmouseover="src='img/icon/servidorpublico2.png'"
+								src="img/icon/servidor publico1.png"
+								class="img-fluid mx-auto d-block" width="70">
 							<p
-								class="font-weight-bold text-special-color-dark align-self-center responsive-text-categorias">Servidores Públicos Estatal</p>
+								class="font-weight-bold  text-center responsive-text-categorias">Servidores Públicos Estatal</p>
 						</div>
 					</div>
 				</a>
