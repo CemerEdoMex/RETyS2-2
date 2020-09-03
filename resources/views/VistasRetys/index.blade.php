@@ -51,8 +51,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/finanzasm2.png"
+							<img onmouseout=" src='img/icon/finanzas1.png'"onmouseover="src='img/icon/finanzas2.png'"
+								src="img/icon/finanzas1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Finanzas</p>
