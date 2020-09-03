@@ -12,7 +12,7 @@ class AdminRetys extends Controller
 
    public function index(){
 
-      return view('VistasRetys.indexs');
+      return view('VistasRetys.index');
    }
 
    public function btarjetas(Request $request){
