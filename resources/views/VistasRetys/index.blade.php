@@ -68,8 +68,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/reclutamientom.png"
+							<img onmouseout=" src='img/icon/empleo1.png'"onmouseover="src='img/icon/empleo2.png'"
+								src="img/icon/empleo1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Empleo</p>
@@ -85,8 +85,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/familiam2.png"
+							<img onmouseout=" src='img/icon/familia1.png'"onmouseover="src='img/icon/familia2.png'"
+								src="img/icon/familia1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Familia</p>
@@ -102,8 +102,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/justiciam2.png"
+							<img onmouseout=" src='img/icon/justicia1.png'"onmouseover="src='img/icon/justicia2.png'"
+								src="img/icon/justicia1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Justicia</p>
@@ -119,8 +119,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body ">
 						<div class="responsive-categorias mx-auto-lg">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/ambientem2.png"
+							<img onmouseout=" src='img/icon/ambiente1.png'"onmouseover="src='img/icon/ambiente2.png'"
+								src="img/icon/ambiente1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Medio Ambiente</p>
@@ -136,8 +136,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/impuestosm2.png"
+							<img onmouseout=" src='img/icon/impuestos1.png'"onmouseover="src='img/icon/impuestos2.png'"
+								src="img/icon/impuestos1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Pago de Impuestos</p>
@@ -153,8 +153,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/denunciasm2.png"
+							<img onmouseout=" src='img/icon/denuncias1.png'"onmouseover="src='img/icon/denuncias2.png'"
+								src="img/icon/denuncias1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Quejas o Denuncias</p>
@@ -170,8 +170,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/saludm2.png"
+							<img onmouseout=" src='img/icon/salud1.png'"onmouseover="src='img/icon/salud2.png'"
+								src="img/icon/salud1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Salud y Deporte</p>
@@ -187,8 +187,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/seguridadm2.png"
+							<img onmouseout=" src='img/icon/seguridad1.png'"onmouseover="src='img/icon/seguridad2.png'"
+								src="img/icon/seguridad1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Seguridad</p>
@@ -204,8 +204,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/transportem2.png"
+							<img onmouseout=" src='img/icon/transporte1.png'"onmouseover="src='img/icon/transporte2.png'"
+								src="img/icon/transporte1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Transporte y Urbanismo</p>
@@ -221,8 +221,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/turismom2.png"
+							<img onmouseout=" src='img/icon/turismo1.png'"onmouseover="src='img/icon/turismo2.png'"
+								src="img/icon/turismo1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Turismo</p>
@@ -238,8 +238,8 @@
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
-								src="img/icon/viviendam2.png"
+							<img onmouseout=" src='img/icon/vivienda1.png'"onmouseover="src='img/icon/vivienda2.png'"
+								src="img/icon/vivienda1.png"
 								class="img-fluid mx-auto d-block" width="70">
 							<p
 								class="font-weight-bold  text-center responsive-text-categorias">Vivienda</p>

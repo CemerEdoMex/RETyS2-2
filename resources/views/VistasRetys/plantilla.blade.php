@@ -153,9 +153,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ÁREAS DE GOBIERNO</a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Federal</a>
-                          <a class="dropdown-item" href="#">Estatal</a>
-                          <a class="dropdown-item" href="#">Municipal</a>
+                          <a class="dropdown-item" href="#"><img src="img/icon/mexico.png" style="width:20%;" class=" img-circle mx-auto"> Federal</a>
+                          <a class="dropdown-item" href="#"><img src="img/icon/estatal.png" style="width:20%;" class=" img-circle mx-auto"> Estatal</a>
+                          <a class="dropdown-item" href="#"><img src="img/icon/municipal.png" style="width:20%;" class=" img-circle mx-auto"> Municipal</a>
                       </li>
 
                     <!--<li class="nav-item secondary">
