@@ -15,6 +15,8 @@
     return view('welcome');
 });*/
 
+//Route::GET('/','AdminRetys@test');
+
 Route::GET('/','AdminRetys@index');
 
 Route::GET('inicio','AdminRetys@index')->name('inicio');

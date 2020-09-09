@@ -4,23 +4,23 @@
     <div class="container">
 
 
-          <div class="row">
+          <div class="row  mb-auto">
 
-                <div class="card border-primary mb-3 justify-content-center" style="max-width: 18rem;">
+                <div class="card border-success mb-3 justify-content-center" style="max-width: 18rem;">
                  <div class="card-header "><h5 class="card-title font-weight-bold" style="text-align: center">Expedición de informe o certificado de no antecedentes penales</h5>  </div>
                   <div class="card-body text-primary" >
                     <img src="img/icon/certificado.png" style="width:30%;" class="img-size-50 mr-3 img-circle mx-auto d-block" alt="User Image">
 
                    <h5 class="card-title font-weight-bold" style="text-align: center">Costo:$139</h5>
                     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                      <img src="img/icon/principioafin.png" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín"> 
+                      <img src="img/icon/principioafin.png" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
                       <img src="img/icon/preenlinea.png" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
                       <img src="img/icon/carpeta.png" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
                   <button type="button" class="btn btn-outline-primary" style="width: 120px">Portal de pago</button>
                   <button type="button" class="btn btn-outline-primary"style="width: 120px">Portal de citas</buttom> <button type="button" class="btn btn-outline-primary" style="width: 120px"> Trámite en línea</button>
                    <button type="button" class="btn btn-outline-primary" style="width: 120px">Descargar formato</button>
                  </div>
-                 <a class="btn btn-primary" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                 <a class="btn btn-success" href="{{ route('trasnparencia') }}" role="button">Más información</a>
                 </div>
 
 
@@ -47,6 +47,29 @@
                 <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
               </div>
             </div>-->
+
+            @foreach ($terg as $item)
+
+            <div class="card border-primary mb-3 justify-content-center" style="max-width: 18rem;">
+                <div class="card-header "><h5 class="card-title font-weight-bold" style="text-align: center">{{$item->denominacion}}</h5>  </div>
+                 <div class="card-body text-primary" >
+                   <img src="img/icon/certificado.png" style="width:30%;" class="img-size-50 mr-3 img-circle mx-auto d-block" alt="User Image">
+
+                  <h5 class="card-title font-weight-bold" style="text-align: center">Costo:$139</h5>
+                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                     <img src="img/icon/principioafin.png" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
+                     <img src="img/icon/preenlinea.png" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
+                     <img src="img/icon/carpeta.png" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
+                 <button type="button" class="btn btn-outline-primary" style="width: 120px">Portal de pago</button>
+                 <button type="button" class="btn btn-outline-primary"style="width: 120px">Portal de citas</buttom> <button type="button" class="btn btn-outline-primary" style="width: 120px"> Trámite en línea</button>
+                  <button type="button" class="btn btn-outline-primary" style="width: 120px">Descargar formato</button>
+                </div>
+                <a class="btn btn-primary" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+               </div>
+
+            @endforeach
+
+
 
 
         </div>
