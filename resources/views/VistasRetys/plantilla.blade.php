@@ -81,8 +81,8 @@
                 </div>
                 <div class="container">
                     <div class="carousel-caption">
-                        <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                            <input type="search" id="search" placeholder="Busca tu Trámite" />
+                        <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
+                            <input type="search" name="buscar" id="search" placeholder="Busca tu Trámite" />
                             <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                         </form>
                     </div>
@@ -103,8 +103,8 @@
               <div class="container">
                 <div class="carousel-caption">
                    <div class="container-1">
-                    <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                        <input type="search" id="search" placeholder="Busca tu Trámite" />
+                    <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
+                        <input type="search" name="buscar" id="search" placeholder="Busca tu Trámite" />
                         <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                       </form>
                 </div>
@@ -125,8 +125,8 @@
                 <div class="container">
                   <div class="carousel-caption">
                      <div class="container-1">
-                      <form   class="form-inline" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                          <input type="search" id="search" placeholder="Busca tu Trámite" />
+                      <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
+                          <input type="search" name="buscar" id="search" placeholder="Busca tu Trámite" />
                           <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
                         </form>
                   </div>
@@ -335,18 +335,18 @@
                    <li class=" text-white ">-Pueblos Mágicos</li>
                     <li class=" text-white ">-Visita el Estado</li>
                 </ul>
-              
+
               </div>
-             
+
                <div class="col-lg-3 col-md-4">
                 <h5 class=" text-white ">Trámites y servicios</h5>
                 <ul class="list-unstyled ">
                   <li class=" text-white ">-Ventanilla electrónica</li>
                   <li class=" text-white ">-Carpeta ciudadana</li>
                   <li class=" text-white ">-Centros de Servicios Administrativos</li>
-                   <li class=" text-white ">-Portal de servicios</li> 
+                   <li class=" text-white ">-Portal de servicios</li>
                 </ul>
-              
+
               </div>
               <div class="col-lg-2 col-md-4">
                 <h5 class=" text-white ">Transparencia</h5>
@@ -355,10 +355,10 @@
                   <li class=" text-white ">-Transparencia fiscal</li>
                   <li class=" text-white ">-INFOEM</li>
                    <li class=" text-white ">-Información pública</li>
-                   <li class=" text-white ">-SAIMEX</li> 
+                   <li class=" text-white ">-SAIMEX</li>
 
                 </ul>
-              
+
               </div>
 
                <div class="col-lg-2 col-md-4">
@@ -368,21 +368,21 @@
                   <li class=" text-white ">-Estadísticas</li>
                   <li class=" text-white ">-Datos abiertos en México</li>
                    <li class=" text-white ">-Fundación de Datos Abiertos</li>
-                 
+
 
                 </ul>
-              
+
               </div>
 
 
 
 
-             
+
 
               <div class="col-lg-3">
-                
+
                 <img class="img" src="{{ asset ('img/h1.png') }}" alt="" />
-               
+
               </div>
 
             </div>
