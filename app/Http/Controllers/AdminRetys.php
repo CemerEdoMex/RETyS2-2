@@ -30,7 +30,7 @@ class AdminRetys extends Controller
         $buscar=$request->get('buscar');
 
 
-        $terg=DB::select("Select Denominacion,key1,key2,key3,key4,key5
+        $terg=DB::select("Select Ambito,COSTO_TRAM,COSTO_CANTIDAD,Denominacion,key1,key2,key3,key4,key5
         from Tbgem_citramite
         where Denominacion like '%{$buscar}%'");
 
