@@ -20,26 +20,40 @@ class AdminRetys extends Controller
 
     public function index()
    {
-       $data=DB::select('select * from TBGEM_CICOSTOS WHERE rownum <= 10');
+       $data=DB::select('SELECT * FROM TBGEM_CICOSTOS WHERE rownum <= 3');
+
+       //return $data;
 
         return view('VistasRetys.index');
    }
 
-   public function btarjetas(Request $request){
+   public function btarjetas(Request $request)
+   {
 
-        $buscar=$request->get('buscar');
+    $buscar=$request->get('buscar');
+
+    $count = DB::table('Tbgem_citramite')
+    ->select(DB::raw('count(*) as total'))
+    ->whereRaw("Denominacion like '%{$buscar}%'")
+    ->get();
+
+    $data = DB::table('Tbgem_citramite')
+    //->select('COSTO_TRAM','TRAMOSERV,ENLINEA,Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+    ->whereRaw("Denominacion like '%{$buscar}%'")
+    ->paginate(6);
+
+    $count2 = sizeof($data);
+
+    return view('VistasRetys.vtarjetas',
+                ['data' => $data,'count2' => $count2,'count' =>$count]);
+
+   }
+
+   public function category(){
 
 
-        $terg=DB::select("Select Ambito,COSTO_TRAM,COSTO_CANTIDAD,Denominacion,key1,key2,key3,key4,key5
-        from Tbgem_citramite
-        where Denominacion like '%{$buscar}%'");
 
-       //return $terg;
-
-
-
- 	   return view('VistasRetys.vtarjetas')
- 	            ->with(['terg'=>$terg]);
+        return view('VistasRetys.categorias');
 
    }
 

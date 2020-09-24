@@ -25,11 +25,14 @@ Route::GET('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGE
 Route::GET('areasgob','AdminRetys@bareasgob')->name('areasgob') ;/*Areas de Gobierno */
 Route::GET('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*Areas de Gobierno */
 
+
+Route::GET('categoria','Adminretys@category')->name('category');
+
 Route::GET('prueba','AdminRetys@prueba')->name('prueba');
 
 /*
 |--------------------------------------------------------------------------
-| Trasnparencia Ruras
+| Trasnparencia Rutas
 |--------------------------------------------------------------------------
 |*/
 

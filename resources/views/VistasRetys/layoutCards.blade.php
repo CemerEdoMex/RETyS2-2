@@ -93,56 +93,12 @@
 
             <div class="row mb-2">
 
-                <div class="col-lg-9" >
+                <div class="col-lg-12" >
 
                     @yield ('tarjetas')
 
-                </div> <!-- Col 6 -->
+                </div> <!-- Col 12 -->
 
-                <div class="col-lg-3">
-
-                    <div class="card bg-gradient-success ">
-                        <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
-                            <div class="text-success d-flex h-100 mask blue-gradient-rgba">
-                            <div class="first-content align-self-center p-3">
-                                <h3 class="text-sucess text-bold"><i class="fas fa-folder-open fa-2x"></i> Carpeta Ciudadana</h3>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="card-body text-success">
-                                    CUTS
-                                    <p class="text-secondary"> Ingresa aquí para realizar tu trámite y/o servicio o consultar el estado de tus solicitudes. </p>
-                                    <div class="form-grupo">
-                                        <form action="">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" id="cuts" name="cuts"
-                                                    aria-describedby="cutsHelp" placeholder="CUTS">
-                                                <small id="cutslHelp" class="form-text text-muted">Ingresa tu CUTS previamente creada</small>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control" id="password"
-                                                    name="password" placeholder="Password">
-                                            </div>
-                                            <button type="button" class="btn btn-success btn-fluid">Iniciar sesión
-
-                                            </button>
-                                        </form>
-                                        <hr>
-                                        <ul>
-                                            <li> <a href="#">¿Olvidaste tu contraseña?</a> </li>
-                                            <li> <a href="#"> Verifica si tienes CUTS</a> </li>
-                                            <li> <a href="#"> ¿No tienes CUTS?  Obtenla AQUÍ</a> </li>
-                                            <li> <a href="#"> ¿Deseas modificar tu correo electrónico?</a> </li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <br>
-
-                </div> <!-- Col 3 -->
             </div> <!-- sISTEMA DE COLUMNAS -->
 
             <div class="row">

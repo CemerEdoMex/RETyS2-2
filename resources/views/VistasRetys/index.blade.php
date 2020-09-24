@@ -1,6 +1,6 @@
 @extends('VistasRetys.plantilla')
 
-
+<link rel="stylesheet" href="{{ asset('vendor/accordeon.css')}}">
 @section('tarjetas')
 
 <section class=" pt-4 pb-4">
@@ -11,34 +11,25 @@
 			</div>
 
 
-			<div class="col-6 col-xl-3 col-md-4">
-				<a style="color:#341050;"
-					href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite=352&tipoTramite=2"
-					title="Educación">
-					<div
-						class="card border-0 bg-transparent responsive-categorias card-body">
+			<div class="col-6 col-xl-3 col-md-4 accordion-container">
+				<a style="color:#341050;" title="Educación" href="categoria/">
+					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img alt="cambiar imagen"
-								 onmouseout=" src='img/icon/educacion3.png'"onmouseover="src='img/icon/educacionm2.png'" src="img/icon/educacion3.png"
-								class="img-fluid mx-auto d-block" width="70">
-							<p class="font-weight-bold  text-center responsive-text-categorias">Educación</p>
+							<img alt="cambiar imagen" onmouseout=" src='img/icon/educacion3.png'"onmouseover="src='img/icon/educacionm2.png'" src="img/icon/educacionm2.png" class="img-fluid mx-auto d-block" width="70">
+                            <p class="font-weight-bold  text-center responsive-text-categorias">Educación</p>
 						</div>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-6 col-xl-3 col-md-4">
-				<a style="color:#341050;"
-					href="http://tramitesyservicios.edomex.gob.mx/legcita/"
-					title="Cultura">
-					<div
-						class="card border-0 bg-transparent responsive-categorias card-body">
+			<div class="col-6 col-xl-3 col-md-4 accordion-container">
+				<a style="color:#341050;" href="categoria/" title="Cultura">
+					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
 							<img onmouseout=" src='img/icon/culturam2.png'"onmouseover="src='img/icon/culturam3.png'"
 								src="img/icon/culturam2.png"
 								class="img-fluid mx-auto d-block" width="70">
-							<p
-								class="font-weight-bold  text-center responsive-text-categorias">Cultura</p>
+							<p class="font-weight-bold  text-center responsive-text-categorias">Cultura</p>
 						</div>
 					</div>
 				</a>
@@ -46,7 +37,7 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="http://tramitesyservicios.edomex.gob.mx/legcita/"
+                href="categoria/"
 					title="Finanzas">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -63,7 +54,7 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/162"
+                    href="categoria/"
 					title="Empleo">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -286,6 +277,25 @@
 		$('#exampleModalCenter').modal('show')
 
 	});
+
+    $(function(){
+        $(".accordion-titulo").click(function(e){
+
+        e.preventDefault();
+
+        var contenido=$(this).next(".accordion-content");
+
+        if(contenido.css("display")=="none"){ //open
+          contenido.slideDown(250);
+          $(this).addClass("open");
+        }
+        else{ //close
+          contenido.slideUp(250);
+          $(this).removeClass("open");
+        }
+
+      });
+    });
 
 	</script>
 @endsection
