@@ -358,7 +358,7 @@ ul.navbar-nav .nav-item:after {
 
 
 footer {
-  background:#353536;
+  background:#c6c6c6;
   color: #aaa;
   padding-top: 10px;
 }
@@ -419,8 +419,25 @@ footer .copyright {
 }
 
 footer .copyright span {
-  color: #0894d1;
+  color: #494e54;
 }
+footer .text-black{
+  color:#000000;
+
+}
+footer .text-small {
+  font-size:small; 
+  
+}
+footer .text-medium {
+  font-size:medium; 
+  font-weight: bold;
+  
+}
+.btn-redondo{
+ border-radius: 150px 150px 150px 150px;
+}
+
 
 
 
