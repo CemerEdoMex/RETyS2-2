@@ -6,6 +6,7 @@
         Educacion <span class="badge badge-light">4 Trámites encontrados</span>
       </button>
       <br><br>
+
         <div class="row  mb-4">
 
 
@@ -52,6 +53,9 @@
                     </div>
                   </div>
               </div>
+
+
+
 
          {{-- @foreach ($terg as $item)
 

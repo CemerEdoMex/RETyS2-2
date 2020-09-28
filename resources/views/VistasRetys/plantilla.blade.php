@@ -48,10 +48,16 @@
                 <a class="nav-link" href="{{ route('inicio')}}">TRÁMITES Y SERVICIOS</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="http://edomex.gob.mx/transparencia">TRANSPARENCIA</a>
+                <a class="nav-link" href="http://edomex.gob.mx/acerca_ventanilla">Acerca de la ventanilla</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link " href="http://edomex.gob.mx/estadisticas">DATOS ABIERTOS</a>
+                <a class="nav-link" href="http://edomex.gob.mx/conoce_ventanilla">Conoce la ventanilla</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="http://edomex.gob.mx/marco_ventanilla">Marco jurídico </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link " href="http://edomex.gob.mx/guias_tramites">Guías</a>
               </li>
             </ul>
 
@@ -63,33 +69,12 @@
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+
           </ol>
           <div class="carousel-inner">
 
+
             <div class="carousel-item active">
-            <img class="first-slide" src="{{ asset('img/Pal_1.jpg')}}" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="card-title font-weight-bold" style=" font-size: 82px;">RETyS</h1>
-                    <h2 class="font-weight-bold" >Registro Estatal de Trámites  y Servicios</h2>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                </div>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                            <input type="search" name="buscar" id="search" placeholder="Busca tu Trámite" />
-                            <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
               <img class="second-slide" src="{{ asset('img/Pal_2.jpg')}}" alt="Third slide" >
                 <div class="carousel-caption d-none d-md-block">
                     <h1 class="card-title font-weight-bold" style=" font-size: 82px;">RETyS</h1>
@@ -104,45 +89,18 @@
                 <div class="carousel-caption">
                    <div class="container-1">
                     <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                        <input type="search" name="buscar" id="search" placeholder="Busca tu Trámite" />
-                        <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
-                      </form>
+                        <input type="search" name="buscar"  id="search" placeholder="¿Qué estás buscando?" />
+                        <button class="btn btn-info my-2 my-sm-0" id="validationTooltipUsernamePrepend" type="submit">Buscar...🔎</button>
+                    </form>
                 </div>
               </div>
             </div>
 
-            <div class="carousel-item">
-                <img class="second-slide" src="{{ asset('img/Pal_3.jpg')}}" alt="Third slide" >
-                  <div class="carousel-caption d-none d-md-block">
-                      <h1 class="card-title font-weight-bold" style=" font-size: 72px;">RETyS</h1>
-                      <h3 class="font-weight-bold" >Registro Estatal de Trámites y Servicios</h3>
-                      <br>
-                      <br>
-                      <br>
-                      <br>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="carousel-caption">
-                     <div class="container-1">
-                      <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                          <input type="search" name="buscar" id="search" placeholder="Busca tu Trámite" />
-                          <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
-                        </form>
-                  </div>
-                </div>
-              </div>
+
 
 
           </div>
-          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+
         </div>
             <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
                 <ul class="navbar-nav" style="margin:auto;">
@@ -155,7 +113,7 @@
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="https://www.gob.mx/tramites"><img src="img/icon/mexico.png" style="width:20%;" class=" img-circle mx-auto"> Federal</a>
                           <a class="dropdown-item" href="#"><img src="img/icon/estatal.png" style="width:20%;" class=" img-circle mx-auto"> Estatal</a>
-                          <a class="dropdown-item" href="#"><img src="img/icon/municipal.png" style="width:20%;" class=" img-circle mx-auto"> Municipal</a>
+                          <a class="dropdown-item" href="{{ route('municipios') }}"><img src="img/icon/municipal.png" style="width:20%;" class=" img-circle mx-auto"> Municipal</a>
                       </li>
 
                     <!--<li class="nav-item secondary">
@@ -192,7 +150,7 @@
                             <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
                                 <div class="text-white d-flex h-100 mask blue-gradient-rgba">
                                 <div class="first-content align-self-center p-3">
-                                    <h3 class="card-title text-warning text-bold"><i class="fas fa-comments fa-2x"></i> Punto de Contacto</h3>
+                                    <h3 class="card-title text-bold" style="color: #d19f09!important;"><i class="fas fa-comments fa-2x"></i> Punto de Contacto</h3>
                                 </div>
                                 </div>
                             </div>
@@ -215,11 +173,11 @@
                                         <ul>
                                             <li class="text-secondary">
 
-                                                <p>Lada sin costo <span class="text-warning"> 01 800 696 96 96
+                                                <p>Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 696 96 96
                                                   </span></p>
                                             </li>
                                             <li class="text-secondary">
-                                                <p>En el valle de Toluca <span class="text-warning"> 070
+                                                <p>En el valle de Toluca <span class="text-warning" style="color: #d19f09!important;"> 070
                                                 </span></p>
                                             </li>
                                         </ul>

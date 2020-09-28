@@ -30,22 +30,22 @@ class AdminRetys extends Controller
    public function btarjetas(Request $request)
    {
 
-    $buscar=$request->get('buscar');
+        $buscar=$request->get('buscar');
 
-    $count = DB::table('Tbgem_citramite')
-    ->select(DB::raw('count(*) as total'))
-    ->whereRaw("Denominacion like '%{$buscar}%'")
-    ->get();
+        $count = DB::table('Tbgem_citramite')
+        ->select(DB::raw('count(*) as total'))
+        ->whereRaw("Denominacion like '%{$buscar}%'")
+        ->get();
 
-    $data = DB::table('Tbgem_citramite')
-    //->select('COSTO_TRAM','TRAMOSERV,ENLINEA,Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
-    ->whereRaw("Denominacion like '%{$buscar}%'")
-    ->paginate(6);
+        $data = DB::table('Tbgem_citramite')
+        //->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+        ->whereRaw("Denominacion like '%{$buscar}%'")
+        ->paginate(6);
 
-    $count2 = sizeof($data);
+        $count2 = sizeof($data);
 
-    return view('VistasRetys.vtarjetas',
-                ['data' => $data,'count2' => $count2,'count' =>$count]);
+        return view('VistasRetys.vtarjetas',
+                    ['data' => $data,'count2' => $count2,'count' =>$count]);
 
    }
 
@@ -60,6 +60,29 @@ class AdminRetys extends Controller
    public function bareasgob(){
 
       return view('VistasRetys.vagobierno');
+
+   }
+
+   public function municipios()
+   {
+        $data = DB::table('tbgem_citramite')->select('AMBITO_MUN_CLAVE','Tbgem_cimunicipios.MUN_DESCRIPCION as nombreMun')
+        ->distinct()
+        ->leftJoin('Tbgem_cimunicipios', 'tbgem_citramite.AMBITO_MUN_CLAVE', '=', 'Tbgem_cimunicipios.MUN_CLAVE')
+        ->orderBy('Tbgem_cimunicipios.MUN_DESCRIPCION')
+        ->get();
+
+        return $data;
+
+        return view('VistasRetys.Municipios.minucipios');
+   }
+
+   public function tramByMun()
+   {
+
+        $dataQuery = DB::table('tbgem_citramite')->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+                        ->where('AMBITO_MUN_CLAVE',$request->clave)
+                        ->orderBy('Denominacion')
+                        ->get();
 
    }
 

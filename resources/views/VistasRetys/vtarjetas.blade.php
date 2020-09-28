@@ -56,12 +56,20 @@
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
                         <img src="img/icon/principioafin.png" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
+
                         @if ($item->enlinea == 1)
                             <img src="img/icon/preenlinea.png" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
                         @endif
                         <img src="img/icon/carpeta.png" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
+
+                        @if ($item->costo_cantidad > 0)
                         <button type="button" class="btn btn-outline-primary" style="width: 120px">Portal de pago</button>
+                        @endif
+
+                        @if ($item->enlinea == 1)
                         <button type="button" class="btn btn-outline-primary"style="width: 120px">Portal de citas</button>
+                        @endif
+
                         @if ($item->enlinea == 1)
                         <button type="button" class="btn btn-outline-primary" style="width: 120px"> Trámite en línea</button>
                         @endif

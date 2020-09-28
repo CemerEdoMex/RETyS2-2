@@ -28,6 +28,8 @@ Route::GET('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*Area
 
 Route::GET('categoria','Adminretys@category')->name('category');
 
+Route::GET('/minicipios','Adminretys@municipios')->name('municipios');
+
 Route::GET('prueba','AdminRetys@prueba')->name('prueba');
 
 /*
