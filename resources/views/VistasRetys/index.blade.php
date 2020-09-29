@@ -15,7 +15,7 @@
 				<a style="color:#341050;" title="Educación" href="categoria/">
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
-							<img alt="cambiar imagen" onmouseout=" src='img/icon/educacion3.png'"onmouseover="src='img/icon/educacionm2.png'" src="img/icon/educacionm2.png" class="img-fluid mx-auto d-block" width="70">
+							<img alt="cambiar imagen" onmouseout=" src='img/icon/educacionm2.png'"onmouseover="src='img/icon/educacion3.png'" src="img/icon/educacionm2.png" class="img-fluid mx-auto d-block" width="70">
                             <p class="font-weight-bold  text-center responsive-text-categorias">Educación</p>
 						</div>
 					</div>
