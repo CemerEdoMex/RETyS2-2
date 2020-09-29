@@ -65,25 +65,32 @@ class AdminRetys extends Controller
 
    public function municipios()
    {
-        $data = DB::table('tbgem_citramite')->select('AMBITO_MUN_CLAVE','Tbgem_cimunicipios.MUN_DESCRIPCION as nombreMun')
+        $data = DB::table('tbgem_citramite')->select('AMBITO_MUN_CLAVE','Tbgem_cimunicipios.MUN_DESCRIPCION')
         ->distinct()
         ->leftJoin('Tbgem_cimunicipios', 'tbgem_citramite.AMBITO_MUN_CLAVE', '=', 'Tbgem_cimunicipios.MUN_CLAVE')
         ->orderBy('Tbgem_cimunicipios.MUN_DESCRIPCION')
         ->get();
 
-        return $data;
+        //dd($data[0]);
 
-        return view('VistasRetys.Municipios.minucipios');
+        return view('VistasRetys.Municipios.minucipios',compact('data'));
    }
 
-   public function tramByMun()
+   public function municipioDetalle($clave)
    {
-
         $dataQuery = DB::table('tbgem_citramite')->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
-                        ->where('AMBITO_MUN_CLAVE',$request->clave)
+                        ->where([
+                            ['AMBITO_MUN_CLAVE',$clave],
+                            ['BAJA','0']
+                            ])
                         ->orderBy('Denominacion')
                         ->get();
 
+                       // return $dataQuery;
+        $count = sizeof($dataQuery);
+
+        return view('VistasRetys.Municipios.municipioDetalle',
+        ['data' => $dataQuery,'count' =>$count]);
    }
 
    public function bpersonasgob(){

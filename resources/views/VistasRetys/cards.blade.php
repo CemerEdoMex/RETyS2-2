@@ -7,7 +7,7 @@
 		<div class="contenedor_tarjeta">
 			<a href="https://sistemas2.edomex.gob.mx/TramitesyServicios/Tramite?tram=352&cont=0">
 				<figure id="tarjeta">
-					<img src="{{ asset('img/unnamed.jpg') }}" class="frontal" alt="">
+					<img src="{{ asset('img/certificado.png') }}" class="frontal" alt="">
 					<figcaption class="trasera">
 						<h2 class="titulo text-center">Expedición del informe o certificado de no antecedentes penales</h2>
 						<hr>
