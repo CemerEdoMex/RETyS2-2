@@ -44,3 +44,10 @@ Route::GET('trasnparencia','AdminRetys@trasnparencia')->name('trasnparencia');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+|--------------------------------------------------------------------------
+| Categorias  Rutas
+|--------------------------------------------------------------------------
+|*/
+route::GET('educacion/{id_tem}','Adminretys@bptema')->name('Educación');
