@@ -33,7 +33,7 @@
 		<div class="contenedor_tarjeta">
 			<a href="http://sistemas2.edomex.gob.mx/TramitesyServicios/Tramite?tram=33&cont=0">
 				<figure id="tarjeta">
-					<img src="img/verifica.png" class="frontal" alt="">
+					<img src="{{asset ('img/verifica.png') }}" class="frontal" alt="">
 					<figcaption class="trasera">
 						<h2 class="titulo text-center">Pago de multa por verificación vehicular extemporánea.</h2>
 						<hr>

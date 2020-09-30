@@ -15,7 +15,7 @@
     padding-left: 15px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 20px;
   }
 
 
@@ -42,12 +42,13 @@
     -moz-border-radius-bottomright: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-radius: 50%;
 
     border: none;
-    background: #232833;
+    background: #2993da;
     height: 50px;
     width: 50px;
-    color: #4f5b66;
+    color: #e6e6e6;
     opacity: 0;
     font-size: 10pt;
 
@@ -65,5 +66,5 @@
   }
 
   .container-4:hover button.icon:hover{
-    background: white;
+    background: #2993da;
   }

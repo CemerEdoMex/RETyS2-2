@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="{{ asset('vendor/nav.css') }}">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
         <!-- <link rel="stylesheet" href="css/style4.css">-->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
             integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
@@ -19,7 +19,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
             integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
         </script>
-        <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+        <link href="{{ asset('vendor/animate.css/animate.min.css')}}" rel="stylesheet">
 
         <!-- Custom styles for this template -->
 
@@ -34,7 +34,7 @@
       <header>
         <nav class="navbar  fixed-top navbar-expand-sm navbar-light fixed-right bg-light">
 
-          <a class="navbar-brand" href="#"><img src="img/h1.png" class="logo-brand" alt="logo" height="70"
+          <a class="navbar-brand" href="#"><img src="{{ asset('img/h1.png')}}" class="logo-brand" alt="logo" height="70"
             width="250"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -111,8 +111,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ÁREAS DE GOBIERNO</a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="https://www.gob.mx/tramites"><img src="img/icon/mexico.png" style="width:20%;" class=" img-circle mx-auto"> Federal</a>
-                          <a class="dropdown-item" href="#"><img src="img/icon/estatal.png" style="width:20%;" class=" img-circle mx-auto"> Estatal</a>
+                          <a class="dropdown-item" href="https://www.gob.mx/tramites"><img src="{{ asset('img/icon/mexico.png')}}" style="width:20%;" class=" img-circle mx-auto"> Federal</a>
+                          <a class="dropdown-item" href="#"><img src="{{ asset('img/icon/estatal.png')}}" style="width:20%;" class=" img-circle mx-auto"> Estatal</a>
                           <a class="dropdown-item" href="{{ route('municipios') }}"><img src="img/icon/municipal.png" style="width:20%;" class=" img-circle mx-auto"> Municipal</a>
                       </li>
 
@@ -348,14 +348,14 @@
           </div>
           <div class="row copyright">
               <div class="col-lg-1 col-md-4">
-               
+
 
 
                 </ul>
 
               </div>
 
-          
+
              <div class="col-lg-2 col-md-4">
                 <h5 class=" text-white text-medium ">Acerca del gobierno</h5>
                 <ul class="list-unstyled ">
@@ -425,13 +425,13 @@
 
               </div>
                 <div class="col-lg-1 col-md-4">
-               
+
 
 
                 </ul>
 
               </div>
-          
+
           </div>
         </footer>
 
@@ -443,18 +443,18 @@
 
                 <!-- Optional JavaScript -->
                 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-                <script src="./js/jquery-3.5.1.slim.js"></script>
+                <script src="{{ asset('js/jquery-3.5.1.slim.js') }}"></script>
                 <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
 
-                <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-                <script src="./vendor/venobox/venobox.min.js"></script>
-                <script src="./vendor/waypoints/jquery.waypoints.min.js"></script>
-                <script src="./vendor/counterup/counterup.min.js"></script>
+                <script src="{{ asset('vendor/venobox/venobox.min.js') }}"></script>
+                <script src="{{ asset('vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+                <script src="{{ asset('vendor/counterup/counterup.min.js') }}"></script>
                 <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
-                <script src="./vendor/isotope-layout/isotope.pkgd.min.js"></script>
+                <script src="{{ asset('vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 
-                <script src="./vendor/aos/aos.js"></script>
+                <script src="{{ asset('vendor/aos/aos.js') }}"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
                     integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
                     crossorigin="anonymous"></script>

@@ -17,6 +17,9 @@
             <div class="card text-center" style="width: 18rem;">
                 <div class="card-body">
                 <h5 class="card-title">{{$data[$i]->mun_descripcion}}</h5>
+                @if ($data[$i]->ruta)
+                <img src="{{ asset($data[$i]->ruta) }}"  class="rounded" alt="...">
+                @endif
                 <p class="card-text"><a href="#">Visita su sitio web.</a> </p>
                 <a href="{{ url('/municipios/'.$data[$i]->ambito_mun_clave) }}" class="btn btn-primary">Ver trámites </a>
                 </div>
