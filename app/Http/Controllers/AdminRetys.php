@@ -110,5 +110,28 @@ class AdminRetys extends Controller
        return view('Trasnparencia.transparencia');
    }
 
+    public function bptema($id_tem)
+   {
+        
+   $datatema = DB::table('tbgem_citram_clas')->select('idtramite')
+                        ->where([
+                            ['idclasificacion',$id_tem],
+                            ])
+                        ->get();
+    $datatram = DB::table('tbgem_citramite')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+                        ->where([
+                            ['BAJA','0']
+                            ])
+                        ->orderBy('Denominacion')
+                        ->get();
+
+
+                       // return $datatram;
+        $count = sizeof($datatram);
+
+        return view('VistasRetys.categoriatarjetas',
+        ['datatem'=>$datatema,'datatram' => $datatram,'count' =>$count]);     
+   }
+
 
 }
