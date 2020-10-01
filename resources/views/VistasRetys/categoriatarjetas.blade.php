@@ -17,7 +17,7 @@
         </div>
 
         <br>
-   
+
         <hr>
 
         <div class="row mb-4">
@@ -35,7 +35,7 @@
                     @else
                     <div class="card border-warning mb-3 text-center justify-content-center" style="max-width: 20rem;">
                 @endif
-                
+
 
                 <div class="card-header "><h6 class="card-title font-weight-bold" style="text-align: center">{{$item->denominacion}}</h6>  </div>
 
@@ -52,6 +52,7 @@
 
                         <img src="{{asset('img/icon/certificado.png')}}" style="width:30%;" class="img-size-50 mr-3 img-circle mx-auto d-block" alt="User Image">
 
+
                         @if ($item->costo_cantidad > 0)
                             <h5 class="card-title font-weight-bold" style="text-align: center">Costo:$ {{$item->costo_cantidad}}</h5>
                         @else
@@ -59,6 +60,7 @@
                         @endif
 
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
 
                         <img src="{{asset('img/icon/principioafin.png')}}" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
 
@@ -98,7 +100,7 @@
         </div>
 
 
-  
+
 
 
 
