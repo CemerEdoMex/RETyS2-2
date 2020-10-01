@@ -112,8 +112,8 @@
                         <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ÁREAS DE GOBIERNO</a>
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="https://www.gob.mx/tramites"><img src="{{ asset('img/icon/mexico.png')}}" style="width:20%;" class=" img-circle mx-auto"> Federal</a>
-                          <a class="dropdown-item" href="#"><img src="{{ asset('img/icon/estatal.png')}}" style="width:20%;" class=" img-circle mx-auto"> Estatal</a>
-                          <a class="dropdown-item" href="{{ route('municipios') }}"><img src="img/icon/municipal.png" style="width:20%;" class=" img-circle mx-auto"> Municipal</a>
+                          <a class="dropdown-item" href="{{ route('areasgob') }}"><img src="{{ asset('img/icon/estatal.png')}}" style="width:20%;" class=" img-circle mx-auto"> Estatal</a>
+                          <a class="dropdown-item" href="{{ route('municipios') }}"><img src="{{ asset('img/icon/municipal.png')}}" style="width:20%;" class=" img-circle mx-auto"> Municipal</a>
                       </li>
 
                     <!--<li class="nav-item secondary">

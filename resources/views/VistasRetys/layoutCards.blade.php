@@ -32,9 +32,9 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-sm navbar-light fixed-right bg-light">
+    <nav class="navbar  fixed-top navbar-expand-sm navbar-light fixed-right bg-light">
 
-    <a class="navbar-brand" href="#"><img src="{{ asset('img/h1.png')}}" class="logo-brand" alt="logo" height="70"
+      <a class="navbar-brand" href="#"><img src="{{ asset('img/h1.png')}}" class="logo-brand" alt="logo" height="70"
         width="250"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,13 +45,19 @@
             <a class="nav-link" href="http://edomex.gob.mx/">MI PORTAL</a>
           </li>
           <li class="nav-item active">
-          <a class="nav-link" href="{{ route('inicio') }}">TRÁMITES Y SERVICIOS</a>
+            <a class="nav-link" href="{{ route('inicio')}}">TRÁMITES Y SERVICIOS</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="http://edomex.gob.mx/transparencia">TRANSPARENCIA</a>
+            <a class="nav-link" href="http://edomex.gob.mx/acerca_ventanilla">Acerca de la ventanilla</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link " href="http://edomex.gob.mx/estadisticas">DATOS ABIERTOS</a>
+            <a class="nav-link" href="http://edomex.gob.mx/conoce_ventanilla">Conoce la ventanilla</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://edomex.gob.mx/marco_ventanilla">Marco jurídico </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link " href="http://edomex.gob.mx/guias_tramites">Guías</a>
           </li>
         </ul>
 
@@ -70,14 +76,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ÁREAS DE GOBIERNO</a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Federal</a>
-                      <a class="dropdown-item" href="#">Estatal</a>
-                      <a class="dropdown-item" href="#">Municipal</a>
+                      <a class="dropdown-item" href="https://www.gob.mx/tramites"><img src="{{ asset('img/icon/mexico.png')}}" style="width:20%;" class=" img-circle mx-auto"> Federal</a>
+                      <a class="dropdown-item" href="{{ route('areasgob') }}"><img src="{{ asset('img/icon/estatal.png')}}" style="width:20%;" class=" img-circle mx-auto"> Estatal</a>
+                      <a class="dropdown-item" href="{{ route('municipios') }}"><img src="{{ asset('img/icon/municipal.png')}}" style="width:20%;" class=" img-circle mx-auto"> Municipal</a>
                   </li>
 
-                <!--<li class="nav-item secondary">
-                    <a class="nav-link text-bold" href="{{ route('areasgob')}} ">Areas de Gobierno</a>
-                </li> -->
+
 
 
                 <li class="nav-item">

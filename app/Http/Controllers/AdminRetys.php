@@ -57,9 +57,25 @@ class AdminRetys extends Controller
 
    }
 
-   public function bareasgob(){
+   public function areasGob(){
 
-      return view('VistasRetys.vagobierno');
+
+        $dataQuery=DB::table('Tbgem_cisujetoobligado')->select('IDCVEUA','Sujetoobligado','AMBITO_MUN_CLAVE','AMBITO','ORDEN','XSECRETARIA','URL')
+                        ->where([
+                            ['Nivo',0],
+                            ['AMBITO_MUN_CLAVE',0],
+                            ['AMBITO',3],
+                            ['IDINTEGRADOR',172],
+                            ['IDSUJETOPODER',419],
+                            ['INTEGRADOR',8],
+                            ['ESPODER',8]
+                        ])
+                        ->whereNotIn('IDCVEUA', ['200000000'])
+                        ->orderBy('orden')
+                        ->get();
+        //return $dataQuery;
+
+        return view('VistasRetys.AreasGob.areasgob',compact('dataQuery'));
 
    }
 
@@ -72,7 +88,7 @@ class AdminRetys extends Controller
         ->orderBy('Tbgem_cimunicipios.MUN_DESCRIPCION')
         ->get();
 
-        return $data;
+        //return $data;
 
         return view('VistasRetys.Municipios.minucipios',compact('data'));
    }
@@ -112,7 +128,7 @@ class AdminRetys extends Controller
 
     public function bptema($id_tem)
    {
-        
+
    $datatema = DB::table('tbgem_citram_clas')->select('idtramite')
                         ->where([
                             ['idclasificacion',$id_tem],
@@ -130,7 +146,7 @@ class AdminRetys extends Controller
         $count = sizeof($datatram);
 
         return view('VistasRetys.categoriatarjetas',
-        ['datatem'=>$datatema,'datatram' => $datatram,'count' =>$count]);     
+        ['datatem'=>$datatema,'datatram' => $datatram,'count' =>$count]);
    }
    
 

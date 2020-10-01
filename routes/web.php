@@ -31,6 +31,9 @@ Route::GET('categoria','Adminretys@category')->name('category');
 Route::GET('/minicipios','Adminretys@municipios')->name('municipios');
 Route::GET('/municipios/{clave}','Adminretys@municipioDetalle')->name('municipio');
 
+
+Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');
+
 Route::GET('prueba','AdminRetys@prueba')->name('prueba');
 
 /*

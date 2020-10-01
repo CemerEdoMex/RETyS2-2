@@ -29,7 +29,7 @@
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
 				<a
 					href=""
@@ -46,7 +46,7 @@
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-6 col-xl-3 col-md-4">
 				<a
 					href="/ventanilla/categoria/173"
@@ -63,12 +63,12 @@
 					</div>
 				</a>
 			</div>
-			
-		
 
-			
-			
-			
+
+
+
+
+
 
 		</div>
 	</div>
