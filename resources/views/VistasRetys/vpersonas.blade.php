@@ -16,7 +16,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a  style="color:#341050;"
-					href=""
+					href="{{ route('Personas','1') }}"
 					title="Trámites">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -33,7 +33,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a  style="color:#341050;"
-					href="/ventanilla/categoria/173"
+					href="{{ route('Personas','17') }}"
 					title="Servicios">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -50,7 +50,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/157"
+					href="{{ route('Personas','18') }}"
 					title="Educación">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -67,7 +67,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/160"
+					href="{{ route('Personas','15') }}"
 					title="Finanzas">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -84,7 +84,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/162"
+					href="{{ route('Personas','2') }}"
 					title="Medio Ambiente">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -101,7 +101,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/163"
+					href="{{ route('Personas','3') }}"
 					title="Licencias">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -118,7 +118,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/164"
+					href="{{ route('Personas','4') }}"
 					title="Seguridad Pública">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -135,7 +135,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/165"
+					href="{{ route('Personas','5') }}"
 					title="Negocios y Empresas">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -152,7 +152,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/166"
+					href="{{ route('Personas','6') }}"
 					title="Trabajo">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -169,7 +169,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/167"
+					href="{{ route('Personas','14') }}"
 					title="Registro Público">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -186,7 +186,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/169"
+					href="{{ route('Personas','8') }}"
 					title="Vehículos">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -203,7 +203,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/154"
+					href="{{ route('Personas','16') }}"
 					title="Salud">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -219,7 +219,7 @@
 			</div>
 				<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="/ventanilla/categoria/154"
+					href="{{ route('Personas','10') }}"
 					title="Salud">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">

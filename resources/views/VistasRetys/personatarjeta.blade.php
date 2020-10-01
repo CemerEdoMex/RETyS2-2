@@ -21,10 +21,10 @@
         <hr>
 
         <div class="row mb-4">
-              @foreach ($datatem as $tema)
+              @foreach ($dataper as $tper)
 
             @foreach ($datatram as $item)
-            @if($tema->idtramite == $item->idtramite)
+            @if($tper->idtramite == $item->idtramite)
 
                 @if ($item->ambito == 3)
                     <div class="card border-success mb-3 text-center justify-content-center" style="max-width: 20rem;">

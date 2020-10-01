@@ -51,3 +51,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 |--------------------------------------------------------------------------
 |*/
 route::GET('catego/{id_tem}','Adminretys@bptema')->name('catego');
+
+/*
+|--------------------------------------------------------------------------
+| Categorias  Rutas
+|--------------------------------------------------------------------------
+|*/
+route::GET('Personas/{id_per}','Adminretys@bppersona')->name('Personas');
+
