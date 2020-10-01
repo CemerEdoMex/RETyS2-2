@@ -53,4 +53,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 | Categorias  Rutas
 |--------------------------------------------------------------------------
 |*/
-route::GET('educacion/{id_tem}','Adminretys@bptema')->name('Educación');
+route::GET('catego/{id_tem}','Adminretys@bptema')->name('catego');
