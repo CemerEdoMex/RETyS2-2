@@ -11,9 +11,9 @@
 
         <div class="container-1">
             <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                <input type="search" name="buscar" id="search" placeholder="Busca tu Trámite" />
-                <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
-              </form>
+             <input type="search" name="buscar"  id="search" placeholder="¿Qué estás buscando?" />
+             <button class="btn btn-info my-2 my-sm-0 btn-redondo" id="validationTooltipUsernamePrepend" type="submit">🔎</button>
+            </form>
         </div>
 
         <br>
