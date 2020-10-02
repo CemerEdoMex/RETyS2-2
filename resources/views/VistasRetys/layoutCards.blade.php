@@ -115,76 +115,161 @@
 
 
 
-            <!-- FOOTER -->
-            <footer>
-                <div class="container">
-                  <div class="row">
+          <!-- FOOTER -->
+                <footer>
+          <div class="container">
+            <div class="row">
 
-                    <div class="col-lg-2 col-md-4">
-                      <h5 class=" text-white ">Conoce el Estado</h5>
-                      <ul class="list-unstyled ">
-                        <li class=" text-white ">-Nuestros municipios</li>
-                        <li class=" text-white ">-Corredores turísticos</li>
-                        <li class=" text-white ">-Parques</li>
-                         <li class=" text-white ">-Pueblos Mágicos</li>
-                          <li class=" text-white ">-Visita el Estado</li>
-                      </ul>
+              <div class="col-lg-2 col-md-4">
+                <h5 class=" text-black text-medium ">Conoce el Estado</h5>
+                <ul class="list-unstyled ">
+                  <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Nuestros municipios</li>
+                  <li class=" text-black text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Corredores turísticos</li>
+                  <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Parques</li>
+                   <li class=" text-black text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Pueblos Mágicos</li>
+                    <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Visita el Estado</li>
+                </ul>
 
-                    </div>
+              </div>
 
-                     <div class="col-lg-3 col-md-4">
-                      <h5 class=" text-white ">Trámites y servicios</h5>
-                      <ul class="list-unstyled ">
-                        <li class=" text-white ">-Ventanilla electrónica</li>
-                        <li class=" text-white ">-Carpeta ciudadana</li>
-                        <li class=" text-white ">-Centros de Servicios Administrativos</li>
-                         <li class=" text-white ">-Portal de servicios</li>
-                      </ul>
+               <div class="col-lg-2 col-md-4">
+                <h5 class=" text-black text-medium">Trámites y servicios</h5>
+                <ul class="list-unstyled ">
+                  <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Ventanilla electrónica</li>
+                  <li class=" text-black text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Carpeta ciudadana</li>
+                  <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Centros de Servicios Administrativos</li>
+                   <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Portal de servicios</li>
+                </ul>
 
-                    </div>
-                    <div class="col-lg-2 col-md-4">
-                      <h5 class=" text-white ">Transparencia</h5>
-                      <ul class="list-unstyled ">
-                        <li class=" text-white ">-¿Qué es?</li>
-                        <li class=" text-white ">-Transparencia fiscal</li>
-                        <li class=" text-white ">-INFOEM</li>
-                         <li class=" text-white ">-Información pública</li>
-                         <li class=" text-white ">-SAIMEX</li>
+              </div>
+              <div class="col-lg-2 col-md-4">
+                <h5 class=" text-black text-medium ">Transparencia</h5>
+                <ul class="list-unstyled ">
+                  <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">¿Qué es?</li>
+                  <li class=" text-black text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Transparencia fiscal</li>
+                  <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">INFOEM</li>
+                   <li class=" text-black text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Información pública</li>
+                   <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">SAIMEX</li>
 
-                      </ul>
+                </ul>
 
-                    </div>
+              </div>
 
-                     <div class="col-lg-2 col-md-4">
-                      <h5 class=" text-white ">Datos abiertos</h5>
-                      <ul class="list-unstyled ">
-                        <li class=" text-white ">-Datos abiertos en el Estado</li>
-                        <li class=" text-white ">-Estadísticas</li>
-                        <li class=" text-white ">-Datos abiertos en México</li>
-                         <li class=" text-white ">-Fundación de Datos Abiertos</li>
-
-
-                      </ul>
-
-                    </div>
+               <div class="col-lg-2 col-md-4">
+                <h5 class=" text-black text-medium ">Datos abiertos</h5>
+                <ul class="list-unstyled ">
+                  <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Datos abiertos</li>
+                  <li class=" text-black text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Estadísticas</li>
+                  <li class=" text-black text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Datos abiertos en México</li>
+                   <li class=" text-black text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:5%;">Fundación de Datos Abiertos</li>
 
 
+                </ul>
+
+              </div>
 
 
 
 
-                    <div class="col-lg-3">
 
-                      <img class="img" src="{{ asset ('img/h1.png') }}" alt="" />
 
-                    </div>
+              <div class="col-lg-4 col-md" style="background:#ededed">
 
-                  </div>
-                </div>
-                <div class="copyright text-center">
-                  Gobierno del Estado de México.
-                </div>
-              </footer>
+                <img class="img" src="{{ asset ('img/h1.png') }}" alt="" />
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="row copyright">
+              <div class="col-lg-1 col-md-4">
+
+
+
+                </ul>
+
+              </div>
+
+
+             <div class="col-lg-2 col-md-4">
+                <h5 class=" text-white text-medium ">Acerca del gobierno</h5>
+                <ul class="list-unstyled ">
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Plan de Desarrollo</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Dependencias</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">g2g</li>
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Gaceta de gobierno</li>
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Legistel</li>
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Glosario del sitio</li>
+
+
+                </ul>
+
+              </div>
+               <div class="col-lg-2 col-md-4">
+                <h5 class=" text-white text-medium ">Enlaces de interés</h5>
+                <ul class="list-unstyled ">
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Derechos Humanos</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Mejora Regulatoria</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Instituto Electoral del Estado</li>
+                   <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Poder Legislativo</li>
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Poder Judicial</li>
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Edictos</li>
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Caso mujeres víctimas de tortura sexual Atenco vs. México</li>
+
+
+                </ul>
+
+              </div>
+               <div class="col-lg-2 col-md-4">
+                <h5 class=" text-white text-medium ">Comunicación social</h5>
+                <ul class="list-unstyled ">
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Edomex Informa</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Seguridad y justicia</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">TV Edoméx</li>
+                   <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">TV Legislatura</li>
+                   <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Servicios a medios</li>
+
+
+                </ul>
+
+              </div>
+               <div class="col-lg-2 col-md-4">
+                <h5 class=" text-white text-medium ">Contáctanos</h5>
+                <ul class="list-unstyled ">
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Chat en línea - CATGEM</li>
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Directorio de servidoras y servidores públicos</li>
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Sistema de Atención Mexiquense</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Escribe al gobernador</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Seguimiento de asuntos</li>
+                   <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Escribe al webmaster</li>
+
+
+                </ul>
+
+              </div>
+               <div class="col-lg-2 col-md-4">
+                <h5 class=" text-white text-medium ">Términos y condiciones</h5>
+                <ul class="list-unstyled ">
+                  <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Acerca del portal</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Mapa del portal</li>
+                  <li class=" text-white text-small"><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Políticas de privacidad</li>
+                   <li class=" text-white text-small "><img src="{{asset('img/icon/triangulo.png')}}" style="width:3%;">Visualizadores</li>
+
+
+                </ul>
+
+              </div>
+                <div class="col-lg-1 col-md-4">
+
+
+
+                </ul>
+
+              </div>
+
+          </div>
+        </footer>
 
 
 

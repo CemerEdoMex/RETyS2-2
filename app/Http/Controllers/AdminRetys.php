@@ -149,6 +149,30 @@ class AdminRetys extends Controller
         return view('VistasRetys.categoriatarjetas',
         ['datatem'=>$datatema,'datatram' => $datatram,'count' =>$count]);
    }
+   
+
+   public function bppersona($id_per)
+   {
+        
+   $datapersona = DB::table('tbgem_citram_perfil')->select('idtramite')
+                        ->where([
+                            ['id_perfil',$id_per],
+                            ])
+                        ->get();
+    $datatram = DB::table('tbgem_citramite')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+                        ->where([
+                            ['BAJA','0']
+                            ])
+                        ->orderBy('Denominacion')
+                        ->get();
+
+
+                       // return $datatram;
+        $count = sizeof($datatram);
+
+        return view('VistasRetys.personatarjeta',
+        ['dataper'=>$datapersona,'datatram' => $datatram,'count' =>$count]);     
+   }
 
 
 }
