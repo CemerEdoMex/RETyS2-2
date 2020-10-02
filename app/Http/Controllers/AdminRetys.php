@@ -41,7 +41,7 @@ class AdminRetys extends Controller
         $data = DB::table('Tbgem_citramite')
         //->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
         ->whereRaw("Denominacion like '%{$buscar}%'")
-        ->paginate(6);
+        ->paginate(9);
 
         $count2 = sizeof($data);
 

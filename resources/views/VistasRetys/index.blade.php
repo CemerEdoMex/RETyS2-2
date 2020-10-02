@@ -12,7 +12,7 @@
 
 
 			<div class="col-6 col-xl-3 col-md-4 accordion-container">
-				<a style="color:#341050;" title="Educación" href="{{ route('catego','T06') }}">
+				<a style="color:#341050;" title="Educación" href="{{ route('catego','T06','Educación') }}">
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
 							<img alt="cambiar imagen" onmouseout=" src='img/icon/educacionm2.png'"onmouseover="src='img/icon/educacion3.png'" src="img/icon/educacionm2.png" class="img-fluid mx-auto d-block" width="70">

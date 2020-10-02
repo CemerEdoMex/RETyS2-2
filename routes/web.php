@@ -60,5 +60,5 @@ route::GET('catego/{id_tem}','Adminretys@bptema')->name('catego');
 | Categorias  Rutas
 |--------------------------------------------------------------------------
 |*/
-route::GET('Personas/{id_per}','Adminretys@bppersona')->name('Personas');
+route::GET('Personas/{id_per}/{ncat}','Adminretys@bppersona')->name('Personas');
 

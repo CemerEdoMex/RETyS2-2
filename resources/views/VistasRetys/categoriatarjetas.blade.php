@@ -15,6 +15,9 @@
                 <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
               </form>
         </div>
+         <div class="col-12 text-center text-elegant-color-dark text-dark" >
+                <p style=" font-size: 42px;">Categorías</p>
+         </div>
 
         <br>
 
