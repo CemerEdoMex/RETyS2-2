@@ -35,6 +35,7 @@ class AdminRetys extends Controller
         $count = DB::table('Tbgem_citramite')
         ->select(DB::raw('count(*) as total'))
         ->whereRaw("Denominacion like '%{$buscar}%'")
+        ->where("Baja",0)
         ->get();
 
         $data = DB::table('Tbgem_citramite')
