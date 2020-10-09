@@ -138,7 +138,7 @@
 
                         <h3> Video Tutorial</h3>
                         <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CrRL854defQ"
+                        <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/121_-PXqD69ocezhmuFDWhfcooWKc2k5W/view"
                         allowfullscreen></iframe>
                         </div>
                         <br>
