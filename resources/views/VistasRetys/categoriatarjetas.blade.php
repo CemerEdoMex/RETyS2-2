@@ -30,13 +30,13 @@
             @if($tema->idtramite == $item->idtramite)
 
                 @if ($item->ambito == 3)
-                    <div class="card border-success mb-3 text-center justify-content-center" style="max-width: 20rem;">
+                    <div class="card border-success mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem; ">
                     @elseif ($item->ambito == 4)
-                    <div class="card border-primary mb-3 text-center justify-content-center" style="max-width: 20rem;">
+                    <div class="card border-primary mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem;">
                     @elseif($item->ambito == 5)
-                    <div class="card border-secondary mb-3 text-center justify-content-center" style="max-width: 20rem;">
+                    <div class="card border-secondary mb-5 text-center justify-content-center" style="max-width: 20rem;">
                     @else
-                    <div class="card border-warning mb-3 text-center justify-content-center" style="max-width: 20rem;">
+                    <div class="card border-warning mb-5 text-center justify-content-center" style="max-width: 20rem;">
                 @endif
 
 
@@ -62,29 +62,48 @@
                             <h5 class="card-title text-success font-weight-bold" style="text-align: center">Costo:$ 0.0</h5>
                         @endif
 
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; 
 
-
+                        @if($item->prinfin == 1)
                         <img src="{{asset('img/icon/principioafin.png')}}" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
-
-                        @if ($item->enlinea == 1)
+                         @endif
+                        @if ($item->preges == 1)
                             <img src="{{asset('img/icon/preenlinea.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
                         @endif
+                          @if ($item->chat == 1)
+                            <img src="{{asset('img/icon/chat.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Chat en Línea">
+                        @endif
+                      
+                          @if ($item->presencial == 1)
+                            <img src="{{asset('img/icon/presencial.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Presencial
+                            ">
+                        @endif
+                       
+                       
                         <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
-                        
+
+                        <br>
+                        <br>
 
                         @if ($item->costo_cantidad > 0)
                         <button type="button" class="btn btn-outline-primary" style="width: 120px">Portal de pago</button>
                         @endif
 
-                        @if ($item->enlinea == 1)
-                        <button type="button" class="btn btn-outline-primary"style="width: 120px">Portal de citas</button>
+                        @if ($item->prinfin == 1)
+                        @if ($item->prinfin_seits == 1)
+                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Tremite En Linea</a>
+                        @else
+                        <a href="{{$item-> prinfin_url}}" class="btn btn-outline-primary"style="width: 120px">Tremite En Linea</a>
+                        @endif
                         @endif
 
-                        @if ($item->enlinea == 1)
-                        <button type="button" class="btn btn-outline-primary" style="width: 120px"> Trámite en línea</button>
+                        @if ($item->preges == 1)
+                        <a href="{{$item-> preges_url}}" class="btn btn-outline-primary" style="width: 120px"> Pregestión en línea</a>
                         @endif
-                        <button type="button" class="btn btn-outline-primary" style="width: 120px">Descargar formato</button>
+                        
+                         @if ($item->chat == 1)
+                        <a href="{{$item-> chat_url}}" class="btn btn-outline-primary" style="width: 120px"> Chat en línea</a>
+                        @endif
                     </div>
                     @if ($item->ambito == 3)
                     <a class="btn btn-success" href="{{ route('trasnparencia') }}" role="button">Más información</a>
@@ -95,7 +114,7 @@
                     @endif
                     </div>
 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                   @endif
                @endforeach
             @endforeach

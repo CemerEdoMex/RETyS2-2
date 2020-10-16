@@ -41,12 +41,11 @@ class AdminRetys extends Controller
         $data = DB::table('Tbgem_citramite')
         //->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
         ->whereRaw("Denominacion like '%{$buscar}%'")
-<<<<<<< HEAD
-        ->paginate(9);
-=======
+
         ->where("Baja",0)
-        ->paginate(6);
->>>>>>> d8c61e3c8cfa8402266d194fc07c9e018bcca48c
+         ->paginate(9);
+        
+
 
         $count2 = sizeof($data);
 
@@ -140,7 +139,7 @@ class AdminRetys extends Controller
                             ['idclasificacion',$id_tem],
                             ])
                         ->get();
-    $datatram = DB::table('tbgem_citramite')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+    $datatram = DB::table('tbgem_citramite')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion','PRINFIN_URL','PREGES_URL','CHAT_URL','PRINFIN','PREGES','CHAT','PRESENCIAL','PRINFIN_SEITS','TIPOTRAM')
                         ->where([
                             ['BAJA','0']
                             ])
