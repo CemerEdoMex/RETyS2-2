@@ -21,6 +21,8 @@
     </script>
     <link href="{{ asset('vendor/animate.css/animate.min.css')}}" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ asset('css/boton.css')}}">
+
     <!-- Custom styles for this template -->
 
     <link rel="stylesheet" href="{{ asset('vendor/carousel.css') }}">

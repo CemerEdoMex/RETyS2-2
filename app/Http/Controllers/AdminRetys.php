@@ -41,14 +41,11 @@ class AdminRetys extends Controller
         $data = DB::table('Tbgem_citramite')
         //->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
         ->whereRaw("Denominacion like '%{$buscar}%'")
-<<<<<<< HEAD
-        ->paginate(9);
-=======
         ->where("Baja",0)
         ->paginate(6);
->>>>>>> d8c61e3c8cfa8402266d194fc07c9e018bcca48c
-
         $count2 = sizeof($data);
+
+        //return $data;
 
         return view('VistasRetys.vtarjetas',
                     ['data' => $data,'count2' => $count2,'count' =>$count]);
@@ -81,8 +78,45 @@ class AdminRetys extends Controller
                         ->get();
         //return $dataQuery;
 
-        return view('VistasRetys.AreasGob.areasgob',compact('dataQuery'));
 
+        $dataQuery2 = DB::select("SELECT s.idsujeto, s.Sujetoobligado,s.ambito,s.AMBITO_MUN_CLAVE,s.AMBITO,s.ORDEN,s.XSECRETARIA,s.ttotales,s.imagen,
+        ambito.descripcion,s.URL
+        from Tbgem_cisujetoobligado s
+        left outer  join GRL_ELEMENTOS ambito on s.ambito =  ambito.idelemento
+        left outer join GRL_ELEMENTOS poder on s.poder = poder.idelemento
+        where Nivo=0 and AMBITO_MUN_CLAVE=0 and AMBITO=3
+        and IDINTEGRADOR = 172 and IDSUJETOPODER=419 and INTEGRADOR=8 and ESPODER=8 and IDCVEUA <> '200000000' and s.ttotales >0
+        order by orden");
+
+        //return $dataQuery2;
+
+        return view('VistasRetys.AreasGob.areasgob',compact('dataQuery2'));
+
+   }
+
+   public function areasGobDetalle($idsujeto) {
+
+    $data= DB::select('SELECT distinct t.idtramite, t.denominacion,
+                        t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,
+                        t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
+                        t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
+                        FROM tbgem_CITramite t
+                        INNER JOIN grl_elementos e on t.ambito = e.idelemento
+                        INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
+                        INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
+                        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+                        INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
+                        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+                        LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
+                        where t.Baja=0
+                        and s.idsujeto ='.$idsujeto.'
+                        order by t.denominacion');
+
+    $count = sizeof($data);
+
+    //return $count;
+
+    return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
    }
 
    public function municipios()
@@ -101,7 +135,7 @@ class AdminRetys extends Controller
 
    public function municipioDetalle($clave)
    {
-        $dataQuery = DB::table('tbgem_citramite')->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+        $dataQuery = DB::table('tbgem_citramite')->select('preges_url','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
                         ->where([
                             ['AMBITO_MUN_CLAVE',$clave],
                             ['BAJA','0']
@@ -140,7 +174,7 @@ class AdminRetys extends Controller
                             ['idclasificacion',$id_tem],
                             ])
                         ->get();
-    $datatram = DB::table('tbgem_citramite')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+    $datatram = DB::table('tbgem_citramite')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion','preges_url')
                         ->where([
                             ['BAJA','0']
                             ])

@@ -6,22 +6,22 @@
 
 <div class="container">
     <button type="button" class="btn btn-primary">
-     Catálogo de Trámites y Servicios por Áreas de Gobierno <span class="badge badge-light">{{ sizeof($dataQuery)}} encontrados</span>
+     Catálogo de Trámites y Servicios por Áreas de Gobierno <span class="badge badge-light">{{ sizeof($dataQuery2)}} encontrados</span>
     </button>
     <br>
     <hr>
 
     <div class="card-columns">
 
-        @for ($i = 0; $i < sizeof($dataQuery); $i++)
+        @for ($i = 0; $i < sizeof($dataQuery2); $i++)
             <div class="card text-center" style="width: 18rem;">
                 <div class="card-body">
-                <h5 class="card-title">{{$dataQuery[$i]->sujetoobligado}}</h5>
+                <h5 class="card-title">{{$dataQuery2[$i]->sujetoobligado}}</h5>
                 {{--@if ($dataQuery[$i]->ruta)
                 <img src="{{ asset($dataQuery[$i]->ruta) }}"  class="rounded" alt="...">
                 @endif--}}
-                <p class="card-text"><a href="{{$dataQuery[$i]->url}}" target="_blanck">Visita su sitio web.</a> </p>
-                <a href="{{-- url('/municipios/'.$data[$i]->ambito_mun_clave) --}}" class="btn btn-primary">Ver trámites </a>
+                <p class="card-text"><a href="{{$dataQuery2[$i]->url}}" target="_blanck">Visita su sitio web.</a> </p>
+                <a href="{{ url('/areasgog/'.$dataQuery2[$i]->idsujeto) }}" class="btn btn-primary">Ver trámites </a>
                 </div>
             </div>
         @endfor

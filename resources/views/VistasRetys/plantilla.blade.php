@@ -21,6 +21,10 @@
         </script>
         <link href="{{ asset('vendor/animate.css/animate.min.css')}}" rel="stylesheet">
 
+
+
+        <link rel="stylesheet" href="{{ asset('css/boton.css')}}">
+
         <!-- Custom styles for this template -->
 
         <link rel="stylesheet" href="{{ asset('vendor/carousel.css') }}">
@@ -89,8 +93,10 @@
                 <div class="carousel-caption">
                    <div class="container-1">
                     <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                        <input type="search" name="buscar"  id="search" placeholder="¿Qué estás buscando?" />
-                        <button class="btn btn-info my-2 my-sm-0 btn-redondo" id="validationTooltipUsernamePrepend" type="submit">🔎</button>
+                        <div class="container-4">
+                            <input type="search" id="search" name="buscar" placeholder="¿Qué estás buscando?" />
+                            <button class="icon"><i class="fa fa-search"></i></button>
+                          </div>
                     </form>
                 </div>
               </div>
@@ -138,8 +144,7 @@
 
                         <h3> Video Tutorial</h3>
                         <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/121_-PXqD69ocezhmuFDWhfcooWKc2k5W/view"
-                        allowfullscreen></iframe>
+                            <iframe width="1044" height="587" src="https://www.youtube.com/embed/GunYFYaGe-E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <br>
 
@@ -208,6 +213,8 @@
                                 </div>
                             </div>
                             <div class="card-body text-success">
+
+
                                         CUTS
                                         <p class="text-secondary"> Ingresa aquí para realizar tu trámite y/o servicio o consultar el estado de tus solicitudes. </p>
                                         <div class="form-grupo">

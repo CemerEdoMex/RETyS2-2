@@ -31,6 +31,15 @@ Route::GET('categoria','Adminretys@category')->name('category');
 Route::GET('/minicipios','Adminretys@municipios')->name('municipios');
 Route::GET('/municipios/{clave}','Adminretys@municipioDetalle')->name('municipio');
 
+/*
+|--------------------------------------------------------------------------
+| Areas Gobiernos Rutas
+|--------------------------------------------------------------------------
+|*/
+
+
+Route::GET('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog');
+
 
 Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');
 
@@ -60,5 +69,5 @@ route::GET('catego/{id_tem}','Adminretys@bptema')->name('catego');
 | Categorias  Rutas
 |--------------------------------------------------------------------------
 |*/
-route::GET('Personas/{id_per}/{ncat}','Adminretys@bppersona')->name('Personas');
+route::GET('Personas/{id_per}','Adminretys@bppersona')->name('Personas');
 

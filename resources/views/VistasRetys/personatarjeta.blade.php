@@ -11,13 +11,15 @@
 
         <div class="container-1">
             <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-             <input type="search" name="buscar"  id="search" placeholder="¿Qué estás buscando?" />
-             <button class="btn btn-info my-2 my-sm-0 btn-redondo" id="validationTooltipUsernamePrepend" type="submit">🔎</button>
+            <div class="container-4">
+                    <input type="search" id="search" name="buscar" placeholder="¿Qué estás buscando?" />
+                    <button class="icon"><i class="fa fa-search"></i></button>
+                  </div>
             </form>
         </div>
 
         <br>
-   
+
         <hr>
 
         <div class="row mb-4">
@@ -35,7 +37,7 @@
                     @else
                     <div class="card border-warning mb-3 text-center justify-content-center" style="max-width: 20rem;">
                 @endif
-                
+
 
                 <div class="card-header "><h6 class="card-title font-weight-bold" style="text-align: center">{{$item->denominacion}}</h6>  </div>
 
@@ -66,7 +68,7 @@
                             <img src="{{asset('img/icon/preenlinea.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
                         @endif
                         <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
-                        
+
 
                         @if ($item->costo_cantidad > 0)
                         <button type="button" class="btn btn-outline-primary" style="width: 120px">Portal de pago</button>
@@ -98,7 +100,7 @@
         </div>
 
 
-  
+
 
 
 

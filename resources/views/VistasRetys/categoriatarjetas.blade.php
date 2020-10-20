@@ -11,8 +11,10 @@
 
         <div class="container-1">
             <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                <input type="search" name="buscar" id="search" placeholder="Busca tu Trámite" />
-                <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar...🔎</button>
+                <div class="container-4">
+                    <input type="search" id="search" name="buscar" placeholder="¿Qué estás buscando?" />
+                    <button class="icon"><i class="fa fa-search"></i></button>
+                  </div>
               </form>
         </div>
          <div class="col-12 text-center text-elegant-color-dark text-dark" >
@@ -71,7 +73,7 @@
                             <img src="{{asset('img/icon/preenlinea.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
                         @endif
                         <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
-                        
+
 
                         @if ($item->costo_cantidad > 0)
                         <button type="button" class="btn btn-outline-primary" style="width: 120px">Portal de pago</button>
@@ -81,8 +83,8 @@
                         <button type="button" class="btn btn-outline-primary"style="width: 120px">Portal de citas</button>
                         @endif
 
-                        @if ($item->enlinea == 1)
-                        <button type="button" class="btn btn-outline-primary" style="width: 120px"> Trámite en línea</button>
+                        @if ($item->enlinea == 1 || $item->preges_url )
+                        <a href="{{ $item->preges_url }}" class="btn btn-outline-primary" style="width: 120px"> Trámite en línea  </a>
                         @endif
                         <button type="button" class="btn btn-outline-primary" style="width: 120px">Descargar formato</button>
                     </div>
