@@ -81,9 +81,12 @@
                             ">
                         @endif
 
-
+                         @if ($item->prinfin_seits == 1)
                         <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
-
+                        @endif
+                        @if ($item->preges_seits ==1 )
+                        <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
+                         @endif
 
                         <br>
                         <br>
@@ -103,9 +106,13 @@
 
 
                         @if ($item->preges == 1)
+                        @if ($item->preges_seits== 1)
+                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Tremite En Linea</a>
+                        @else 
                         <a href="{{$item-> preges_url}}" class="btn btn-outline-primary" style="width: 120px"> Pregestión en línea</a>
                         @endif
-
+                        @endif
+                         
                          @if ($item->chat == 1)
                         <a href="{{$item-> chat_url}}" class="btn btn-outline-primary" style="width: 120px"> Chat en línea</a>
 
