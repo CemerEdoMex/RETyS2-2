@@ -98,7 +98,7 @@ class AdminRetys extends Controller
    public function areasGobDetalle($idsujeto) {
 
     $data= DB::select('SELECT distinct t.idtramite, t.denominacion,
-                        t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,
+                        t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.PRINFIN_URL,t.CHAT_URL,t.TIPOTRAM
                         t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
                         t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
                         FROM tbgem_CITramite t
@@ -184,6 +184,8 @@ class AdminRetys extends Controller
                         ->orderBy('Denominacion')
                         ->get();
 
+;
+
 
                        // return $datatram;
         $count = sizeof($datatram);
@@ -206,7 +208,8 @@ class AdminRetys extends Controller
                             ['BAJA','0']
                             ])
                         ->orderBy('Denominacion')
-                        ->get();
+                        ->get()
+                        ;
 
 
                        // return $datatram;
@@ -215,6 +218,17 @@ class AdminRetys extends Controller
         return view('VistasRetys.personatarjeta',
         ['dataper'=>$datapersona,'datatram' => $datatram,'count' =>$count]);
    }
+ 
+ public function benlinea()
+ {
+  $datalinea= DB::table('TBGEM_CITRAMITE')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion','PRINFIN_URL','PREGES_URL','CHAT_URL','PRINFIN','PREGES','CHAT','PRESENCIAL','PRINFIN_SEITS','TIPOTRAM','PREGES_SEITS')
+  ->where([['BAJA','0']])
+  ->orderBy('Denominacion')
+  ->get();
+  return view('VistasRetys.enlineatarj',['datalinea'=>$datalinea]);
+
+ }
+
 
 
 }

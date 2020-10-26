@@ -92,10 +92,6 @@
                         <br>
 
 
-                        @if ($item->costo_cantidad > 0)
-                        <button type="button" class="btn btn-outline-primary" style="width: 120px">Portal de pago</button>
-                        @endif
-
                         @if ($item->prinfin == 1)
                         @if ($item->prinfin_seits == 1)
                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Tremite En Linea</a>
@@ -107,7 +103,7 @@
 
                         @if ($item->preges == 1)
                         @if ($item->preges_seits== 1)
-                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Tremite En Linea</a>
+                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Pregestión en línea</a>
                         @else 
                         <a href="{{$item-> preges_url}}" class="btn btn-outline-primary" style="width: 120px"> Pregestión en línea</a>
                         @endif
