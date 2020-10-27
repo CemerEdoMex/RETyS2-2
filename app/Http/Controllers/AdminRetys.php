@@ -115,7 +115,7 @@ class AdminRetys extends Controller
 
     $count = sizeof($data);
 
-    //return $count;
+    //eturn $data;
 
     return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
    }
@@ -136,7 +136,7 @@ class AdminRetys extends Controller
 
    public function municipioDetalle($clave)
    {
-        $dataQuery = DB::table('tbgem_citramite')->select('preges_url','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+        $dataQuery = DB::table('tbgem_citramite')->select('idtramite','preges_url','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
                         ->where([
                             ['AMBITO_MUN_CLAVE',$clave],
                             ['BAJA','0']
