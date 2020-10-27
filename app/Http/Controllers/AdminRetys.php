@@ -225,6 +225,8 @@ class AdminRetys extends Controller
   ->where([['BAJA','0']])
   ->orderBy('Denominacion')
   ->get();
+    
+
   return view('VistasRetys.enlineatarj',['datalinea'=>$datalinea]);
 
  }

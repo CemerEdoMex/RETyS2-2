@@ -23,9 +23,11 @@
         <hr>
 
         <div class="row mb-4">
+              
+               @foreach ($datatram as $item)
               @foreach ($dataper as $tper)
 
-            @foreach ($datatram as $item)
+           
             @if($tper->idtramite == $item->idtramite)
 
              @if ($item->ambito == 3)
@@ -130,10 +132,7 @@
 
  </div>
 
-<div style='margin:center;'>
-        {{$data->appends($_GET)}}
 
-</div>
 
 
 

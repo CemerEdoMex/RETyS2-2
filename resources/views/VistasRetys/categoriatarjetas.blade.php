@@ -26,9 +26,10 @@
         <hr>
 
         <div class="row mb-4">
+            @foreach ($datatram as $item)
               @foreach ($datatem as $tema)
 
-            @foreach ($datatram as $item)
+            
             @if($tema->idtramite == $item->idtramite)
 
                 @if ($item->ambito == 3)
