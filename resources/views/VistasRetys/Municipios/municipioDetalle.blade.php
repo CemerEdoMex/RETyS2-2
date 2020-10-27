@@ -33,7 +33,7 @@
                   @elseif($item->ambito == 5)
                   <div class="card border-secondary mb-3 text-center justify-content-center" style="max-width: 20rem;">
                   @else
-                  <div class="card border-warning mb-3 text-center justify-content-center" style="max-width: 20rem;">
+                  < class="card border-warning mb-3 text-center justify-content-center" style="max-width: 20rem;">
               @endif
 
               <div class="card-header "><h6 class="card-title font-weight-bold" style="text-align: center">{{$item->denominacion}}</h6>  </div>
@@ -81,11 +81,11 @@
                       <button type="button" class="btn btn-outline-primary" style="width: 120px">Descargar formato</button>
                   </div>
                   @if ($item->ambito == 3)
-                  <a class="btn btn-success" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                  <a class="btn btn-success" href="../../../RETyS1/paginas/buscaficha.php?idtramserv={{ $item->idtramite }}" role="button">Más información</a>
                   @elseif ($item->ambito == 4)
-                  <a class="btn btn-primary" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                  <a class="btn btn-primary" href="../../../RETyS1/paginas/buscaficha.php?idtramserv={{ $item->idtramite }}" role="button">Más información</a>
                   @elseif ($item->ambito == 5)
-                  <a class="btn btn-secondary" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                  <a class="btn btn-secondary" href="../../../RETyS1/paginas/buscaficha.php?idtramserv={{ $item->idtramite }}" role="button">Más información</a>
                   @endif
                   </div>
 

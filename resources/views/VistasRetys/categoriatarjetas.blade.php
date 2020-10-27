@@ -112,11 +112,11 @@
                         @endif
                     </div>
                     @if ($item->ambito == 3)
-                    <a class="btn btn-success" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                    <a class="btn btn-success" href="../../../RETyS1/paginas/buscaficha.php?idtramserv={{ $item->idtramite }}" role="button">Más información</a>
                     @elseif ($item->ambito == 4)
-                    <a class="btn btn-primary" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                    <a class="btn btn-primary" href="../../../RETyS1/paginas/buscaficha.php?idtramserv={{ $item->idtramite }}" role="button">Más información</a>
                     @elseif ($item->ambito == 5)
-                    <a class="btn btn-secondary" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                    <a class="btn btn-secondary" href="../../../RETyS1/paginas/buscaficha.php?idtramserv={{ $item->idtramite }}" role="button">Más información</a>
                     @endif
                     </div>
 
