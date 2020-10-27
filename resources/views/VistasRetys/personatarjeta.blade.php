@@ -16,6 +16,9 @@
                     <button class="icon"><i class="fa fa-search"></i></button>
                   </div>
             </form>
+            <div class="col-12 text-center text-elegant-color-dark text-dark" >
+                <p style=" font-size: 42px;">Personas</p> 
+         </div>
         </div>
 
         <br>
