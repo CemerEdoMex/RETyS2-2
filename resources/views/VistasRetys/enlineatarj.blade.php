@@ -1,3 +1,5 @@
+
+
   @extends('VistasRetys.layoutCards')
 
 
@@ -15,16 +17,22 @@
                   </div>
               </form>
         </div>
+         <div class="col-12 text-center text-elegant-color-dark text-dark" >
+                <p style=" font-size: 42px;">Trámite en Línea</p>
+         </div>
 
         <br>
-    <span class="badge badge-info"> {{$count2}} Trámites en esta pagina de {{$count[0]->total}} encontrados</span>
+
         <hr>
 
         <div class="row mb-4">
+         
 
-            @foreach ($data as $item)
+            @foreach ($datalinea as $item)
+            @if($item->enlinea)
+            
 
-             @if ($item->ambito == 3)
+                @if ($item->ambito == 3)
                     <div class="card border-success mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem; ">
                     @elseif ($item->ambito == 4)
                     <div class="card border-primary mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem;">
@@ -33,6 +41,7 @@
                     @else
                     <div class="card border-warning mb-5 text-center justify-content-center" style="max-width: 20rem;">
                 @endif
+
 
                 <div class="card-header "><h6 class="card-title font-weight-bold" style="text-align: center">{{$item->denominacion}}</h6>  </div>
 
@@ -47,7 +56,8 @@
                         <span class="badge badge-warning">Ambito desconocido</span>
                         @endif
 
-                        <img src="img/icon/certificado.png" style="width:30%;" class="img-size-50 mr-3 img-circle mx-auto d-block" alt="User Image">
+                        <img src="{{asset('img/icon/certificado.png')}}" style="width:30%;" class="img-size-50 mr-3 img-circle mx-auto d-block" alt="User Image">
+
 
                         @if ($item->costo_cantidad > 0)
                             <h5 class="card-title font-weight-bold" style="text-align: center">Costo:$ {{$item->costo_cantidad}}</h5>
@@ -55,9 +65,9 @@
                             <h5 class="card-title text-success font-weight-bold" style="text-align: center">Costo:$ 0.0</h5>
                         @endif
 
-                        &nbsp; &nbsp; 
+                        &nbsp; &nbsp;
 
-                      @if($item->prinfin == 1)
+                        @if($item->prinfin == 1)
                         <img src="{{asset('img/icon/principioafin.png')}}" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
                          @endif
                         @if ($item->preges == 1)
@@ -82,7 +92,6 @@
                         <br>
                         <br>
 
-                     
 
                         @if ($item->prinfin == 1)
                         @if ($item->prinfin_seits == 1)
@@ -115,17 +124,17 @@
                     @endif
                     </div>
 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
-
-
-            @endforeach
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  @endif
+               @endforeach
+           
 
         </div>
 
-<div style='margin:center;'>
-        {{$data->appends($_GET)}}
 
-</div>
+
+
+
 
     </div>
 

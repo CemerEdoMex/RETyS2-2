@@ -111,7 +111,10 @@
             <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
                 <ul class="navbar-nav" style="margin:auto;">
                     <li class="nav-item active">
-                        <a class="nav-link text-bold text-dark" href="{{ route('inicio')}} ">TRÁMITES EN LÍNEA</a>
+                        <a class="nav-link text-bold text-dark" href="{{ route('inicio')}} ">CATEGORIAS</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-bold text-dark" href="{{ route('enlinea')}} ">TRÁMITES EN LÍNEA</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -144,7 +147,7 @@
 
                         <h3> Video Tutorial</h3>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="1044" height="587" src="https://www.youtube.com/embed/GunYFYaGe-E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ISJsCGz3EMU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <br>
 

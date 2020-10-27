@@ -26,9 +26,10 @@
         <hr>
 
         <div class="row mb-4">
+            @foreach ($datatram as $item)
               @foreach ($datatem as $tema)
 
-            @foreach ($datatram as $item)
+            
             @if($tema->idtramite == $item->idtramite)
 
                 @if ($item->ambito == 3)
@@ -81,17 +82,16 @@
                             ">
                         @endif
 
-
+                         @if ($item->prinfin_seits == 1)
                         <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
-
-
-                        <br>
-                        <br>
-
-
-                        @if ($item->costo_cantidad > 0)
-                        <button type="button" class="btn btn-outline-primary" style="width: 120px">Portal de pago</button>
                         @endif
+                        @if ($item->preges_seits ==1 )
+                        <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
+                         @endif
+
+                        <br>
+                        <br>
+
 
                         @if ($item->prinfin == 1)
                         @if ($item->prinfin_seits == 1)
@@ -103,9 +103,13 @@
 
 
                         @if ($item->preges == 1)
+                        @if ($item->preges_seits== 1)
+                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Pregestión en línea</a>
+                        @else 
                         <a href="{{$item-> preges_url}}" class="btn btn-outline-primary" style="width: 120px"> Pregestión en línea</a>
                         @endif
-
+                        @endif
+                         
                          @if ($item->chat == 1)
                         <a href="{{$item-> chat_url}}" class="btn btn-outline-primary" style="width: 120px"> Chat en línea</a>
 

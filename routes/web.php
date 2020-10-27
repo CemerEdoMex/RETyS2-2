@@ -71,3 +71,10 @@ route::GET('catego/{id_tem}','Adminretys@bptema')->name('catego');
 |*/
 route::GET('Personas/{id_per}','Adminretys@bppersona')->name('Personas');
 
+/*
+|--------------------------------------------------------------------------
+| Enlinea Ruta
+|--------------------------------------------------------------------------
+|*/
+route::GET('enlinea','Adminretys@benlinea')->name('enlinea');
+
