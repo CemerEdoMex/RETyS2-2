@@ -18,12 +18,12 @@
               </form>
         </div>
          <div class="col-12 text-center text-elegant-color-dark text-dark" >
-                <p style=" font-size: 42px;">Categorías</p>
+                <p style=" font-size: 42px;">Categorías</p> 
          </div>
 
         <br>
 
-        <hr>
+        <hr>  
 
         <div class="row mb-4">
             @foreach ($datatram as $item)
