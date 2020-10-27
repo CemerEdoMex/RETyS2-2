@@ -27,13 +27,13 @@
           @foreach ($data as $item)
 
               @if ($item->ambito == 3)
-                  <div class="card border-success mb-3 text-center justify-content-center" style="max-width: 20rem;">
+                  <div class="card border-success mb-3 text-center justify-content-center" style="max-width: 20rem;  min-width:20rem;">
                   @elseif ($item->ambito == 4)
-                  <div class="card border-primary mb-3 text-center justify-content-center" style="max-width: 20rem;">
+                  <div class="card border-primary mb-3 text-center justify-content-center" style="max-width: 20rem;  min-width:20rem;">
                   @elseif($item->ambito == 5)
                   <div class="card border-secondary mb-3 text-center justify-content-center" style="max-width: 20rem;">
                   @else
-                  < class="card border-warning mb-3 text-center justify-content-center" style="max-width: 20rem;">
+                  <div class="card border-warning mb-3 text-center justify-content-center" style="max-width: 20rem;">
               @endif
 
               <div class="card-header "><h6 class="card-title font-weight-bold" style="text-align: center">{{$item->denominacion}}</h6>  </div>

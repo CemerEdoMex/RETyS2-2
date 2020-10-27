@@ -42,6 +42,7 @@ class AdminRetys extends Controller
         //->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
         ->whereRaw("Denominacion like '%{$buscar}%'")
         ->where("Baja",0)
+            ->orderBy('Denominacion')
          ->paginate(9);
 
         $count2 = sizeof($data);
@@ -98,24 +99,24 @@ class AdminRetys extends Controller
    public function areasGobDetalle($idsujeto) {
 
     $data= DB::select('SELECT distinct t.idtramite, t.denominacion,
-                        t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.PRINFIN_URL,t.CHAT_URL,t.TIPOTRAM
-                        t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
-                        t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
-                        FROM tbgem_CITramite t
-                        INNER JOIN grl_elementos e on t.ambito = e.idelemento
-                        INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
-                        INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
-                        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
-                        INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
-                        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
-                        LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
-                        where t.Baja=0
-                        and s.idsujeto ='.$idsujeto.'
-                        order by t.denominacion');
+    t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,
+    t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
+    t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
+    FROM tbgem_CITramite t
+    INNER JOIN grl_elementos e on t.ambito = e.idelemento
+    INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
+    INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
+    INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+    INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
+    INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+    LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
+    where t.Baja=0
+    and s.idsujeto ='.$idsujeto.'
+    order by t.denominacion');
 
     $count = sizeof($data);
 
-    //eturn $data;
+    //return $count;
 
     return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
    }
@@ -136,13 +137,14 @@ class AdminRetys extends Controller
 
    public function municipioDetalle($clave)
    {
-        $dataQuery = DB::table('tbgem_citramite')->select('idtramite','preges_url','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+        $dataQuery = DB::table('tbgem_citramite')
+        //->select('idtramite','preges_url','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
                         ->where([
                             ['AMBITO_MUN_CLAVE',$clave],
                             ['BAJA','0']
                             ])
                         ->orderBy('Denominacion')
-                        ->get();
+                        ->paginate(9);
 
                        // return $dataQuery;
         $count = sizeof($dataQuery);
@@ -218,14 +220,14 @@ class AdminRetys extends Controller
         return view('VistasRetys.personatarjeta',
         ['dataper'=>$datapersona,'datatram' => $datatram,'count' =>$count]);
    }
- 
+
  public function benlinea()
  {
-  $datalinea= DB::table('TBGEM_CITRAMITE')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion','PRINFIN_URL','PREGES_URL','CHAT_URL','PRINFIN','PREGES','CHAT','PRESENCIAL','PRINFIN_SEITS','TIPOTRAM','PREGES_SEITS')
+  $datalinea= DB::table('TBGEM_CITRAMITE')
   ->where([['BAJA','0']])
   ->orderBy('Denominacion')
-  ->get();
-    
+  ->paginate(9);
+
 
   return view('VistasRetys.enlineatarj',['datalinea'=>$datalinea]);
 
