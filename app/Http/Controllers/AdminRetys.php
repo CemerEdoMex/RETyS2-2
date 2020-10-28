@@ -224,9 +224,9 @@ class AdminRetys extends Controller
  public function benlinea()
  {
   $datalinea= DB::table('TBGEM_CITRAMITE')
-  ->where([['BAJA','0']])
+  ->where([['BAJA','0'],['enlinea','1']])
   ->orderBy('Denominacion')
-  ->paginate(9);
+  ->paginate(6);
 
 
   return view('VistasRetys.enlineatarj',['datalinea'=>$datalinea]);
