@@ -99,7 +99,7 @@ class AdminRetys extends Controller
    public function areasGobDetalle($idsujeto) {
 
     $data= DB::select('SELECT distinct t.idtramite, t.denominacion,
-    t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,
+    t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.TIPOTRAM,t.PRINFIN_URL,t.CHAT_URL,
     t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
     t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
     FROM tbgem_CITramite t
