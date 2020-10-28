@@ -5,7 +5,7 @@
     </h3>
     <div class="contenedor">
 		<div class="contenedor_tarjeta">
-			<a href="https://sistemas2.edomex.gob.mx/TramitesyServicios/Tramite?tram=352&cont=0">
+			<a href="../../../RETyS1/paginas/buscaficha.php?idtramserv=352">
 				<figure id="tarjeta">
 					<img src="{{ asset('img/certificado.png') }}" class="frontal" alt="">
 					<figcaption class="trasera">
@@ -18,7 +18,7 @@
 		</div>
 
 		<div class="contenedor_tarjeta">
-			<a href="https://sistemas2.edomex.gob.mx/TramitesyServicios/Tramite?tram=215&cont=0">
+			<a href="../../../RETyS1/paginas/buscaficha.php?idtramserv=215">
 				<figure id="tarjeta">
 					<img src="{{ asset ('img/coche.png') }}" class="frontal" alt="">
 					<figcaption class="trasera">
@@ -31,7 +31,7 @@
 		</div>
 
 		<div class="contenedor_tarjeta">
-			<a href="http://sistemas2.edomex.gob.mx/TramitesyServicios/Tramite?tram=33&cont=0">
+			<a href="../../../RETyS1/paginas/buscaficha.php?idtramserv=33">
 				<figure id="tarjeta">
 					<img src="{{asset ('img/verifica.png') }}" class="frontal" alt="">
 					<figcaption class="trasera">
