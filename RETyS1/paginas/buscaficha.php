@@ -5,7 +5,7 @@
 		$instancia = new Conexion();
 		$conexion = $instancia->get_conexion();
 
-		$idtramserv = $_GET['idtramserv'];
+		$idtramserv = $_POST['idtramserv'];
 
 		//session_start();
 
@@ -345,72 +345,63 @@
 
 										//echo "<table  class='table table-striped'>"; //EMPIEZA A CREAR LA TABLA CON LOS ENCABEZADOS DE TABLA
 										//echo "<tr>";//<tr> CREA UNA NUEVA FILA
-										echo "<td><strong>TITULO</strong></td>";
-										echo "<td><strong>DEFINICION</strong></td>";
-										echo "<td><strong>COSTO</td>";
-										echo "</tr>";	
+										//echo "<td><strong>TITULO</strong></td>";
+										//echo "<td><strong>DEFINICION</strong></td>";
+										//echo "<td><strong>COSTO</td>";
+										//echo "</tr>";	
 
 										$renglon = 0;
 										$numrenglon=0;
 										$numcolumna=0;
 										$iniciorenglon = 'true';
 
+
+										echo "<table border=1> <tr>";
+
 										while ($fila = oci_fetch_array($sentenciasql, OCI_ASSOC+OCI_RETURN_NULLS)) {
 
 												$varnumprog = $varnumprog + 1;
 
-
-
-												$iniciorenglon = 'true';
 												$contenido = '';
-												if ($iniciorenglon = 'true') {
-													echo "<tr>";
-													$iniciorenglon = 'false';
-												}
+
+
 												$renglon = $fila['RENGLON'];
 												$columna = $fila['COLUMNA'];
-												//echo $renglon;
-												//echo $columna;
+
+												if ($renglon <> $numrenglon){
+													echo "</tr>";
+													$numrenglon = $renglon;
+													echo "<tr>";
+												}
+
 												$encab = utf8_encode($fila['ENCABEZADO']);
 												$defin = utf8_encode($fila['DEFINICION']);
 												$cost = $fila['COSTO'];
-												//echo $renglon;
-												//if ($fila['COLUMNA'] = 0 and $fila['COSTO'] = '0' and $fila['ENCABEZADO'] = '0') {
-												if ($renglon = 0 ) {
-														//$encab_renglon = utf8_encode($fila['DEFINICION']);
-														//$contenido = $encab_renglon;
-														//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$encab_renglon</font></font></div></td>";
-												}elseif ($columna = 0 ){
+
+												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">"; 
+
+
+												if ($renglon == 0 ) {
+													//echo "EL VALOR DE RENGLON ES CERO";
+													$contenido = utf8_encode($fila['ENCABEZADO']);
+												}elseif ($columna == 0 ){
+														//echo "COLUMNA 0";
 														$encab_renglon = utf8_decode($fila['DEFINICION']);
 														$contenido = $encab_renglon;
-														//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$defin</font></font></div></td>"; 
 												} else {
+													//echo "COSTO";
 													$varcosto = $fila['COSTO'];
 													$contenido=$varcosto;
 												} 
 												
-												//echo $fila['DEFINICION'];
-												//echo $var1 = utf8_decode($fila['DEFINICION']);
 
-												//$encab_renglon = utf8_encode($fila['DEFINICION']);
-
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$varnumprog</font></font></div></td>"; 
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$encab</font></font></div></td>"; 
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$defin</font></font></div></td>"; 
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$contenido</font></font></div></td>"; 
-												if ($renglon <> $fila) {
-													//echo 
-													# code...
-												}
-												//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$varcosto2</font></font></div></td>";
-												//echo "$vardescripcion";
-												echo "</tr>"; 
-
-
+												//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$renglon $columna $numrenglon $contenido</font></font></div></td>"; 
+												echo "$contenido</font></font></div></td>"; 
 
 
 
 										}
+										echo "</tr></table>";
 /*										echo "$varnumprog";
 
 										

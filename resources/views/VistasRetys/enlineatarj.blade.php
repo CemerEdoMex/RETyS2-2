@@ -46,7 +46,7 @@
         &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
-               <img src="{{asset('img/icon/presencial.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Presencial"> 
+               <img src="{{asset('img/icon/presencial.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Presencial">
                <h6 class="card-title">Presencial </h6>
             </div>
          </div>
@@ -130,7 +130,7 @@
 
                         @if ($item->prinfin == 1)
                         @if ($item->prinfin_seits == 1)
-                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Trámite En Línea</a>
+                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item->idtramite}}&tipoTramite={{$item->tipotram}}" class="btn btn-outline-primary"style="width: 120px">Tremite En Linea</a>
                         @else
                         <a href="{{$item-> prinfin_url}}" class="btn btn-outline-primary"style="width: 120px">Trámite En Línea</a>
                         @endif
@@ -139,7 +139,7 @@
 
                         @if ($item->preges == 1)
                         @if ($item->preges_seits== 1)
-                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Pregestión en línea</a>
+                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item->idtramite}}&tipoTramite={{$item->tipotram}}" class="btn btn-outline-primary"style="width: 120px">Pregestión en línea</a>
                         @else
                         <a href="{{$item-> preges_url}}" class="btn btn-outline-primary" style="width: 120px"> Pregestión en línea</a>
                         @endif
@@ -151,11 +151,11 @@
                         @endif
                     </div>
                     @if ($item->ambito == 3)
-                    <a class="btn btn-success" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                    <a class="btn btn-success" href="../../../RETyS1/paginas/buscaficha.php?idtramserv={{ $item->idtramite }}" role="button">Más información</a>
                     @elseif ($item->ambito == 4)
-                    <a class="btn btn-primary" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                    <a class="btn btn-primary" href="../../../RETyS1/paginas/buscaficha.php?idtramserv={{ $item->idtramite }}" role="button">Más información</a>
                     @elseif ($item->ambito == 5)
-                    <a class="btn btn-secondary" href="{{ route('trasnparencia') }}" role="button">Más información</a>
+                    <a class="btn btn-secondary" href="../../../RETyS1/paginas/buscaficha.php?idtramserv={{ $item->idtramite }}" role="button">Más información</a>
                     @endif
                     </div>
 
