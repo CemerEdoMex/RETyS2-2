@@ -18,7 +18,7 @@
               </form>
         </div>
          <div class="col-12 text-center text-elegant-color-dark text-dark" >
-                <p style=" font-size: 42px;">Trámite en Línea</p>
+                <p style=" font-size: 42px;">Trámites en línea</p>
          </div>
 
         <br>
@@ -26,21 +26,21 @@
           <div class="card" style="width: 13rem;">
              <div class="card-body">
                  <img src="{{asset('img/icon/principioafin.png')}}" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
-                <h6 class="card-title">Principio a Fín en Línea </h6>
+                <h6 class="card-title">Principio a fín en línea </h6>
              </div>
           </div>
          &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
                 <img src="{{asset('img/icon/preenlinea.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
-               <h6 class="card-title">Pregestión en Línea </h6>
+               <h6 class="card-title">Pregestión en línea </h6>
             </div>
          </div>
           &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
                 <img src="{{asset('img/icon/chat.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Chat en Línea">
-               <h6 class="card-title">Chat en Línea </h6>
+               <h6 class="card-title">Chat en línea </h6>
             </div>
          </div>
         &nbsp;
@@ -54,7 +54,7 @@
            <div class="card" style="width: 13rem;">
             <div class="card-body">
                 <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
-               <h6 class="card-title">Carpeta Ciudadana </h6>
+               <h6 class="card-title">Carpeta ciudadana </h6>
             </div>
          </div>
         </div>

@@ -20,7 +20,7 @@ class AdminRetys extends Controller
 
     public function index()
    {
-       $data=DB::select('SELECT * FROM TBGEM_CICOSTOS WHERE rownum <= 3');
+       //$data=DB::select('SELECT * FROM TBGEM_CICOSTOS WHERE rownum <= 3');
 
        //return $data;
 

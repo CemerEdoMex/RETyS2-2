@@ -258,7 +258,7 @@
 		  </button>
 		</div>
 		<div class="modal-body">
-			Bienvenido al Registro Estatal de Trámites y Servicios, aquí podrás consultar la información de los trámites y servicios que el Gobierno del Estado de México te ofrece.
+		    <p class="text-justify">Bienvenido al Registro Estatal de Trámites y Servicios, aquí podrás consultar la información de los trámites y servicios que el Gobierno del Estado de México te ofrece.</p>
 		</div>
 		<div class="modal-footer">
 		  <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>

@@ -111,7 +111,7 @@
             <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
                 <ul class="navbar-nav" style="margin:auto;">
                     <li class="nav-item active">
-                        <a class="nav-link text-bold text-dark" href="{{ route('inicio')}} ">CATEGORIAS</a>
+                        <a class="nav-link text-bold text-dark" href="{{ route('inicio')}} ">CATEGORÍAS</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link text-bold text-dark" href="{{ route('enlinea')}} ">TRÁMITES EN LÍNEA</a>
@@ -175,7 +175,20 @@
                                     </li>
                                 </ul>
                                 <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+
+                                    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <br> <br>
+                                        <p class="text-secondary text-bold">En Línea <span class="text-warning" style="color: #d19f09!important;"> CHAT FEDERAL </span></p>
+                                        <p class="text-secondary text-bold"> Centro de Atención FEDERAL </p>
+                                        <ul>
+                                            <li class="text-secondary">
+
+                                                <p>Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 FEDERAL
+                                                  </span></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+
                                     <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <br> <br>
                                        <p class="text-secondary text-bold">Centro de Atención Telefónica</p>
                                         <ul>
@@ -191,7 +204,21 @@
                                         </ul>
                                         <p class="text-secondary text-bold">Centro de Servicios Administrativos</p>
                                     </div>
-                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <br> <br>
+                                        <p class="text-secondary text-bold">Centro de Atención Telefónica</p>
+                                        <ul>
+                                            <li class="text-secondary">
+
+                                                <p>Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 696 96 96
+                                                  </span></p>
+                                            </li>
+                                            <li class="text-secondary">
+                                                <p>En el valle de Toluca <span class="text-warning" style="color: #d19f09!important;"> 070
+                                                </span></p>
+                                            </li>
+                                        </ul>
+                                        <p class="text-secondary text-bold">Centro de Servicios Administrativos</p>
+                                    </div>
                                 </div>
 
                             </div>
