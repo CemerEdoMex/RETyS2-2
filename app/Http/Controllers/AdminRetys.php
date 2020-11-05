@@ -175,7 +175,7 @@ class AdminRetys extends Controller
        return view('Trasnparencia.transparencia');
    }
 
-    public function bptema($id_tem)
+    public function bptema($id_tem,$ncatego)
    {
 
    $datatema = DB::table('tbgem_citram_clas')->select('idtramite')
@@ -192,18 +192,21 @@ class AdminRetys extends Controller
                         ->orderBy('Denominacion')
                         ->get();
 
-;
+              $ncat=($ncatego);
 
 
                        // return $datatram;
         $count = sizeof($datatram);
 
-        return view('VistasRetys.categoriatarjetas',
-        ['datatem'=>$datatema,'datatram' => $datatram,'count' =>$count]);
+        return view('VistasRetys.categoriatarjetas')
+        ->with('datatem',$datatema)
+        ->with('datatram',$datatram)
+        ->with('count',$count)
+        ->with('ncat',$ncat);
    }
 
 
-   public function bppersona($id_per)
+   public function bppersona($id_per,$nperson)
    {
 
    $datapersona = DB::table('tbgem_citram_perfil')->select('idtramite')
@@ -216,15 +219,18 @@ class AdminRetys extends Controller
                             ['BAJA','0']
                             ])
                         ->orderBy('Denominacion')
-                        ->get()
-                        ;
-
+                        ->get();
+               $nper=($nperson);
 
                        // return $datatram;
         $count = sizeof($datatram);
 
-        return view('VistasRetys.personatarjeta',
-        ['dataper'=>$datapersona,'datatram' => $datatram,'count' =>$count]);
+        return view('VistasRetys.personatarjeta')
+        ->with('dataper',$datapersona)
+        ->with('datatram',$datatram)
+        ->with('count',$count)
+        ->with('nper',$nper);
+        
    }
 
  public function benlinea()

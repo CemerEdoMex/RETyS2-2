@@ -18,7 +18,7 @@
               </form>
         </div>
          <div class="col-12 text-center text-elegant-color-dark text-dark" >
-                <p style=" font-size: 42px;">Categorías</p> 
+                <p style=" font-size: 42px;">{{$ncat}}</p> 
          </div>
          <div class="row mb-5">
           <div class="card" style="width: 13rem;">

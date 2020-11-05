@@ -16,7 +16,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a  style="color:#341050;"
-					href="{{ route('Personas','1') }}"
+					href="{{ route('Personas',['1','Adultos Mayores']) }}"
 					title="Trámites">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -33,7 +33,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a  style="color:#341050;"
-					href="{{ route('Personas','17') }}"
+					href="{{ route('Personas',['17','Empresarios y Emprendedores']) }}"
 					title="Servicios">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -50,7 +50,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','18') }}"
+					href="{{ route('Personas',['18','Estudiantes']) }}"
 					title="Educación">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -67,7 +67,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','15') }}"
+					href="{{ route('Personas',['15','Hombres']) }}"
 					title="Finanzas">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -84,7 +84,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','2') }}"
+					href="{{ route('Personas',['2','Indígenas']) }}"
 					title="Medio Ambiente">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -101,7 +101,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','3') }}"
+					href="{{ route('Personas',['3','Jóvenes']) }}"
 					title="Licencias">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -118,7 +118,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','4') }}"
+					href="{{ route('Personas',['4','Migrantes']) }}"
 					title="Seguridad Pública">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -135,7 +135,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','5') }}"
+					href="{{ route('Personas',['5','Mujeres']) }}"
 					title="Negocios y Empresas">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -152,7 +152,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','6') }}"
+					href="{{ route('Personas',['6','Niños']) }}"
 					title="Trabajo">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -169,7 +169,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','14') }}"
+					href="{{ route('Personas',['14','Notarios Públicos']) }}"
 					title="Registro Público">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -186,7 +186,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','8') }}"
+					href="{{ route('Personas',['8','Personas con Discapacidad']) }}"
 					title="Vehículos">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -203,7 +203,7 @@
 			
 			<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','16') }}"
+					href="{{ route('Personas',['16','Productores']) }}"
 					title="Salud">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
@@ -219,7 +219,7 @@
 			</div>
 				<div class="col-6 col-xl-3 col-md-4">
 				<a style="color:#341050;"
-					href="{{ route('Personas','10') }}"
+					href="{{ route('Personas',['10','Servidores Públicos Estatal']) }}"
 					title="Salud">
 					<div
 						class="card border-0 bg-transparent responsive-categorias card-body">
