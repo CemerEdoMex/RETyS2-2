@@ -7,6 +7,8 @@ use Auth;
 use DB;
 use App\mtramiteomodelo; //modelo tramotes o servicio
 use App\mtregistro; //modelo de registros
+use App\t_tema; //modelo de temas
+use App\t_tramites; //modelo de tramites
 
 class AdminRetys extends Controller
 {
@@ -192,7 +194,18 @@ class AdminRetys extends Controller
                         ->orderBy('Denominacion')
                         ->get();
 
-;
+   /* $datatema=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS 
+      FROM tbgem_citramite t 
+      INNER JOIN TBGEM_CITRAM_CLAS TT ON TT.IDTRAMITE = t.IDTRAMITE
+      INNER JOIN TBGEM_PORTEMA TM ON TM.IDCLASIFICACION = TT.IDCLASIFICACION
+      WHERE t.BAJA = 0
+      AND TM.IDCLASIFICACION='.$id_tem.'
+      orderBy t.denominacion');*/
+   /*$datatram=t_tema::Tema($request->get('id_tem')):
+     $datatram=t_tramites::all()
+     ->where([['BAJA','0']])
+     ->orderBy('denominacion');*/
+
 
 
                        // return $datatram;
