@@ -62,14 +62,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 | Categorias  Rutas
 |--------------------------------------------------------------------------
 |*/
-route::GET('catego/{id_tem}','Adminretys@bptema')->name('catego');
+route::GET('catego/{id_tem}/{ncatego}','Adminretys@bptema')->name('catego');
 
 /*
 |--------------------------------------------------------------------------
 | Categorias  Rutas
 |--------------------------------------------------------------------------
 |*/
-route::GET('Personas/{id_per}','Adminretys@bppersona')->name('Personas');
+route::GET('Personas/{id_per}/{nperson}','Adminretys@bppersona')->name('Personas');
 
 /*
 |--------------------------------------------------------------------------
