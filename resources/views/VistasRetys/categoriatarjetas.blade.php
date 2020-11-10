@@ -18,7 +18,7 @@
               </form>
         </div>
          <div class="col-12 text-center text-elegant-color-dark text-dark" >
-                <p style=" font-size: 42px;">{{$ncat}}</p> 
+                <p style=" font-size: 42px;">{{$ncat}} {{$paginas}}</p> 
          </div>
          <div class="row mb-5">
           <div class="card" style="width: 13rem;">
@@ -59,14 +59,13 @@
 
         <br>
 
-        <hr>  
+        <br>  
 
         <div class="row mb-4">
             @foreach ($datatram as $item)
-              @foreach ($datatem as $tema)
-
+              
             
-            @if($tema->idtramite == $item->idtramite)
+           
 
                 @if ($item->ambito == 3)
                     <div class="card border-success mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem; ">
@@ -160,14 +159,25 @@
                     </div>
 
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  @endif
-               @endforeach
+           
             @endforeach
 
         </div>
 
 
-
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
 
 
 

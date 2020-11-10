@@ -177,10 +177,10 @@ class AdminRetys extends Controller
        return view('Trasnparencia.transparencia');
    }
 
-    public function bptema($id_tem)
+    public function bptema($id_tem,$ncatego)
    {
 
-   $datatema = DB::table('tbgem_citram_clas')->select('idtramite')
+ /*  $datatema = DB::table('tbgem_citram_clas')->select('idtramite')
                         ->where([
                             ['idclasificacion',$id_tem],
                             ])
@@ -192,34 +192,45 @@ class AdminRetys extends Controller
                             ['BAJA','0']
                             ])
                         ->orderBy('Denominacion')
-                        ->get();
+                        ->get
 
-   /* $datatema=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS 
+                        ();*/
+     $id_tem2="'$id_tem'";
+    $datatram=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS 
       FROM tbgem_citramite t 
       INNER JOIN TBGEM_CITRAM_CLAS TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_PORTEMA TM ON TM.IDCLASIFICACION = TT.IDCLASIFICACION
       WHERE t.BAJA = 0
-      AND TM.IDCLASIFICACION='.$id_tem.'
-      orderBy t.denominacion');*/
+      AND TM.IDCLASIFICACION='.$id_tem2.'
+      order by t.denominacion');
+    
    /*$datatram=t_tema::Tema($request->get('id_tem')):
      $datatram=t_tramites::all()
      ->where([['BAJA','0']])
      ->orderBy('denominacion');*/
+     $ncat=($ncatego);
 
 
 
                        // return $datatram;
         $count = sizeof($datatram);
+        $tram_x_pag=9;
+        $paginas =$count/9;
+        $paginas=ceil($paginas);
 
-        return view('VistasRetys.categoriatarjetas',
-        ['datatem'=>$datatema,'datatram' => $datatram,'count' =>$count]);
+        return view('VistasRetys.categoriatarjetas')
+        
+        ->with(['datatram'=>$datatram])
+        ->with(['count'=>$count])
+        ->with(['ncat'=>$ncat])
+        ->with(['paginas'=>$paginas]);
    }
 
 
-   public function bppersona($id_per)
+   public function bppersona($id_per,$nperson)
    {
 
-   $datapersona = DB::table('tbgem_citram_perfil')->select('idtramite')
+  /* $datapersona = DB::table('tbgem_citram_perfil')->select('idtramite')
                         ->where([
                             ['id_perfil',$id_per],
                             ])
@@ -229,15 +240,28 @@ class AdminRetys extends Controller
                             ['BAJA','0']
                             ])
                         ->orderBy('Denominacion')
-                        ->get()
-                        ;
+                        ->get();*/
+    $datatram=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
+      FROM TBGEM_CITRAMITE t
+      INNER JOIN TBGEM_CITRAM_PERFIL TT ON TT.IDTRAMITE = t.IDTRAMITE
+      INNER JOIN TBGEM_CIPERFIL TM ON TM.ID_PERFIL = TT.ID_PERFIL
+      WHERE t.BAJA = 0
+      AND TM.ID_PERFIL='.$id_per.'order by t.denominacion ');
 
 
                        // return $datatram;
         $count = sizeof($datatram);
+        $nper =($nperson);
+        $tram_x_pag=9;
+        $paginas =$count/9;
+        $paginas=ceil($paginas);
 
-        return view('VistasRetys.personatarjeta',
-        ['dataper'=>$datapersona,'datatram' => $datatram,'count' =>$count]);
+        return view('VistasRetys.personatarjeta')
+        /*->with(['dataper'=>$datapersona])*/
+        ->with(['datatram'=>$datatram])
+        ->with(['count'=>$count])
+        ->with(['nper'=>$nper])
+        ->with(['paginas'=>$paginas]);
    }
 
  public function benlinea()
@@ -245,7 +269,7 @@ class AdminRetys extends Controller
   $datalinea= DB::table('TBGEM_CITRAMITE')
   ->where([['BAJA','0'],['enlinea','1']])
   ->orderBy('Denominacion')
-  ->paginate(6);
+  ->paginate(9);
 
 
   return view('VistasRetys.enlineatarj',['datalinea'=>$datalinea]);

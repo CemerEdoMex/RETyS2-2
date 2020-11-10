@@ -64,10 +64,10 @@
         <div class="row mb-4">
 
                @foreach ($datatram as $item)
-              @foreach ($dataper as $tper)
+              
 
 
-            @if($tper->idtramite == $item->idtramite)
+           
 
              @if ($item->ambito == 3)
                     <div class="card border-success mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem; ">
@@ -161,8 +161,8 @@
                     </div>
 
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
-                  @endif
-               @endforeach
+                    
+
             @endforeach
 
         </div>
