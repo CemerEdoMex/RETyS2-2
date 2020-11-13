@@ -166,6 +166,34 @@
             @endforeach
 
         </div>
+        <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+     @if($pagina<=1)
+    <li class="page-item disabled ">
+    <a class="page-link " href="{{URL::action('Adminretys@bppersona',['id_per'=>$id_persona,'nperson'=>$nper,'pagina'=>$pagina-1])}}" tabindex="-1" aria-disabled="true">Anterior</a>
+    </li>
+    @else
+     <li class="page-item ">
+    <a class="page-link " href="{{URL::action('Adminretys@bppersona',['id_per'=>$id_persona,'nperson'=>$nper,'pagina'=>$pagina-1])}}" tabindex="-1" aria-disabled="true">Anterior</a>
+    </li>
+    @endif
+     @for($i=0;$i<$paginas;$i++)
+     @if($pagina==$i+1)
+    <li class="page-item active"><a class="page-link" href="{{URL::action('Adminretys@bppersona',['id_per'=>$id_persona,'nperson'=>$nper,'pagina'=>$i+1])}}">{{$i+1}}</a></li>
+    @else
+     <li class="page-item "><a class="page-link" href="{{URL::action('Adminretys@bppersona',['id_per'=>$id_persona,'nperson'=>$nper,'pagina'=>$i+1])}}">{{$i+1}}</a></li>
+     @endif
+   @endfor
+    
+   @if($paginas<=$pagina)
+      <li class="page-item disabled"><a class="page-link"href="{{URL::action('Adminretys@bppersona',['id_per'=>$id_persona,'nperson'=>$nper,'pagina'=>$pagina+1])}}">Siguiente</a>
+    </li>
+    @else
+  <li class="page-item"><a class="page-link" href="{{URL::action('Adminretys@bppersona',['id_per'=>$id_persona,'nperson'=>$nper,'pagina'=>$pagina+1])}}">Siguiente</a>
+    </li>
+    @endif
+  </ul>
+</nav>
 
  </div>
 

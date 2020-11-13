@@ -18,7 +18,7 @@
               </form>
         </div>
          <div class="col-12 text-center text-elegant-color-dark text-dark" >
-                <p style=" font-size: 42px;">{{$ncat}} {{$paginas}}</p> 
+                <p style=" font-size: 42px;">{{$ncat}} </p> 
          </div>
          <div class="row mb-5">
           <div class="card" style="width: 13rem;">
@@ -167,21 +167,39 @@
 
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    <li class="page-item ">
+  
+   @if($pagina<=1)
+    <li class="page-item disabled ">
+    <a class="page-link " href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$pagina-1])}}" tabindex="-1" aria-disabled="true">Anterior</a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+    @else
+     <li class="page-item ">
+    <a class="page-link " href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$pagina-1])}}" tabindex="-1" aria-disabled="true">Anterior</a>
     </li>
+    @endif
+    
+     @for($i=0;$i<$paginas;$i++)
+     @if($pagina==$i+1)
+    <li class="page-item active"><a class="page-link" href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$i+1])}}">{{$i+1}}</a></li>
+    @else
+     <li class="page-item "><a class="page-link" href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$i+1])}}">{{$i+1}}</a></li>
+     @endif
+   @endfor
+    
+   @if($paginas<=$pagina)
+      <li class="page-item disabled"><a class="page-link" href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$pagina+1])}}">Siguiente</a>
+    </li>
+    @else
+  <li class="page-item"><a class="page-link" href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$pagina+1])}}">Siguiente</a>
+    </li>
+    @endif
   </ul>
 </nav>
 
 
 
     </div>
-
+ 
 
   @stop
