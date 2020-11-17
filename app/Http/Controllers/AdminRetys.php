@@ -22,7 +22,7 @@ class AdminRetys extends Controller
 
     public function index()
    {
-       $data=DB::select('SELECT * FROM TBGEM_CICOSTOS WHERE rownum <= 3');
+      // $data=DB::select('SELECT * FROM TBGEM_CICOSTOS WHERE rownum <= 3');
 
        //return $data;
 
@@ -166,11 +166,11 @@ class AdminRetys extends Controller
       return view('VistasRetys.vpersonas');
    }
 
-   public function prueba()
-   {
+   public function cedula(){
 
-      return view('VistasRetys.prueba');
-   }
+    return view('VistasRetys.Fichas.ficha');
+
+    }
 
    public function trasnparencia()
    {
@@ -198,14 +198,14 @@ class AdminRetys extends Controller
      $id_tem2="'$id_tem'";
 
 
-    $datatram2=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS 
-      FROM tbgem_citramite t 
+    $datatram2=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
+      FROM tbgem_citramite t
       INNER JOIN TBGEM_CITRAM_CLAS TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_PORTEMA TM ON TM.IDCLASIFICACION = TT.IDCLASIFICACION
       WHERE t.BAJA = 0
       AND TM.IDCLASIFICACION='.$id_tem2.'
       order by t.denominacion');
-    
+
    /*$datatram=t_tema::Tema($request->get('id_tem')):
      $datatram=t_tramites::all()
      ->where([['BAJA','0']])
@@ -221,13 +221,13 @@ class AdminRetys extends Controller
         $paginas=ceil($paginas);
         $inicia=($pagina-1)*$tram_x_pag;
 
-    $datatram=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS 
-      FROM tbgem_citramite t 
+    $datatram=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
+      FROM tbgem_citramite t
       INNER JOIN TBGEM_CITRAM_CLAS TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_PORTEMA TM ON TM.IDCLASIFICACION = TT.IDCLASIFICACION
       WHERE t.BAJA = 0
       AND TM.IDCLASIFICACION='.$id_tem2.'
-      order by t.denominacion 
+      order by t.denominacion
       OFFSET '.$inicia.' ROWS FETCH FIRST 9 ROW ONLY');
 
         return view('VistasRetys.categoriatarjetas')
@@ -261,7 +261,7 @@ class AdminRetys extends Controller
       WHERE t.BAJA = 0
       AND TM.ID_PERFIL='.$id_per.'order by t.denominacion');
 
-  
+
 
 
                        // return $datatram;
@@ -273,7 +273,7 @@ class AdminRetys extends Controller
         $id_persona=($id_per);
         $pagina=($pagina);
         $inicia=($pagina-1)*$tram_x_pag;
-        
+
 
           $datatram=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
       FROM TBGEM_CITRAMITE t

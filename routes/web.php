@@ -43,7 +43,8 @@ Route::GET('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog'
 
 Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');
 
-Route::GET('prueba','AdminRetys@prueba')->name('prueba');
+Route::GET('/cedulaTram', 'AdminRetys@cedula');
+
 
 /*
 |--------------------------------------------------------------------------

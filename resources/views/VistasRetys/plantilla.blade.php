@@ -134,6 +134,10 @@
                         <a class="nav-link text-bold text-dark" href="{{ route('personasgob')}} ">POR PERSONA</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link text-bold text-dark" href="http://sistemas2.edomex.gob.mx/ventanilla/seguimiento.action" target="_blanck">Inicia CUTS</a>
+                    </li>
+
 
 
                 </ul>
@@ -181,41 +185,39 @@
                                         <p class="text-secondary text-bold">En Línea <span class="text-warning" style="color: #d19f09!important;"> CHAT FEDERAL </span></p>
                                         <p class="text-secondary text-bold"> Centro de Atención FEDERAL </p>
                                         <ul>
-                                            <li class="text-secondary">
 
                                                 <p>Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 FEDERAL
                                                   </span></p>
-                                            </li>
+
                                         </ul>
                                     </div>
 
                                     <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <br> <br>
                                        <p class="text-secondary text-bold">Centro de Atención Telefónica</p>
                                         <ul>
-                                            <li class="text-secondary">
 
-                                                <p>Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 696 96 96
+
+                                                <p class="text-secondary">Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 696 96 96
                                                   </span></p>
-                                            </li>
-                                            <li class="text-secondary">
-                                                <p>En el valle de Toluca <span class="text-warning" style="color: #d19f09!important;"> 070
+
+
+                                                <p class="text-secondary">En el valle de Toluca <span class="text-warning" style="color: #d19f09!important;"> 070
                                                 </span></p>
-                                            </li>
+
                                         </ul>
                                         <p class="text-secondary text-bold">Centro de Servicios Administrativos</p>
                                     </div>
                                     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <br> <br>
                                         <p class="text-secondary text-bold">Centro de Atención Telefónica</p>
                                         <ul>
-                                            <li class="text-secondary">
+
 
                                                 <p>Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 696 96 96
                                                   </span></p>
-                                            </li>
-                                            <li class="text-secondary">
+
                                                 <p>En el valle de Toluca <span class="text-warning" style="color: #d19f09!important;"> 070
                                                 </span></p>
-                                            </li>
+
                                         </ul>
                                         <p class="text-secondary text-bold">Centro de Servicios Administrativos</p>
                                     </div>
@@ -226,12 +228,13 @@
 
                     </div> <!-- Col 3 -->
 
-                    <div class="col-lg-6" >
+                    <div class="col-lg-9" >
 
                         @yield ('tarjetas')
 
                     </div> <!-- Col 6 -->
 
+                  {{--
                     <div class="col-lg-3">
 
                         <div class="card bg-gradient-success ">
@@ -292,20 +295,9 @@
 
                                 <p class="card-text">Sí realizaste un trámite o servicio, consulta el estado de tu solicitud mediante el folio.</p>
 
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control text-warning" placeholder="•	Ingresa el folio"
-                                        aria-label="Ingrese su folio" aria-describedby="basic-addon2" name="folioID"
-                                        id="folioID">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-info btn-redondo" type="button">🔎 </button>
-                                    </div>
-                                </div>
+                </div> --}}
 
-                            </div>
-                        </div>
-
-                    </div> <!-- Col 3 -->
-                </div> <!-- sISTEMA DE COLUMNAS -->
+                        </div><!-- sISTEMA DE COLUMNAS -->
 
                 <div class="row">
                     <div class="col-12 col-md">
