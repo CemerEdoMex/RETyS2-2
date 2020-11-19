@@ -100,43 +100,70 @@ class AdminRetys extends Controller
 
    public function areasGobDetalle($idsujeto) {
 
-    $data= DB::select('SELECT distinct t.idtramite, t.denominacion,
-    t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.TIPOTRAM,t.PRINFIN_URL,t.CHAT_URL,
-    t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
-    t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
-    FROM tbgem_CITramite t
-    INNER JOIN grl_elementos e on t.ambito = e.idelemento
-    INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
-    INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
-    INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
-    INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
-    INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
-    LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
-    where t.Baja=0
-    and s.idsujeto ='.$idsujeto.'
-    order by t.denominacion');
+    if($idsujeto == 1)
+    {
+        $data= DB::select('SELECT distinct t.idtramite, t.denominacion,
+        t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.TIPOTRAM,t.PRINFIN_URL,t.CHAT_URL,
+        t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
+        t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
+        FROM tbgem_CITramite t
+        INNER JOIN grl_elementos e on t.ambito = e.idelemento
+        INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
+        INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
+        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+        INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
+        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+        LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
+        where t.Baja=0
+        and s.idsujeto in (1,2)
+        order by t.denominacion');
 
-    $count = sizeof($data);
+        $count = sizeof($data);
 
-    //return $count;
+        //return $count;
 
-    return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
+        return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
+    } else {
+
+        $data= DB::select('SELECT distinct t.idtramite, t.denominacion,
+        t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.TIPOTRAM,t.PRINFIN_URL,t.CHAT_URL,
+        t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
+        t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
+        FROM tbgem_CITramite t
+        INNER JOIN grl_elementos e on t.ambito = e.idelemento
+        INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
+        INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
+        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+        INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
+        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+        LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
+        where t.Baja=0
+        and s.idsujeto ='.$idsujeto.'
+        order by t.denominacion');
+
+        $count = sizeof($data);
+
+        //return $count;
+
+        return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
+
+    }
    }
 
    public function municipios()
    {
-       /* $data = DB::table('tbgem_citramite')->select('AMBITO_MUN_CLAVE','Tbgem_cimunicipios.MUN_DESCRIPCION','tbgem_cimunlogos.RUTA')
+        $data = DB::table('tbgem_citramite')->select('AMBITO_MUN_CLAVE','Tbgem_cimunicipios.MUN_DESCRIPCION','tbgem_cimunlogos.RUTA')
         ->distinct()
         ->leftJoin('Tbgem_cimunicipios', 'tbgem_citramite.AMBITO_MUN_CLAVE', '=', 'Tbgem_cimunicipios.MUN_CLAVE')
         ->leftJoin('tbgem_cimunlogos', 'tbgem_citramite.AMBITO_MUN_CLAVE','=', 'tbgem_cimunlogos.MUN_CLAVE')
         ->orderBy('Tbgem_cimunicipios.MUN_DESCRIPCION')
-        ->get(); */
+        ->get(); 
 
-        $data = DB::table('tbgem_citramite')->select('AMBITO_MUN_CLAVE','Tbgem_cimunicipios.MUN_DESCRIPCION')
+       /* $data = DB::table('tbgem_citramite')->select('AMBITO_MUN_CLAVE','Tbgem_cimunicipios.MUN_DESCRIPCION')
         ->distinct()
         ->leftJoin('Tbgem_cimunicipios', 'tbgem_citramite.AMBITO_MUN_CLAVE', '=', 'Tbgem_cimunicipios.MUN_CLAVE')
         ->orderBy('Tbgem_cimunicipios.MUN_DESCRIPCION')
-        ->get();
+        ->get(); */
 
         //return $data;
 
