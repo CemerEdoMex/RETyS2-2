@@ -165,8 +165,8 @@
         </div>
 
 
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
+<nav aria-label="Page navigation example" class="pagination-responsive mb-2">
+  <ul class="pagination flex-wrap justify-content-center">
     <li class="page-item ">
   
    @if($pagina<=1)

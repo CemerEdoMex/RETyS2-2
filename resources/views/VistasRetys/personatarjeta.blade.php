@@ -166,8 +166,8 @@
             @endforeach
 
         </div>
-        <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
+        <nav aria-label="Page navigation example" class="pagination-responsive mb-2">
+  <ul class="pagination pagination-sm flex-wrap justify-content-center">
      @if($pagina<=1)
     <li class="page-item disabled ">
     <a class="page-link " href="{{URL::action('Adminretys@bppersona',['id_per'=>$id_persona,'nperson'=>$nper,'pagina'=>$pagina-1])}}" tabindex="-1" aria-disabled="true">Anterior</a>

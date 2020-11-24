@@ -255,7 +255,7 @@ class AdminRetys extends Controller
       WHERE t.BAJA = 0
       AND TM.IDCLASIFICACION='.$id_tem2.'
       order by t.denominacion
-      OFFSET '.$inicia.' ROWS FETCH FIRST 9 ROW ONLY');
+      OFFSET '.$inicia.' ROWS FETCH FIRST '.$tram_x_pag.' ROW ONLY');
 
         return view('VistasRetys.categoriatarjetas')
         ->with(['pagina'=>$pagina])
@@ -308,7 +308,7 @@ class AdminRetys extends Controller
       INNER JOIN TBGEM_CIPERFIL TM ON TM.ID_PERFIL = TT.ID_PERFIL
       WHERE t.BAJA = 0
       AND TM.ID_PERFIL='.$id_per.'order by t.denominacion
-      OFFSET '.$inicia.' ROWS FETCH FIRST 9 ROW ONLY');
+      OFFSET '.$inicia.' ROWS FETCH FIRST '.$tram_x_pag.' ROW ONLY');
 
         return view('VistasRetys.personatarjeta')
         /*->with(['dataper'=>$datapersona])*/
