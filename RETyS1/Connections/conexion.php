@@ -6,8 +6,9 @@ class Conexion
 	{
 		// Declaracion de las variables
 
-		//$conn=oci_connect("prub","1234","10.33.64.190/xe");
-		$conn=oci_connect('SYSTEM','Angel170820','localhost/angeldata');
+		//$conn=oci_connect("RETYS2014","retys2014","10.10.124.12:1521/pdb1srv.edomex.gob.mx");
+		//$conn=oci_connect('SYSTEM','aDm1n2020','localhost/orcl');
+		$conn=oci_connect('SYSTEM','Lalo1516','localhost/lalodatabase');
 
 		If (!$conn){
 	        	echo 'Error en la conexión a la Base de Datos...';
@@ -22,3 +23,4 @@ class Conexion
 	}
 }
 ?>
+

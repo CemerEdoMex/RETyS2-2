@@ -24,21 +24,21 @@
           <div class="card" style="width: 13rem;">
              <div class="card-body">
                  <img src="{{asset('img/icon/principioafin.png')}}" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
-                <h6 class="card-title">Principio a Fín en Línea </h6>
+                <h6 class="card-title">Principio a fín en línea </h6>
              </div>
           </div>
          &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
                 <img src="{{asset('img/icon/preenlinea.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
-               <h6 class="card-title">Pregestión en Línea </h6>
+               <h6 class="card-title">Pregestión en línea </h6>
             </div>
          </div>
           &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
                 <img src="{{asset('img/icon/chat.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Chat en Línea">
-               <h6 class="card-title">Chat en Línea </h6>
+               <h6 class="card-title">Chat en línea </h6>
             </div>
          </div>
         &nbsp;
@@ -52,7 +52,7 @@
            <div class="card" style="width: 13rem;">
             <div class="card-body">
                 <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
-               <h6 class="card-title">Carpeta Ciudadana </h6>
+               <h6 class="card-title">Carpeta ciudadana </h6>
             </div>
          </div>
         </div>
@@ -131,7 +131,7 @@
                         @if ($item->prinfin_seits == 1)
                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Trámite En Línea</a>
                         @else
-                        <a href="{{$item-> prinfin_url}}" class="btn btn-outline-primary"style="width: 120px">Trámite En Línea</a>
+                        <a href="{{$item-> prinfin_url}}" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
                         @endif
                         @endif
 

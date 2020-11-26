@@ -204,16 +204,16 @@
 		</script>	
 
 
-		<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:270px">
-		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'InformacionGeneral')" id="defaultOpen"><img src="../iconos/info_viol.png" width="50" height="50">Información General</button>
-		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Domicilio')"><img src="../iconos/domicilio_viol.png" width="50" height="55">Domicilio</button>
-		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Costos')"><img src="../iconos/costos_viol.png" width="50" height="55">Costos</button>
-		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'TiempoResp')"><img src="../iconos/tiempo_viol.png" width="50" height="55">Tiempo de Respuesta</button>
-		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Requisitos')"><img src="../iconos/requisitos_viol.png" width="50" height="55">Requisitos</button>
-		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Pasosaseguir')"><img src="../iconos/pasos_viol.png" width="50" height="55">Pasos a seguir</button>		  
-		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Doctoobtener')"><img src="../iconos/documento_viol.png" width="50" height="55">Documento a obtener</button>
-		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'fundamjurid')"><img src="../iconos/fundamento_viol.png" width="50" height="55">Fundamento Jurídico</button>
-		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Pregfrec')"><img src="../iconos/preguntas_viol.png" width="50" height="55">Preguntas Frecuentes</button>
+		<div class="w3-sidebar w3-bar-block w3-light-grey w3-card wrapper" style="width:270px">
+		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'InformacionGeneral')" id="defaultOpen"><img src="../iconos/info_viol.png">Información General</button>
+		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Domicilio')"><img src="../iconos/domicilio_viol.png">Domicilio</button>
+		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Costos')"><img src="../iconos/costos_viol.png">Costos</button>
+		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'TiempoResp')"><img src="../iconos/tiempo_viol.png">Tiempo de Respuesta</button>
+		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Requisitos')"><img src="../iconos/requisitos_viol.png">Requisitos</button>
+		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Pasosaseguir')"><img src="../iconos/pasos_viol.png">Pasos a seguir</button>		  
+		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Doctoobtener')"><img src="../iconos/documento_viol.png">Documento a obtener</button>
+		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'fundamjurid')"><img src="../iconos/fundamento_viol.png">Fundamento Jurídico</button>
+		  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Pregfrec')"><img src="../iconos/preguntas_viol.png">Preguntas Frecuentes</button>
 		</div>
 <!--**************************************************************************************************************************************************************************************-->
 		<div style="margin-left:200px" align="center">
@@ -345,63 +345,72 @@
 
 										//echo "<table  class='table table-striped'>"; //EMPIEZA A CREAR LA TABLA CON LOS ENCABEZADOS DE TABLA
 										//echo "<tr>";//<tr> CREA UNA NUEVA FILA
-										//echo "<td><strong>TITULO</strong></td>";
-										//echo "<td><strong>DEFINICION</strong></td>";
-										//echo "<td><strong>COSTO</td>";
-										//echo "</tr>";	
+										echo "<td><strong>TITULO</strong></td>";
+										echo "<td><strong>DEFINICION</strong></td>";
+										echo "<td><strong>COSTO</td>";
+										echo "</tr>";	
 
 										$renglon = 0;
 										$numrenglon=0;
 										$numcolumna=0;
 										$iniciorenglon = 'true';
 
-
-										echo "<table border=1> <tr>";
-
 										while ($fila = oci_fetch_array($sentenciasql, OCI_ASSOC+OCI_RETURN_NULLS)) {
 
 												$varnumprog = $varnumprog + 1;
 
+
+
+												$iniciorenglon = 'true';
 												$contenido = '';
-
-
+												if ($iniciorenglon = 'true') {
+													echo "<tr>";
+													$iniciorenglon = 'false';
+												}
 												$renglon = $fila['RENGLON'];
 												$columna = $fila['COLUMNA'];
-
-												if ($renglon <> $numrenglon){
-													echo "</tr>";
-													$numrenglon = $renglon;
-													echo "<tr>";
-												}
-
+												//echo $renglon;
+												//echo $columna;
 												$encab = utf8_encode($fila['ENCABEZADO']);
 												$defin = utf8_encode($fila['DEFINICION']);
 												$cost = $fila['COSTO'];
-
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">"; 
-
-
-												if ($renglon == 0 ) {
-													//echo "EL VALOR DE RENGLON ES CERO";
-													$contenido = utf8_encode($fila['ENCABEZADO']);
-												}elseif ($columna == 0 ){
-														//echo "COLUMNA 0";
+												//echo $renglon;
+												//if ($fila['COLUMNA'] = 0 and $fila['COSTO'] = '0' and $fila['ENCABEZADO'] = '0') {
+												if ($renglon = 0 ) {
+														//$encab_renglon = utf8_encode($fila['DEFINICION']);
+														//$contenido = $encab_renglon;
+														//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$encab_renglon</font></font></div></td>";
+												}elseif ($columna = 0 ){
 														$encab_renglon = utf8_decode($fila['DEFINICION']);
 														$contenido = $encab_renglon;
+														//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$defin</font></font></div></td>"; 
 												} else {
-													//echo "COSTO";
 													$varcosto = $fila['COSTO'];
 													$contenido=$varcosto;
 												} 
 												
+												//echo $fila['DEFINICION'];
+												//echo $var1 = utf8_decode($fila['DEFINICION']);
 
-												//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$renglon $columna $numrenglon $contenido</font></font></div></td>"; 
-												echo "$contenido</font></font></div></td>"; 
+												//$encab_renglon = utf8_encode($fila['DEFINICION']);
+
+												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$varnumprog</font></font></div></td>"; 
+												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$encab</font></font></div></td>"; 
+												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$defin</font></font></div></td>"; 
+												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$contenido</font></font></div></td>"; 
+												if ($renglon <> $fila) {
+													//echo 
+													# code...
+												}
+												//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$varcosto2</font></font></div></td>";
+												//echo "$vardescripcion";
+												echo "</tr>"; 
+
+
 
 
 
 										}
-										echo "</tr></table>";
 /*										echo "$varnumprog";
 
 										
