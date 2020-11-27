@@ -331,6 +331,11 @@ class AdminRetys extends Controller
   return view('VistasRetys.enlineatarj',['datalinea'=>$datalinea]);
 
  }
+ public function pdf_fichain(){
+
+
+
+ }
 
 
 

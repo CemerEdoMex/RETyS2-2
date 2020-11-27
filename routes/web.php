@@ -79,3 +79,11 @@ route::GET('Personas/{id_per}/{nperson}/{pagina?}','Adminretys@bppersona')->name
 |*/
 route::GET('enlinea','Adminretys@benlinea')->name('enlinea');
 
+/*
+|--------------------------------------------------------------------------
+| pdf ficha de información de tramite
+|--------------------------------------------------------------------------
+|*/
+route::get('fichapdf/id_tram','Adminretys@pdf_fichan')->name('fichapdf');
+
+
