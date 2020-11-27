@@ -51,6 +51,8 @@ Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');
 
 Route::GET('/cedulaTram', 'AdminRetys@cedula');
 
+Route::GET('/pdf','AdminRetys@PDFgenerator');
+
 
 /*
 |--------------------------------------------------------------------------

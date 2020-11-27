@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
+use PDF;
 use App\mtramiteomodelo; //modelo tramotes o servicio
 use App\mtregistro; //modelo de registros
 use App\t_tema; //modelo de temas
@@ -198,6 +199,25 @@ class AdminRetys extends Controller
 
     return view('VistasRetys.Fichas.ficha');
 
+    }
+
+    public function downloadPDF()
+    {
+        /*$data = [
+            'titulo' => 'retys.edomex'
+        ];*/
+
+        $pdf = \PDF::loadView('Trasnparencia.transparencia');
+
+        //$pdf = \PDF::loadView('Trasnparencia.transparencia', $data);
+
+        return $pdf->download('archivo.pdf');
+    }
+
+    public function PDFgenerator()
+    {
+        $pdf = PDF::loadview('Trasnparencia.transparencia');
+        return $pdf->download('realprogrammer.pdf');
     }
 
    public function trasnparencia()
