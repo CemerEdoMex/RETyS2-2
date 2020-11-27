@@ -58,7 +58,7 @@ Route::GET('/cedulaTram', 'AdminRetys@cedula');
 |--------------------------------------------------------------------------
 |*/
 
-Route::GET('trasnparencia','AdminRetys@trasnparencia')->name('trasnparencia');
+Route::GET('fichainformativa','AdminRetys@trasnparencia')->name('fichainformativa');
 
 Auth::routes();
 
