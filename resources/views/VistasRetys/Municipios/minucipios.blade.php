@@ -6,7 +6,7 @@
 
 <div class="container">
     <button type="button" class="btn btn-primary">
-        Municipios <span class="badge badge-light">86 encontrados</span>
+        Municipios <span class="badge badge-light">{{ sizeof($data) }}  encontrados</span>
     </button>
     <br>
     <hr>
@@ -21,7 +21,7 @@
                 <img src="{{ asset($data[$i]->ruta) }}"  class="rounded" alt="...">
                 @endif
                 <p class="card-text"><a href="#">Visita su sitio web.</a> </p>
-                <a href="{{ url('/municipios/'.$data[$i]->ambito_mun_clave) }}" class="btn btn-primary">Ver trámites </a>
+                <a href="{{ url('/municipios/'.$data[$i]->mun_descripcion.'/'.$data[$i]->ambito_mun_clave) }}" class="btn btn-primary">Ver trámites </a>
                 </div>
             </div>
         @endfor

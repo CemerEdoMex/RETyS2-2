@@ -28,8 +28,14 @@ Route::GET('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*Area
 
 Route::GET('categoria','Adminretys@category')->name('category');
 
+/*
+|--------------------------------------------------------------------------
+|  Municipios
+|--------------------------------------------------------------------------
+|*/
+
 Route::GET('/minicipios','Adminretys@municipios')->name('municipios');
-Route::GET('/municipios/{clave}','Adminretys@municipioDetalle')->name('municipio');
+Route::GET('/municipios/{municipio}/{clave}','Adminretys@municipioDetalle')->name('municipio');
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +50,8 @@ Route::GET('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog'
 Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');
 
 Route::GET('/cedulaTram', 'AdminRetys@cedula');
+
+Route::GET('/pdf','AdminRetys@PDFgenerator');
 
 
 /*
