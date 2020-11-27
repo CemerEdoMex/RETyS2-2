@@ -83,11 +83,12 @@ class AdminRetys extends Controller
         //return $dataQuery;
 
 
-        $dataQuery2 = DB::select("SELECT s.idsujeto, s.Sujetoobligado,s.ambito,s.AMBITO_MUN_CLAVE,s.AMBITO,s.ORDEN,s.XSECRETARIA,s.ttotales,s.imagen,
+        $dataQuery2 = DB::select(" SELECT s.idsujeto, s.Sujetoobligado,s.ambito,s.AMBITO_MUN_CLAVE,s.AMBITO,s.ORDEN,s.XSECRETARIA,s.ttotales,tbgem_ciareasgoblogo.RUTA,s.imagen,
         ambito.descripcion,s.URL
         from Tbgem_cisujetoobligado s
         left outer  join GRL_ELEMENTOS ambito on s.ambito =  ambito.idelemento
         left outer join GRL_ELEMENTOS poder on s.poder = poder.idelemento
+        left join tbgem_ciareasgoblogo on s.idsujeto =  tbgem_ciareasgoblogo.NUM_CLAVE
         where Nivo=0 and AMBITO_MUN_CLAVE=0 and AMBITO=3
         and IDINTEGRADOR = 172 and IDSUJETOPODER=419 and INTEGRADOR=8 and ESPODER=8 and IDCVEUA <> '200000000' and s.ttotales >0
         order by orden");
@@ -157,7 +158,7 @@ class AdminRetys extends Controller
         ->leftJoin('Tbgem_cimunicipios', 'tbgem_citramite.AMBITO_MUN_CLAVE', '=', 'Tbgem_cimunicipios.MUN_CLAVE')
         ->leftJoin('tbgem_cimunlogos', 'tbgem_citramite.AMBITO_MUN_CLAVE','=', 'tbgem_cimunlogos.MUN_CLAVE')
         ->orderBy('Tbgem_cimunicipios.MUN_DESCRIPCION')
-        ->get(); 
+        ->get();
 
        /* $data = DB::table('tbgem_citramite')->select('AMBITO_MUN_CLAVE','Tbgem_cimunicipios.MUN_DESCRIPCION')
         ->distinct()
@@ -170,7 +171,7 @@ class AdminRetys extends Controller
         return view('VistasRetys.Municipios.minucipios',compact('data'));
    }
 
-   public function municipioDetalle($clave)
+   public function municipioDetalle($municipio,$clave)
    {
         $dataQuery = DB::table('tbgem_citramite')
         //->select('idtramite','preges_url','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
@@ -181,11 +182,11 @@ class AdminRetys extends Controller
                         ->orderBy('Denominacion')
                         ->paginate(9);
 
-                       // return $dataQuery;
+                      //return ($dataQuery);
         $count = sizeof($dataQuery);
 
         return view('VistasRetys.Municipios.municipioDetalle',
-        ['data' => $dataQuery,'count' =>$count]);
+        ['data' => $dataQuery,'count' =>$count,'municipio' =>$municipio]);
    }
 
    public function bpersonasgob(){

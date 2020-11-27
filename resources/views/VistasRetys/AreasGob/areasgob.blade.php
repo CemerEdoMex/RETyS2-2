@@ -17,9 +17,9 @@
             <div class="card text-center" style="width: 18rem;">
                 <div class="card-body">
                 <h5 class="card-title">{{$dataQuery2[$i]->sujetoobligado}}</h5>
-                {{--@if ($dataQuery[$i]->ruta)
-                <img src="{{ asset($dataQuery[$i]->ruta) }}"  class="rounded" alt="...">
-                @endif--}}
+                @if ($dataQuery2[$i]->ruta)
+                <img src="{{ asset($dataQuery2[$i]->ruta) }}"  class="rounded" alt="...">
+                @endif
                 <p class="card-text"><a href="{{$dataQuery2[$i]->url}}" target="_blanck">Visita su sitio web.</a> </p>
                 <a href="{{ url('/areasgog/'.$dataQuery2[$i]->idsujeto) }}" class="btn btn-primary">Ver trámites </a>
                 </div>

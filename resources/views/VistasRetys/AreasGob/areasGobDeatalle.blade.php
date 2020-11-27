@@ -16,6 +16,10 @@
             </form>
       </div>
       <br>
+      {{--<div class="col-12 text-center text-elegant-color-dark text-dark" >
+        <p style=" font-size: 42px;">{{$data[0]->Sujetoobligado}} </p>
+      </div>
+      <br>--}}
        <div class="row mb-5">
           <div class="card" style="width: 13rem;">
              <div class="card-body">
@@ -40,7 +44,7 @@
         &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
-               <img src="{{asset('img/icon/presencial.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Presencial"> 
+               <img src="{{asset('img/icon/presencial.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Presencial">
                <h6 class="card-title">Presencial </h6>
             </div>
          </div>
