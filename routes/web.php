@@ -92,6 +92,7 @@ route::GET('enlinea','Adminretys@benlinea')->name('enlinea');
 | pdf ficha de información de tramite
 |--------------------------------------------------------------------------
 |*/
-route::get('fichapdf/id_tram','Adminretys@pdf_fichan')->name('fichapdf');
+route::get('fichapdf/{id_tram}','Adminretys@pdf_fichan')->name('fichapdf');
+route::get('cedulainfo','Adminretys@cedulainformacion')->name('cedulainfo');
 
 

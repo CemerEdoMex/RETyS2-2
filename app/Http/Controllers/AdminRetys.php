@@ -329,7 +329,7 @@ class AdminRetys extends Controller
       INNER JOIN TBGEM_CIPERFIL TM ON TM.ID_PERFIL = TT.ID_PERFIL
       WHERE t.BAJA = 0
       AND TM.ID_PERFIL='.$id_per.'order by t.denominacion
-      OFFSET '.$inicia.' ROWS FETCH FIRST '.$tram_x_pag.' ROW ONLY');
+      OFFSET '.$inicia.' ROWS FETCH FIRST'.$tram_x_pag.' ROW ONLY');
 
         return view('VistasRetys.personatarjeta')
         /*->with(['dataper'=>$datapersona])*/
@@ -354,7 +354,12 @@ class AdminRetys extends Controller
  }
  public function pdf_fichain(){
 
+ 
 
+ }
+ public function cedulainformacion(){
+
+ return view('fichasinfo.cedulainformacion');
 
  }
 
