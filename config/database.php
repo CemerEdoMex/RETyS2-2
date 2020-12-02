@@ -92,6 +92,18 @@ return [
         ],
 
         'oracle' => [
+            'driver' => 'oracle',
+            'host' => '10.10.124.12',
+            'port' => '1521',
+            'database' => 'xe',
+            'service_name' => 'pdb1srv.edomex.gob.mx',
+            'username' => 'RETYS2014',
+            'password' => 'retys2014',
+            'charset' => '',
+            'prefix' => '',
+        ]
+
+        /*'oracle' => [
             'driver'         => 'oracle',
             'host'           => 'localhost',
             'port'           => '1521',
@@ -103,7 +115,7 @@ return [
             'prefix_schema'  =>  '',
             'edition'        => 'ora$base',
             'server_version' =>  '11g',
-        ],
+        ],*/
 
 
     ],

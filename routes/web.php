@@ -51,8 +51,12 @@ Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');
 
 Route::GET('/cedulaTram', 'AdminRetys@cedula');
 
-Route::GET('/pdf','AdminRetys@PDFgenerator');
-
+/*
+|-------------------------------------------------------------------------
+| Rutas para archivos PDF
+|-------------------------------------------------------------------------
+|*/
+Route::GET('/pdf','PDF_Controller@create')->name('pdf');
 
 /*
 |--------------------------------------------------------------------------
@@ -95,4 +99,11 @@ route::GET('enlinea','Adminretys@benlinea')->name('enlinea');
 route::get('fichapdf/{id_tram}','Adminretys@pdf_fichan')->name('fichapdf');
 route::get('cedulainfo','Adminretys@cedulainformacion')->name('cedulainfo');
 
-
+/*
+|-------------------------------------------------------------------------
+| Trial Rutes
+|-------------------------------------------------------------------------
+/*/
+Route::get('/prueba', function () {
+    return view('VistasRetys.newCards');
+});

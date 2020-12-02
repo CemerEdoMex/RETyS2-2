@@ -201,24 +201,6 @@ class AdminRetys extends Controller
 
     }
 
-    public function downloadPDF()
-    {
-        /*$data = [
-            'titulo' => 'retys.edomex'
-        ];*/
-
-        $pdf = \PDF::loadView('Trasnparencia.transparencia');
-
-        //$pdf = \PDF::loadView('Trasnparencia.transparencia', $data);
-
-        return $pdf->download('archivo.pdf');
-    }
-
-    public function PDFgenerator()
-    {
-        $pdf = PDF::loadview('Trasnparencia.transparencia');
-        return $pdf->download('realprogrammer.pdf');
-    }
 
    public function trasnparencia()
    {
@@ -354,7 +336,7 @@ class AdminRetys extends Controller
  }
  public function pdf_fichain(){
 
- 
+
 
  }
  public function cedulainformacion(){

@@ -134,9 +134,7 @@
                         <a class="nav-link text-bold text-dark" href="{{ route('personasgob')}} ">POR PERSONA</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link text-bold text-dark" href="http://sistemas2.edomex.gob.mx/ventanilla/seguimiento.action" target="_blanck">Inicia CUTS</a>
-                    </li>
+
 
 
 
@@ -167,60 +165,24 @@
                                 </div>
                             </div>
                             <div class="card-body text-warning">
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                      <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Federal</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Estatal</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Municipal</a>
-                                    </li>
-                                </ul>
                                 <div class="tab-content" id="myTabContent">
 
-                                    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <br> <br>
-                                        <p class="text-secondary text-bold">En Línea <span class="text-warning" style="color: #d19f09!important;"> CHAT FEDERAL </span></p>
-                                        <p class="text-secondary text-bold"> Centro de Atención FEDERAL </p>
-                                        <ul>
-
-                                                <p>Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 FEDERAL
-                                                  </span></p>
-
-                                        </ul>
-                                    </div>
-
                                     <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <br> <br>
-                                       <p class="text-secondary text-bold">Centro de Atención Telefónica</p>
+                                       <p class="text-secondary text-bold"> <h3> Centro de Atención Telefónica </h3> </p>
+                                       <br>
                                         <ul>
+                                            <p class="text-secondary"> <a class="text-warning" style="color: #d19f09!important;" href="http://">CHAT</a>  en linea.
 
-
-                                                <p class="text-secondary">Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 696 96 96
-                                                  </span></p>
-
-
-                                                <p class="text-secondary">En el valle de Toluca <span class="text-warning" style="color: #d19f09!important;"> 070
+                                            <p class="text-secondary">Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 696 96 96
                                                 </span></p>
+
+                                            <p class="text-secondary">En el valle de Toluca <span class="text-warning" style="color: #d19f09!important;"> 070
+                                            </span></p>
 
                                         </ul>
                                         <p class="text-secondary text-bold">Centro de Servicios Administrativos</p>
                                     </div>
-                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <br> <br>
-                                        <p class="text-secondary text-bold">Centro de Atención Telefónica</p>
-                                        <ul>
 
-
-                                                <p>Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 696 96 96
-                                                  </span></p>
-
-                                                <p>En el valle de Toluca <span class="text-warning" style="color: #d19f09!important;"> 070
-                                                </span></p>
-
-                                        </ul>
-                                        <p class="text-secondary text-bold">Centro de Servicios Administrativos</p>
-                                    </div>
                                 </div>
 
                             </div>
@@ -228,49 +190,34 @@
 
                     </div> <!-- Col 3 -->
 
-                    <div class="col-lg-9" >
+                    <div class="col-lg-6" >
 
                         @yield ('tarjetas')
 
                     </div> <!-- Col 6 -->
 
-                  {{--
+
                     <div class="col-lg-3">
 
                         <div class="card bg-gradient-success ">
                             <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
-                                <div class="text-success d-flex h-100 mask blue-gradient-rgba">
+                                <div class="text-warning d-flex h-100 mask blue-gradient-rgba">
                                 <div class="first-content align-self-center p-3">
-                                    <h3 class="text-sucess text-bold"><i class="fas fa-folder-open fa-2x"></i> Carpeta Ciudadana</h3>
+                                    <h3 class="text-warning text-bold"><i class="fas fa-folder-open fa-2x"></i> Carpeta Ciudadana</h3>
                                 </div>
                                 </div>
                             </div>
-                            <div class="card-body text-success">
+                            <div class="card-body">
 
+                                        <h3 class="text-warning">Clave unica de Tamites y Servicios</h3>
 
-                                        CUTS
-                                        <p class="text-secondary"> Ingresa aquí para realizar tu trámite y/o servicio o consultar el estado de tus solicitudes. </p>
                                         <div class="form-grupo">
-                                            <form action="">
-                                                <div class="form-group">
-                                                    <input type="email" class="form-control" id="cuts" name="cuts"
-                                                        aria-describedby="cutsHelp" placeholder="CUTS">
-                                                    <small id="cutslHelp" class="form-text text-muted">Ingresa tu CUTS previamente creada</small>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="password" class="form-control" id="password"
-                                                        name="password" placeholder="Password">
-                                                </div>
-                                                <button type="button" class="btn btn-success btn-fluid">Iniciar sesión
-
-                                                </button>
-                                            </form>
                                             <hr>
                                             <ul>
-                                                <li> <a href="#">¿Olvidaste tu contraseña?</a> </li>
+                                                <li> <a href="#" >Inicia sesion</a> </li>
+                                                <li> <a href="#" >¿Olvidaste tu contraseña?</a> </li>
                                                 <li> <a href="#"> Verifica si tienes CUTS</a> </li>
                                                 <li> <a href="#"> ¿No tienes CUTS?  Obtenla AQUÍ</a> </li>
-                                                <li> <a href="#"> ¿Deseas modificar tu correo electrónico?</a> </li>
                                             </ul>
                                         </div>
                                     </li>
@@ -278,26 +225,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <br>
+                    </div>
 
-                        <hr>
-
-                        <br>
-                        <div class="card bg-gradient-info">
-                            <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
-                                <div class="text-info d-flex h-100 mask blue-gradient-rgba">
-                                <div class="first-content align-self-center p-3">
-                                    <h3 class="text-info text-bold"><i class="fas fa-search"></i>Consulta tu solicitud</h3>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="card-body ">
-
-                                <p class="card-text">Sí realizaste un trámite o servicio, consulta el estado de tu solicitud mediante el folio.</p>
-
-                </div> --}}
-
-                        </div><!-- sISTEMA DE COLUMNAS -->
+                 </div><!-- sISTEMA DE COLUMNAS -->
 
                 <div class="row">
                     <div class="col-12 col-md">
