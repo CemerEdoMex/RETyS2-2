@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class PDF_Controller extends Controller
 {
@@ -21,19 +22,36 @@ class PDF_Controller extends Controller
     {
         $idtramserv = 352;
 
-        $varidcveua = 12;
 
-        $queryUno = "SELECT IDTRAMITE,IDCVEUA,DENOMINACION,DESCRIPCION,FLEGAL,DOCOBTENER,NOMBRE_CORTO,ENLINEA,AMBITO,PRESENCIAL,TRESP_MIN,TRESP_HOR,TRESP_DIA,TRESP_ANIO,TRESP_MES
-                    from tbgem_citramite where idtramite = '".$idtramserv."'"; // Informacion general del tramite
+        $queryUno = DB::table('tbgem_citramite')
+                    ->select('tbgem_citramite.IDTRAMITE','tbgem_citramite.IDCVEUA','tbgem_citramite.DENOMINACION','tbgem_citramite.DESCRIPCION','tbgem_citramite.FLEGAL','tbgem_citramite.DOCOBTENER','tbgem_citramite.NOMBRE_CORTO','tbgem_citramite.ENLINEA','tbgem_citramite.AMBITO','tbgem_citramite.PRESENCIAL','tbgem_citramite.TRESP_MIN','tbgem_citramite.TRESP_HOR',
+                                'tbgem_citramite.TRESP_DIA','tbgem_citramite.TRESP_ANIO','tbgem_citramite.TRESP_MES',
+                                'tbgem_ciunidadesadm.DEPENDENCIA','tbgem_ciunidadesadm.DIR_GRAL','tbgem_ciunidadesadm.UNIDADADM','tbgem_ciunidadesadm.TITULAR','tbgem_ciunidadesadm.CORREOE','tbgem_ciunidadesadm.CALLE','tbgem_ciunidadesadm.NOEXTINT','tbgem_ciunidadesadm.COLONIA','tbgem_ciunidadesadm.CP','tbgem_ciunidadesadm.LADA1','tbgem_ciunidadesadm.LADA2',
+                                'tbgem_ciunidadesadm.LADA3','tbgem_ciunidadesadm.TELEFONO1','tbgem_ciunidadesadm.TELEFONO2','tbgem_ciunidadesadm.TELEFONO3','tbgem_ciunidadesadm.EXT','tbgem_ciunidadesadm.FAX')
+                    ->leftJoin('tbgem_ciunidadesadm','tbgem_citramite.IDCVEUA','tbgem_ciunidadesadm.IDCVEUA')
+                    ->where('tbgem_citramite.idtramite',$idtramserv)
+                    ->get();// Informacion general del tramite
 
-        $queryDos = "SELECT DEPENDENCIA,DIR_GRAL,UNIDADADM,TITULAR,CORREOE,CALLE,NOEXTINT,COLONIA,CP,LADA1,LADA2,LADA3,TELEFONO1,TELEFONO2,TELEFONO3,EXT,FAX
-                    from tbgem_ciunidadesadm where IDCVEUA = '".$varidcveua."'"; // Unidad Administrativa
 
-        $queryTres = "SELECT RENGLON, COLUMNA, COSTO, ENCABEZADO, DEFINICION from TBGEM_CICOSTOS where idtramite = '".$idtramserv."' order by renglon, columna"; //Costos
+        //$queryDos = "SELECT DEPENDENCIA,DIR_GRAL,UNIDADADM,TITULAR,CORREOE,CALLE,NOEXTINT,COLONIA,CP,LADA1,LADA2,LADA3,TELEFONO1,TELEFONO2,TELEFONO3,EXT,FAX
+                    //from tbgem_ciunidadesadm where IDCVEUA = '".$varidcveua."'"; // Unidad Administrativa
 
-        $queryCuatro = "SELECT IDPASOS,PASO,IDTRAMITE from tbgem_pasos where IDTRAMITE = '".$idtramserv."' order by IDTRAMITE, IDPASOS"; // Pasos a seguir
+        $queryCostos = DB::table('TBGEM_CICOSTOS')
+                       ->SELECT('RENGLON', 'COLUMNA', 'COSTO', 'ENCABEZADO', 'DEFINICION')
+                       ->where('idtramite',$idtramserv)
+                       ->orderBy('renglon','asc')
+                       ->orderBy('columna','asc')
+                       ->get(); //Costos
 
-        $queryCinco = "SELECT PREGUNTA, RESPUESTA from tbgem_ciotros where IDTRAMITE = '".$idtramserv."' order by NUM, CONSE"; // Preguntas y respuestas
+        //$queryPasos = "SELECT IDPASOS,PASO,IDTRAMITE from tbgem_pasos where IDTRAMITE = '".$idtramserv."' order by IDTRAMITE, IDPASOS"; // Pasos a seguir
+
+        $queryPasos = DB::table('tbgem_pasos')
+                        ->select('IDPASOS','PASO','IDTRAMITE')
+                        ->where('IDTRAMITE',$idtramserv)
+                        ->orderBy('IDPASOS')
+                        ->get();
+
+        //dd($queryPasos);
 
         $data = [
             'titulo' => 'Expedición del informe o certificado de no antecedentes penales'
