@@ -32,56 +32,56 @@
                
                 <li>
                     <a href="#">
-                        <i class="fas fa-image"></i>
+                         <img src="{{asset('img/imgcedula/info_viol.png')}}" style="width:15%;" >
                         Información general
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-question"></i>
+                         <img src="{{asset('img/imgcedula/domicilio_viol.png')}}" style="width:15%;" >
                         Domicilio
                     </a>
                 </li>
 				<li>
                     <a href="#">
-                        <i class="fas fa-question"></i>
+                        <img src="{{asset('img/imgcedula/costos_viol.png')}}" style="width:15%;" >
                         Costos
                     </a>
                 </li>
 				<li>
                     <a href="#">
-                        <i class="fas fa-question"></i>
+                        <img src="{{asset('img/imgcedula/tiempo_viol.png')}}" style="width:15%;" >
                         Tiempo de respuesta
                     </a>
                 </li>
 				<li>
                     <a href="#">
-                        <i class="fas fa-question"></i>
+                        <img src="{{asset('img/imgcedula/requisitos_viol.png')}}" style="width:15%;" >
                         Requisitos
                     </a>
                 </li>
 				<li>
                     <a href="#">
-                        <i class="fas fa-question"></i>
+                        <img src="{{asset('img/imgcedula/pasos_viol.png')}}" style="width:15%;" >
                         Pasos a seguir
                     </a>
                 </li>
 				<li>
                     <a href="#">
-                        <i class="fas fa-question"></i>
+                        <img src="{{asset('img/imgcedula/documento_viol.png')}}" style="width:15%;" >
                         Documento a obtener
                     </a>
                 </li>
 				<li>
                     <a href="#">
-                        <i class="fas fa-question"></i>
+                         <img src="{{asset('img/imgcedula/fundamento_viol.png')}}" style="width:15%;" >
                         Fundamento jurídico
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-paper-plane"></i>
-                        Contact
+                         <img src="{{asset('img/imgcedula/preguntas_viol.png')}}" style="width:15%;" >
+                        Preguntas frecuentes
                     </a>
                 </li>
             </ul>
