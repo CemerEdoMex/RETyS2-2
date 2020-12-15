@@ -60,11 +60,12 @@
     @endforeach
     <h2>{{ $item}}</h2>
 
+    <h3><img src="../RETyS1/iconos/info_viol.png" alt="info" width="25" height="25">Descripcion</h3>
+
     <p>
         La expedición del Certificado o informe permite acreditar si una persona ha sido o no condenada por sentencia firme dictada por los órganos jurisdiccionales competentes.
     </p>
 
-    <h3><img src="../RETyS1/iconos/info_viol.png" alt="info" width="25" height="25">Información General</h3>
     <br>
     {{-- Informacion General & Modalidad --}}
     <table class="table">

@@ -33,6 +33,14 @@ class PDF_Controller extends Controller
                     ->get();// Informacion general del tramite
 
 
+
+        $queryReq = DB::table('tbgem_cireq_tram')
+                    ->select('IDTRAMITE','TIPO','ORIGINAL','COPIA','DESCRIPCION','ORDEN','FUNDAMENTOS')
+                    ->where('IDTRAMITE',$idtramserv)
+                    ->orderBy('TIPO','asc')
+                    ->orderBy('ORDEN','asc')
+                    ->get(); // requisitos dle trmite
+
         //$queryDos = "SELECT DEPENDENCIA,DIR_GRAL,UNIDADADM,TITULAR,CORREOE,CALLE,NOEXTINT,COLONIA,CP,LADA1,LADA2,LADA3,TELEFONO1,TELEFONO2,TELEFONO3,EXT,FAX
                     //from tbgem_ciunidadesadm where IDCVEUA = '".$varidcveua."'"; // Unidad Administrativa
 
