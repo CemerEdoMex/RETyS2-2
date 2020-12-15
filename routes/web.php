@@ -56,7 +56,7 @@ Route::GET('/cedulaTram', 'AdminRetys@cedula');
 | Rutas para archivos PDF
 |-------------------------------------------------------------------------
 |*/
-Route::GET('/pdf','PDF_Controller@create')->name('pdf');
+Route::GET('/pdf/{idtramserv}','PDF_Controller@create')->name('pdf');
 
 /*
 |--------------------------------------------------------------------------

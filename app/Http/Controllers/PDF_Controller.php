@@ -18,9 +18,16 @@ class PDF_Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($idtramserv)
     {
-        $idtramserv = 352;
+       # $idtramserv = 352;
+       if(!is_numeric($idtramserv))
+       {
+        echo'<script type="text/javascript">
+        alert("No se encontro la informacion");
+        location.href="http://retys.edomex.gob.mx/";
+        </script>';
+       }
 
 
         $queryUno = DB::table('tbgem_citramite')
@@ -69,7 +76,7 @@ class PDF_Controller extends Controller
 
         //$pdf->loadView('PDFViews.ficha');
 
-        $pdf = \PDF::loadView('PDFViews.ficha', compact('data'));
+        $pdf = \PDF::loadView('PDFViews.ficha', compact('data','queryUno','queryReq','queryCostos'));
 
         return $pdf->stream('mi-archivo.pdf');
 
