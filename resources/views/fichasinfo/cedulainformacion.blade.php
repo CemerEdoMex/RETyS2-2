@@ -79,7 +79,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" class="w3-bar-item tablink" onclick="openCity(event, 'Pregfrec')">
                          <img src="{{asset('img/imgcedula/preguntas_viol.png')}}" style="width:15%;" >
                         Preguntas frecuentes
                     </a>
@@ -295,6 +295,23 @@
             </tr>
             <tr>
                 <th>Acuerdo 14/2011 del C. Procurador de Justicia del Estado de México</th>
+            </tr>
+        </table>
+    </div>
+    <div id="Pregfrec" class="tabcontent text-center">
+        <h2>Preguntas frecuentes</h2></center>
+        <table>
+            <tr>
+                <td>1. Imprimí mi Informe de No Antecedentes Penales y me aparece que tengo un posible homónimo ¿Qué tengo que hacer?</td>
+                <th>1.- Debe agendar una cita al teléfono 01 (722) 213-2497 en un horario de Lunes a Viernes de 9:00 a 13:00 horas. <br>
+                    2.- El día y a la hora de su cita elegida por usted, debe presentarse personalmente en las oficinas del Instituto de Servicios Periciales de la Procuraduría General de Justicia del Estado de México, ubicadas en Av. Morelos Ote. 1300 entre Jaime Nuno, Col. San Sebastián, Toluca con los siguientes documentos:
+                    1.-Informe de No Antecedentes en (original y copia)<br>
+                    2.- Identificación oficial que utilizo para su registro (original y copia)
+                </th>
+            </tr>
+            <tr>
+                <td>2. ¿Por qué me aparece error en la fecha de nacimiento?</td>
+                <th>Debe ingresar sus datos como le pide el sistema por ejemplo: 12/09/1985, es decir (día/mes/año) agregando diagonales como separación.</th>
             </tr>
         </table>
     </div>

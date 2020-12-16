@@ -93,12 +93,12 @@ return [
 
         'oracle' => [
             'driver' => 'oracle',
-            'host' => '10.10.124.12',
+            'host' => 'localhost',
             'port' => '1521',
-            'database' => 'xe',
-            'service_name' => 'pdb1srv.edomex.gob.mx',
-            'username' => 'RETYS2014',
-            'password' => 'retys2014',
+            'database' => 'lalodatabase',
+            'service_name' => '',
+            'username' => 'system',
+            'password' => 'Lalo1516',
             'charset' => '',
             'prefix' => '',
         ]
