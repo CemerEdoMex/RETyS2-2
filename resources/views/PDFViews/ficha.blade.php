@@ -55,19 +55,56 @@
 </header>
 
 <main>
-    @foreach ($data ?? '' as $item)
 
-    @endforeach
-    <h2>{{ $item}}</h2>
+    <h2>{{ $queryUno[0]->denominacion}}</h2>
 
-    <p>
-        La expedición del Certificado o informe permite acreditar si una persona ha sido o no condenada por sentencia firme dictada por los órganos jurisdiccionales competentes.
-    </p>
+    <h3><img src="../RETyS1/iconos/info_viol.png" alt="info" width="25" height="25">Descripción</h3>
 
-    <h3><img src="../RETyS1/iconos/info_viol.png" alt="info" width="25" height="25">Información General</h3>
+    <p> {{$queryUno[0]->descripcion}} </p>
+
+    <h3><img src="../RETyS1/iconos/pasos_viol.png" alt="info" width="25" height="25">Requisitos</h3>
+
+    <ul>
+        @foreach ($queryReq as $item)
+        <li>{{$item->descripcion}}</li>
+        @endforeach
+
+    </ul>
+
+    <h3><img src="../RETyS1/iconos/costos_viol.png" alt="info" width="25" height="25">Costo (En desarrollo)</h3>
+
+    <p> {{$queryCostos}} </p>
+
+    <h3><img src="../RETyS1/iconos/tiempo_viol.png" alt="info" width="25" height="25"> Duración del trámite  </h3>
+
+    <p> {{$queryUno[0]->tresp_min}} min.</p>
+
+    <h3><img src="../RETyS1/iconos/domicilio_viol.png" alt="info" width="25" height="25"> Donde y cuando puedo realizarlo </h3>
+
+    <p>Calle {{$queryUno[0]->calle}} # {{$queryUno[0]->noextint}},Colnia {{$queryUno[0]->colonia}} , {{$queryUno[0]->cp}}.</p>
+
+    <h4>Telefonos</h4>
+    <ul>
+        <li>
+             {{$queryUno[0]->lada1}} {{$queryUno[0]->telefono1}}
+        </li>
+        <li>
+             {{$queryUno[0]->lada2}} {{$queryUno[0]->telefono2}}
+        </li>
+        <li>
+            {{$queryUno[0]->lada3}} {{$queryUno[0]->telefono3}}
+       </li>
+    </ul>
+
+    <span> Ext {{$queryUno[0]->ext}} & Fax {{$queryUno[0]->fax}}</span>
+
     <br>
+
+   {{-- <h3>Unidad Administrativa Responsable</h3> --}}
+
     {{-- Informacion General & Modalidad --}}
-    <table class="table">
+
+    {{--<table class="table">
         <thead>
             <tr>
                 <th class="t_head"> Dependencia u Organismo </th>
@@ -103,7 +140,7 @@
                 <td class="t_data"> mlmartinez@nsp.gob.mx</td>
             </tr>
         </tbody>
-    </table>
+    </table> --}}
 
     {{-- Domicilio --}}
 

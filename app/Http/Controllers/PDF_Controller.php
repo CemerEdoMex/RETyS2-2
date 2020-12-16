@@ -18,9 +18,16 @@ class PDF_Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($idtramserv)
     {
-        $idtramserv = 352;
+       # $idtramserv = 352;
+       if(!is_numeric($idtramserv))
+       {
+        echo'<script type="text/javascript">
+        alert("No se encontro la informacion");
+        location.href="http://retys.edomex.gob.mx/";
+        </script>';
+       }
 
 
         $queryUno = DB::table('tbgem_citramite')
@@ -32,6 +39,14 @@ class PDF_Controller extends Controller
                     ->where('tbgem_citramite.idtramite',$idtramserv)
                     ->get();// Informacion general del tramite
 
+
+
+        $queryReq = DB::table('tbgem_cireq_tram')
+                    ->select('IDTRAMITE','TIPO','ORIGINAL','COPIA','DESCRIPCION','ORDEN','FUNDAMENTOS')
+                    ->where('IDTRAMITE',$idtramserv)
+                    ->orderBy('TIPO','asc')
+                    ->orderBy('ORDEN','asc')
+                    ->get(); // requisitos dle trmite
 
         //$queryDos = "SELECT DEPENDENCIA,DIR_GRAL,UNIDADADM,TITULAR,CORREOE,CALLE,NOEXTINT,COLONIA,CP,LADA1,LADA2,LADA3,TELEFONO1,TELEFONO2,TELEFONO3,EXT,FAX
                     //from tbgem_ciunidadesadm where IDCVEUA = '".$varidcveua."'"; // Unidad Administrativa
@@ -61,7 +76,7 @@ class PDF_Controller extends Controller
 
         //$pdf->loadView('PDFViews.ficha');
 
-        $pdf = \PDF::loadView('PDFViews.ficha', compact('data'));
+        $pdf = \PDF::loadView('PDFViews.ficha', compact('data','queryUno','queryReq','queryCostos'));
 
         return $pdf->stream('mi-archivo.pdf');
 
