@@ -209,12 +209,12 @@
                             </div>
                             <div class="card-body">
 
-                                        <h3 class="text-warning">Clave unica de Tamites y Servicios</h3>
+                                        <h3 class="text-warning">Clave Única de Trámites y Servicios</h3>
 
                                         <div class="form-grupo">
                                             <hr>
                                             <ul>
-                                                <li> <a href="#" >Inicia sesion</a> </li>
+                                                <li> <a href="#" >Inicia sesión</a> </li>
                                                 <li> <a href="#" >¿Olvidaste tu contraseña?</a> </li>
                                                 <li> <a href="#"> Verifica si tienes CUTS</a> </li>
                                                 <li> <a href="#"> ¿No tienes CUTS?  Obtenla AQUÍ</a> </li>
@@ -225,6 +225,8 @@
                                 </ul>
                             </div>
                         </div>
+
+
                     </div>
 
                  </div><!-- sISTEMA DE COLUMNAS -->
