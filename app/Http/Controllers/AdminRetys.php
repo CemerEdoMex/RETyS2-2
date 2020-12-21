@@ -342,14 +342,12 @@ class AdminRetys extends Controller
  public function cedulainformacion($id_tram){
   $idtramserv=352;
 
-   $queryUno = DB::table('tbgem_citramite')
-                    ->select('tbgem_citramite.IDTRAMITE','tbgem_citramite.IDCVEUA','tbgem_citramite.DENOMINACION','tbgem_citramite.DESCRIPCION','tbgem_citramite.FLEGAL','tbgem_citramite.DOCOBTENER','tbgem_citramite.NOMBRE_CORTO','tbgem_citramite.ENLINEA','tbgem_citramite.AMBITO','tbgem_citramite.PRESENCIAL','tbgem_citramite.TRESP_MIN','tbgem_citramite.TRESP_HOR',
-                                'tbgem_citramite.TRESP_DIA','tbgem_citramite.TRESP_ANIO','tbgem_citramite.TRESP_MES',
-                                'tbgem_ciunidadesadm.DEPENDENCIA','tbgem_ciunidadesadm.DIR_GRAL','tbgem_ciunidadesadm.UNIDADADM','tbgem_ciunidadesadm.TITULAR','tbgem_ciunidadesadm.CORREOE','tbgem_ciunidadesadm.CALLE','tbgem_ciunidadesadm.NOEXTINT','tbgem_ciunidadesadm.COLONIA','tbgem_ciunidadesadm.CP','tbgem_ciunidadesadm.LADA1','tbgem_ciunidadesadm.LADA2',
-                                'tbgem_ciunidadesadm.LADA3','tbgem_ciunidadesadm.TELEFONO1','tbgem_ciunidadesadm.TELEFONO2','tbgem_ciunidadesadm.TELEFONO3','tbgem_ciunidadesadm.EXT','tbgem_ciunidadesadm.FAX')
-                    ->leftJoin('tbgem_ciunidadesadm','tbgem_citramite.IDCVEUA','tbgem_ciunidadesadm.IDCVEUA')
-                    ->where('tbgem_citramite.idtramite',$idtramserv)
-                    ->get();// Informacion general del tramite
+  
+    $tramitequery=DB::select('SELECT distinct tr.IDTRAMITE,tr.IDCVEUA,tr.DENOMINACION,tr.DESCRIPCION,tr.FLEGAL,tr.DOCOBTENER,tr.NOMBRE_CORTO,tr.ENLINEA,tr.AMBITO,tr.PRESENCIAL,tr.TRESP_MIN,tr.TRESP_HOR,tr.TRESP_DIA,tr.TRESP_ANIO,tr.TRESP_MES,uam.DEPENDENCIA,uam.DIR_GRAL,uam.UNIDADADM,uam.TITULAR,uam.CORREOE,uam.CALLE,uam.NOEXTINT,uam.COLONIA,uam.CP,uam.LADA1,uam.LADA2,uam.LADA3,uam.TELEFONO1,uam.TELEFONO2,uam.TELEFONO3,uam.EXT
+                              FROM tbgem_citramite tr
+                              INNER JOIN tbgem_ciunidadesadm ua ON tr.IDCVEUA = uam.IDCVEUA
+                              WHERE tr.IDTRAMITE =111');
+
 
 
         //$queryDos = "SELECT DEPENDENCIA,DIR_GRAL,UNIDADADM,TITULAR,CORREOE,CALLE,NOEXTINT,COLONIA,CP,LADA1,LADA2,LADA3,TELEFONO1,TELEFONO2,TELEFONO3,EXT,FAX
@@ -370,12 +368,12 @@ class AdminRetys extends Controller
                         ->orderBy('IDPASOS')
                         ->get();
 
-        //dd($queryPasos);
+        
 
- return view('fichasinfo.cedulainformacion')
-  ->with(['tramite'=>$queryUno])
- ->with(['Costos'=>$queryCostos])
- ->with(['pasos'=>$queryPasos]);
+ return view('fichasinfo.cedulainformacion',['tramite' => $tramite]);
+ // ->with(['tramite'=>$queryUno])
+ //->with(['Costos'=>$queryCostos])
+ //->with(['pasos'=>$queryPasos]);
 
 
  }

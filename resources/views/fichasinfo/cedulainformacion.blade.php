@@ -92,19 +92,33 @@
 
         <!-- Page Content  -->
         <div id="content">
+           
 
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light " >
+                <div class="container-fluid text" >
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                         
                     </button>
                     
-
-                    
                 </div>
+                 
             </nav>
+            
+             <div class="text-center" style="align-content:center;  color:#341050; ">
+                @foreach($tramite as $tram)
+                <h3>{{$tram->denominacion}}</h3>
+                @endforeach
+                </div>
+                <div class="text-center" style="align-content:center;  color:#341050;">
+                <table class="table table-hover">
+                    <tr>
+                        <th><p>nwgeujpñhguwhf piuwehgfñliuehfhew iugfhewfuewhihe</p></th>
+                    </tr>
+                </table>
+                </div>
+           
 
 
              <div id="InformacionGeneral" class="tabcontent text-center">
