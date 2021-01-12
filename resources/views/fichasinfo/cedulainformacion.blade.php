@@ -109,20 +109,75 @@
              <div class="text-center" style="align-content:center;  color:#341050; ">
                 @foreach($tramite as $tram)
                 <h3>{{$tram->denominacion}}</h3>
-                @endforeach
+               
                 </div>
                 <div class="text-center" style="align-content:center;  color:#341050;">
                 <table class="table table-hover">
                     <tr>
-                        <th><p>nwgeujpñhguwhf piuwehgfñliuehfhew iugfhewfuewhihe</p></th>
+                    
+                        <th><p>{{$tram->descripcion}}</p></th>
+                        
                     </tr>
                 </table>
+                 @endforeach
                 </div>
            
 
 
              <div id="InformacionGeneral" class="tabcontent text-center">
       <h2>Información General</h2>
+    @foreach($tramite as $tram)
+      <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Dependencia u Organismo</th>
+      <td>{{$tram->dependencia}}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Dirección General</th>
+      <td>{{$tram->dir_gral}}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Unidad Administrativa Responsable</th>
+      <td>{{$tram->unidadadm}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Titular de la Unidad Administrativa</th>
+      <td>{{$tram->titular}}</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Modalidad del Trámite</th>
+      <td>Jacob</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Ámbito</th>
+      <td>Jacob</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Canal de Atención</th>
+      <td>Jacob</td>
+      
+    </tr>
+     <tr>
+      <th scope="row">Canal de Atención</th>
+      <td>Jacob</td>
+      
+    </tr>
+  </tbody>
+</table>
+@endforeach
       <table>
             <tr>
                 <td>Modalidades</td>
