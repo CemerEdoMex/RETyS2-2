@@ -326,143 +326,63 @@
 				        <tbody>
 				            <tr>
 								<td>
-									<?php
+                                <?php
 										$sentenciasql = oci_parse($conexion, "SELECT RENGLON, COLUMNA, COSTO, ENCABEZADO, DEFINICION from TBGEM_CICOSTOS where idtramite = '".$idtramserv."' order by renglon, columna");
-										//$sentenciasql = oci_parse($conexion, "SELECT IDTRAMITE,TIPON,IDREQTRAM,DESCRIPCION from tbgem_cireq_tram where idtramite = '".$idtramserv."' order by IDTRAMITE
-										//	asc, TIPON, IDREQTRAM");
 
 										oci_execute($sentenciasql);
 
-										//$fila = oci_fetch_array($sentenciasql, OCI_ASSOC+OCI_RETURN_NULLS);
-
-										//var_dump($fila);
-										//printf("%s (%s)\n", $fila[0], $fila[1]);
-
-										//echo oci_num_rows($sentenciasql) . " REGISTROS ENCONTRADOS.<br />\n";
-
-
-										$varnumprog = 0;
-
-										//echo "<table  class='table table-striped'>"; //EMPIEZA A CREAR LA TABLA CON LOS ENCABEZADOS DE TABLA
-										//echo "<tr>";//<tr> CREA UNA NUEVA FILA
-										echo "<td><strong>TITULO</strong></td>";
-										echo "<td><strong>DEFINICION</strong></td>";
-										echo "<td><strong>COSTO</td>";
-										echo "</tr>";
+										$varnumprog = 0; // numero progresivo
 
 										$renglon = 0;
 										$numrenglon=0;
 										$numcolumna=0;
-										$iniciorenglon = 'true';
+										$iniciorenglon = 'true'; #valida encabeados
+
+
+										echo "<table border=1 align='center'> <tr>";
 
 										while ($fila = oci_fetch_array($sentenciasql, OCI_ASSOC+OCI_RETURN_NULLS)) {
 
 												$varnumprog = $varnumprog + 1;
 
-
-
-												$iniciorenglon = 'true';
 												$contenido = '';
-												if ($iniciorenglon = 'true') {
-													echo "<tr>";
-													$iniciorenglon = 'false';
-												}
+
+
 												$renglon = $fila['RENGLON'];
 												$columna = $fila['COLUMNA'];
-												//echo $renglon;
-												//echo $columna;
+
+												if ($renglon <> $numrenglon){
+													echo "</tr>";
+													$numrenglon = $renglon;
+													echo "<tr>";
+												}
+
 												$encab = utf8_encode($fila['ENCABEZADO']);
 												$defin = utf8_encode($fila['DEFINICION']);
 												$cost = $fila['COSTO'];
-												//echo $renglon;
-												//if ($fila['COLUMNA'] = 0 and $fila['COSTO'] = '0' and $fila['ENCABEZADO'] = '0') {
-												if ($renglon = 0 ) {
-														//$encab_renglon = utf8_encode($fila['DEFINICION']);
-														//$contenido = $encab_renglon;
-														//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$encab_renglon</font></font></div></td>";
-												}elseif ($columna = 0 ){
+
+												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">";
+
+
+												if ($renglon == 0 ) {
+													//echo "EL VALOR DE RENGLON ES CERO";
+													$contenido = utf8_encode($fila['ENCABEZADO']);
+												}elseif ($columna == 0 ){
+														//echo "COLUMNA 0";
 														$encab_renglon = utf8_decode($fila['DEFINICION']);
 														$contenido = $encab_renglon;
-														//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$defin</font></font></div></td>";
 												} else {
+													//echo "COSTO";
 													$varcosto = $fila['COSTO'];
 													$contenido=$varcosto;
 												}
 
-												//echo $fila['DEFINICION'];
-												//echo $var1 = utf8_decode($fila['DEFINICION']);
-
-												//$encab_renglon = utf8_encode($fila['DEFINICION']);
-
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$varnumprog</font></font></div></td>";
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$encab</font></font></div></td>";
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$defin</font></font></div></td>";
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$contenido</font></font></div></td>";
-												if ($renglon <> $fila) {
-													//echo
-													# code...
-												}
-												//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$varcosto2</font></font></div></td>";
-												//echo "$vardescripcion";
-												echo "</tr>";
-
-
+												echo "$contenido</font></font></div></td>";
 
 
 
 										}
-/*										echo "$varnumprog";
-
-
-										for ($i=0; $i < $varnumprog; $i++) {
-
-												//var_dump($fila);
-												//$varnumprog = $varnumprog + 1;
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$varnumprog</font></font></div></td>";
-												$contenido = '';
-												if ($iniciorenglon = 'true') {
-													echo "<tr>";
-													$iniciorenglon = 'false';
-												}
-												$renglon = $fila['RENGLON'];
-												$columna = $fila['COLUMNA'];
-												echo $renglon;
-												echo $columna;
-												$encab = $fila['ENCABEZADO'];
-												$defin = $fila['DEFINICION'];
-												$cost = $fila['COSTO'];
-												//echo $renglon;
-												//if ($fila['COLUMNA'] = 0 and $fila['COSTO'] = '0' and $fila['ENCABEZADO'] = '0') {
-												//if ($renglon <= 0 and  $columna <= 0) {
-														//$encab_renglon = utf8_encode($fila['DEFINICION']);
-														//$contenido = $encab_renglon;
-												//		echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$encab</font></font></div></td>";
-												//}elseif ($renglon <= 0 and $columna = 1 ){
-														//$encab_renglon = utf8_encode($fila['DEFINICION']);
-														//$contenido = $encab_renglon;
-											//			echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$defin</font></font></div></td>";
-												//} else {
-												//	$varcosto = $fila['COSTO'];
-												//	$contenido=$varcosto;
-											//	}
-
-												//echo $fila['DEFINICION'];
-												//echo $var1 = utf8_decode($fila['DEFINICION']);
-
-												//$encab_renglon = utf8_encode($fila['DEFINICION']);
-
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$varnumprog</font></font></div></td>";
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$encab</font></font></div></td>";
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$defin</font></font></div></td>";
-												echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$cost</font></font></div></td>";
-												if ($renglon <> $fila) {
-													//echo
-													# code...
-												}
-												//echo "<td> <div align=\"center\"><font color=\"#000000\"><font size=\"2\"><font face=\"Verdana\">$varcosto2</font></font></div></td>";
-												//echo "$vardescripcion";
-												//echo "</tr>";
-										}*/
+										echo "</tr></table>";
 
 									?>
 								</td>

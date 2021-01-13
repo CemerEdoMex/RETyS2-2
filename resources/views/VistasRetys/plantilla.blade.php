@@ -5,6 +5,11 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name ="description" content = "Página del Gobierno del Estado de México para búsqueda y consulta de Tramites y Servicios">
+
+        <meta name=”keywords” content="tramites, servicios, estado,  mexico, cuts, CUTS, TRAMITES, ventanilla, gobierno, curp, RETYS, retys, retys edomex,edomex">
+
+        <link rel="icon" href="img/gobiernologo.ico" type="image/x-icon">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ asset('bootstrap4.5/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/nav.css') }}">
@@ -167,9 +172,8 @@
                             <div class="card-body text-warning">
                                 <div class="tab-content" id="myTabContent">
 
-                                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <br> <br>
-                                       <p class="text-secondary text-bold"> <h3> Centro de Atención Telefónica </h3> </p>
-                                       <br>
+                                       <p class="text-secondary text-bold"> <h5> Centro de Atención Telefónica </h5> </p>
+
                                         <ul>
                                             <p class="text-secondary"> <a class="text-warning" style="color: #d19f09!important;" href="http://">CHAT</a>  en linea.
 
@@ -181,7 +185,7 @@
 
                                         </ul>
                                         <p class="text-secondary text-bold">Centro de Servicios Administrativos</p>
-                                    </div>
+
 
                                 </div>
 
@@ -208,24 +212,32 @@
                                 </div>
                             </div>
                             <div class="card-body">
-
-                                        <h3 class="text-warning">Clave Única de Trámites y Servicios</h3>
-
+                                        <h3 class="text-warning">Clave única de Trámites y Servicios</h3>
                                         <div class="form-grupo">
                                             <hr>
-                                            <ul>
-                                                <li> <a href="#" >Inicia sesión</a> </li>
-                                                <li> <a href="#" >¿Olvidaste tu contraseña?</a> </li>
-                                                <li> <a href="#"> Verifica si tienes CUTS</a> </li>
-                                                <li> <a href="#"> ¿No tienes CUTS?  Obtenla AQUÍ</a> </li>
-                                            </ul>
+                                                <p> <a href="#" class="text-dark" >Inicia sesión</a> </p>
+                                                <p> <a href="#"  class="text-dark" >¿Olvidaste tu contraseña?</a> </p>
+                                                <p> <a href="#" class="text-dark" > Verifica si tienes CUTS</a> </p>
+                                                 <a href="#" class="text-dark" > ¿No tienes CUTS?  Obtenla <span class="text-warning"> AQUÍ </span> </a>
                                         </div>
-                                    </li>
-
-                                </ul>
                             </div>
                         </div>
-
+                      <hr>
+                        <div class="card bg-gradient-success ">
+                            <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
+                                <div class="text-warning d-flex h-100 mask blue-gradient-rgba">
+                                <div class="first-content align-self-center p-3">
+                                  <h3 style="color: #b4621e!important;"> <i class="fa fa-search fa-2x"></i> Consulta tu solicitud</h3>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                        <div class="form-grupo">
+                                            <hr>
+                                               <p>Si realizaste un trámite o servicio,<a href="https://sistemas2.edomex.gob.mx/ventanilla/busquedaPorFolio.action" style="color: #b4621e!important;"> AQUÍ </a>  podrás consultar el estado de tu solicitud mediante el folio</p>
+                                        </div>
+                            </div>
+                        </div>
 
                     </div>
 

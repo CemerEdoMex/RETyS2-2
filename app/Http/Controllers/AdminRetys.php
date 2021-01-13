@@ -343,9 +343,9 @@ class AdminRetys extends Controller
   $idtramserv=352;
 
   
-    $tramitequery=DB::select('SELECT distinct tr.IDTRAMITE,tr.IDCVEUA,tr.DENOMINACION,tr.DESCRIPCION,tr.FLEGAL,tr.DOCOBTENER,tr.NOMBRE_CORTO,tr.ENLINEA,tr.AMBITO,tr.PRESENCIAL,tr.TRESP_MIN,tr.TRESP_HOR,tr.TRESP_DIA,tr.TRESP_ANIO,tr.TRESP_MES,uam.DEPENDENCIA,uam.DIR_GRAL,uam.UNIDADADM,uam.TITULAR,uam.CORREOE,uam.CALLE,uam.NOEXTINT,uam.COLONIA,uam.CP,uam.LADA1,uam.LADA2,uam.LADA3,uam.TELEFONO1,uam.TELEFONO2,uam.TELEFONO3,uam.EXT
+    $tramitequery=DB::select('SELECT tr.IDTRAMITE,tr.IDCVEUA,tr.DENOMINACION,tr.DESCRIPCION,tr.FLEGAL,tr.DOCOBTENER,tr.NOMBRE_CORTO,tr.ENLINEA,tr.AMBITO,tr.PRESENCIAL,tr.TRESP_MIN,tr.TRESP_HOR,tr.TRESP_DIA,tr.TRESP_ANIO,tr.TRESP_MES,uam.DEPENDENCIA,uam.DIR_GRAL,uam.UNIDADADM,uam.TITULAR,uam.CORREOE,uam.CALLE,uam.NOEXTINT,uam.COLONIA,uam.CP,uam.LADA1,uam.LADA2,uam.LADA3,uam.TELEFONO1,uam.TELEFONO2,uam.TELEFONO3,uam.EXT
                               FROM tbgem_citramite tr
-                              INNER JOIN tbgem_ciunidadesadm ua ON tr.IDCVEUA = uam.IDCVEUA
+                              INNER JOIN tbgem_ciunidadesadm uam ON tr.IDCVEUA = uam.IDCVEUA
                               WHERE tr.IDTRAMITE =111');
 
 
@@ -370,10 +370,10 @@ class AdminRetys extends Controller
 
         
 
- return view('fichasinfo.cedulainformacion',['tramite' => $tramite]);
- // ->with(['tramite'=>$queryUno])
- //->with(['Costos'=>$queryCostos])
- //->with(['pasos'=>$queryPasos]);
+ return view('fichasinfo.cedulainformacion')
+ ->with(['tramite'=>$tramitequery])
+ ->with(['Costos'=>$queryCostos])
+ ->with(['pasos'=>$queryPasos]);
 
 
  }
