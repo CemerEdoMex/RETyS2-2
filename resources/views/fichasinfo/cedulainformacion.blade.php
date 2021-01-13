@@ -127,7 +127,7 @@
              <div id="InformacionGeneral" class="tabcontent text-center">
       <h2>Información General</h2>
     @foreach($tramite as $tram)
-      <table class="table table-bordered">
+      <table class="table table-bordered " style="max-width: 800px; margin: auto;  ">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -157,7 +157,9 @@
     </tr>
     <tr>
       <th scope="row">Modalidad del Trámite</th>
-      <td>Jacob</td>
+      @if($tram->)
+      <td></td>
+      @endif
       
     </tr>
     <tr>
@@ -171,51 +173,14 @@
       
     </tr>
      <tr>
-      <th scope="row">Canal de Atención</th>
+      <th scope="row">Correo Electrónico</th>
       <td>Jacob</td>
       
     </tr>
   </tbody>
 </table>
 @endforeach
-      <table>
-            <tr>
-                <td>Modalidades</td>
-                <th>
-                    <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite=352&tipoTramite=2"><img src="img\iconos_transparencia\\tramite_linea.png"
-                    alt="tramite en linea"></a>
-
-                    <a href=""><img src="img\iconos_transparencia\presencial.png"
-                    alt="tramite en linea"></a>
-                </th>
-            </tr>
-            <tr>
-                <td>Tiempo de respuesta</td>
-                <th> 15 minuto(s)</th>
-            </tr>
-            <tr>
-                <td>Ámbito</td>
-                <th>Estatal</th>
-            </tr>
-            <tr>
-                <td>Dependencia u Organismo</td>
-                <th>Fiscalía General de Justicia del Estado de México</th>
-            </tr>
-            <tr>
-                <td>Dirección General</td>
-                <th>Coordinación General de Servicios Periciales</th>
-            </tr>
-
-            <tr>
-                <td>Unidad Administrativa Responsable</td>
-                <th>Departamento de Identificación</th>
-            </tr>
-
-            <tr>
-                <td>Titular de la Unidad Administrativa Responsable</td>
-                <th>Lic. Cuauhtémoc José Zariñana Oronoz</th>
-            </tr>
-      </table>
+    
     </div>
 
 
