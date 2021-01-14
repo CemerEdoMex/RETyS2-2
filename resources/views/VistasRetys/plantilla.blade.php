@@ -161,9 +161,9 @@
                         <hr>
 
                         <br>
-                        <div class="card gradient-card bg-gradient-warning ">
+                        <div class="card gradient-card bg-gradient-warning d-flex justify-content-center ">
                             <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
-                                <div class="text-white d-flex h-100 mask blue-gradient-rgba">
+                                <div class="text-white d-flex justify-content-center">
                                 <div class="first-content align-self-center p-3">
                                     <h3 class="card-title text-bold" style="color: #d19f09!important;"><i class="fas fa-comments fa-2x"></i> Punto de Contacto</h3>
                                 </div>
@@ -203,16 +203,17 @@
 
                     <div class="col-lg-3">
 
-                        <div class="card bg-gradient-success ">
+                        <div class="card bg-gradient-success d-flex justify-content-center">
                             <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
-                                <div class="text-warning d-flex h-100 mask blue-gradient-rgba">
+                                <div class="text-warning d-flex justify-content-center">
                                 <div class="first-content align-self-center p-3">
                                     <h3 class="text-warning text-bold"><i class="fas fa-folder-open fa-2x"></i> Carpeta Ciudadana</h3>
                                 </div>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                        <h3 class="text-warning">Clave única de Trámites y Servicios</h3>
+                            <div class="card-body card text-center">
+
+                                        <h3 class="text-warning">Clave Única de Trámites y Servicios</h3>
                                         <div class="form-grupo">
                                             <hr>
                                                 <p> <a href="#" class="text-dark" >Inicia sesión</a> </p>
@@ -223,15 +224,15 @@
                             </div>
                         </div>
                       <hr>
-                        <div class="card bg-gradient-success ">
+                        <div class="card bg-gradient-success d-flex justify-content-center ">
                             <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
-                                <div class="text-warning d-flex h-100 mask blue-gradient-rgba">
+                                <div class="text-warning d-flex justify-content-center">
                                 <div class="first-content align-self-center p-3">
                                   <h3 style="color: #b4621e!important;"> <i class="fa fa-search fa-2x"></i> Consulta tu solicitud</h3>
                                 </div>
                                 </div>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body card text-center">
                                         <div class="form-grupo">
                                             <hr>
                                                <p>Si realizaste un trámite o servicio,<a href="https://sistemas2.edomex.gob.mx/ventanilla/busquedaPorFolio.action" style="color: #b4621e!important;"> AQUÍ </a>  podrás consultar el estado de tu solicitud mediante el folio</p>
