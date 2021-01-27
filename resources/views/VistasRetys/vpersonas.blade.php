@@ -14,7 +14,7 @@
 				<strong>Personas</strong>
 			</div>
 			
-			<div class="col-6 col-xl-3 col-md-4">
+			<div class="col-6 col-xl-3 col-md-4"> 
 				<a  style="color:#341050;"
 					href="{{ route('Personas',['1','Adultos Mayores','1']) }}"
 					title="Trámites">

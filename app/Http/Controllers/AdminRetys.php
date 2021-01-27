@@ -284,12 +284,13 @@ class AdminRetys extends Controller
                             ])
                         ->orderBy('Denominacion')
                         ->get();*/
+                    $id_persona=($id_per);    
      $datatram2=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
       FROM TBGEM_CITRAMITE t
       INNER JOIN TBGEM_CITRAM_PERFIL TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_CIPERFIL TM ON TM.ID_PERFIL = TT.ID_PERFIL
       WHERE t.BAJA = 0
-      AND TM.ID_PERFIL='.$id_per.'order by t.denominacion');
+      AND TM.ID_PERFIL='.$id_persona.'order by t.denominacion');
 
 
 
@@ -310,7 +311,7 @@ class AdminRetys extends Controller
       INNER JOIN TBGEM_CITRAM_PERFIL TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_CIPERFIL TM ON TM.ID_PERFIL = TT.ID_PERFIL
       WHERE t.BAJA = 0
-      AND TM.ID_PERFIL='.$id_per.'order by t.denominacion
+      AND TM.ID_PERFIL='.$id_persona.'order by t.denominacion
       OFFSET '.$inicia.' ROWS FETCH FIRST'.$tram_x_pag.' ROW ONLY');
 
         return view('VistasRetys.personatarjeta')
@@ -340,13 +341,13 @@ class AdminRetys extends Controller
 
  }
  public function cedulainformacion($id_tram){
-  $idtramserv=352;
+  $idtramserv=($id_tram);
 
   
-    $tramitequery=DB::select('SELECT tr.IDTRAMITE,tr.IDCVEUA,tr.DENOMINACION,tr.DESCRIPCION,tr.FLEGAL,tr.DOCOBTENER,tr.NOMBRE_CORTO,tr.ENLINEA,tr.AMBITO,tr.PRESENCIAL,tr.TRESP_MIN,tr.TRESP_HOR,tr.TRESP_DIA,tr.TRESP_ANIO,tr.TRESP_MES,uam.DEPENDENCIA,uam.DIR_GRAL,uam.UNIDADADM,uam.TITULAR,uam.CORREOE,uam.CALLE,uam.NOEXTINT,uam.COLONIA,uam.CP,uam.LADA1,uam.LADA2,uam.LADA3,uam.TELEFONO1,uam.TELEFONO2,uam.TELEFONO3,uam.EXT
+    $tramitequery=DB::select('SELECT tr.IDTRAMITE,tr.IDCVEUA,tr.DENOMINACION,tr.DESCRIPCION,tr.FLEGAL,tr.DOCOBTENER,tr.NOMBRE_CORTO,tr.ENLINEA,tr.AMBITO,tr.PRESENCIAL,tr.TRESP_MIN,tr.TRESP_HOR,tr.TRESP_DIA,tr.TRESP_ANIO,tr.TRESP_MES,uam.DEPENDENCIA,uam.DIR_GRAL,uam.UNIDADADM,uam.TITULAR,uam.CORREOE,uam.CALLE,uam.NOEXTINT,uam.COLONIA,uam.CP,uam.LADA1,uam.LADA2,uam.LADA3,uam.TELEFONO1,uam.TELEFONO2,uam.TELEFONO3,uam.EXT,uam.FAX
                               FROM tbgem_citramite tr
                               INNER JOIN tbgem_ciunidadesadm uam ON tr.IDCVEUA = uam.IDCVEUA
-                              WHERE tr.IDTRAMITE =111');
+                              WHERE tr.IDTRAMITE ='.$idtramserv.'');
 
 
 
@@ -368,12 +369,34 @@ class AdminRetys extends Controller
                         ->orderBy('IDPASOS')
                         ->get();
 
+        $queryReq = DB::table('tbgem_cireq_tram')
+                    ->select('IDTRAMITE','TIPO','ORIGINAL','COPIA','DESCRIPCION','ORDEN','FUNDAMENTOS','cantidadcop')
+                    ->where('IDTRAMITE',$idtramserv)
+                    ->orderBy('TIPO','asc')
+                    ->orderBy('ORDEN','asc')
+                    ->get();
+
+        $count=sizeof( $queryPasos);
         
+        for($i=0;$i<=$count;$i++){
+           $i=$i;
+        }
+
+        $querypre = DB::table('tbgem_CIOTROS')
+                    ->select('IDTRAMITE','pregunta','respuesta','num')
+                    ->where('IDTRAMITE',$idtramserv)
+                    ->orderBy('num','asc')
+                    
+                    ->get();
 
  return view('fichasinfo.cedulainformacion')
  ->with(['tramite'=>$tramitequery])
  ->with(['Costos'=>$queryCostos])
- ->with(['pasos'=>$queryPasos]);
+ ->with(['pasos'=>$queryPasos])
+ ->with(['requisitos'=>$queryReq])
+ ->with(['count'=>$count])
+ ->with(['i'=>$i])
+ ->with(['preguntas'=>$querypre]);
 
 
  }

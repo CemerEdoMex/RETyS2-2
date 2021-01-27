@@ -24,7 +24,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Cedula informativa</h3>
+                <h3>Cédula informativa</h3>
                 <strong></strong>
             </div>
 
@@ -131,7 +131,7 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
+      <th scope="col">Detalle</th>
     
     </tr>
   </thead>
@@ -157,24 +157,45 @@
     </tr>
     <tr>
       <th scope="row">Modalidad del Trámite</th>
-      @if($tram->)
-      <td></td>
-      @endif
-      
+      <td>
+       @if($tram->enlinea == 1)
+                        En linea,
+                         @endif
+
+                          @if ($tram->presencial == 1)
+                            Presencial
+                        @endif
+
+                       
+        </td>
     </tr>
     <tr>
       <th scope="row">Ámbito</th>
-      <td>Jacob</td>
+      @if($tram->ambito == 3)
+      <td>Estatal</td>
+      @elseif($tram->ambito == 4)
+      <td>Municipal</td>
+      @elseif($tram->ambito == 5)
+      <td>Federal</td>
+      @else 
+      <td>Ambito desconocido</td>
+
+      @endif
+      
       
     </tr>
     <tr>
       <th scope="row">Canal de Atención</th>
-      <td>Jacob</td>
+      <td>
+       @if ($tram->presencial == 1)
+        Presencial
+       @endif
+     </td>
       
     </tr>
      <tr>
       <th scope="row">Correo Electrónico</th>
-      <td>Jacob</td>
+      <td>{{$tram->correoe}}</td>
       
     </tr>
   </tbody>
@@ -185,26 +206,54 @@
 
 
         <div id="Domicilio" class="tabcontent text-center">
+
         <h2>Domicilio</h2>
-        <table>
-            <tr>
-                <td>Oficina</td>
-                <th>*Oficina de Expedición de Certificado de No Antecedentes Penales (Ecatepec)<br>
-                    Domicilio Calle Palma No. Ext. Sin número No. Int. , Col. La Mora,
-                    C.P. 55280, Municipio Ecatepec de Morelos, México<br>
-                    * Municipios que atiende: Ecatepec de Morelos<br>
-                </th>
-            </tr>
-            <tr>
-                <td>Teléfonos y correos de contacto</td>
-                <th> *Teléfonos:55 5787 7309<br>
-                    *Correo electrónico:certificados@ispedomex.mx<br></th>
-            </tr>
-            <tr>
-                <td>Días y horarios de atención</td>
-                <th>*Horario y días de atención:De 9:00 a 16:00 horas de Lunes a Viernes</th>
-            </tr>
-        </table>
+         @foreach($tramite as $tram)
+      <table class="table table-bordered " style="max-width: 800px; margin: auto;  ">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+     <th scope="col">Calle</th>
+      <td>{{$tram->calle}}</td>
+      
+     
+      
+      
+    </tr>
+    <th scope="col">Número Ext </th>
+    <td>{{$tram->noextint}}</td>
+    <tr>
+        <th scope="col">Colonia</th>
+        <td>{{$tram->colonia}}</td> 
+    </tr>
+     <tr>
+        <th scope="col">Código Postal</th>
+       <td>{{$tram->cp}}</td> 
+    </tr>
+    <tr>
+        <th scope="col">Número Telefónico (1)</th>
+       <td>{{$tram->lada1}}{{$tram->telefono1}}</td> 
+    </tr>
+    <tr>
+        <th scope="col">Número Telefónico (2)</th>
+       <td>{{$tram->lada2}}{{$tram->telefono2}}</td> 
+    </tr>
+    <tr>
+        <th scope="col">Número Telefónico (3)</th>
+       <td>{{$tram->lada3}}{{$tram->telefono3}}</td> 
+    </tr>
+    <tr>
+        <th scope="col">Extensión</th>
+       <td>{{$tram->ext}}</td> 
+    </tr>
+    <tr>
+        <th scope="col">Fax</th>
+       <td>{{$tram->fax}}</td> 
+    </tr>
+  </tbody>
+</table>
+@endforeach
     </div>
 
      <div id="Costos" class="tabcontent text-center">
@@ -223,54 +272,66 @@
 
     <div id="TiempoResp" class="tabcontent text-center">
         <h2>Tiempo de respuesta</h2></center>
-        <table>
+        @foreach($tramite as $tram)
+        <table class="table table-bordered " style="max-width: 700px; margin: auto;">
             <tr>
                 <td>Tiempo de respuesta</td>
-                <th>15 minuto(s)</th>
+                <th>
+                    
+                    @if($tram->tresp_min >= 1)
+                    {{$tram->tresp_min}} Minuto(s)
+                    @endif
+                    @if($tram->tresp_hor >= 1)
+                    {{$tram->tresp_hor}} Hora(s)
+                    @endif
+                    @if($tram->tresp_dia>= 1)
+                    {{$tram->tresp_dia}} Día(s)
+                    @endif
+                     @if($tram->tresp_mes>= 1)
+                    {{$tram->tresp_mes}} Mes(es)
+                    @endif
+                     @if($tram->tresp_anio>= 1)
+                    {{$tram->tresp_dia}} anio(s)
+                    @endif
+                </th>
             </tr>
         </table>
+        @endforeach
     </div>
 
      <div id="Requisitos" class="tabcontent text-center">
         <h2>Requisitos</h2>
-        <table>
-            <tr>
-                <th>Requisitos para personas físicas:</th>
-                <th>Original</th>
-                <th>Copias</th>
-
+      
+         
+        
+        <table class="table table-bordered " style="max-width: 800px; margin: auto;">
+             <thead>
+              <tr>
+               <th scope="col">Persona</th>
+               <th scope="col">Requisito</th>
+               <th scope="col">Original</th>
+               <th scope="col">Copia</th>
+              </tr>
+             </thead>
+              @foreach($requisitos as $req )
+              <tr>
+                <td>{{$req->tipo}}</td>
+                 <td>{{$req->descripcion}}</td>
+                 @if($req->original==1)
+                 <td>si</td>
+                 @else
+                    <td>no</td>
+                 @endif
+                 @if($req->copia==1)
+                 <td>si</td>
+                 @else
+                    <td>no</td>
+                 @endif
             </tr>
-            <tr>
-                <td>1. Clave Única de Trámites y Servicios (CUTS)</td>
-                <th> si</th>
-                <th>no</th>
-            </tr>
-            <tr>
-                <td>2. Formato universal de pago y comprobante de pago</td>
-                <th> si</th>
-                <th>no</th>
-            </tr>
-            <tr>
-                <td>3. Identificación oficial vigente</td>
-                <th> si</th>
-                <th>no</th>
-            </tr>
-            <tr>
-                <td>4. Comprobante de registro en línea (cita)</td>
-                <th> si</th>
-                <th>no</th>
-            </tr>
-            <tr>
-                <td>5. Fotografías en tamaño infantil (solo se aplica si el trámite se va a concluir en los módulos de Chalco, Tlalnepantla, Texcoco, Ecatepec, Jilotepec, Valle de Bravo y Tejupilco)</td>
-                <th> si</th>
-                <th>no</th>
-            </tr>
-            <tr>
-                <td>6. Oficio dirigido al C. Director General del Instituto de Servicios Periciales, el cual deberá ser expedido por la autoridad o el titular del área de recursos humanos de la dependencia que lo contrata; donde se especifique el nombre de la persona y el fundamento legal de dicha dependencia para requerir el certificado (oficio en hoja membretada, firmado y sellado)</td>
-                <th> si</th>
-                <th>no</th>
-            </tr>
+             @endforeach
         </table>
+       
+       
     </div>
 
 
@@ -278,77 +339,94 @@
 
      <div id="Pasosaseguir" class="tabcontent text-center">
         <h2>Pasos a Seguir</h2>
-        <table>
-            <tr><td>El usuario ingresa a la dirección electrónica http://ventanillaelectronica.edomex.gob.mx/</td></tr>
-            <tr><td>Localizar el apartado "Carpeta Ciudadana".</td></tr>
-            <tr><td>Si no cuenta con su Clave Única de Trámites y Servicios (CUTS) dar clic en "¿No tienes tu CUTS? Obtenla AQUÍ" para obtenerla. Seguir los pasos para obterner la CUTS.</td></tr>
-            <tr><td>Si ya cuenta con su CUTS, ingresar su CUTS y su contraseña; dar clic en el botón "Iniciar sesión".</td></tr>
-            <tr><td>Al abrirse la ventanilla electrónica: Localizar el "Buscador avanzado de trámites o servicios"; escribir "antecedentes penales" y dar clic en el botón "Buscar".</td></tr>
-            <tr><td>En los resultados de la búsqueda, dar click en el texto "Expedición del Informe o Certificado de No Antecedentes Penales".</td></tr>
-            <tr><td>Al abrirse la nueva ventana, dar clic en "Trámite en linea".</td></tr>
-            <tr><td>Leer el texto y dar clic en el botón "SIGUIENTE".</td></tr>
-            <tr><td>Capturar los datos del solicitante y elegir el tipo de documento a obtener.</td></tr>
-            <tr><td>Si se eligió un Informe de no antecedentes penales, el sistema presentará una liga para imprimir el documento. Imprima el documento para concluir su trámite.</td></tr>
-            <tr><td>Si se eligió un certificado de no antecedentes penales, el sistema generará una liga para imprimir el "Comprobante de registro en línea". Imprima el comprobante.</td></tr>
-            <tr><td>Regrese a la ventanilla electrónica y presione la tecla F5 para volver a cargar la información; si el navegador le muestra una alerta de clic en el botón "reenviar".</td></tr>
-            <tr><td>Dentro de la ventanilla electrónica, en el apartado "Seguimiento de Trámites y Servicios" de clic en el rubro "En proceso Gobierno", enseguida localice y de clic sobre el folio al cual le va a dar seguimiento, al realizar esto, se desplegará el estado del folio, enseguida de clic en "Ver Detalle".</td></tr>
-            <tr><td>Al desplegarse el seguimiento del trámite, de clic en "Abrir" y posteriormente de clic en "Ver detalle".</td></tr>
-            <tr><td>Seleccione el módulo más cercano a su domicilio o trabajo al cual acudirá a concluir el trámite, de clic en el botón "Enviar".</td></tr>
-            <tr><td>Seleccione la fecha y hora que más le convenga para asistir al módulo de expedición del certificado, de clic en el botón "Enviar".</td></tr>
-            <tr><td>El sistema generará una liga para imprimir el "Comprobante de Registro en Línea (cita)" y otra para imprimir el "Formato Universal de Pago" (imprimir ambos).</td></tr>
-            <tr><td>El usuario acude en la fecha y hora registrada en el "Comprobante de Registro en Línea" con la documentación que el comprobante especifica para concluir su trámite.</td></tr>
+        <table class="table table-bordered " style="max-width: 800px; margin: auto;">
+             <thead>
+              <tr>
+               <th scope="col">Pasos</th>
+               
+              </tr>
+             </thead>
+              @foreach($pasos as $pas )
+              <tr>
+             
+                <td>{{$pas->paso}}</td>
+                 
+                 
+            </tr>
+             @endforeach
         </table>
+       
     </div>
 
 
 
      <div id="Doctoobtener" class="tabcontent text-center">
         <h2>Documento a obtener</h2>
-        <table>
-            <tr>
-                <th>Si el documento solicitado es un informe, se obtiene el informe de no antecedentes penales.</th>
+        <table class="table table-bordered " style="max-width: 800px; margin: auto;">
+             <thead>
+              <tr>
+               <th scope="col">Documento </th>
+               
+              </tr>
+             </thead>
+              @foreach($tramite as $tram )
+              <tr>
+             
+                <td>{{$tram->docobtener}}</td>
+                 
+                 
             </tr>
-            <tr>
-                <th>Si el documento solicitado es un certificado, se obtiene el certificado de no antecedentes penales</th>
-            </tr>
+             @endforeach
         </table>
+      
     </div>
 
    
     <div id="fundamjurid" class="tabcontent text-center">
-        <h2>Fundamento Juridico</h2>
-        <table>
-            <tr>
-                <th>Ley para el uso de medios electrónicos del Estado de México. Artículo 19.</th>
+        <h2>Fundamento Jurídico</h2>
+         <table class="table table-bordered " style="max-width: 800px; margin: auto;">
+             <thead>
+              <tr>
+               <th scope="col">Fundamento Jurídico </th>
+               
+              </tr>
+             </thead>
+              @foreach($tramite as $tram )
+              <tr>
+             
+                <td>{{$tram->flegal}}</td>
+                 
+                 
             </tr>
-            <tr>
-                <th>Código Financiero del Gobierno del Estado de México Artículo 103 fracción I.</th>
-            </tr>
-            <tr>
-                <th>Acuerdo 14/2011 del C. Procurador de Justicia del Estado de México</th>
-            </tr>
-            <tr>
-                <th>Acuerdo 14/2011 del C. Procurador de Justicia del Estado de México</th>
-            </tr>
+             @endforeach
         </table>
+       
     </div>
     <div id="Pregfrec" class="tabcontent text-center">
-        <h2>Preguntas frecuentes</h2></center>
-        <table>
-            <tr>
-                <td>1. Imprimí mi Informe de No Antecedentes Penales y me aparece que tengo un posible homónimo ¿Qué tengo que hacer?</td>
-                <th>1.- Debe agendar una cita al teléfono 01 (722) 213-2497 en un horario de Lunes a Viernes de 9:00 a 13:00 horas. <br>
-                    2.- El día y a la hora de su cita elegida por usted, debe presentarse personalmente en las oficinas del Instituto de Servicios Periciales de la Procuraduría General de Justicia del Estado de México, ubicadas en Av. Morelos Ote. 1300 entre Jaime Nuno, Col. San Sebastián, Toluca con los siguientes documentos:
-                    1.-Informe de No Antecedentes en (original y copia)<br>
-                    2.- Identificación oficial que utilizo para su registro (original y copia)
-                </th>
+        <h2>Preguntas frecuentes</h2>
+         <table class="table table-bordered " style="max-width: 900px; margin: auto;">
+             <thead>
+              <tr>
+               <th scope="col"># </th>
+               <th scope="col">Pregunta </th>
+               <th scope="col">Respuesta </th>
+               
+              </tr>
+             </thead>
+              @foreach($preguntas as $pre )
+              <tr>
+             
+                <td>{{$pre->num}}</td>
+                <td>{{$pre->pregunta}}</td>
+                <td>{{$pre->respuesta}}</td>
+                 
+                 
             </tr>
-            <tr>
-                <td>2. ¿Por qué me aparece error en la fecha de nacimiento?</td>
-                <th>Debe ingresar sus datos como le pide el sistema por ejemplo: 12/09/1985, es decir (día/mes/año) agregando diagonales como separación.</th>
-            </tr>
+             @endforeach
         </table>
+      
     </div>
+
 
            
            
