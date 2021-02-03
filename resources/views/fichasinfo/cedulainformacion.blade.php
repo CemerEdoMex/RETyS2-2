@@ -258,16 +258,10 @@
 
      <div id="Costos" class="tabcontent text-center">
         <h2>Costos</h2>
-        <table>
-            <tr>
-                <td>costo</td>
-                <th>$ 139 pesos.</th>
-            </tr>
-            <tr>
-                <td>Lugar de pago</td>
-                <th> Bancos, Centros comerciales y En Línea (Portal de Pagos).</th>
-            </tr>
-        </table>
+        @foreach($Costos as $cos)
+
+        
+        @endforeach
     </div>
 
     <div id="TiempoResp" class="tabcontent text-center">

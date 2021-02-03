@@ -285,12 +285,13 @@ class AdminRetys extends Controller
                         ->orderBy('Denominacion')
                         ->get();*/
                     $id_persona=($id_per);    
-     $datatram2=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
+     $datatram2=DB::select('SELECT distinct t.IDTRAMITE,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
       FROM TBGEM_CITRAMITE t
       INNER JOIN TBGEM_CITRAM_PERFIL TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_CIPERFIL TM ON TM.ID_PERFIL = TT.ID_PERFIL
       WHERE t.BAJA = 0
-      AND TM.ID_PERFIL='.$id_persona.'order by t.denominacion');
+      AND TM.ID_PERFIL='.$id_persona.'
+      order by t.denominacion');
 
 
 
@@ -306,13 +307,17 @@ class AdminRetys extends Controller
         $inicia=($pagina-1)*$tram_x_pag;
 
 
-          $datatram=DB::select('SELECT distinct t.idtramite,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
+         $datatram=DB::select('SELECT distinct t.IDTRAMITE,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
       FROM TBGEM_CITRAMITE t
       INNER JOIN TBGEM_CITRAM_PERFIL TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_CIPERFIL TM ON TM.ID_PERFIL = TT.ID_PERFIL
       WHERE t.BAJA = 0
-      AND TM.ID_PERFIL='.$id_persona.'order by t.denominacion
-      OFFSET '.$inicia.' ROWS FETCH FIRST'.$tram_x_pag.' ROW ONLY');
+      AND TM.ID_PERFIL='.$id_persona.'
+      order by t.denominacion
+      OFFSET '.$inicia.' ROWS FETCH FIRST '.$tram_x_pag.' ROW ONLY');
+
+
+         
 
         return view('VistasRetys.personatarjeta')
         /*->with(['dataper'=>$datapersona])*/
