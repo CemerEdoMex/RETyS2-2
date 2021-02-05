@@ -258,10 +258,77 @@
 
      <div id="Costos" class="tabcontent text-center">
         <h2>Costos</h2>
-        @foreach($Costos as $cos)
-
         
-        @endforeach
+
+          <table class="table table-bordered " style="max-width: 800px; margin: auto;  ">
+  <thead>
+    @foreach($costos as $cos)
+    @if($cos->renglon==0 && $cos->columna==0)
+    <th>
+      
+     {{ $cos->encabezado}}
+
+      
+    </th>
+    @endif
+    @if($cos->renglon==0 && $cos->columna==1)
+    <th>
+      
+     {{ $cos->encabezado}}
+
+      
+    </th>
+    @endif
+    @if($cos->renglon==0 && $cos->columna==2)
+    <th>
+      
+     {{ $cos->encabezado}}
+
+      
+    </th>
+    @endif
+    @endforeach
+  
+  </thead>
+  <tbody>
+    @foreach($costos as $cos)
+     </tr>
+    @if($cos->renglon==1 && $cos->columna==0)
+    <td>{{$cos->definicion}}</td>
+     @if($cos->renglon==1 && $cos->columna==1)
+    <td>{{$cos->costo}}</td>
+      @endif
+
+    <td></td>
+    @endif
+    <tr>
+       </tr>
+    @if($cos->renglon==2 && $cos->columna==0)
+    <td>{{$cos->definicion}}</td>
+    <td></td>
+    <td></td>
+    
+    @endif
+    <tr>
+       </tr>
+    @if($cos->renglon==3 && $cos->columna==0)
+    <td>{{$cos->definicion}}</td>
+    <td></td>
+    <td></td>
+    @endif
+    <tr>
+       </tr>
+    @if($cos->renglon==4 && $cos->columna==0)
+    <td>{{$cos->definicion}}</td>
+    <td></td>
+    <td></td>
+    @endif
+    <tr>
+   @endforeach
+
+  </tbody>
+</table>
+     
     </div>
 
     <div id="TiempoResp" class="tabcontent text-center">

@@ -396,7 +396,7 @@ class AdminRetys extends Controller
 
  return view('fichasinfo.cedulainformacion')
  ->with(['tramite'=>$tramitequery])
- ->with(['Costos'=>$queryCostos])
+ ->with(['costos'=>$queryCostos])
  ->with(['pasos'=>$queryPasos])
  ->with(['requisitos'=>$queryReq])
  ->with(['count'=>$count])
