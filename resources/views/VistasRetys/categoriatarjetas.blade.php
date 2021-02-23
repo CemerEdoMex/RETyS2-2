@@ -129,7 +129,7 @@
 
                         @if ($item->prinfin == 1)
                         @if ($item->prinfin_seits == 1)
-                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Trámite En Línea</a>
+                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Trámite En línea</a>
                         @else
                         <a href="{{$item-> prinfin_url}}" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
                         @endif
