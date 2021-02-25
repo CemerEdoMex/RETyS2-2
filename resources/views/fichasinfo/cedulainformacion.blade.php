@@ -256,78 +256,172 @@
 @endforeach
     </div>
 
-     <div id="Costos" class="tabcontent text-center">
+  <div id="Costos" class="tabcontent text-center">
         <h2>Costos</h2>
         
-
-          <table class="table table-bordered " style="max-width: 800px; margin: auto;  ">
-  <thead>
+         <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
+         
+  <li class="nav-item" >
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"> 
+        Costo
+          </a>
+  </li>
+ 
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+      @foreach($costos as $cos)
+      @if($cos->renglon==1 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+         @foreach($costos as $cos)
+      @if($cos->renglon==2 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+    </a>
+  </li>
+ <li class="nav-tem">
+  <a class="nav-link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aeia-controls="tab4" aria-selected="false">
+      @foreach($costos as $cos)
+      @if($cos->renglon==3 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+  <li class="nav-tem">
+  <a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab5" role="tab" aeia-controls="tab5" aria-selected="false">
     @foreach($costos as $cos)
-    @if($cos->renglon==0 && $cos->columna==0)
-    <th>
-      
-     {{ $cos->encabezado}}
+      @if($cos->renglon==4 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+</ul>
 
-      
-    </th>
-    @endif
-    @if($cos->renglon==0 && $cos->columna==1)
-    <th>
-      
-     {{ $cos->encabezado}}
-
-      
-    </th>
-    @endif
-    @if($cos->renglon==0 && $cos->columna==2)
-    <th>
-      
-     {{ $cos->encabezado}}
-
-      
-    </th>
-    @endif
-    @endforeach
-  
-  </thead>
-  <tbody>
-    @foreach($costos as $cos)
-     </tr>
-    @if($cos->renglon==1 && $cos->columna==0)
-    <td>{{$cos->definicion}}</td>
-     @if($cos->renglon==1 && $cos->columna==1)
-    <td>{{$cos->costo}}</td>
-      @endif
-
-    <td></td>
-    @endif
-    <tr>
-       </tr>
-    @if($cos->renglon==2 && $cos->columna==0)
-    <td>{{$cos->definicion}}</td>
-    <td></td>
-    <td></td>
-    
-    @endif
-    <tr>
-       </tr>
-    @if($cos->renglon==3 && $cos->columna==0)
-    <td>{{$cos->definicion}}</td>
-    <td></td>
-    <td></td>
-    @endif
-    <tr>
-       </tr>
-    @if($cos->renglon==4 && $cos->columna==0)
-    <td>{{$cos->definicion}}</td>
-    <td></td>
-    <td></td>
-    @endif
-    <tr>
-   @endforeach
-
-  </tbody>
-</table>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+     @foreach($costos as $cos)
+      @if($cos->renglon==4 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <table class="table table-bordered " style="max-width: 400px; margin: auto;">
+             <thead style="background-color:#341050;">
+              <tr style="color: #fff;">
+               <th scope="col">Clave</th>
+               <th scope="col">Costo</th>
+              
+              </tr>
+             </thead>
+             <tr>
+               <td> 
+                 @foreach($costos as $cos)
+                  @if($cos->renglon==1 && $cos->columna==1)
+                   {{$cos->costo}}
+                  @endif
+                 @endforeach
+               </td>
+               <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==1 && $cos->columna==2)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+             </tr>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+   <table class="table table-bordered " style="max-width: 400px; margin: auto;">
+             <thead style="background-color:#341050;">
+              <tr style="color: #fff;">
+               <th scope="col">Clave</th>
+               <th scope="col">Costo</th>
+              
+              </tr>
+             </thead>
+             <tr>
+               <td> 
+                 @foreach($costos as $cos)
+                  @if($cos->renglon==2 && $cos->columna==1)
+                   {{$cos->costo}}
+                  @endif
+                 @endforeach
+               </td>
+               <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==2 && $cos->columna==2)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+             </tr>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+    <table class="table table-bordered " style="max-width: 400px; margin: auto;">
+             <thead style="background-color:#341050;">
+              <tr style="color: #fff;">
+               <th scope="col">Clave</th>
+               <th scope="col">Costo</th>
+              
+              </tr>
+             </thead>
+             <tr>
+               <td> 
+                 @foreach($costos as $cos)
+                  @if($cos->renglon==3 && $cos->columna==1)
+                   {{$cos->costo}}
+                  @endif
+                 @endforeach
+               </td>
+               <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==3 && $cos->columna==2)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+             </tr>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+    <table class="table table-bordered " style="max-width: 400px; margin: auto;">
+             <thead style="background-color:#341050;">
+              <tr style="color: #fff;">
+               <th scope="col">Clave</th>
+               <th scope="col">Costo</th>
+              
+              </tr>
+             </thead>
+             <tr>
+               <td> 
+                 @foreach($costos as $cos)
+                  @if($cos->renglon==4 && $cos->columna==1)
+                   {{$cos->costo}}
+                  @endif
+                 @endforeach
+               </td>
+               <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==4 && $cos->columna==2)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+             </tr>
+    </table>
+  </div>
+</div>
      
     </div>
 

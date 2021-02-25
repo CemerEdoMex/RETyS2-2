@@ -349,7 +349,7 @@ class AdminRetys extends Controller
   $idtramserv=($id_tram);
 
   
-    $tramitequery=DB::select('SELECT tr.IDTRAMITE,tr.IDCVEUA,tr.DENOMINACION,tr.DESCRIPCION,tr.FLEGAL,tr.DOCOBTENER,tr.NOMBRE_CORTO,tr.ENLINEA,tr.AMBITO,tr.PRESENCIAL,tr.TRESP_MIN,tr.TRESP_HOR,tr.TRESP_DIA,tr.TRESP_ANIO,tr.TRESP_MES,uam.DEPENDENCIA,uam.DIR_GRAL,uam.UNIDADADM,uam.TITULAR,uam.CORREOE,uam.CALLE,uam.NOEXTINT,uam.COLONIA,uam.CP,uam.LADA1,uam.LADA2,uam.LADA3,uam.TELEFONO1,uam.TELEFONO2,uam.TELEFONO3,uam.EXT,uam.FAX
+    $tramitequery=DB::select('SELECT tr.IDTRAMITE,tr.IDCVEUA,tr.DENOMINACION,tr.DESCRIPCION,tr.FLEGAL,tr.DOCOBTENER,tr.NOMBRE_CORTO,tr.ENLINEA,tr.AMBITO,tr.PRESENCIAL,tr.TRESP_MIN,tr.TRESP_HOR,tr.TRESP_DIA,tr.TRESP_ANIO,tr.TRESP_MES,tr.COSTOGP,tr.COSTO_CANTIDAD,tr.COSTO_TRAM,uam.DEPENDENCIA,uam.DIR_GRAL,uam.UNIDADADM,uam.TITULAR,uam.CORREOE,uam.CALLE,uam.NOEXTINT,uam.COLONIA,uam.CP,uam.LADA1,uam.LADA2,uam.LADA3,uam.TELEFONO1,uam.TELEFONO2,uam.TELEFONO3,uam.EXT,uam.FAX
                               FROM tbgem_citramite tr
                               INNER JOIN tbgem_ciunidadesadm uam ON tr.IDCVEUA = uam.IDCVEUA
                               WHERE tr.IDTRAMITE ='.$idtramserv.'');
