@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html>
+ <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Collapsible </title>
-
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Collapsible </title>
   <link rel="stylesheet" href="{{ asset('bootstrap4.5/css/bootstrap.min.css') }}">
-   <link rel="stylesheet" href="{{ asset('css/stylecedula/style4.css') }}">
-
-
+  <link rel="stylesheet" href="{{ asset('css/stylecedula/style4.css') }}">
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-</head>
+ </head>
 
-<body>
+ <body>
 
     <div class="wrapper">
         <!-- Sidebar  -->
@@ -205,7 +201,7 @@
     </div>
 
 
-        <div id="Domicilio" class="tabcontent text-center">
+     <div id="Domicilio" class="tabcontent text-center">
 
         <h2>Domicilio</h2>
          @foreach($tramite as $tram)
@@ -254,7 +250,7 @@
   </tbody>
 </table>
 @endforeach
-    </div>
+</div>
 
   <div id="Costos" class="tabcontent text-center">
         <h2>Costos</h2>
@@ -304,12 +300,27 @@
   </a>
  </li>
 </ul>
-
+<br>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-     @foreach($costos as $cos)
-      @if($cos->renglon==4 && $cos->columna==0)
-            {{$cos->definicion}}
+     @foreach($tramite as $tram)
+      @if($tram->costo_tram==1 && $tram->costogp==0 )
+         <table class="table table-bordered " style="max-width: 400px; margin: auto;">
+          <thead style="background-color:#341050;">
+              <tr style="color: #fff;">
+               <th scope="col">Costo</th>
+              </tr>
+             </thead>
+             <tr>
+              <th>
+              ${{$tram->costo_cantidad}}
+              </th>
+             </tr>
+          </table>
+            @elseif($tram->costo_tram==1 && $tram->costogp==1)
+            El tramite o servicio cuenta con más de un costo, escoge el concepto para conocer su costo.
+            @elseif($tram->costo_tram==0) 
+            El trámite o servicio no cuenta con algún costo.    
            @endif
             @endforeach
   </div>
@@ -420,8 +431,166 @@
                </td>
              </tr>
     </table>
+     </div>
+   </div>
+   <!--************************************************************************************************************************-->
+    <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
+         
+  <li class="nav-item" >
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-selected="true"> 
+        Costo
+          </a>
+  </li>
+ 
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile" aria-selected="false">
+      @foreach($costos as $cos)
+      @if($cos->renglon==1 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="contact" aria-selected="false">
+         @foreach($costos as $cos)
+      @if($cos->renglon==2 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+    </a>
+  </li>
+ <li class="nav-tem">
+  <a class="nav-link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aeia-controls="tab4" aria-selected="false">
+      @foreach($costos as $cos)
+      @if($cos->renglon==3 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+  <li class="nav-tem">
+  <a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab5" role="tab" aeia-controls="tab5" aria-selected="false">
+    @foreach($costos as $cos)
+      @if($cos->renglon==4 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+ <li class="nav-tem">
+  <a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab6" role="tab" aeia-controls="tab5" aria-selected="false">
+    @foreach($costos as $cos)
+      @if($cos->renglon==5 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+ <li class="nav-tem">
+  <a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab7" role="tab" aeia-controls="tab5" aria-selected="false">
+    @foreach($costos as $cos)
+      @if($cos->renglon==6 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+ <li class="nav-tem">
+  <a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab8" role="tab" aeia-controls="tab5" aria-selected="false">
+    @foreach($costos as $cos)
+      @if($cos->renglon==7 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+ <li class="nav-tem">
+  <a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab9" role="tab" aeia-controls="tab5" aria-selected="false">
+    @foreach($costos as $cos)
+      @if($cos->renglon==8 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+ <li class="nav-tem">
+  <a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab10" role="tab" aeia-controls="tab5" aria-selected="false">
+    @foreach($costos as $cos)
+      @if($cos->renglon==9 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+  <li class="nav-tem">
+  <a class="nav-link" id="tab5-tab" data-toggle="tab" href="#tab11" role="tab" aeia-controls="tab5" aria-selected="false">
+    @foreach($costos as $cos)
+      @if($cos->renglon==10 && $cos->columna==0)
+            {{$cos->definicion}}
+           @endif
+            @endforeach
+  </a>
+ </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+     @foreach($tramite as $tram)
+      @if($tram->costo_tram==1 && $tram->costogp==0 )
+         <table class="table table-bordered " style="max-width: 400px; margin: auto;">
+          <thead style="background-color:#341050;">
+              <tr style="color: #fff;">
+               <th scope="col">Costo</th>
+              </tr>
+             </thead>
+             <tr>
+              <th>
+              ${{$tram->costo_cantidad}}
+              </th>
+             </tr>
+          </table>
+            @elseif($tram->costo_tram==1 && $tram->costogp==1)
+            El tramite o servicio cuenta con más de un costo, escoge el concepto para conocer su costo.
+            @elseif($tram->costo_tram==0) 
+            El trámite o servicio no cuenta con algún costo.    
+           @endif
+            @endforeach
   </div>
-</div>
+  <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="profile-tab">
+    <table class="table table-bordered " style="max-width: 600px; margin: auto;">
+             <thead style="background-color:#341050;">
+              <tr style="color: #fff;">
+                @foreach($costos as $cos)
+                @if($cos->renglon==0 && $cos->columna>=1)
+               <th scope="col">{{$cos->encabezado}}</th>
+                @endif
+               @endforeach
+              </tr>
+             </thead>
+             <tr>
+               <td> 
+                 @foreach($costos as $cos)
+                  @if($cos->renglon==1 && $cos->columna==1)
+                   {{$cos->costo}}
+                  @endif
+                 @endforeach
+               </td>
+               <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==1 && $cos->columna==2)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+             </tr>
+    </table>
+  </div>
+ 
+
+  
+   </div>
+   <!--************************************************************************************************************************-->
      
     </div>
 
@@ -605,6 +774,5 @@
             });
         });
     </script>
-</body>
-
+ </body>
 </html>
