@@ -71,9 +71,13 @@
 
     </ul>
 
+    @if (sizeof($queryCostos) > 0)
     <h3><img src="../RETyS1/iconos/costos_viol.png" alt="info" width="25" height="25">Costo (En desarrollo)</h3>
 
-    <p> {{$queryCostos}} </p>
+    {{ $queryCostos }}
+    {{-- <p>Renglon {{  $queryCostos[0]->renglon }} ,Columna {{$queryCostos[0]->columna}},Costo {{$queryCostos[0]->costo}},Definicion {{$queryCostos[0]->definicion}}</p> --}}
+    @endif
+
 
     <h3><img src="../RETyS1/iconos/tiempo_viol.png" alt="info" width="25" height="25"> Duración del trámite  </h3>
 
