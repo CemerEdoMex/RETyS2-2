@@ -255,7 +255,7 @@
   <div id="Costos" class="tabcontent text-center">
         <h2>Costos</h2>
         
-         <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
+      <!--    <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
          
   <li class="nav-item" >
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"> 
@@ -299,9 +299,9 @@
             @endforeach
   </a>
  </li>
-</ul>
+</ul> -->
 <br>
-<div class="tab-content" id="myTabContent">
+<!--<div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
      @foreach($tramite as $tram)
       @if($tram->costo_tram==1 && $tram->costogp==0 )
@@ -432,12 +432,12 @@
              </tr>
     </table>
      </div>
-   </div>
+   </div> -->
    <!--************************************************************************************************************************-->
     <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
          
   <li class="nav-item" >
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-selected="true"> 
+    <a class="nav-link active" id="home-tab1" data-toggle="tab" href="#tab1-home" role="tab" aria-controls="home" aria-selected="true"> 
         Costo
           </a>
   </li>
@@ -535,10 +535,10 @@
 </ul>
 
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  <div class="tab-pane fade show active" id="tab1-home" role="tabpanel" aria-labelledby="home-tab">
      @foreach($tramite as $tram)
       @if($tram->costo_tram==1 && $tram->costogp==0 )
-         <table class="table table-bordered " style="max-width: 400px; margin: auto;">
+         <table class="table table-bordered " style="max-width: 600px; margin: auto;">
           <thead style="background-color:#341050;">
               <tr style="color: #fff;">
                <th scope="col">Costo</th>
@@ -558,8 +558,8 @@
             @endforeach
   </div>
   <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="profile-tab">
-    <table class="table table-bordered " style="max-width: 600px; margin: auto;">
-             <thead style="background-color:#341050;">
+    <table class="table table-bordered " style="max-width: 1000px; margin: auto;">
+             <thead style="background-color:#341050; font-size: small">
               <tr style="color: #fff;">
                 @foreach($costos as $cos)
                 @if($cos->renglon==0 && $cos->columna>=1)
@@ -579,6 +579,77 @@
                <td> 
                 @foreach($costos as $cos)
                  @if($cos->renglon==1 && $cos->columna==2)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+               <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==1 && $cos->columna==3)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+                <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==1 && $cos->columna==4)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+                <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==1 && $cos->columna==5)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+             </tr>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="profile-tab">
+    <table class="table table-bordered " style="max-width: 1000px; margin: auto; ">
+             <thead style="background-color:#341050;font-size: small;">
+              <tr style="color: #fff;">
+                @foreach($costos as $cos)
+                @if($cos->renglon==0 && $cos->columna>=1)
+               <th scope="col">{{$cos->encabezado}}</th>
+                @endif
+               @endforeach
+              </tr>
+             </thead>
+             <tr>
+               <td> 
+                 @foreach($costos as $cos)
+                  @if($cos->renglon==2 && $cos->columna==1)
+                   {{$cos->costo}}
+                  @endif
+                 @endforeach
+               </td>
+               <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==2 && $cos->columna==2)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+               <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==2 && $cos->columna==3)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+                <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==2 && $cos->columna==4)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+                <td> 
+                @foreach($costos as $cos)
+                 @if($cos->renglon==2 && $cos->columna==5)
                   {{$cos->costo}}
                  @endif
                 @endforeach
