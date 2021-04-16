@@ -25,7 +25,7 @@
             </div>
 
             <ul class="list-unstyled components">
-               
+
                 <li>
                     <a href="#" class="w3-bar-item tablink" onclick="openCity(event, 'InformacionGeneral')" id="defaultOpen">
                          <img src="{{asset('img/imgcedula/info_viol.png')}}" style="width:15%;" >
@@ -82,42 +82,42 @@
                 </li>
             </ul>
 
-           
+
         </nav>
 
 
         <!-- Page Content  -->
         <div id="content">
-           
+
 
             <nav class="navbar navbar-expand-lg navbar-light " >
                 <div class="container-fluid text" >
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        
+
                     </button>
-                    
+
                 </div>
-                 
+
             </nav>
-            
+
              <div class="text-center" style="align-content:center;  color:#341050; ">
                 @foreach($tramite as $tram)
                 <h3>{{$tram->denominacion}}</h3>
-               
+
                 </div>
                 <div class="text-center" style="align-content:center;  color:#341050;">
                 <table class="table table-hover">
                     <tr>
-                    
+
                         <th><p>{{$tram->descripcion}}</p></th>
-                        
+
                     </tr>
                 </table>
                  @endforeach
                 </div>
-           
+
 
 
              <div id="InformacionGeneral" class="tabcontent text-center">
@@ -128,19 +128,19 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Detalle</th>
-    
+
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">Dependencia u Organismo</th>
       <td>{{$tram->dependencia}}</td>
-      
+
     </tr>
     <tr>
       <th scope="row">Dirección General</th>
       <td>{{$tram->dir_gral}}</td>
-      
+
     </tr>
     <tr>
       <th scope="row">Unidad Administrativa Responsable</th>
@@ -149,7 +149,7 @@
     <tr>
       <th scope="row">Titular de la Unidad Administrativa</th>
       <td>{{$tram->titular}}</td>
-      
+
     </tr>
     <tr>
       <th scope="row">Modalidad del Trámite</th>
@@ -162,7 +162,7 @@
                             Presencial
                         @endif
 
-                       
+
         </td>
     </tr>
     <tr>
@@ -173,12 +173,12 @@
       <td>Municipal</td>
       @elseif($tram->ambito == 5)
       <td>Federal</td>
-      @else 
+      @else
       <td>Ambito desconocido</td>
 
       @endif
-      
-      
+
+
     </tr>
     <tr>
       <th scope="row">Canal de Atención</th>
@@ -187,17 +187,17 @@
         Presencial
        @endif
      </td>
-      
+
     </tr>
      <tr>
       <th scope="row">Correo Electrónico</th>
       <td>{{$tram->correoe}}</td>
-      
+
     </tr>
   </tbody>
 </table>
 @endforeach
-    
+
     </div>
 
 
@@ -212,40 +212,40 @@
     <tr>
      <th scope="col">Calle</th>
       <td>{{$tram->calle}}</td>
-      
-     
-      
-      
+
+
+
+
     </tr>
     <th scope="col">Número Ext </th>
     <td>{{$tram->noextint}}</td>
     <tr>
         <th scope="col">Colonia</th>
-        <td>{{$tram->colonia}}</td> 
+        <td>{{$tram->colonia}}</td>
     </tr>
      <tr>
         <th scope="col">Código Postal</th>
-       <td>{{$tram->cp}}</td> 
+       <td>{{$tram->cp}}</td>
     </tr>
     <tr>
         <th scope="col">Número Telefónico (1)</th>
-       <td>{{$tram->lada1}}{{$tram->telefono1}}</td> 
+       <td>{{$tram->lada1}}{{$tram->telefono1}}</td>
     </tr>
     <tr>
         <th scope="col">Número Telefónico (2)</th>
-       <td>{{$tram->lada2}}{{$tram->telefono2}}</td> 
+       <td>{{$tram->lada2}}{{$tram->telefono2}}</td>
     </tr>
     <tr>
         <th scope="col">Número Telefónico (3)</th>
-       <td>{{$tram->lada3}}{{$tram->telefono3}}</td> 
+       <td>{{$tram->lada3}}{{$tram->telefono3}}</td>
     </tr>
     <tr>
         <th scope="col">Extensión</th>
-       <td>{{$tram->ext}}</td> 
+       <td>{{$tram->ext}}</td>
     </tr>
     <tr>
         <th scope="col">Fax</th>
-       <td>{{$tram->fax}}</td> 
+       <td>{{$tram->fax}}</td>
     </tr>
   </tbody>
 </table>
@@ -254,15 +254,15 @@
 
   <div id="Costos" class="tabcontent text-center">
         <h2>Costos</h2>
-        
+
          <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
-         
+
   <li class="nav-item" >
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"> 
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
         Costo
           </a>
   </li>
- 
+
   <li class="nav-item">
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
       @foreach($costos as $cos)
@@ -319,8 +319,8 @@
           </table>
             @elseif($tram->costo_tram==1 && $tram->costogp==1)
             El tramite o servicio cuenta con más de un costo, escoge el concepto para conocer su costo.
-            @elseif($tram->costo_tram==0) 
-            El trámite o servicio no cuenta con algún costo.    
+            @elseif($tram->costo_tram==0)
+            El trámite o servicio no cuenta con algún costo.
            @endif
             @endforeach
   </div>
@@ -330,18 +330,18 @@
               <tr style="color: #fff;">
                <th scope="col">Clave</th>
                <th scope="col">Costo</th>
-              
+
               </tr>
              </thead>
              <tr>
-               <td> 
+               <td>
                  @foreach($costos as $cos)
                   @if($cos->renglon==1 && $cos->columna==1)
                    {{$cos->costo}}
                   @endif
                  @endforeach
                </td>
-               <td> 
+               <td>
                 @foreach($costos as $cos)
                  @if($cos->renglon==1 && $cos->columna==2)
                   {{$cos->costo}}
@@ -357,18 +357,18 @@
               <tr style="color: #fff;">
                <th scope="col">Clave</th>
                <th scope="col">Costo</th>
-              
+
               </tr>
              </thead>
              <tr>
-               <td> 
+               <td>
                  @foreach($costos as $cos)
                   @if($cos->renglon==2 && $cos->columna==1)
                    {{$cos->costo}}
                   @endif
                  @endforeach
                </td>
-               <td> 
+               <td>
                 @foreach($costos as $cos)
                  @if($cos->renglon==2 && $cos->columna==2)
                   {{$cos->costo}}
@@ -384,18 +384,18 @@
               <tr style="color: #fff;">
                <th scope="col">Clave</th>
                <th scope="col">Costo</th>
-              
+
               </tr>
              </thead>
              <tr>
-               <td> 
+               <td>
                  @foreach($costos as $cos)
                   @if($cos->renglon==3 && $cos->columna==1)
                    {{$cos->costo}}
                   @endif
                  @endforeach
                </td>
-               <td> 
+               <td>
                 @foreach($costos as $cos)
                  @if($cos->renglon==3 && $cos->columna==2)
                   {{$cos->costo}}
@@ -411,18 +411,18 @@
               <tr style="color: #fff;">
                <th scope="col">Clave</th>
                <th scope="col">Costo</th>
-              
+
               </tr>
              </thead>
              <tr>
-               <td> 
+               <td>
                  @foreach($costos as $cos)
                   @if($cos->renglon==4 && $cos->columna==1)
                    {{$cos->costo}}
                   @endif
                  @endforeach
                </td>
-               <td> 
+               <td>
                 @foreach($costos as $cos)
                  @if($cos->renglon==4 && $cos->columna==2)
                   {{$cos->costo}}
@@ -435,13 +435,13 @@
    </div>
    <!--************************************************************************************************************************-->
     <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
-         
+
   <li class="nav-item" >
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-selected="true"> 
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-selected="true">
         Costo
           </a>
   </li>
- 
+
   <li class="nav-item">
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile" aria-selected="false">
       @foreach($costos as $cos)
@@ -552,8 +552,8 @@
           </table>
             @elseif($tram->costo_tram==1 && $tram->costogp==1)
             El tramite o servicio cuenta con más de un costo, escoge el concepto para conocer su costo.
-            @elseif($tram->costo_tram==0) 
-            El trámite o servicio no cuenta con algún costo.    
+            @elseif($tram->costo_tram==0)
+            El trámite o servicio no cuenta con algún costo.
            @endif
             @endforeach
   </div>
@@ -569,14 +569,14 @@
               </tr>
              </thead>
              <tr>
-               <td> 
+               <td>
                  @foreach($costos as $cos)
                   @if($cos->renglon==1 && $cos->columna==1)
                    {{$cos->costo}}
                   @endif
                  @endforeach
                </td>
-               <td> 
+               <td>
                 @foreach($costos as $cos)
                  @if($cos->renglon==1 && $cos->columna==2)
                   {{$cos->costo}}
@@ -586,12 +586,12 @@
              </tr>
     </table>
   </div>
- 
 
-  
+
+
    </div>
    <!--************************************************************************************************************************-->
-     
+
     </div>
 
     <div id="TiempoResp" class="tabcontent text-center">
@@ -601,7 +601,7 @@
             <tr>
                 <td>Tiempo de respuesta</td>
                 <th>
-                    
+
                     @if($tram->tresp_min >= 1)
                     {{$tram->tresp_min}} Minuto(s)
                     @endif
@@ -625,9 +625,9 @@
 
      <div id="Requisitos" class="tabcontent text-center">
         <h2>Requisitos</h2>
-      
-         
-        
+
+
+
         <table class="table table-bordered " style="max-width: 800px; margin: auto;">
              <thead>
               <tr>
@@ -654,8 +654,8 @@
             </tr>
              @endforeach
         </table>
-       
-       
+
+
     </div>
 
 
@@ -667,19 +667,19 @@
              <thead>
               <tr>
                <th scope="col">Pasos</th>
-               
+
               </tr>
              </thead>
               @foreach($pasos as $pas )
               <tr>
-             
+
                 <td>{{$pas->paso}}</td>
-                 
-                 
+
+
             </tr>
              @endforeach
         </table>
-       
+
     </div>
 
 
@@ -690,41 +690,41 @@
              <thead>
               <tr>
                <th scope="col">Documento </th>
-               
+
               </tr>
              </thead>
               @foreach($tramite as $tram )
               <tr>
-             
+
                 <td>{{$tram->docobtener}}</td>
-                 
-                 
+
+
             </tr>
              @endforeach
         </table>
-      
+
     </div>
 
-   
+
     <div id="fundamjurid" class="tabcontent text-center">
         <h2>Fundamento Jurídico</h2>
          <table class="table table-bordered " style="max-width: 800px; margin: auto;">
              <thead>
               <tr>
                <th scope="col">Fundamento Jurídico </th>
-               
+
               </tr>
              </thead>
               @foreach($tramite as $tram )
               <tr>
-             
+
                 <td>{{$tram->flegal}}</td>
-                 
-                 
+
+
             </tr>
              @endforeach
         </table>
-       
+
     </div>
     <div id="Pregfrec" class="tabcontent text-center">
         <h2>Preguntas frecuentes</h2>
@@ -734,26 +734,26 @@
                <th scope="col"># </th>
                <th scope="col">Pregunta </th>
                <th scope="col">Respuesta </th>
-               
+
               </tr>
              </thead>
               @foreach($preguntas as $pre )
               <tr>
-             
+
                 <td>{{$pre->num}}</td>
                 <td>{{$pre->pregunta}}</td>
                 <td>{{$pre->respuesta}}</td>
-                 
-                 
+
+
             </tr>
              @endforeach
         </table>
-      
+
     </div>
 
 
-           
-           
+
+
     </div>
 
 
