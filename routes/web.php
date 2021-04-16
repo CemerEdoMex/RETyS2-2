@@ -97,7 +97,7 @@ route::GET('enlinea','Adminretys@benlinea')->name('enlinea');
 |--------------------------------------------------------------------------
 |*/
 route::get('fichapdf/{id_tram}','Adminretys@pdf_fichan')->name('fichapdf');
-route::get('cedulainfo','Adminretys@cedulainformacion')->name('cedulainfo');
+route::get('cedulainfo/{id_tram?}','Adminretys@cedulainformacion')->name('cedulainfo');
 
 /*
 |-------------------------------------------------------------------------

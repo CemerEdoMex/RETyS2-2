@@ -91,7 +91,21 @@ return [
             'prefix_indexes' => true,
         ],
 
-        'oracle' => [
+        /*'oracle' => [
+            'driver'         => 'oracle',
+            'host'           => 'localhost',
+            'port'           => '1521',
+            'database'       => 'angeldata',
+            'username'       => 'system',
+            'password'       => 'Angel170820',
+            'charset'        => 'AL32UTF8',
+            'prefix'         =>  '',
+            'prefix_schema'  =>  '',
+            'edition'        => 'ora$base',
+            'server_version' =>  '11g',
+        ],*/
+
+        /*'oracle' => [
             'driver' => 'oracle',
             'host' => '10.10.124.12',
             'port' => '1521',
@@ -101,21 +115,19 @@ return [
             'password' => 'retys2014',
             'charset' => '',
             'prefix' => '',
-        ]
+        ]*/
 
-        /*'oracle' => [
-            'driver'         => 'oracle',
-            'host'           => 'localhost',
-            'port'           => '1521',
-            'database'       => 'lalodatabase',
-            'username'       => 'system',
-            'password'       => 'Lalo1516',
-            'charset'        => 'AL32UTF8',
-            'prefix'         =>  '',
-            'prefix_schema'  =>  '',
-            'edition'        => 'ora$base',
-            'server_version' =>  '11g',
-        ],*/
+        'oracle' => [
+            'driver' => 'oracle',
+            'host' => 'racsei-bd18.edomex.gob.mx',
+            'port' => '1521',
+            'database' => 'xe',
+            'service_name' => 'pdb1srv.edomex.gob.mx',
+            'username' => 'RETYS2014',
+            'password' => 'retys2014',
+            'charset' => '',
+            'prefix' => '',
+        ]
 
 
     ],

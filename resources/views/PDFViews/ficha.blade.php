@@ -71,9 +71,106 @@
 
     </ul>
 
+
     <h3><img src="../RETyS1/iconos/costos_viol.png" alt="info" width="25" height="25">Costo (En desarrollo)</h3>
 
-    <p> {{$queryCostos}} </p>
+    @foreach($queryCostos as $cos)
+        @if($cos->renglon==1 && $cos->columna==0)
+            Definicion {{$cos->definicion}} <br>
+        @endif
+    @endforeach
+    @foreach($queryCostos as $cos)
+    @if($cos->renglon==1 && $cos->columna==1)
+        Clave {{$cos->costo}} <br>
+    @endif
+    @endforeach
+    @foreach($queryCostos as $cos)
+        @if($cos->renglon==1 && $cos->columna==2)
+          Costo  {{$cos->costo}} <br>
+        @endif
+    @endforeach
+
+
+
+
+    @foreach($queryCostos as $cos)
+        @if($cos->renglon==2 && $cos->columna==0)
+        Definicion {{$cos->definicion}} <br>
+        @endif
+    @endforeach
+    @foreach($queryCostos as $cos)
+    @if($cos->renglon==2 && $cos->columna==1)
+        Clave {{$cos->costo}} <br>
+    @endif
+    @endforeach
+    @foreach($queryCostos as $cos)
+        @if($cos->renglon==2 && $cos->columna==2)
+        Costo  {{$cos->costo}} <br>
+        @endif
+    @endforeach
+
+
+
+    @foreach($queryCostos as $cos)
+        @if($cos->renglon==3 && $cos->columna==0)
+        Definicion {{$cos->definicion}} <br>
+        @endif
+    @endforeach
+    @foreach($queryCostos as $cos)
+    @if($cos->renglon==3 && $cos->columna==1)
+        Clave {{$cos->costo}} <br>
+    @endif
+    @endforeach
+    @foreach($queryCostos as $cos)
+        @if($cos->renglon==3 && $cos->columna==2)
+        Costo  {{$cos->costo}} <br>
+        @endif
+    @endforeach
+
+
+
+    @foreach($queryCostos as $cos)
+        @if($cos->renglon==4 && $cos->columna==0)
+        Definicion {{$cos->definicion}} <br>
+        @endif
+    @endforeach
+    @foreach($queryCostos as $cos)
+    @if($cos->renglon==4 && $cos->columna==1)
+        Clave {{$cos->costo}} <br>
+    @endif
+    @endforeach
+    @foreach($queryCostos as $cos)
+        @if($cos->renglon==4 && $cos->columna==2)
+        Costo  {{$cos->costo}} <br>
+        @endif
+    @endforeach
+
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <h3><img src="../RETyS1/iconos/tiempo_viol.png" alt="info" width="25" height="25"> Duración del trámite  </h3>
 

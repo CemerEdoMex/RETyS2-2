@@ -58,6 +58,8 @@ class PDF_Controller extends Controller
                        ->orderBy('columna','asc')
                        ->get(); //Costos
 
+
+
         //$queryPasos = "SELECT IDPASOS,PASO,IDTRAMITE from tbgem_pasos where IDTRAMITE = '".$idtramserv."' order by IDTRAMITE, IDPASOS"; // Pasos a seguir
 
         $queryPasos = DB::table('tbgem_pasos')

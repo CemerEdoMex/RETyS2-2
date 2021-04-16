@@ -5,6 +5,11 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name ="description" content = "Página del Gobierno del Estado de México para búsqueda y consulta de Tramites y Servicios">
+
+        <meta name=”keywords” content="tramites, servicios, estado,  mexico, cuts, CUTS, TRAMITES, ventanilla, gobierno, curp, RETYS, retys, retys edomex,edomex">
+
+        <link rel="icon" href="img/gobiernologo.ico" type="image/x-icon">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ asset('bootstrap4.5/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/nav.css') }}">
@@ -149,16 +154,16 @@
 
                         <h3> Video Tutorial</h3>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ISJsCGz3EMU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DBgi7WxSyNo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <br>
 
                         <hr>
 
                         <br>
-                        <div class="card gradient-card bg-gradient-warning ">
+                        <div class="card gradient-card bg-gradient-warning d-flex justify-content-center ">
                             <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
-                                <div class="text-white d-flex h-100 mask blue-gradient-rgba">
+                                <div class="text-white d-flex justify-content-center">
                                 <div class="first-content align-self-center p-3">
                                     <h3 class="card-title text-bold" style="color: #d19f09!important;"><i class="fas fa-comments fa-2x"></i> Punto de Contacto</h3>
                                 </div>
@@ -167,11 +172,10 @@
                             <div class="card-body text-warning">
                                 <div class="tab-content" id="myTabContent">
 
-                                    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <br> <br>
-                                       <p class="text-secondary text-bold"> <h3> Centro de Atención Telefónica </h3> </p>
-                                       <br>
+                                       <p class="text-secondary text-bold"> <h5> Centro de Atención Telefónica </h5> </p>
+
                                         <ul>
-                                            <p class="text-secondary"> <a class="text-warning" style="color: #d19f09!important;" href="http://">CHAT</a>  en linea.
+                                            <p class="text-secondary"> <a class="text-warning" style="color: #d19f09!important;" href="http://">CHAT</a>  en línea.
 
                                             <p class="text-secondary">Lada sin costo <span class="text-warning" style="color: #d19f09!important;"> 01 800 696 96 96
                                                 </span></p>
@@ -181,7 +185,7 @@
 
                                         </ul>
                                         <p class="text-secondary text-bold">Centro de Servicios Administrativos</p>
-                                    </div>
+
 
                                 </div>
 
@@ -199,32 +203,43 @@
 
                     <div class="col-lg-3">
 
-                        <div class="card bg-gradient-success ">
+                        <div class="card bg-gradient-success d-flex justify-content-center">
                             <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
-                                <div class="text-warning d-flex h-100 mask blue-gradient-rgba">
+                                <div class="text-warning d-flex justify-content-center">
                                 <div class="first-content align-self-center p-3">
                                     <h3 class="text-warning text-bold"><i class="fas fa-folder-open fa-2x"></i> Carpeta Ciudadana</h3>
                                 </div>
                                 </div>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body card text-center">
 
-                                        <h3 class="text-warning">Clave unica de Tamites y Servicios</h3>
-
+                                        <h3 class="text-warning">Clave Única de Trámites y Servicios</h3>
                                         <div class="form-grupo">
                                             <hr>
-                                            <ul>
-                                                <li> <a href="#" >Inicia sesion</a> </li>
-                                                <li> <a href="#" >¿Olvidaste tu contraseña?</a> </li>
-                                                <li> <a href="#"> Verifica si tienes CUTS</a> </li>
-                                                <li> <a href="#"> ¿No tienes CUTS?  Obtenla AQUÍ</a> </li>
-                                            </ul>
+                                                <p> <a href="http://sistemas2.edomex.gob.mx/ventanilla/seguimiento.action;jsessionid=85512EA584B2EFC87BE506151B4C54C7" class="text-dark" >Inicia sesión</a> </p>
+                                                <p> <a href="http://cuts.edomex.gob.mx/cuts2018/irRecuperarCon.action"  class="text-dark" >¿Olvidaste tu contraseña?</a> </p>
+                                                <p> <a href="http://cuts.edomex.gob.mx/cuts2018/irRCInicial.action" class="text-dark" > Verifica si tienes CUTS</a> </p>
+                                                 <a href="http://cuts.edomex.gob.mx/cuts2018/irRCInicial.action" class="text-dark" > ¿No tienes CUTS?  Obtenla <span class="text-warning"> AQUÍ </span> </a>
                                         </div>
-                                    </li>
-
-                                </ul>
                             </div>
                         </div>
+                      <hr>
+                        <div class="card bg-gradient-success d-flex justify-content-center ">
+                            <div class="card-image " style="background-image: url({{asset('img/backinicio.png')}})">
+                                <div class="text-warning d-flex justify-content-center">
+                                <div class="first-content align-self-center p-3">
+                                  <h3 style="color: #b4621e!important;"> <i class="fa fa-search fa-2x"></i> Consulta tu solicitud</h3>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="card-body card text-center">
+                                        <div class="form-grupo">
+                                            <hr>
+                                               <p>Si realizaste un trámite o servicio,<a href="https://sistemas2.edomex.gob.mx/ventanilla/busquedaPorFolio.action" style="color: #b4621e!important;"> AQUÍ </a>  podrás consultar el estado de tu solicitud mediante el folio</p>
+                                        </div>
+                            </div>
+                        </div>
+
                     </div>
 
                  </div><!-- sISTEMA DE COLUMNAS -->
