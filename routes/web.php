@@ -21,7 +21,7 @@ Route::GET('/','AdminRetys@index');
 
 Route::GET('inicio','AdminRetys@index')->name('inicio');
 
-Route::POST('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGETas */
+Route::ANY('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGETas */
 
 Route::GET('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*ruta personas */
 
@@ -51,7 +51,7 @@ Route::POST('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog
 
 Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');
 
-Route::GET('/cedulaTram', 'AdminRetys@cedula');
+Route::GET('/cedulaTram', 'AdminRetys@cedula') ->name('cedulaTram');
 
 /*
 |-------------------------------------------------------------------------
@@ -98,8 +98,9 @@ route::GET('enlinea','Adminretys@benlinea')->name('enlinea');
 | pdf ficha de información de tramite
 |--------------------------------------------------------------------------
 |*/
-route::get('fichapdf/{id_tram}','Adminretys@pdf_fichan')->name('fichapdf');
-route::get('cedulainfo/{id_tram?}','Adminretys@cedulainformacion')->name('cedulainfo');
+route::GET('fichapdf/{id_tram}','Adminretys@pdf_fichan')->name('fichapdf');
+
+route::GET('cedulainfo/{id_tram?}','Adminretys@cedulainformacion')->name('cedulainfo');
 
 /*
 |-------------------------------------------------------------------------

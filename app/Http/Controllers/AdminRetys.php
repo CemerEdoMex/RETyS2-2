@@ -24,9 +24,7 @@ class AdminRetys extends Controller
 
     public function index()
    {
-      // $data=DB::select('SELECT * FROM TBGEM_CICOSTOS WHERE rownum <= 3');
 
-       //return $data;
 
         return view('VistasRetys.index');
    }
@@ -246,24 +244,10 @@ class AdminRetys extends Controller
        return view('Trasnparencia.transparencia');
    }
 
-    public function bptema($id_tem,$ncatego,$pagina=null)
+   public function bptema($id_tem,$ncatego,$pagina=null)
     {
 
- /*  $datatema = DB::table('tbgem_citram_clas')->select('idtramite')
-                        ->where([
-                            ['idclasificacion',$id_tem],
-                            ])
-                        ->get();
 
-    $datatram = DB::table('tbgem_citramite')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion','PRINFIN_URL','PREGES_URL','CHAT_URL','PRINFIN','PREGES','CHAT','PRESENCIAL','PRINFIN_SEITS','TIPOTRAM','PREGES_SEITS')
-
-                        ->where([
-                            ['BAJA','0']
-                            ])
-                        ->orderBy('Denominacion')
-                        ->get
-
-                        ();*/
      $id_tem2="'$id_tem'";
 
 
@@ -275,10 +259,7 @@ class AdminRetys extends Controller
       AND TM.IDCLASIFICACION='.$id_tem2.'
       order by t.denominacion');
 
-   /*$datatram=t_tema::Tema($request->get('id_tem')):
-     $datatram=t_tramites::all()
-     ->where([['BAJA','0']])
-     ->orderBy('denominacion');*/
+
      $ncat=($ncatego);
      $id_tema=($id_tem);
      $pagina=($pagina);

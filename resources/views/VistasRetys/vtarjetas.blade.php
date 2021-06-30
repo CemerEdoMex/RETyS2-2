@@ -159,8 +159,10 @@
 
         </div>
 
-<div style='margin:center;'>
-    {{$data->links()}}
+ <div style='margin:center;'>
+
+{{$data->links()}}
+
 </div>
 
     </div>
