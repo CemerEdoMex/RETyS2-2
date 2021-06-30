@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('bootstrap4.5/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/nav.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('bootstrap4.5/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('vendor/nav.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -23,7 +23,7 @@
 
     <!-- Custom styles for this template -->
 
-    <link rel="stylesheet" href="{{ asset('vendor/carousel.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('vendor/carousel.css') }}">
 
   @yield('title')<title>Trámites y Servicios </title>
 
@@ -173,7 +173,7 @@
 
                     <div class="col-lg-3">
 
-                      <img class="img" src="{{ asset ('img/h1.png') }}" alt="" />
+                      <img class="img" src="{{ secure_asset ('img/h1.png') }}" alt="" />
 
                     </div>
 
@@ -194,14 +194,14 @@
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="./js/jquery-3.5.1.slim.js"></script>
-            <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+            <script src="{{ secure_asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
 
             <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
             <script src="./vendor/venobox/venobox.min.js"></script>
             <script src="./vendor/waypoints/jquery.waypoints.min.js"></script>
             <script src="./vendor/counterup/counterup.min.js"></script>
-            <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+            <script src="{{ secure_asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
             <script src="./vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
             <script src="./vendor/aos/aos.js"></script>
@@ -212,7 +212,7 @@
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
                 integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
                 crossorigin="anonymous"></script>
-            <script src="{{ asset('bootstrap4.5/js/bootstrap.min.js') }}"></script>
+            <script src="{{ secure_asset('bootstrap4.5/js/bootstrap.min.js') }}"></script>
 
 
             @yield('scripts')

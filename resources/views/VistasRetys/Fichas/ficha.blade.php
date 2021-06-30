@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-<link rel="stylesheet" href="{{ asset('css/cedulaStyle.scss') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/cedulaStyle.scss') }}">
 
 <div class="tabs">
     <div class="tab-header">
@@ -52,6 +52,6 @@
     </div>
   </div>
 
-<script src="{{ asset('js/verticalTabs.js') }}"></script>
+<script src="{{ secure_asset('js/verticalTabs.js') }}"></script>
 
 @endsection

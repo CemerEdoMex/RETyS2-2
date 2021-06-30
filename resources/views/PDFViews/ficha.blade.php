@@ -48,9 +48,9 @@
 <body>
 <header>
     <div>
-        <img src="{{ asset('img/gobiernologo.png') }}"  height="72" alt="logo" srcset="">
+        <img src="{{ secure_asset('img/gobiernologo.png') }}"  height="72" alt="logo" srcset="">
         Registro Estatal de Tramites y Servicios
-        <img src="{{ asset('img/edomexlogo.png') }}"  height="72" alt="logo2" srcset="">
+        <img src="{{ secure_asset('img/edomexlogo.png') }}"  height="72" alt="logo2" srcset="">
     </div>
 </header>
 

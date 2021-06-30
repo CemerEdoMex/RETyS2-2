@@ -22,7 +22,7 @@
 @section('scripts')
     <!-- example
 
-    <script src="{{ asset('bootstrap4.5/js/bootstrap.min.js') }}"></script>
+    <script src="{{ secure_asset('bootstrap4.5/js/bootstrap.min.js') }}"></script>
 
     -->
 @endsection

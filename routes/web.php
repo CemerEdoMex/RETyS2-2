@@ -21,12 +21,14 @@ Route::GET('/','AdminRetys@index');
 
 Route::GET('inicio','AdminRetys@index')->name('inicio');
 
-Route::GET('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGETas */
-Route::GET('areasgob','AdminRetys@bareasgob')->name('areasgob') ;/*Areas de Gobierno */
-Route::GET('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*Areas de Gobierno */
+Route::POST('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGETas */
+
+Route::GET('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*ruta personas */
 
 
 Route::GET('categoria','Adminretys@category')->name('category');
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,8 +36,8 @@ Route::GET('categoria','Adminretys@category')->name('category');
 |--------------------------------------------------------------------------
 |*/
 
-Route::GET('/minicipios','Adminretys@municipios')->name('municipios');
-Route::GET('/municipios/{municipio}/{clave}','Adminretys@municipioDetalle')->name('municipio');
+Route::GET('/municipios','Adminretys@municipios')->name('municipios');
+Route::POST('/municipios/{municipio}/{clave}','Adminretys@municipioDetalle')->name('municipio');
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +46,7 @@ Route::GET('/municipios/{municipio}/{clave}','Adminretys@municipioDetalle')->nam
 |*/
 
 
-Route::GET('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog');
+Route::POST('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog');
 
 
 Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');

@@ -4,7 +4,7 @@
 
 @section('tarjetas')
 
-<link rel="stylesheet" href="{{ asset('vendor/transparencia.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('vendor/transparencia.css') }}">
 
 <body class="mx-auto">
     <p style="background:#7d276d; color:white; font-weight:bold; padding:10px;  solid #a3a1a0; margin-top:40px; margin-bottom:1px; text-align:center; font-size:30px; border-radius:10px;">Expedición del informe o certificado de no antecedentes penales</p>
@@ -236,6 +236,6 @@
 
 @section('scripts')
 
-<script src="{{ asset('js/Trasnparencia/trasnparencia.js')}}"></script>
+<script src="{{ secure_asset('js/Trasnparencia/trasnparencia.js')}}"></script>
 
 @endsection

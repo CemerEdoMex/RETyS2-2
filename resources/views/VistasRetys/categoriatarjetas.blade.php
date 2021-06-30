@@ -10,7 +10,8 @@
     <div class="container text-center justify-content-center">
 
         <div class="container-1">
-            <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
+            <form   class="form-inline"  method="POST" action="{{ secure_url('tarjetas') }}" style="  justify-content: center;" >
+                @csrf
                 <div class="container-4">
                     <input type="search" id="search" name="buscar" placeholder="¿Qué estás buscando?" />
                     <button class="icon"><i class="fa fa-search"></i></button>
@@ -18,40 +19,40 @@
               </form>
         </div>
          <div class="col-12 text-center text-elegant-color-dark text-dark" >
-                <p style=" font-size: 42px;">{{$ncat}} </p> 
+                <p style=" font-size: 42px;">{{$ncat}} </p>
          </div>
          <div class="row mb-5">
           <div class="card" style="width: 13rem;">
              <div class="card-body">
-                 <img src="{{asset('img/icon/principioafin.png')}}" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
+                 <img src="{{secure_asset('img/icon/principioafin.png')}}" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
                 <h6 class="card-title">Principio a fín en línea </h6>
              </div>
           </div>
          &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
-                <img src="{{asset('img/icon/preenlinea.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
+                <img src="{{secure_asset('img/icon/preenlinea.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
                <h6 class="card-title">Pregestión en línea </h6>
             </div>
          </div>
           &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
-                <img src="{{asset('img/icon/chat.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Chat en Línea">
+                <img src="{{secure_asset('img/icon/chat.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Chat en Línea">
                <h6 class="card-title">Chat en línea </h6>
             </div>
          </div>
         &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
-               <img src="{{asset('img/icon/presencial.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Presencial"> 
+               <img src="{{secure_asset('img/icon/presencial.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Presencial">
                <h6 class="card-title">Presencial </h6>
             </div>
          </div>
          &nbsp;
            <div class="card" style="width: 13rem;">
             <div class="card-body">
-                <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
+                <img src="{{secure_asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
                <h6 class="card-title">Carpeta ciudadana </h6>
             </div>
          </div>
@@ -59,13 +60,13 @@
 
         <br>
 
-        <br>  
+        <br>
 
         <div class="row mb-4">
             @foreach ($datatram as $item)
-              
-            
-           
+
+
+
 
                 @if ($item->ambito == 3)
                     <div class="card border-success mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem; ">
@@ -91,7 +92,7 @@
                         <span class="badge badge-warning">Ambito desconocido</span>
                         @endif
 
-                        <img src="{{asset('img/icon/certificado.png')}}" style="width:30%;" class="img-size-50 mr-3 img-circle mx-auto d-block" alt="User Image">
+                        <img src="{{secure_asset('img/icon/certificado.png')}}" style="width:30%;" class="img-size-50 mr-3 img-circle mx-auto d-block" alt="User Image">
 
 
                         @if ($item->costo_cantidad > 0)
@@ -103,24 +104,24 @@
                         &nbsp; &nbsp;
 
                         @if($item->prinfin == 1)
-                        <img src="{{asset('img/icon/principioafin.png')}}" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
+                        <img src="{{secure_asset('img/icon/principioafin.png')}}" style="width:20%;" class=" img-circle mx-auto "title="Principio a Fín">
                          @endif
                         @if ($item->preges == 1)
-                            <img src="{{asset('img/icon/preenlinea.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
+                            <img src="{{secure_asset('img/icon/preenlinea.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Pregestión en Línea">
                         @endif
                           @if ($item->chat == 1)
-                            <img src="{{asset('img/icon/chat.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Chat en Línea">
+                            <img src="{{secure_asset('img/icon/chat.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Chat en Línea">
                         @endif
 
                           @if ($item->presencial == 1)
-                            <img src="{{asset('img/icon/presencial.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Presencial">
+                            <img src="{{secure_asset('img/icon/presencial.png')}}" style="width:20%;" class=" img-circle mx-auto" title="Presencial">
                         @endif
 
                          @if ($item->prinfin_seits == 1)
-                        <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
+                        <img src="{{secure_asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
                         @endif
                         @if ($item->preges_seits ==1 )
-                        <img src="{{asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
+                        <img src="{{secure_asset('img/icon/carpeta.png')}}" style="width:20%;" class=" img-circle mx-auto " title="Carpeta Ciudadana" >
                          @endif
 
                         <br>
@@ -129,7 +130,7 @@
 
                         @if ($item->prinfin == 1)
                         @if ($item->prinfin_seits == 1)
-                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Trámite En línea</a>
+                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
                         @else
                         <a href="{{$item-> prinfin_url}}" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
                         @endif
@@ -139,27 +140,27 @@
                         @if ($item->preges == 1)
                         @if ($item->preges_seits== 1)
                          <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Pregestión en línea</a>
-                        @else 
+                        @else
                         <a href="{{$item-> preges_url}}" class="btn btn-outline-primary" style="width: 120px"> Pregestión en línea</a>
                         @endif
                         @endif
-                         
+
                          @if ($item->chat == 1)
                         <a href="{{$item-> chat_url}}" class="btn btn-outline-primary" style="width: 120px"> Chat en línea</a>
 
                         @endif
                     </div>
                     @if ($item->ambito == 3)
-                    <a class="btn btn-success" href="{{ route('cedulainfo',$item->idtramite) }}" role="button">Más información</a>
+                    <a class="btn btn-success" href="{{ secure_url('cedulainfo',$item->idtramite) }}" role="button">Más información</a>
                     @elseif ($item->ambito == 4)
-                    <a class="btn btn-primary" href="{{ route('cedulainfo',$item->idtramite) }}" role="button" role="button">Más información</a>
+                    <a class="btn btn-primary" href="{{ secure_url('cedulainfo',$item->idtramite) }}" role="button" role="button">Más información</a>
                     @elseif ($item->ambito == 5)
-                    <a class="btn btn-secondary" href="{{ route('cedulainfo',$item->idtramite) }}" role="button" role="button">Más información</a>
+                    <a class="btn btn-secondary" href="{{ secure_url('cedulainfo',$item->idtramite) }}" role="button" role="button">Más información</a>
                     @endif
                     </div>
 
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-           
+
             @endforeach
 
         </div>
@@ -168,7 +169,7 @@
 <nav aria-label="Page navigation example" class="pagination-responsive mb-2">
   <ul class="pagination flex-wrap justify-content-center">
     <li class="page-item ">
-  
+
    @if($pagina<=1)
     <li class="page-item disabled ">
     <a class="page-link " href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$pagina-1])}}" tabindex="-1" aria-disabled="true">Anterior</a>
@@ -178,7 +179,7 @@
     <a class="page-link " href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$pagina-1])}}" tabindex="-1" aria-disabled="true">Anterior</a>
     </li>
     @endif
-    
+
      @for($i=0;$i<$paginas;$i++)
      @if($pagina==$i+1)
     <li class="page-item active"><a class="page-link" href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$i+1])}}">{{$i+1}}</a></li>
@@ -186,9 +187,9 @@
      <li class="page-item "><a class="page-link" href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$i+1])}}">{{$i+1}}</a></li>
      @endif
    @endfor
-    
+
    @if($paginas<=$pagina)
-      <li class="page-item disabled"><a class="page-link" href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$pagina+1])}}">Siguiente</a>
+      <li class="page-item disabled"><a class="page-link" href="{{URL::action ('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$pagina+1])}}">Siguiente</a>
     </li>
     @else
   <li class="page-item"><a class="page-link" href="{{URL::action('Adminretys@bptema',['id_tem'=>$id_tema,'ncatego'=>$ncat,'pagina'=>$pagina+1])}}">Siguiente</a>
@@ -200,6 +201,6 @@
 
 
     </div>
- 
+
 
   @stop

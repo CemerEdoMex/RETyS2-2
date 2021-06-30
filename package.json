@@ -23,6 +23,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "gsap": "^3.6.1",
         "materialize-css": "^1.0.0-rc.2"
     }
 }

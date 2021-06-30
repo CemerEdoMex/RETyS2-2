@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use Auth;
 use DB;
 use PDF;
@@ -33,7 +34,7 @@ class AdminRetys extends Controller
    public function btarjetas(Request $request)
    {
 
-        $buscar=$request->get('buscar');
+        $buscar=$request->input('buscar');
 
         $count = DB::table('Tbgem_citramite')
         ->select(DB::raw('count(*) as total'))
@@ -45,8 +46,9 @@ class AdminRetys extends Controller
         //->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
         ->whereRaw("Denominacion like '%{$buscar}%'")
         ->where("Baja",0)
-            ->orderBy('Denominacion')
-         ->paginate(9);
+        ->orderBy('Denominacion')
+        ->paginate(9);
+
 
         $count2 = sizeof($data);
 
@@ -54,6 +56,7 @@ class AdminRetys extends Controller
 
         return view('VistasRetys.vtarjetas',
                     ['data' => $data,'count2' => $count2,'count' =>$count]);
+
 
    }
 
@@ -109,56 +112,63 @@ class AdminRetys extends Controller
 
    public function areasGobDetalle($idsujeto) {
 
-    if($idsujeto == 1)
-    {
-        $data= DB::select('SELECT distinct t.idtramite, t.denominacion,
-        t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.TIPOTRAM,t.PRINFIN_URL,t.CHAT_URL,
-        t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
-        t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
-        FROM tbgem_CITramite t
-        INNER JOIN grl_elementos e on t.ambito = e.idelemento
-        INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
-        INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
-        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
-        INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
-        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
-        LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
-        where t.Baja=0
-        and s.idsujeto in (1,2)
-        order by t.denominacion');
+        try {
+            if($idsujeto == 1)
+            {
+                $data= DB::select('SELECT distinct t.idtramite, t.denominacion,s.XSECRETARIA,
+                t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.TIPOTRAM,t.PRINFIN_URL,t.CHAT_URL,s.sujetoobligado,
+                t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
+                t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
+                FROM tbgem_CITramite t
+                INNER JOIN grl_elementos e on t.ambito = e.idelemento
+                INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
+                INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
+                INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+                INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
+                INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+                LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
+                where t.Baja=0
+                and s.idsujeto in (1,2)
+                order by t.denominacion');
 
-        $count = sizeof($data);
-
-        //return $count;
-
-        return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
-    } else {
-
-        $data= DB::select('SELECT distinct t.idtramite, t.denominacion,
-        t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.TIPOTRAM,t.PRINFIN_URL,t.CHAT_URL,
-        t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
-        t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
-        FROM tbgem_CITramite t
-        INNER JOIN grl_elementos e on t.ambito = e.idelemento
-        INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
-        INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
-        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
-        INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
-        INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
-        LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
-        where t.Baja=0
-        and s.idsujeto ='.$idsujeto.'
-        order by t.denominacion');
-
-        $count = sizeof($data);
+                $count = sizeof($data);
 
 
+                //return $count;
 
-        //return $count;
+                return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
+            } else {
 
-        return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
+                $data= DB::select('SELECT distinct t.idtramite, t.denominacion,s.XSECRETARIA,
+                t.COSTO_TRAM,t.COSTO_CANTIDAD,t.preges_url,t.TIPOTRAM,t.PRINFIN_URL,t.CHAT_URL,s.sujetoobligado,
+                t.enlinea, t.tramoserv, t.prinfin, t.preges, t.chat, t.presencial, t.telefonica, t.prinfin_seits, t.preges_seits, t.ambito, e.descripcion as ambitoDesc,
+                t.ambito_mun_clave, m.mun_descripcion, t.poder, poder.descripcion as poder_desc
+                FROM tbgem_CITramite t
+                INNER JOIN grl_elementos e on t.ambito = e.idelemento
+                INNER JOIN tbgem_cimunicipios m on t.ambito_mun_clave = m.mun_clave
+                INNER JOIN tbgem_citram_perfil tramperf on t.idtramite =tramperf.idtramite
+                INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+                INNER JOIN tbgem_cisujetoobligado s on u.idsujeto = s.idsujeto
+                INNER JOIN tbgem_ciunidadesadm u on t.idcveua = u.idcveua
+                LEFT OUTER JOIN grl_elementos poder on t.poder = poder.idelemento
+                where t.Baja=0
+                and s.idsujeto ='.$idsujeto.'
+                order by t.denominacion');
 
-    }
+                $count = sizeof($data);
+
+
+                //return $count;
+
+                return view ('VistasRetys.AreasGob.areasGobDeatalle',['data' => $data,'count' =>$count]);
+
+            }
+        } catch(\Illuminate\Database\QueryException $ex){
+
+            return view('404');
+        //dd($ex->getMessage());
+        // Note any method of class PDOException can be called on $ex.
+      }
    }
 
    public function municipios()
@@ -230,13 +240,14 @@ class AdminRetys extends Controller
     }
 
 
-   public function trasnparencia()
+
+    public function trasnparencia()
    {
        return view('Trasnparencia.transparencia');
    }
 
     public function bptema($id_tem,$ncatego,$pagina=null)
-   {
+    {
 
  /*  $datatema = DB::table('tbgem_citram_clas')->select('idtramite')
                         ->where([
@@ -301,18 +312,9 @@ class AdminRetys extends Controller
    public function bppersona($id_per,$nperson,$pagina=null)
    {
 
-  /* $datapersona = DB::table('tbgem_citram_perfil')->select('idtramite')
-                        ->where([
-                            ['id_perfil',$id_per],
-                            ])
-                        ->get();
-    $datatram = DB::table('tbgem_citramite')->select('idtramite','COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion','PRINFIN_URL','PREGES_URL','CHAT_URL','PRINFIN','PREGES','CHAT','PRESENCIAL','PRINFIN_SEITS','TIPOTRAM','PREGES_SEITS')
-                        ->where([
-                            ['BAJA','0']
-                            ])
-                        ->orderBy('Denominacion')
-                        ->get();*/
-                    $id_persona=($id_per);
+
+    $id_persona=($id_per);
+
      $datatram2=DB::select('SELECT distinct t.IDTRAMITE,t.COSTO_TRAM,t.TRAMOSERV,t.ENLINEA,t.Ambito,t.AMBITO_MUN_CLAVE,t.COSTO_TRAM,t.COSTO_CANTIDAD,t.Denominacion,t.PRINFIN_URL,t.PREGES_URL,t.CHAT_URL,t.PRINFIN,t.PREGES,t.CHAT,t.PRESENCIAL,t.PRINFIN_SEITS,t.TIPOTRAM,t.PREGES_SEITS
       FROM TBGEM_CITRAMITE t
       INNER JOIN TBGEM_CITRAM_PERFIL TT ON TT.IDTRAMITE = t.IDTRAMITE
@@ -346,7 +348,6 @@ class AdminRetys extends Controller
 
 
 
-
         return view('VistasRetys.personatarjeta')
         /*->with(['dataper'=>$datapersona])*/
         ->with(['id_persona'=>$id_persona])
@@ -374,66 +375,82 @@ class AdminRetys extends Controller
 
  }
  public function cedulainformacion($id_tram){
-  $idtramserv=($id_tram);
+
+        $idtramserv=$id_tram;
+
+        try {
+            $tramitequery=DB::select('SELECT tr.IDTRAMITE,tr.IDCVEUA,tr.DENOMINACION,tr.DESCRIPCION,tr.FORMATO_TIPO,tr.FLEGAL,tr.DOCOBTENER,tr.NOMBRE_CORTO,tr.ENLINEA,tr.AMBITO,tr.PRESENCIAL,tr.TRESP_MIN,tr.TRESP_HOR,tr.TRESP_DIA,tr.TRESP_ANIO,tr.TRESP_MES,tr.COSTOGP,tr.COSTO_CANTIDAD,tr.COSTO_TRAM,uam.DEPENDENCIA,uam.DIR_GRAL,uam.UNIDADADM,uam.TITULAR,uam.CORREOE,uam.CALLE,uam.NOEXTINT,uam.COLONIA,uam.CP,uam.LADA1,uam.LADA2,uam.LADA3,uam.TELEFONO1,uam.TELEFONO2,uam.TELEFONO3,uam.EXT,uam.FAX
+                                    FROM tbgem_citramite tr
+                                    INNER JOIN tbgem_ciunidadesadm uam ON tr.IDCVEUA = uam.IDCVEUA
+                                    WHERE tr.IDTRAMITE ='.$idtramserv.'');
 
 
-    $tramitequery=DB::select('SELECT tr.IDTRAMITE,tr.IDCVEUA,tr.DENOMINACION,tr.DESCRIPCION,tr.FLEGAL,tr.DOCOBTENER,tr.NOMBRE_CORTO,tr.ENLINEA,tr.AMBITO,tr.PRESENCIAL,tr.TRESP_MIN,tr.TRESP_HOR,tr.TRESP_DIA,tr.TRESP_ANIO,tr.TRESP_MES,tr.COSTOGP,tr.COSTO_CANTIDAD,tr.COSTO_TRAM,uam.DEPENDENCIA,uam.DIR_GRAL,uam.UNIDADADM,uam.TITULAR,uam.CORREOE,uam.CALLE,uam.NOEXTINT,uam.COLONIA,uam.CP,uam.LADA1,uam.LADA2,uam.LADA3,uam.TELEFONO1,uam.TELEFONO2,uam.TELEFONO3,uam.EXT,uam.FAX
-                              FROM tbgem_citramite tr
-                              INNER JOIN tbgem_ciunidadesadm uam ON tr.IDCVEUA = uam.IDCVEUA
-                              WHERE tr.IDTRAMITE ='.$idtramserv.'');
+
+              //$queryDos = "SELECT DEPENDENCIA,DIR_GRAL,UNIDADADM,TITULAR,CORREOE,CALLE,NOEXTINT,COLONIA,CP,LADA1,LADA2,LADA3,TELEFONO1,TELEFONO2,TELEFONO3,EXT,FAX
+                          //from tbgem_ciunidadesadm where IDCVEUA = '".$varidcveua."'"; // Unidad Administrativa
+
+              $queryCostos = DB::table('TBGEM_CICOSTOS')
+                             ->SELECT('RENGLON', 'COLUMNA', 'COSTO', 'ENCABEZADO', 'DEFINICION')
+                             ->where('idtramite',$idtramserv)
+                             ->orderBy('renglon','asc')
+                             ->orderBy('columna','asc')
+                             ->get(); //Costos
+
+              //$queryPasos = "SELECT IDPASOS,PASO,IDTRAMITE from tbgem_pasos where IDTRAMITE = '".$idtramserv."' order by IDTRAMITE, IDPASOS"; // Pasos a seguir
+
+              $queryPasos = DB::table('tbgem_pasos')
+                              ->select('IDPASOS','PASO','IDTRAMITE')
+                              ->where('IDTRAMITE',$idtramserv)
+                              ->orderBy('IDPASOS')
+                              ->get();
+              $queryform = DB::table('tbgem_ciadjuntos')
+                              ->select('IDTRAMITE','IDADJUNTO','DESCRIPCION','ARCHIVO','IDFTIPO')
+                              ->where('IDTRAMITE',$idtramserv)
+                              ->orderBy('DESCRIPCION','asc')
+                              ->get();
+
+
+              $queryReq = DB::table('tbgem_cireq_tram')
+                          ->select('IDTRAMITE','TIPO','ORIGINAL','COPIA','DESCRIPCION','ORDEN','FUNDAMENTOS','cantidadcop')
+                          ->where('IDTRAMITE',$idtramserv)
+                          ->orderBy('TIPO','asc')
+                          ->orderBy('ORDEN','asc')
+                          ->get();
+
+              $count=sizeof( $queryPasos);
+
+              for($i=0;$i<=$count;$i++){
+                 $i=$i;
+              }
+
+              $querypre = DB::table('tbgem_CIOTROS')
+                          ->select('IDTRAMITE','pregunta','respuesta','num')
+                          ->where('IDTRAMITE',$idtramserv)
+                          ->orderBy('num','asc')
+
+                          ->get();
+
+                    return view('fichasinfo.cedulainformacion')
+                    ->with(['tramite'=>$tramitequery])
+                    ->with(['costos'=>$queryCostos])
+                    ->with(['formato'=>$queryform])
+                    ->with(['pasos'=>$queryPasos])
+                    ->with(['requisitos'=>$queryReq])
+                    ->with(['count'=>$count])
+                    ->with(['i'=>$i])
+                    ->with(['preguntas'=>$querypre]);
+              // Closures include ->first(), ->get(), ->pluck(), etc.
+
+            } catch(\Illuminate\Database\QueryException $ex){
+
+                return view('404');
+            //dd($ex->getMessage());
+            // Note any method of class PDOException can be called on $ex.
+          }
 
 
 
-        //$queryDos = "SELECT DEPENDENCIA,DIR_GRAL,UNIDADADM,TITULAR,CORREOE,CALLE,NOEXTINT,COLONIA,CP,LADA1,LADA2,LADA3,TELEFONO1,TELEFONO2,TELEFONO3,EXT,FAX
-                    //from tbgem_ciunidadesadm where IDCVEUA = '".$varidcveua."'"; // Unidad Administrativa
-
-        $queryCostos = DB::table('TBGEM_CICOSTOS')
-                       ->SELECT('RENGLON', 'COLUMNA', 'COSTO', 'ENCABEZADO', 'DEFINICION')
-                       ->where('idtramite',$idtramserv)
-                       ->orderBy('renglon','asc')
-                       ->orderBy('columna','asc')
-                       ->get(); //Costos
-
-        //$queryPasos = "SELECT IDPASOS,PASO,IDTRAMITE from tbgem_pasos where IDTRAMITE = '".$idtramserv."' order by IDTRAMITE, IDPASOS"; // Pasos a seguir
-
-        $queryPasos = DB::table('tbgem_pasos')
-                        ->select('IDPASOS','PASO','IDTRAMITE')
-                        ->where('IDTRAMITE',$idtramserv)
-                        ->orderBy('IDPASOS')
-                        ->get();
-
-        $queryReq = DB::table('tbgem_cireq_tram')
-                    ->select('IDTRAMITE','TIPO','ORIGINAL','COPIA','DESCRIPCION','ORDEN','FUNDAMENTOS','cantidadcop')
-                    ->where('IDTRAMITE',$idtramserv)
-                    ->orderBy('TIPO','asc')
-                    ->orderBy('ORDEN','asc')
-                    ->get();
-
-        $count=sizeof( $queryPasos);
-
-        for($i=0;$i<=$count;$i++){
-           $i=$i;
-        }
-
-        $querypre = DB::table('tbgem_CIOTROS')
-                    ->select('IDTRAMITE','pregunta','respuesta','num')
-                    ->where('IDTRAMITE',$idtramserv)
-                    ->orderBy('num','asc')
-
-                    ->get();
-
- return view('fichasinfo.cedulainformacion')
- ->with(['tramite'=>$tramitequery])
- ->with(['costos'=>$queryCostos])
- ->with(['pasos'=>$queryPasos])
- ->with(['requisitos'=>$queryReq])
- ->with(['count'=>$count])
- ->with(['i'=>$i])
- ->with(['preguntas'=>$querypre]);
-
-
- }
-
+            }
 
 
 }

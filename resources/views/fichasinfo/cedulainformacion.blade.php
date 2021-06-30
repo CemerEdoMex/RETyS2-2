@@ -5,9 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Collapsible </title>
-  <link rel="stylesheet" href="{{ asset('bootstrap4.5/css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/stylecedula/style4.css') }}">
+
+
+  <link rel="icon" href="{{ secure_asset('img/gobiernologo.ico') }}" type="image/x-icon">
+
+  <link rel="stylesheet" href="{{ secure_asset('bootstrap4.5/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('css/stylecedula/style4.css') }}">
+
+<title>Trámites y Servicios </title>
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -28,55 +33,64 @@
 
                 <li>
                     <a href="#" class="w3-bar-item tablink" onclick="openCity(event, 'InformacionGeneral')" id="defaultOpen">
-                         <img src="{{asset('img/imgcedula/info_viol.png')}}" style="width:15%;" >
+                         <img src="{{secure_asset('img/imgcedula/info_viol.png')}}" style="width:15%;" >
                         Información general
                     </a>
                 </li>
                 <li>
                     <a href="#" class="w3-bar-item tablink" onclick="openCity(event, 'Domicilio')">
-                         <img src="{{asset('img/imgcedula/domicilio_viol.png')}}" style="width:15%;" >
+                         <img src="{{secure_asset('img/imgcedula/domicilio_viol.png')}}" style="width:15%;" >
                         Domicilio
                     </a>
                 </li>
 				<li>
                     <a href="#" class="w3-bar-item tablink" onclick="openCity(event, 'Costos')">
-                        <img src="{{asset('img/imgcedula/costos_viol.png')}}" style="width:15%;" >
+                        <img src="{{secure_asset('img/imgcedula/costos_viol.png')}}" style="width:15%;" >
                         Costos
                     </a>
                 </li>
 				<li>
                     <a href="#" class="w3-bar-item  tablink" onclick="openCity(event, 'TiempoResp')">
-                        <img src="{{asset('img/imgcedula/tiempo_viol.png')}}" style="width:15%;" >
+                        <img src="{{secure_asset('img/imgcedula/tiempo_viol.png')}}" style="width:15%;" >
                         Tiempo de respuesta
                     </a>
                 </li>
 				<li>
                     <a href="#" class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Requisitos')">
-                        <img src="{{asset('img/imgcedula/requisitos_viol.png')}}" style="width:15%;" >
+                        <img src="{{secure_asset('img/imgcedula/requisitos_viol.png')}}" style="width:15%;" >
                         Requisitos
                     </a>
                 </li>
 				<li>
                     <a href="#" class="w3-bar-item  tablink" onclick="openCity(event, 'Pasosaseguir')">
-                        <img src="{{asset('img/imgcedula/pasos_viol.png')}}" style="width:15%;" >
+                        <img src="{{secure_asset('img/imgcedula/pasos_viol.png')}}" style="width:15%;" >
                         Pasos a seguir
                     </a>
                 </li>
 				<li>
                     <a href="#" class="w3-bar-item tablink" onclick="openCity(event, 'Doctoobtener')">
-                        <img src="{{asset('img/imgcedula/documento_viol.png')}}" style="width:15%;" >
+                        <img src="{{secure_asset('img/imgcedula/documento_viol.png')}}" style="width:15%;" >
                         Documento a obtener
                     </a>
                 </li>
+
+
+                <li>
+                    <a href="#" class="w3-bar-item tablink" onclick="openCity(event, 'Formdesc')">
+                        <img src="{{asset('img/imgcedula/formato.png')}}" style="width:15%;" >
+                        Descargar formato
+                    </a>
+                </li>
+
 				<li>
                     <a href="#" class="w3-bar-item tablink" onclick="openCity(event, 'fundamjurid')">
-                         <img src="{{asset('img/imgcedula/fundamento_viol.png')}}" style="width:15%;" >
+                         <img src="{{secure_asset('img/imgcedula/fundamento_viol.png')}}" style="width:15%;" >
                         Fundamento jurídico
                     </a>
                 </li>
                 <li>
                     <a href="#" class="w3-bar-item tablink" onclick="openCity(event, 'Pregfrec')">
-                         <img src="{{asset('img/imgcedula/preguntas_viol.png')}}" style="width:15%;" >
+                         <img src="{{secure_asset('img/imgcedula/preguntas_viol.png')}}" style="width:15%;" >
                         Preguntas frecuentes
                     </a>
                 </li>
@@ -255,7 +269,7 @@
   <div id="Costos" class="tabcontent text-center">
         <h2>Costos</h2>
 
-         <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
+      <!--    <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
 
   <li class="nav-item" >
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
@@ -299,9 +313,9 @@
             @endforeach
   </a>
  </li>
-</ul>
+</ul> -->
 <br>
-<div class="tab-content" id="myTabContent">
+<!--<div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
      @foreach($tramite as $tram)
       @if($tram->costo_tram==1 && $tram->costogp==0 )
@@ -432,12 +446,12 @@
              </tr>
     </table>
      </div>
-   </div>
+   </div> -->
    <!--************************************************************************************************************************-->
     <ul class="nav nav-tabs" id="myTab" role="tablist" style="max-width: 700px; margin: auto;">
 
   <li class="nav-item" >
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-selected="true">
+    <a class="nav-link active" id="home-tab1" data-toggle="tab" href="#tab1-home" role="tab" aria-controls="home" aria-selected="true">
         Costo
           </a>
   </li>
@@ -535,10 +549,10 @@
 </ul>
 
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  <div class="tab-pane fade show active" id="tab1-home" role="tabpanel" aria-labelledby="home-tab">
      @foreach($tramite as $tram)
       @if($tram->costo_tram==1 && $tram->costogp==0 )
-         <table class="table table-bordered " style="max-width: 400px; margin: auto;">
+         <table class="table table-bordered " style="max-width: 600px; margin: auto;">
           <thead style="background-color:#341050;">
               <tr style="color: #fff;">
                <th scope="col">Costo</th>
@@ -558,8 +572,8 @@
             @endforeach
   </div>
   <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="profile-tab">
-    <table class="table table-bordered " style="max-width: 600px; margin: auto;">
-             <thead style="background-color:#341050;">
+    <table class="table table-bordered " style="max-width: 1000px; margin: auto;">
+             <thead style="background-color:#341050; font-size: small">
               <tr style="color: #fff;">
                 @foreach($costos as $cos)
                 @if($cos->renglon==0 && $cos->columna>=1)
@@ -579,6 +593,77 @@
                <td>
                 @foreach($costos as $cos)
                  @if($cos->renglon==1 && $cos->columna==2)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+               <td>
+                @foreach($costos as $cos)
+                 @if($cos->renglon==1 && $cos->columna==3)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+                <td>
+                @foreach($costos as $cos)
+                 @if($cos->renglon==1 && $cos->columna==4)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+                <td>
+                @foreach($costos as $cos)
+                 @if($cos->renglon==1 && $cos->columna==5)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+             </tr>
+    </table>
+  </div>
+  <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="profile-tab">
+    <table class="table table-bordered " style="max-width: 1000px; margin: auto; ">
+             <thead style="background-color:#341050;font-size: small;">
+              <tr style="color: #fff;">
+                @foreach($costos as $cos)
+                @if($cos->renglon==0 && $cos->columna>=1)
+               <th scope="col">{{$cos->encabezado}}</th>
+                @endif
+               @endforeach
+              </tr>
+             </thead>
+             <tr>
+               <td>
+                 @foreach($costos as $cos)
+                  @if($cos->renglon==2 && $cos->columna==1)
+                   {{$cos->costo}}
+                  @endif
+                 @endforeach
+               </td>
+               <td>
+                @foreach($costos as $cos)
+                 @if($cos->renglon==2 && $cos->columna==2)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+               <td>
+                @foreach($costos as $cos)
+                 @if($cos->renglon==2 && $cos->columna==3)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+                <td>
+                @foreach($costos as $cos)
+                 @if($cos->renglon==2 && $cos->columna==4)
+                  {{$cos->costo}}
+                 @endif
+                @endforeach
+               </td>
+                <td>
+                @foreach($costos as $cos)
+                 @if($cos->renglon==2 && $cos->columna==5)
                   {{$cos->costo}}
                  @endif
                 @endforeach
@@ -706,6 +791,34 @@
     </div>
 
 
+    <div id="Formdesc" class="tabcontent text-center">
+        <h2>Descargar formato </h2>
+        <table class="table table-bordered " style="max-width: 800px; margin: auto;">
+             <thead>
+              <tr>
+               <th scope="col">Formato </th>
+
+              </tr>
+             </thead>
+              @foreach($tramite as $tram )
+              <tr>
+               @IF($tram->formato_tipo==0)
+               El Trámite no cuenta con archivos para descargar
+               @else
+               @foreach($formato as $form)
+               <a href="https://sistemas2.edomex.gob.mx/TramitesyServicios/DespliegaArchivo?idadjunto={{$form->idadjunto}}&idtramite={{$form->idtramite}}"> Descargar : {{ $form->descripcion }}</a>
+               @endforeach
+               @endif()
+                <td></td>
+
+
+            </tr>
+             @endforeach
+        </table>
+
+    </div>
+
+
     <div id="fundamjurid" class="tabcontent text-center">
         <h2>Fundamento Jurídico</h2>
          <table class="table table-bordered " style="max-width: 800px; margin: auto;">
@@ -764,7 +877,7 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-<script src="{{ asset('js/Trasnparencia/trasnparencia.js')}}"></script>
+<script src="{{ secure_asset('js/Trasnparencia/trasnparencia.js')}}"></script>
 
 
     <script type="text/javascript">

@@ -19,10 +19,13 @@
                 <div class="card-body">
                 <h5 class="card-title">{{$data[$i]->mun_descripcion}}</h5>
                 @if ($data[$i]->ruta)
-                <img src="{{ asset($data[$i]->ruta) }}"  class="rounded" alt="...">
+                <img src="{{ secure_asset($data[$i]->ruta) }}"  class="rounded" alt="...">
                 @endif
                 <p class="card-text"><a href="#">Visita su sitio web.</a> </p>
-                <a href="{{ url('/municipios/'.$data[$i]->mun_descripcion.'/'.$data[$i]->mun_clave) }}" class="btn btn-primary">Ver trámites </a>
+                <form action="/municipios/{{ $data[$i]->mun_descripcion }}/{{ $data[$i]->mun_clave }}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-primary"> Ver Trámites </button>
+                </form>
                 </div>
             </div>
         @endfor

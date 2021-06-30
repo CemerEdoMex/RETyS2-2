@@ -5,6 +5,10 @@
 
     RewriteEngine On
 
+    RewriteEngine On
+    RewriteCond %{81, 433}
+    RewriteRule ^(.*)$ https://retys.edomex.gob.mx/$ [R,L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -19,3 +23,4 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
