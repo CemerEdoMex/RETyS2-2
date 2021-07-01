@@ -84,7 +84,7 @@
 
 
         <div class="carousel-item active">
-          <img class="second-slide" src="{{ secure_asset('img/Pal_2.jpg')}}" alt="Third slide" >
+          <img class="second-slide" src="{{ secure_asset('img/palacio.jpeg')}}" alt="Third slide" >
             <div class="carousel-caption d-none d-md-block">
                 <h1 class="card-title font-weight-bold" style=" font-size: 82px;">RETyS</h1>
                 <h2 class="font-weight-bold" >Registro Estatal de Trámites y Servicios</h2>

@@ -21,7 +21,7 @@ Route::GET('/','AdminRetys@index');
 
 Route::GET('inicio','AdminRetys@index')->name('inicio');
 
-Route::ANY('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGETas */
+Route::POST('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGETas */
 
 Route::GET('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*ruta personas */
 
