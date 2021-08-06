@@ -46,7 +46,7 @@ Route::POST('/municipios/{municipio}/{clave}','Adminretys@municipioDetalle')->na
 |*/
 
 
-Route::POST('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog');
+Route::POST('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog')->where('idsujeto', '[0-9]+');;
 
 
 Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');
@@ -100,7 +100,7 @@ route::GET('enlinea','Adminretys@benlinea')->name('enlinea');
 |*/
 route::GET('fichapdf/{id_tram}','Adminretys@pdf_fichan')->name('fichapdf');
 
-route::GET('cedulainfo/{id_tram?}','Adminretys@cedulainformacion')->name('cedulainfo');
+route::POST('cedulainfo/{id_tram?}','Adminretys@cedulainformacion')->name('cedulainfo')->where('id_tram', '[0-9]+');
 
 /*
 |-------------------------------------------------------------------------
@@ -109,4 +109,14 @@ route::GET('cedulainfo/{id_tram?}','Adminretys@cedulainformacion')->name('cedula
 /*/
 Route::get('/prueba', function () {
     return view('VistasRetys.newCards');
+});
+
+
+/*
+|-------------------------------------------------------------------------
+| Ruta de respaldo
+|-------------------------------------------------------------------------
+/*/
+Route::fallback(function() {
+     return view('404');
 });

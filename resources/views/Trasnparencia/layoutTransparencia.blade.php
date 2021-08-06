@@ -8,8 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ secure_asset('bootstrap4.5/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ secure_asset('vendor/nav.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="{{ secure_asset('css/fonts.css')}}">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style2.css">
     <!-- <link rel="stylesheet" href="css/style4.css">-->
