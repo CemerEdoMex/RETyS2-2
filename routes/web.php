@@ -37,7 +37,7 @@ Route::GET('categoria','Adminretys@category')->name('category');
 |*/
 
 Route::GET('/municipios','Adminretys@municipios')->name('municipios');
-Route::POST('/municipios/{municipio}/{clave}','Adminretys@municipioDetalle')->name('municipio');
+Route::GET('/municipios/{municipio}/{clave}','Adminretys@municipioDetalle')->name('municipio')->where(['municipio', '[0-9]+'],['clave','[0-9]']);
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +46,7 @@ Route::POST('/municipios/{municipio}/{clave}','Adminretys@municipioDetalle')->na
 |*/
 
 
-Route::POST('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog')->where('idsujeto', '[0-9]+');;
+Route::POST('/areasgog/{idsujeto}','Adminretys@areasGobDetalle')->name('areasgog')->where('idsujeto', '[0-9]+');
 
 
 Route::GET('/areasgob','Adminretys@areasGob')->name('areasgob');
@@ -77,14 +77,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 | Categorias  Rutas
 |--------------------------------------------------------------------------
 |*/
-route::POST('catego/{id_tem}/{ncatego}/{pagina?}','Adminretys@bptema')->name('catego');
+route::GET('catego/{id_tem}/{ncatego}/{pagina?}','Adminretys@bptema')->name('catego');
 
 /*
 |--------------------------------------------------------------------------
-| Categorias  Rutas
+| PERSONAS  Rutas
 |--------------------------------------------------------------------------
 |*/
-route::POST('Personas/{id_per}/{nperson}/{pagina?}','Adminretys@bppersona')->name('Personas');
+route::GET('Personas/{id_per}/{nperson}/{pagina?}','Adminretys@bppersona')->name('Personas');
 
 /*
 |--------------------------------------------------------------------------

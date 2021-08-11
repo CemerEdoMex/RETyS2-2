@@ -219,7 +219,7 @@
                                         <hr>
                                             <p> <a href="http://sistemas2.edomex.gob.mx/ventanilla/seguimiento.action;jsessionid=85512EA584B2EFC87BE506151B4C54C7" class="text-dark" >Inicia sesión</a> </p>
                                             <p> <a href="http://cuts.edomex.gob.mx/cuts2018/irRecuperarCon.action"  class="text-dark" >¿Olvidaste tu contraseña?</a> </p>
-                                            <p> <a href="https://sistemas2.edomex.gob.mx/ventanilla/views/ventanillaUnica.jsp?tipo=&cve=&texto=&busqueda=#" class="text-dark" > Verifica si tienes CUTS</a> </p>
+                                            <!-- <p> <a href="https://sistemas2.edomex.gob.mx/ventanilla/views/ventanillaUnica.jsp?tipo=&cve=&texto=&busqueda=#" class="text-dark" > Verifica si tienes CUTS</a> </p> -->
                                              <a href="http://cuts.edomex.gob.mx/cuts2018/irRCInicial.action" class="text-dark" > ¿No tienes CUTS?  Obtenla <span class="text-warning"> AQUÍ </span> </a>
                                     </div>
                         </div>

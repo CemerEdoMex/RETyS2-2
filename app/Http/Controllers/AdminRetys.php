@@ -261,7 +261,7 @@ class AdminRetys extends Controller
       FROM tbgem_citramite t
       INNER JOIN TBGEM_CITRAM_CLAS TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_PORTEMA TM ON TM.IDCLASIFICACION = TT.IDCLASIFICACION
-      WHERE t.BAJA = 0
+      WHERE t.BAJA = 0 and t.ambito= 3
       AND TM.IDCLASIFICACION='.$id_tem2.'
       order by t.denominacion');
 
@@ -281,7 +281,7 @@ class AdminRetys extends Controller
       FROM tbgem_citramite t
       INNER JOIN TBGEM_CITRAM_CLAS TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_PORTEMA TM ON TM.IDCLASIFICACION = TT.IDCLASIFICACION
-      WHERE t.BAJA = 0
+      WHERE t.BAJA = 0 and t.ambito= 3
       AND TM.IDCLASIFICACION='.$id_tem2.'
       order by t.denominacion
       OFFSET '.$inicia.' ROWS FETCH FIRST '.$tram_x_pag.' ROW ONLY');
@@ -306,7 +306,7 @@ class AdminRetys extends Controller
       FROM TBGEM_CITRAMITE t
       INNER JOIN TBGEM_CITRAM_PERFIL TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_CIPERFIL TM ON TM.ID_PERFIL = TT.ID_PERFIL
-      WHERE t.BAJA = 0
+      WHERE t.BAJA = 0 and t.ambito= 3
       AND TM.ID_PERFIL='.$id_persona.'
       order by t.denominacion');
 
@@ -328,7 +328,7 @@ class AdminRetys extends Controller
       FROM TBGEM_CITRAMITE t
       INNER JOIN TBGEM_CITRAM_PERFIL TT ON TT.IDTRAMITE = t.IDTRAMITE
       INNER JOIN TBGEM_CIPERFIL TM ON TM.ID_PERFIL = TT.ID_PERFIL
-      WHERE t.BAJA = 0
+      WHERE t.BAJA = 0 and t.ambito= 3
       AND TM.ID_PERFIL='.$id_persona.'
       order by t.denominacion
       OFFSET '.$inicia.' ROWS FETCH FIRST '.$tram_x_pag.' ROW ONLY');

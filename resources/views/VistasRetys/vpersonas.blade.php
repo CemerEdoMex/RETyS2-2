@@ -16,8 +16,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			     <form action="{{ secure_url('Personas',['1','Adultos Mayores','1']) }}"  method="POST">
-                      @csrf
+			     <form action="{{ secure_url('Personas',['1','Adultos Mayores','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -33,8 +33,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			     
-				 <form action="{{ secure_url('Personas',['17','Empresarios y Emprendedores','1']) }}"  method="POST">
-                      @csrf
+				 <form action="{{ secure_url('Personas',['17','Empresarios y Emprendedores','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -50,8 +50,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			     
-                 <form action="{{ secure_url('Personas',['18','Estudiantes','1']) }}"  method="POST">
-                      @csrf
+                 <form action="{{ secure_url('Personas',['18','Estudiantes','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -69,8 +69,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			     
-				 <form action="{{ secure_url('Personas',['15','Hombres','1']) }}"  method="POST">
-                      @csrf
+				 <form action="{{ secure_url('Personas',['15','Hombres','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -88,8 +88,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			     <form action="{{ secure_url('Personas',['2','Indígenas','1']) }}"  method="POST">
-                      @csrf
+			     <form action="{{ secure_url('Personas',['2','Indígenas','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -105,8 +105,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			     
-				 <form action="{{ secure_url('Personas',['3','Jóvenes','1']) }}"  method="POST">
-                      @csrf
+				 <form action="{{ secure_url('Personas',['3','Jóvenes','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -124,8 +124,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			      <form action="{{ secure_url('Personas',['4','Migrantes','1']) }}"  method="POST">
-                      @csrf
+			      <form action="{{ secure_url('Personas',['4','Migrantes','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -141,8 +141,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			     
-				 <form action="{{ secure_url('Personas',['5','Mujeres','1']) }}"  method="POST">
-                      @csrf
+				 <form action="{{ secure_url('Personas',['5','Mujeres','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -158,8 +158,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			     
-				 <form action="{{ secure_url('Personas',['6','Niños','1']) }}"  method="POST">
-                      @csrf
+				 <form action="{{ secure_url('Personas',['6','Niños','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -177,8 +177,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			      <form action="{{ secure_url('Personas',['14','Notarios Públicos','1']) }}"  method="POST">
-                      @csrf
+			      <form action="{{ secure_url('Personas',['14','Notarios Públicos','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -194,8 +194,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			      <form action="{{ secure_url('Personas',['8','Personas con Discapacidad','1']) }}"  method="POST">
-                      @csrf
+			      <form action="{{ secure_url('Personas',['8','Personas con Discapacidad','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -212,8 +212,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			     
-				 <form action="{{ secure_url('Personas',['16','Productores','1']) }}"  method="POST">
-                      @csrf
+				 <form action="{{ secure_url('Personas',['16','Productores','1']) }}"  method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">
@@ -228,8 +228,8 @@
 			</div>
 				<div class="col-6 col-xl-3 col-md-4">
 				 
-				 <form action="{{ secure_url('Personas',['10','Servidores Públicos Estatal','1']) }}" method="POST">
-                      @csrf
+				 <form action="{{ secure_url('Personas',['10','Servidores Públicos Estatal','1']) }}" method="get">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias">

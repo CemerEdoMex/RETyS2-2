@@ -10,8 +10,8 @@
     <div class="container text-center justify-content-center">
 
         <div class="container-1">
-            <form   class="form-inline"  method="POST" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
-                @csrf
+            <form   class="form-inline"  method="GET" action="{{ route('tarjetas') }}" style="  justify-content: center;" >
+               {{--@csrf --}} 
             <div class="container-4">
                     <input type="search" id="search" name="buscar" placeholder="¿Qué estás buscando?" />
                     <button class="icon"><i class="fa fa-search"></i></button>
@@ -153,20 +153,20 @@
 
                     </div>
                     @if ($item->ambito == 3)
-                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="post">
-                        @csrf
+                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="get">
+                        
                         <button type="submit" class="btn btn-success" role="button"> Más información </button>
                     </form>
 
                     @elseif ($item->ambito == 4)
-                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="post">
-                        @csrf
+                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="get">
+                        
                         <button type="submit" class="btn btn-primary" role="button"> Más información </button>
                     </form>
 
                     @elseif ($item->ambito == 5)
-                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="post">
-                        @csrf
+                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="get">
+                        
                         <button type="submit" class="btn btn-secondary" role="button"> Más información </button>
                     </form>
                     @endif

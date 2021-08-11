@@ -1,7 +1,5 @@
   @extends('VistasRetys.layoutCards')
 
-
-
   @section('tarjetas')
 
 
@@ -60,13 +58,13 @@
         <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
         <ul class="navbar-nav" style="margin:auto;">
             <li class="nav-item active">
-                <button class="nav-link text-bold text-dark" onclick="filter(0);">TODOS LOS TRÁMITES </button>
+                <a class="nav-link text-bold text-dark" onclick="filter('all');">TODOS LOS TRÁMITES </a>
             </li>
             <li class="nav-item active">
-                <button class="nav-link text-bold text-dark" onclick="filter(3);">TRÁMITES ESTATALES</button>
+                <a class="nav-link text-bold text-dark" onclick="filter('estatales');">TRÁMITES ESTATALES</a>
             </li>
             <li class="nav-item">
-                <button class="nav-link text-bold text-dark" onclick="filter(4);">TRÁMITES MUNICIPALES </button>
+                <a class="nav-link text-bold text-dark" onclick="filter('municipales');">TRÁMITES MUNICIPALES </a>
             </li>
         </ul>
     </nav>
@@ -140,7 +138,7 @@
 
                     @if ($item->prinfin == 1)
                     @if ($item->prinfin_seits == 1)
-                    <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
+                    <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite=1" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
                     @else
                     <a href="{{$item-> prinfin_url}}" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
                     @endif
@@ -149,7 +147,7 @@
 
                     @if ($item->preges == 1)
                     @if ($item->preges_seits== 1)
-                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite={{$item-> tipotram}}" class="btn btn-outline-primary"style="width: 120px">Pregestión en línea</a>
+                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item-> idtramite}}&tipoTramite=2" class="btn btn-outline-primary"style="width: 120px">Pregestión en línea</a>
                     @else
                     <a href="{{$item-> preges_url}}" class="btn btn-outline-primary" style="width: 120px"> Pregestión en línea</a>
                     @endif
@@ -186,13 +184,10 @@
         @endforeach
 
     </div>
-  <script src="{{ secure_asset ('js/filtro.js')}}"> </script>
-<div style='margin:center;'>
-
-{{$data->links()}}
-
-</div>
-
+    <script src="{{ secure_asset ('js/filtro.js')}}"> </script>
+    <div style='margin:center;'>
+    {{$data->links()}}
+    </div>
 </div>
 
 

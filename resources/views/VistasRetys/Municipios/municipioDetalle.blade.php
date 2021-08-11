@@ -150,20 +150,20 @@
                         @endif
                   </div>
                   @if ($item->ambito == 3)
-                  <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="post">
-                      @csrf
+                  <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="get">
+                     {{-- ---}} {{-- @csrf---}}
                       <button type="submit" class="btn btn-success" role="button"> Más información </button>
                   </form>
 
                   @elseif ($item->ambito == 4)
-                  <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="post">
-                      @csrf
+                  <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="get">
+                      {{-- @csrf---}}
                       <button type="submit" class="btn btn-primary" role="button"> Más información </button>
                   </form>
 
                   @elseif ($item->ambito == 5)
-                  <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="post">
-                      @csrf
+                  <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="get">
+                      {{-- @csrf---}}
                       <button type="submit" class="btn btn-secondary" role="button"> Más información </button>
                   </form>
                   @endif

@@ -10,8 +10,8 @@
     <div class="container text-center justify-content-center">
 
         <div class="container-1">
-            <form   class="form-inline"  method="POST" action="{{ secure_url('tarjetas') }}" style="  justify-content: center;" >
-                @csrf
+            <form   class="form-inline"  method="get" action="{{ secure_url('tarjetas') }}" style="  justify-content: center;" >
+                
                 <div class="container-4">
                     <input type="search" id="search" name="buscar" placeholder="¿Qué estás buscando?" />
                     <button class="icon"><i class="fa fa-search"></i></button>
@@ -60,7 +60,21 @@
          </div>
         </div>
         <hr>
-
+   {{-- Filtro --}}
+        <nav class="navbar navbar-expand-sm bg-light navbar-light" id="filtro">
+        <ul class="navbar-nav" style="margin:auto;">
+            <li class="nav-item active">
+                <a class="nav-link text-bold text-dark" onclick="filter('all');">TODOS LOS TRÁMITES </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link text-bold text-dark" onclick="filter('estatales');">TRÁMITES ESTATALES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-bold text-dark" onclick="filter('municipales');">TRÁMITES MUNICIPALES </a>
+            </li>
+        </ul>
+    </nav>
+    <br>
         <div class="row mb-4">
 
 
@@ -69,11 +83,11 @@
 
 
                 @if ($item->ambito == 3)
-                    <div class="card border-success mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem; ">
+                    <div class="estatal card border-success mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem; ">
                     @elseif ($item->ambito == 4)
-                    <div class="card border-primary mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem;">
+                    <div class="municipal card border-primary mb-5 text-center justify-content-center" style="max-width: 20rem; min-width: 20rem;">
                     @elseif($item->ambito == 5)
-                    <div class="card border-secondary mb-5 text-center justify-content-center" style="max-width: 20rem;">
+                    <div class="federal card border-secondary mb-5 text-center justify-content-center" style="max-width: 20rem;">
                     @else
                     <div class="card border-warning mb-5 text-center justify-content-center" style="max-width: 20rem;">
                 @endif
@@ -131,7 +145,7 @@
 
                         @if ($item->prinfin == 1)
                         @if ($item->prinfin_seits == 1)
-                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item->idtramite}}&tipoTramite={{$item->tipotram}}" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
+                        <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item->idtramite}}&tipoTramite=1" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
                         @else
                         <a href="{{$item-> prinfin_url}}" class="btn btn-outline-primary"style="width: 120px">Trámite en línea</a>
                         @endif
@@ -140,7 +154,7 @@
 
                         @if ($item->preges == 1)
                         @if ($item->preges_seits== 1)
-                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item->idtramite}}&tipoTramite={{$item->tipotram}}" class="btn btn-outline-primary"style="width: 120px">Pregestión en línea</a>
+                         <a href="http://sistemas2.edomex.gob.mx/ventanilla/ejecutarTramite.action?valorTramite={{$item->idtramite}}&tipoTramite=2" class="btn btn-outline-primary"style="width: 120px">Pregestión en línea</a>
                         @else
                         <a href="{{$item-> preges_url}}" class="btn btn-outline-primary" style="width: 120px"> Pregestión en línea</a>
                         @endif
@@ -152,20 +166,20 @@
                         @endif
                     </div>
                     @if ($item->ambito == 3)
-                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="post">
-                        @csrf
+                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="get">
+                        
                         <button type="submit" class="btn btn-success" role="button"> Más información </button>
                     </form>
 
                     @elseif ($item->ambito == 4)
-                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="post">
-                        @csrf
+                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="get">
+                        
                         <button type="submit" class="btn btn-primary" role="button"> Más información </button>
                     </form>
 
                     @elseif ($item->ambito == 5)
-                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="post">
-                        @csrf
+                    <form action="{{ secure_url('cedulainfo',$item->idtramite) }}"  method="get">
+                        
                         <button type="submit" class="btn btn-secondary" role="button"> Más información </button>
                     </form>
                     @endif
@@ -178,7 +192,7 @@
 
         </div>
 
-
+<script src="{{ secure_asset ('js/filtro.js')}}"> </script>
     <div style='margin:center;'>
 
         {{$datalinea->appends($_GET)}}

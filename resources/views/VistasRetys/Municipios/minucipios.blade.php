@@ -22,8 +22,8 @@
                 <img src="{{ secure_asset($data[$i]->ruta) }}"  class="rounded" alt="...">
                 @endif
                 <p class="card-text"><a href="#">Visita su sitio web.</a> </p>
-                <form action="/municipios/{{ $data[$i]->mun_descripcion }}/{{ $data[$i]->mun_clave }}" method="post">
-                    @csrf
+                <form action="/municipios/{{ $data[$i]->mun_descripcion }}/{{ $data[$i]->mun_clave }}" method="GET">
+                   
                     <button type="submit" class="btn btn-primary"> Ver Trámites </button>
                 </form>
                 </div>

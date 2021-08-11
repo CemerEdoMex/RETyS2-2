@@ -13,8 +13,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4 accordion-container">
 
-                  <form action="{{secure_url('catego',['T06', 'Educación','1']) }}"  method="post">
-                      @csrf
+                  <form action="{{secure_url('catego',['T06', 'Educación','1']) }}"  method="GET">
+                      {{--@csrf--}}
                       <button type="submit" style="border:0px" > 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -30,8 +30,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4 accordion-container">
 			  
-			  <form action="{{ secure_url('catego',['T03','Cultura','1']) }}"  method="post">
-                      @csrf
+			  <form action="{{ secure_url('catego',['T03','Cultura','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					  <div class="card border-0 bg-transparent responsive-categorias card-body">
 						  <div class="responsive-categorias mx-auto">
@@ -48,8 +48,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			    
-                <form action="{{ secure_url('catego',['T05','Economía y Negocios','1']) }}"  method="post">
-                      @csrf
+                <form action="{{ secure_url('catego',['T05','Economía y Negocios','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					  <div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -70,8 +70,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			    <form action="{{ secure_url('catego',['T17','Empleo','1']) }}"  method="POST">
-                      @csrf
+			    <form action="{{ secure_url('catego',['T17','Empleo','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					  <div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -90,8 +90,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			    
-				<form action="{{ secure_url('catego',['T28','Familia','1']) }}"  method="POST">
-                      @csrf
+				<form action="{{ secure_url('catego',['T28','Familia','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					  <div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -106,8 +106,8 @@
 			</div>
 
 			<div class="col-6 col-xl-3 col-md-4">
-			    <form action="{{ secure_url('catego',['T29','Justicia','1']) }}"  method="POST">
-                      @csrf
+			    <form action="{{ secure_url('catego',['T29','Justicia','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -124,8 +124,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			    <form action="{{ secure_url('catego',['T14','Medio Ambiente','1']) }}"  method="POST">
-                      @csrf
+			    <form action="{{ secure_url('catego',['T14','Medio Ambiente','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body ">
 						<div class="responsive-categorias mx-auto-lg">
@@ -141,8 +141,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			     <form action="{{ secure_url('catego',['T22','Pago de Impuestos','1']) }}"  method="POST">
-                      @csrf
+			     <form action="{{ secure_url('catego',['T22','Pago de Impuestos','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -160,8 +160,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			     <form action="{{ secure_url('catego',['T30','Quejas o Denuncias','1']) }}"  method="POST">
-                      @csrf
+			     <form action="{{ secure_url('catego',['T30','Quejas o Denuncias','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -177,8 +177,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			     <form action="{{ secure_url('catego',['T15','Salud y Deporte','1']) }}"  method="POST">
-                      @csrf
+			     <form action="{{ secure_url('catego',['T15','Salud y Deporte','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -196,8 +196,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			     <form action="{{ secure_url('catego',['T07','Seguridad','1']) }}"  method="POST">
-                      @csrf
+			     <form action="{{ secure_url('catego',['T07','Seguridad','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -214,8 +214,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			     <form action="{{ secure_url('catego',['T13','Transporte y Urbanismo','1']) }}"  method="POST">
-                      @csrf
+			     <form action="{{ secure_url('catego',['T13','Transporte y Urbanismo','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					 <div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -233,8 +233,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 
-			     <form action="{{ secure_url('catego',['T18','Turismo','1']) }}"  method="POST">
-                      @csrf
+			     <form action="{{ secure_url('catego',['T18','Turismo','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
@@ -250,8 +250,8 @@
 
 			<div class="col-6 col-xl-3 col-md-4">
 			     
-				 <form action="{{ secure_url('catego',['T19','Vivienda','1']) }}"  method="POST">
-                      @csrf
+				 <form action="{{ secure_url('catego',['T19','Vivienda','1']) }}"  method="GET">
+                      {{--@csrf--}}
                   <button type="submit" style="border:0px"> 
 					<div class="card border-0 bg-transparent responsive-categorias card-body">
 						<div class="responsive-categorias mx-auto">
