@@ -10,6 +10,12 @@
             margin: 3cm 2cm 2cm;
         }
 
+        main{
+            justify-content: center;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
         header {
             position: fixed;
             top: 0cm;
@@ -48,9 +54,9 @@
 <body>
 <header>
     <div>
-        <img src="{{ secure_asset('img/gobiernologo.png') }}"  height="72" alt="logo" srcset="">
+        <!-- <img src="{{ secure_asset('img/gobiernologo.png') }}"  height="72" alt="logo" srcset=""> -->
         Registro Estatal de Tramites y Servicios
-        <img src="{{ secure_asset('img/edomexlogo.png') }}"  height="72" alt="logo2" srcset="">
+         <!-- <img src="{{ secure_asset('img/edomexlogo.png') }}"  height="72" alt="logo2" srcset=""> -->
     </div>
 </header>
 
@@ -58,11 +64,11 @@
 
     <h2>{{ $queryUno[0]->denominacion}}</h2>
 
-    <h3><img src="../RETyS1/iconos/info_viol.png" alt="info" width="25" height="25">Descripción</h3>
+    <h3>Descripción</h3>
 
     <p> {{$queryUno[0]->descripcion}} </p>
 
-    <h3><img src="../RETyS1/iconos/pasos_viol.png" alt="info" width="25" height="25">Requisitos</h3>
+    <h3>Requisitos</h3>
 
     <ul>
         @foreach ($queryReq as $item)
@@ -72,7 +78,7 @@
     </ul>
 
 
-    <h3><img src="../RETyS1/iconos/costos_viol.png" alt="info" width="25" height="25">Costo (En desarrollo)</h3>
+    <h3>Costo</h3>
 
     @foreach($queryCostos as $cos)
         @if($cos->renglon==1 && $cos->columna==0)
@@ -172,11 +178,11 @@
 
 
 
-    <h3><img src="../RETyS1/iconos/tiempo_viol.png" alt="info" width="25" height="25"> Duración del trámite  </h3>
+    <h3>Duración del trámite  </h3>
 
     <p> {{$queryUno[0]->tresp_min}} min.</p>
 
-    <h3><img src="../RETyS1/iconos/domicilio_viol.png" alt="info" width="25" height="25"> Donde y cuando puedo realizarlo </h3>
+    <h3>Donde y cuando puedo realizarlo </h3>
 
     <p>Calle {{$queryUno[0]->calle}} # {{$queryUno[0]->noextint}},Colnia {{$queryUno[0]->colonia}} , {{$queryUno[0]->cp}}.</p>
 
@@ -244,7 +250,7 @@
 </main>
 
 <footer>
-    <h3>http://retys.edomex.gob.mx/</h3>
+    <h3>https://retys.edomex.gob.mx/</h3>
 </footer>
 </body>
 </html>

@@ -105,19 +105,8 @@ return [
             'server_version' =>  '11g',
         ],*/
 
+        
         /*'oracle' => [
-            'driver' => 'oracle',
-            'host' => '10.10.124.12',
-            'port' => '1521',
-            'database' => 'xe',
-            'service_name' => 'pdb1srv.edomex.gob.mx',
-            'username' => 'RETYS2014',
-            'password' => 'retys2014',
-            'charset' => '',
-            'prefix' => '',
-        ]*/
-
-        'oracle' => [
             'driver' => 'oracle',
             'host' => 'racsei-bd18.edomex.gob.mx',
             'port' => '1521',
@@ -127,8 +116,19 @@ return [
             'password' => 'retys2014',
             'charset' => '',
             'prefix' => '',
+        ]*/
+        
+        'oracle' => [
+            'driver' => 'oracle',
+            'host' => 'rac-dgsei.edomex.gob.mx',
+            'port' => '1521',
+            'database' => 'xe',
+            'service_name' => 'servisrv.edomex.gob.mx',
+            'username' => 'RETYS_REGCIVIL',
+            'password' => 'r3tys$r3gc1v1l',
+            'charset' => '',
+            'prefix' => '',
         ]
-
 
     ],
 

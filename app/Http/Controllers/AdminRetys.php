@@ -33,27 +33,33 @@ class AdminRetys extends Controller
    {
 
         $buscar=$request->input('buscar');
+        try {
+            $count = DB::table('Tbgem_citramite')
+            ->select(DB::raw('count(*) as total'))
+            ->whereRaw("Denominacion like '%{$buscar}%'")
+            ->where("Baja",0)
+            ->get();
 
-        $count = DB::table('Tbgem_citramite')
-        ->select(DB::raw('count(*) as total'))
-        ->whereRaw("Denominacion like '%{$buscar}%'")
-        ->where("Baja",0)
-        ->get();
-
-        $data = DB::table('Tbgem_citramite')
-        //->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
-        ->whereRaw("Denominacion like '%{$buscar}%'")
-        ->where("Baja",0)
-        ->orderBy('Denominacion')
-        ->paginate(9);
+            $data = DB::table('Tbgem_citramite')
+            //->select('COSTO_TRAM','TRAMOSERV','ENLINEA','Ambito','AMBITO_MUN_CLAVE','COSTO_TRAM','COSTO_CANTIDAD','Denominacion')
+            ->whereRaw("Denominacion like '%{$buscar}%'")
+            ->where("Baja",0)
+            ->orderBy('Denominacion')
+            ->paginate(9);
 
 
-        $count2 = sizeof($data);
+            $count2 = sizeof($data);
 
-        //return $data;
+            //return $data;
 
-        return view('VistasRetys.vtarjetas',
-                    ['data' => $data,'count2' => $count2,'count' =>$count]);
+            return view('VistasRetys.vtarjetas',
+                        ['data' => $data,'count2' => $count2,'count' =>$count]);
+        }catch(\Illuminate\Database\QueryException $ex){
+
+            return view('404');
+        //dd($ex->getMessage());
+        // Note any method of class PDOException can be called on $ex.
+      }
 
 
    }

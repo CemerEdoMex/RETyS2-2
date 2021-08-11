@@ -680,7 +680,7 @@
     </div>
 
     <div id="TiempoResp" class="tabcontent text-center">
-        <h2>Tiempo de respuesta</h2></center>
+        <h2>Tiempo de respuesta</h2>
         @foreach($tramite as $tram)
         <table class="table table-bordered " style="max-width: 700px; margin: auto;">
             <tr>
@@ -863,9 +863,19 @@
         </table>
 
     </div>
-
-
-
+    <br>
+    <br>
+    <br>
+    
+    @foreach($tramite as $tram )
+          <center>
+          <form action="{{ secure_url('pdf',$tram->idtramite) }}"  method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-light" >
+                        <img src="{{secure_asset('img/imgcedula/pdf.png')}}" style="width:15%;" >Descargar la información </button>
+                    </form>
+                    </center>
+    @endforeach
 
     </div>
 

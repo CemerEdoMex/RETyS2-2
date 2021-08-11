@@ -97,8 +97,8 @@
           <div class="container">
             <div class="carousel-caption">
                <div class="container-1">
-                <form   class="form-inline"  method="POST" action="{{ secure_url('tarjetas') }}" style="  justify-content: center;" >
-                          @csrf
+                <form   class="form-inline"  method="GET" action="{{ secure_url('tarjetas') }}" style="  justify-content: center;" >
+                       {{-- @csrf --}}
                     <div class="container-4">
                         <input type="search" id="search" name="buscar" placeholder="¿Qué estás buscando?" />
                         <button class="icon"><i class="fa fa-search"></i></button>

@@ -305,6 +305,8 @@
                 crossorigin="anonymous"></script>
             <script src="{{ secure_asset('bootstrap4.5/js/bootstrap.min.js') }}"></script>
 
+          
+
 
             @yield('scripts')
 

@@ -21,7 +21,7 @@ Route::GET('/','AdminRetys@index');
 
 Route::GET('inicio','AdminRetys@index')->name('inicio');
 
-Route::POST('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGETas */
+Route::GET('tarjetas','AdminRetys@btarjetas')->name('tarjetas') ;/*ruta de tarGETas */
 
 Route::GET('personasgob','AdminRetys@bpersonasgob')->name('personasgob') ;/*ruta personas */
 
@@ -58,7 +58,7 @@ Route::GET('/cedulaTram', 'AdminRetys@cedula') ->name('cedulaTram');
 | Rutas para archivos PDF
 |-------------------------------------------------------------------------
 |*/
-Route::GET('/pdf/{idtramserv}','PDF_Controller@create')->name('pdf');
+Route::POST('/pdf/{idtramserv}','PDF_Controller@create')->name('pdf');
 
 /*
 |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ Route::GET('/pdf/{idtramserv}','PDF_Controller@create')->name('pdf');
 
 Route::GET('fichainformativa','AdminRetys@trasnparencia')->name('fichainformativa');
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -77,14 +77,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 | Categorias  Rutas
 |--------------------------------------------------------------------------
 |*/
-route::GET('catego/{id_tem}/{ncatego}/{pagina?}','Adminretys@bptema')->name('catego');
+route::POST('catego/{id_tem}/{ncatego}/{pagina?}','Adminretys@bptema')->name('catego');
 
 /*
 |--------------------------------------------------------------------------
 | Categorias  Rutas
 |--------------------------------------------------------------------------
 |*/
-route::GET('Personas/{id_per}/{nperson}/{pagina?}','Adminretys@bppersona')->name('Personas');
+route::POST('Personas/{id_per}/{nperson}/{pagina?}','Adminretys@bppersona')->name('Personas');
 
 /*
 |--------------------------------------------------------------------------
@@ -98,9 +98,9 @@ route::GET('enlinea','Adminretys@benlinea')->name('enlinea');
 | pdf ficha de información de tramite
 |--------------------------------------------------------------------------
 |*/
-route::GET('fichapdf/{id_tram}','Adminretys@pdf_fichan')->name('fichapdf');
+route::POST('fichapdf/{id_tram}','Adminretys@pdf_fichan')->name('fichapdf');
 
-route::POST('cedulainfo/{id_tram?}','Adminretys@cedulainformacion')->name('cedulainfo')->where('id_tram', '[0-9]+');
+route::GET('cedulainfo/{id_tram?}','Adminretys@cedulainformacion')->name('cedulainfo')->where('id_tram', '[0-9]+');
 
 /*
 |-------------------------------------------------------------------------
